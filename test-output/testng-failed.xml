@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
+  <test thread-count="1" name="Web Tests(failed)" parallel="classes">
+    <classes>
+      <class name="tests.Surus">
+        <methods>
+          <include name="TC_045_Ceza_Kurallarina_Erisim"/>
+          <include name="TC_036_Nasil_Surulur_Gecilmemis"/>
+          <include name="TC_039_Ortalama"/>
+          <include name="setUp"/>
+          <include name="TC_046_Odeme_Hatasi"/>
+          <include name="beforeSuite"/>
+          <include name="TC_047_Surus_Bitirme_Basarili"/>
+          <include name="TC_042_Kilit_Takilmadi"/>
+          <include name="TC_034_Surus_Basladi_Kodlu_Kilit"/>
+          <include name="TC_040_Surus_Bitirme"/>
+          <include name="tearDown"/>
+          <include name="TC_037_Acil_Mudahale"/>
+          <include name="TC_041_Park_Edilemez_Alan"/>
+          <include name="TC_035_Surus_Baslat"/>
+          <include name="TC_038_Nasil_Surulur"/>
+          <include name="TC_044_Surus_Bitir_Internet_Kapali"/>
+        </methods>
+      </class> <!-- tests.Surus -->
+      <class name="tests.Ana_Ekran">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_016_Surus_Baslat"/>
+        </methods>
+      </class> <!-- tests.Ana_Ekran -->
+      <class name="tests.Menu">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_066_Yardim_Dokumanina_Erisim"/>
+        </methods>
+      </class> <!-- tests.Menu -->
+    </classes>
+  </test> <!-- Web Tests(failed) -->
+</suite> <!-- Failed suite [Web Suite] -->
