@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Web Suite" preserve-order="true" parallel="classes" thread-count="1">
+<test name="Web Tests">
+	<classes>
+<!-- 	<class name="tests.Yukleme_Ekrani" /> -->
+<!-- 	<class name="tests.Giris_Ekrani" /> -->
+<!-- 	<class name="tests.Ana_Ekran" /> -->
+<!-- 	<class name="tests.Borclar" /> -->
+<!-- 	<class name="tests.Surus" /> -->
+	<class name="tests.Menu" />
+	</classes>
+    </test>
+</suite>
