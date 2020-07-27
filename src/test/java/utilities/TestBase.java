@@ -53,6 +53,7 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         URL appiumURL = new URL("http://127.0.0.1:4723/wd/hub");
 		capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
+		capabilities.setCapability(MobileCapabilityType.LOCALE, "tr_TR");
 //        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
        
 //      device_name:  AOSP_on_IA_Emulator
@@ -64,14 +65,14 @@ public class TestBase {
 //        5210d014508dc3e1
         //name=SM-A520F
         
-////      DEBUG
+//      DEBUG
 //		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "SM-A520F");
 //		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.0");
 //		capabilities.setCapability(MobileCapabilityType.UDID, "5210d014508dc3e1");
 //		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.martitech.marti.dev");
 //		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.martitech.marti.ui.activities.splash.Splash");
 //		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-////		DEBUG--
+//		DEBUG--
 		
 		androidDriver = new AndroidDriver<AndroidElement>(appiumURL, capabilities);
 		androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
