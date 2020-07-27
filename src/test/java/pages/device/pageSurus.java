@@ -516,7 +516,7 @@ public class pageSurus extends PageBaseAndroid {
 			.deleteCustomerDebt(customer_phone_no)
 			.deleteCreditCards(customer_phone_no)
 			.addCustomer(customer_phone_no)
-			.addErrorCreditCard(customer_phone_no)
+			.addCreditCard(customer_phone_no)
 			.addCustomerFinishedRide(customer_phone_no, scooter_code);
 			
 			scooter
