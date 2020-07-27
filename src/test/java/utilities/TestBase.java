@@ -56,6 +56,7 @@ public class TestBase {
 		capabilities.setCapability(MobileCapabilityType.LOCALE, "tr_TR");
 //        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
        
+		
 //      device_name:  AOSP_on_IA_Emulator
 //      UDID:  emulator-5554
         //--huawei device
