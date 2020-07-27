@@ -53,8 +53,8 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         URL appiumURL = new URL("http://127.0.0.1:4723/wd/hub");
 		capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-		capabilities.setCapability(MobileCapabilityType.LANGUAGE, "en");
-		capabilities.setCapability(MobileCapabilityType.LOCALE, "tr_TR");
+//		capabilities.setCapability(MobileCapabilityType.LANGUAGE, "en");
+//		capabilities.setCapability(MobileCapabilityType.LOCALE, "tr_TR");
 //        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
        
 		
