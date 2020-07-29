@@ -35,9 +35,9 @@ public class TestBase {
 	Provider provider = new Provider();
 	protected int caseId = 0;
 	TestDevice testDevice = new TestDevice();
-	ExtentReports extent;
-	ExtentHtmlReporter reporter;
-	ExtentTest logger;
+//	ExtentReports extent;
+//	ExtentHtmlReporter reporter;
+//	ExtentTest logger;
 	
 	public TestBase() {
 		ride_app_test_parameters = provider.GetDataTable(
@@ -46,11 +46,11 @@ public class TestBase {
 
     @BeforeSuite
     public void beforeSuite() {
-		System.out.println("emreeee " + System.getenv("DEVICEFARM_LOG_DIR"));
-    	extent = new ExtentReports();
-		reporter = new ExtentHtmlReporter(System.getenv("DEVICEFARM_LOG_DIR") + "\\extentReport.html");
-		System.out.println("extenrReport path: " + reporter.getFilePath());
-		extent.attachReporter(reporter);
+//		System.out.println("emreeee " + System.getenv("DEVICEFARM_LOG_DIR"));
+//    	extent = new ExtentReports();
+//		reporter = new ExtentHtmlReporter(System.getenv("DEVICEFARM_LOG_DIR") + "\\extentReport.html");
+//		System.out.println("extenrReport path: " + reporter.getFilePath());
+//		extent.attachReporter(reporter);
     }
     
     /**
@@ -105,7 +105,7 @@ public class TestBase {
 			System.out.println("Error : " + result.getThrowable().getMessage());
 
 //			temp = ExtentReportUtilities.getScreenshot(androidDriver);
-			logger.fail("error : " + result.getThrowable().getMessage());
+			//logger.fail("error : " + result.getThrowable().getMessage());  ////////////////////extendi acicagin zaman bunu acmayi unutmas
 //					MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 
 //			if (ride_app_test_parameters[caseId][1] != "0") {//bunu db de browser falan ekledin onun için koymuştum. tekrar dene
@@ -128,9 +128,8 @@ public class TestBase {
     
 	@AfterSuite
 	public void afterSuite() {
-		extent.flush();
+//		extent.flush();
 	}
-	
 	
 //    /**
 //     * Take Screenshot
