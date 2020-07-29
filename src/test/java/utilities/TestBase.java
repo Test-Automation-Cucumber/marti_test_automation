@@ -10,8 +10,13 @@ import org.openqa.selenium.html5.Location;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import dbmodel.Provider;
 import dbmodel.DataPreparation.TestDevice;
@@ -25,11 +30,14 @@ import java.util.concurrent.TimeUnit;
  * Created by Metin.
  */
 public class TestBase {
-    protected static AndroidDriver<AndroidElement> androidDriver;
+	protected static AndroidDriver<AndroidElement> androidDriver;
     protected String[][] ride_app_test_parameters;
 	Provider provider = new Provider();
 	protected int caseId = 0;
 	TestDevice testDevice = new TestDevice();
+	ExtentReports extent;
+	ExtentHtmlReporter reporter;
+	ExtentTest logger;
 	
 	public TestBase() {
 		ride_app_test_parameters = provider.GetDataTable(
@@ -38,7 +46,11 @@ public class TestBase {
 
     @BeforeSuite
     public void beforeSuite() {
-
+		System.out.println("emreeee " + System.getenv("DEVICEFARM_LOG_DIR"));
+    	extent = new ExtentReports();
+		reporter = new ExtentHtmlReporter(System.getenv("DEVICEFARM_LOG_DIR") + "\\extentReport.html");
+		System.out.println("extenrReport path: " + reporter.getFilePath());
+		extent.attachReporter(reporter);
     }
     
     /**
@@ -52,10 +64,7 @@ public class TestBase {
     	System.out.println(">>>>>>>>>>>>>>  TEST METHOD STARTING : " + method.getName());
         DesiredCapabilities capabilities = new DesiredCapabilities();
         URL appiumURL = new URL("http://127.0.0.1:4723/wd/hub");
-		capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-//		capabilities.setCapability(MobileCapabilityType.LOCALE, "tr_TR");
-//        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
-       
+		capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);       
 		
 //      device_name:  AOSP_on_IA_Emulator
 //      UDID:  emulator-5554
@@ -66,28 +75,28 @@ public class TestBase {
 //        5210d014508dc3e1
         //name=SM-A520F
         
-//      DEBUG
-//		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "SM-A520F");
+////      DEBUG
+//		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AOSP_on_IA_Emulator");
 //		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.0");
-//		capabilities.setCapability(MobileCapabilityType.UDID, "5210d014508dc3e1");
+//		capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
 //		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.martitech.marti.dev");
 //		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.martitech.marti.ui.activities.splash.Splash");
 //		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-//		DEBUG--
+////		DEBUG--
 		
 		androidDriver = new AndroidDriver<AndroidElement>(appiumURL, capabilities);
 		androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		//açılırken telefonu sifirlar (lokasyon, wifi, data vs.)
+		//açılırken telefonu sifirlar (lokasyon)
 		androidDriver.setLocation(new Location(41.006405, 29.074996, 1)); //ofis
     }
-
+    
     /**
      * Run After each test method
      */
     @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result){
-		String temp = null;
+//		String temp = null;
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 			System.out.println("*******************************");
@@ -96,15 +105,15 @@ public class TestBase {
 			System.out.println("Error : " + result.getThrowable().getMessage());
 
 //			temp = ExtentReportUtilities.getScreenshot(androidDriver);
-//			logger.fail("error : " + result.getThrowable().getMessage(),
+			logger.fail("error : " + result.getThrowable().getMessage());
 //					MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 
-			if (ride_app_test_parameters[caseId][1] != "0") {//bunu db de browser faln ekledin onun için koymuştum. tekrar dene
+//			if (ride_app_test_parameters[caseId][1] != "0") {//bunu db de browser falan ekledin onun için koymuştum. tekrar dene
 //				temp = ExtentReportUtilities.getScreenshot(driver);
 //				logger.fail("error : " + result.getThrowable().getMessage(),
 //						MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-			}
-//			extent.flush();
+//			}
+//			extent.flush();  BU NEDEN BURDA VAR? EXTENT RAPORLA ALAKALI SORUN CIKARSA BUNU ACIP DENERSIN
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 //			logger.info("Test succeeded.");
 			System.out.println("*******************************");
@@ -116,4 +125,9 @@ public class TestBase {
 //		if (driver == null)
 //			driver.quit();
     }
+    
+	@AfterSuite
+	public void afterSuite() {
+		extent.flush();
+	}
 }
