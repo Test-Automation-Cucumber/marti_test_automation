@@ -130,4 +130,17 @@ public class TestBase {
 	public void afterSuite() {
 		extent.flush();
 	}
+	
+	
+//    /**
+//     * Take Screenshot
+//     * @param name file name
+//     * @return true if successful
+//     */
+//    private boolean takeScreenshot(final String name) {
+//        String screenshotDirectory = System.getProperty("appium.screenshots.dir");
+//        File screenshot = driver.getScreenshotAs(OutputType.FILE);
+//        return screenshot.renameTo(new File(screenshotDirectory, String.format("%s.png", name)));
+//    }
+	
 }
