@@ -84,6 +84,7 @@ public class TestBase {
 //		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 ////		DEBUG--
 		
+		
 		androidDriver = new AndroidDriver<AndroidElement>(appiumURL, capabilities);
 		androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
