@@ -1,0 +1,5 @@
+==================================>>>>>>> Vestel <<<<<<==============================
+device.udid				=2783879817000470
+device.name				=Vestel_5000_Dual
+platform.version		=9.0
+appium.server			=http://0.0.0.0:4723/wd/hub

@@ -1,0 +1,5 @@
+==================================>>>>>>> RNE-L01 <<<<<<==============================
+device.udid				=5210d014508dc3e1
+device.name				=SM-A520F
+platform.version		=9.0
+appium.server			=http://0.0.0.0:4723/wd/hub

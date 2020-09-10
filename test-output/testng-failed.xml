@@ -3,24 +3,31 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
   <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.Surus">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="TC_047_Surus_Bitirme_Basarili"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tests.Surus -->
       <class name="tests.Menu">
         <methods>
           <include name="beforeSuite"/>
-          <include name="TC_050_Profil_Duzenleme"/>
-          <include name="TC_049_Versiyon_Kontrol"/>
+          <include name="afterSuite"/>
+          <include name="TC_053_Varsayilan_Kredi_Karti_Degistirme"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="TC_051_Arkadasini_Davet_Et"/>
+          <include name="beforeClass"/>
+          <include name="TC_055_Kredi_Karti_Ekleme_Basarisiz"/>
+          <include name="TC_054_Kredi_Karti_Ekleme_Basarili"/>
+          <include name="TC_067_Cikis"/>
+          <include name="TC_066_Yardim_Dokumanina_Erisim"/>
         </methods>
       </class> <!-- tests.Menu -->
+      <class name="tests.Ana_Ekran">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="TC_017_Tckn_Gecersiz"/>
+          <include name="afterSuite"/>
+          <include name="setUp"/>
+          <include name="TC_018_Odeme_Yontemi_Yok"/>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- tests.Ana_Ekran -->
     </classes>
   </test> <!-- Web Tests(failed) -->
 </suite> <!-- Failed suite [Web Suite] -->

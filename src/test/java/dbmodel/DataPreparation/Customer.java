@@ -63,21 +63,26 @@ public class Customer {
 	}
 	
 	// *musterinin surus ekle
-		public Customer addCustomerContinuesRide(String customer_phone_no, String scooter_code) {
-			try {
-				if (customer_phone_no.length() < 9) {
-					throw new Exception("hatali musteri numarasi");
+			public int addCustomerContinuesRide(String customer_phone_no, String scooter_code) {
+				String rideId = "";
+				try {
+					if (customer_phone_no.length() < 9) {
+						throw new Exception("hatali musteri numarasi");
+					}
+					provider.ExecuteCommand("delete from rides where end_time is null and customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "');"
+							+ "delete from rides where end_time is null and scooter_id = (select id from scooters where code = '"+ scooter_code  +"');"
+							+ "UPDATE scooters set status_id = 2, is_available = false where code = '"+ scooter_code +"';",
+							"martiDB");
+					
+					rideId = provider.ExecuteScalar("INSERT INTO rides (customer_id, scooter_id, start_time, end_time, distance, charged_price, credit_card_id, payment_service_payment_token, map_data, payment_successful, photo, approved_user_id, approved_date, approved_note, is_approved, actual_price, last_ride_point, payment_service_transaction_id, geofence_group, provision_transaction, additional_payment_transaction, user_id, campaign_id, reservation_id, reservation_price, start_mileage, end_mileage, ride_refunded_by_mileage, gross_price) VALUES" + 
+							"((select id from customers where mobile_phone = '" + customer_phone_no + "'), (select id from scooters where code = '"+ scooter_code  +"'), now(), NULL, NULL, 1.99, NULL, NULL, '{sxk9m8gz8}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '12897526', 10, '12198366', NULL, NULL, NULL, 0, 0.00, 0, NULL, NULL, 0) returning id;",
+							"martiDB");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-				provider.ExecuteCommand(
-						"INSERT INTO rides (customer_id, scooter_id, start_time, end_time, distance, charged_price, credit_card_id, payment_service_payment_token, map_data, payment_successful, photo, approved_user_id, approved_date, approved_note, is_approved, actual_price, last_ride_point, payment_service_transaction_id, geofence_group, provision_transaction, additional_payment_transaction, user_id, campaign_id, reservation_id, reservation_price, start_mileage, end_mileage, ride_refunded_by_mileage, gross_price) VALUES" + 
-						"((select id from customers where mobile_phone = '" + customer_phone_no + "'), (select id from scooters where code = '"+ scooter_code  +"'), now(), NULL, NULL, 1.99, NULL, NULL, '{sxk9m8gz8}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '12897526', 10, '12198366', NULL, NULL, NULL, 0, 0.00, 0, NULL, NULL, 0);",
-						"martiDB");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				return Integer.parseInt(rideId);
 			}
-			return this;
-		}
 	
 	// *kupon temizleme
 	public Customer deleteCustomerCoupons(String customer_phone_no) {
@@ -167,21 +172,21 @@ public class Customer {
 	}
 
 	//*müşteri kart ekleme
-	public Customer addCreditCard(String customer_phone_no) {
+	public String addCreditCard(String customer_phone_no) {
+		String ccNumber = "";
 		try {
 			if (customer_phone_no.length() < 9) {
 				throw new Exception("hatali musteri numarasi");
 			}
-			provider.ExecuteCommand(
+			ccNumber = provider.ExecuteScalar(
 					"INSERT INTO credit_cards (customer_id,last_4_digits,created_date,payment_service_token,is_default,name_on_card,is_active,user_token,cc_type,cc_association) VALUES "
 							+ "((select id from customers where mobile_phone = '" + customer_phone_no
-							+ "'),'0001', now(),'bMvAMjACbfvmd7PrAf9/dp9Y9/E=',true,'AUTO AUTOMATION',true,'j+ut1NFSt/mymsCjC8QCJsACtKY=','DEBIT_CARD','VISA')",
+							+ "'),'0001', now(),'bMvAMjACbfvmd7PrAf9/dp9Y9/E=',true,'AUTO AUTOMATION',true,'j+ut1NFSt/mymsCjC8QCJsACtKY=','DEBIT_CARD','VISA') returning id;",
 					"martiDB");
 		} catch (Exception ex) {
 
 		}
-		
-		return this;
+		return ccNumber;
 	}
 	
 	//*müşteri hatalı kart ekleme

@@ -2,46 +2,50 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Web Suite" duration-ms="43098" started-at="2020-07-29T11:36:38Z" finished-at="2020-07-29T11:37:21Z">
+  <suite name="API Suite" duration-ms="81016" started-at="2020-09-10T11:46:54Z" finished-at="2020-09-10T11:48:15Z">
     <groups>
     </groups>
-    <test name="Web Tests" duration-ms="43098" started-at="2020-07-29T11:36:38Z" finished-at="2020-07-29T11:37:21Z">
-      <class name="tests.Menu">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.Menu@7674b62c]" name="beforeSuite" is-config="true" duration-ms="97" started-at="2020-07-29T11:36:37Z" finished-at="2020-07-29T11:36:38Z">
+    <test name="API Tests" duration-ms="81016" started-at="2020-09-10T11:46:54Z" finished-at="2020-09-10T11:48:15Z">
+      <class name="tests.ride.api.Marti_App_API">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.ride.api.Marti_App_API@5876a9af]" name="beforeSuite" is-config="true" duration-ms="151" started-at="2020-09-10T11:46:54Z" finished-at="2020-09-10T11:46:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.Menu@7674b62c]" name="setUp" is-config="true" duration-ms="11705" started-at="2020-07-29T11:36:38Z" finished-at="2020-07-29T11:36:49Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.ride.api.Marti_App_API@5876a9af]" name="beforeClass" is-config="true" duration-ms="1450" started-at="2020-09-10T11:46:54Z" finished-at="2020-09-10T11:46:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.ride.api.Marti_App_API@5876a9af]" name="setUp" is-config="true" duration-ms="8" started-at="2020-09-10T11:46:55Z" finished-at="2020-09-10T11:46:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.Menu.TC_067_Cikis()]]>
+                <![CDATA[public void tests.ride.api.Marti_App_API.TC_001_app_getConfig() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC_067_Cikis()[pri:67, instance:tests.Menu@7674b62c]" name="TC_067_Cikis" duration-ms="30837" started-at="2020-07-29T11:36:49Z" finished-at="2020-07-29T11:37:20Z">
+        <test-method status="PASS" signature="TC_001_app_getConfig()[pri:0, instance:tests.ride.api.Marti_App_API@5876a9af]" name="TC_001_app_getConfig" duration-ms="79537" started-at="2020-09-10T11:46:55Z" finished-at="2020-09-10T11:48:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_067_Cikis -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Menu@7674b62c]" name="tearDown" is-config="true" duration-ms="540" started-at="2020-07-29T11:37:20Z" finished-at="2020-07-29T11:37:21Z">
+        </test-method> <!-- TC_001_app_getConfig -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ride.api.Marti_App_API@5876a9af]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-09-10T11:48:15Z" finished-at="2020-09-10T11:48:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_067_Cikis status=SUCCESS method=Menu.TC_067_Cikis()[pri:67, instance:tests.Menu@7674b62c] output={null}]]]>
+                <![CDATA[[TestResult name=TC_001_app_getConfig status=SUCCESS method=Marti_App_API.TC_001_app_getConfig()[pri:0, instance:tests.ride.api.Marti_App_API@5876a9af] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.Menu@7674b62c]" name="afterSuite" is-config="true" duration-ms="3" started-at="2020-07-29T11:37:21Z" finished-at="2020-07-29T11:37:21Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.ride.api.Marti_App_API@5876a9af]" name="afterSuite" is-config="true" duration-ms="333" started-at="2020-09-10T11:48:15Z" finished-at="2020-09-10T11:48:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.Menu -->
-    </test> <!-- Web Tests -->
-  </suite> <!-- Web Suite -->
+      </class> <!-- tests.ride.api.Marti_App_API -->
+    </test> <!-- API Tests -->
+  </suite> <!-- API Suite -->
 </testng-results>

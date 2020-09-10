@@ -36,7 +36,7 @@ public class AES {
     {
         try
         {
-        	setKey("AraAraYarakBulursun");
+        	setKey("AraArayarakBulursun");
         	Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
         	cipher.init(Cipher.DECRYPT_MODE, secretKey);
             setKey(new String(cipher.doFinal(Base64.getDecoder().decode("0aTtQVoihZESRiqsp5tXXA=="))));

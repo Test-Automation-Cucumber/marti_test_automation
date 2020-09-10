@@ -32,6 +32,18 @@ public class TestDevice {
 		return this;
 	}
 	
+	public TestDevice resetLoginStatus(String phone_number) {
+		try {
+			provider.ExecuteCommand(
+					"update customers set access_token = NULL where mobile_phone = '" + phone_number + "';",
+					"martiDB");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
 	public TestDevice setWIFIServiceStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
 		ConnectionState conStatus = androidDriver.getConnection();
 		

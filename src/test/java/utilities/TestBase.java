@@ -3,24 +3,36 @@ package utilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
+
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
 
 import org.openqa.selenium.html5.Location;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import dbmodel.Provider;
 import dbmodel.DataPreparation.TestDevice;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -31,116 +43,258 @@ import java.util.concurrent.TimeUnit;
  */
 public class TestBase {
 	protected static AndroidDriver<AndroidElement> androidDriver;
-    protected String[][] ride_app_test_parameters;
+	protected IOSDriver<IOSElement> iosDriver;
+    protected String[][] testParameters;
+    protected String queryGetParameters;
 	Provider provider = new Provider();
 	protected int caseId = 0;
-	TestDevice testDevice = new TestDevice();
-//	ExtentReports extent;
-//	ExtentHtmlReporter reporter;
-//	ExtentTest logger;
+	static ExtentReports extent;
+	ExtentHtmlReporter reporter;
+	ExtentTest logger;
+	protected static Configuration configurationGet;
+	public String baseUrl;
 	
 	public TestBase() {
-		ride_app_test_parameters = provider.GetDataTable(
-				"select * from ride_app_test_parameters order by tc_id;", "automationDB");
+    	//android cihaz secimi.
+//		System.setProperty("deviceName", "SM-A520F");
+    	//ios cihaz secimi.
+		System.setProperty("deviceName", "iPhone5S");
+    
 	}
 
     @BeforeSuite
     public void beforeSuite() {
-//		System.out.println("emreeee " + System.getenv("DEVICEFARM_LOG_DIR"));
-//    	extent = new ExtentReports();
-//		reporter = new ExtentHtmlReporter(System.getenv("DEVICEFARM_LOG_DIR") + "\\extentReport.html");
-//		System.out.println("extenrReport path: " + reporter.getFilePath());
-//		extent.attachReporter(reporter);
+    	extent = new ExtentReports();
+		reporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\reports\\extentReport.html");
+		System.out.println("extentReport path: " + reporter.getFilePath());
+		extent.attachReporter(reporter);
     }
     
-    /**
-     * Run before each method
-     * @throws MalformedURLException
-     */
+    @BeforeClass(alwaysRun = true)
+    public void beforeClass() {
+
+
+    	testParameters = provider.GetDataTable(queryGetParameters, "automationDB");
+    }
+    
     @BeforeMethod(alwaysRun = true)
     public void setUp(Method method) throws Exception {
-		caseId = Integer.parseInt(method.getName().substring(method.getName().lastIndexOf(".") + 4,method.getName().lastIndexOf(".") + 7));
+		try {
+    	caseId = Integer.parseInt(method.getName().substring(method.getName().lastIndexOf(".") + 4, method.getName().lastIndexOf(".") + 7));
 		
     	System.out.println(">>>>>>>>>>>>>>  TEST METHOD STARTING : " + method.getName());
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        URL appiumURL = new URL("http://127.0.0.1:4723/wd/hub");
-		capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);       
-		
-//      device_name:  AOSP_on_IA_Emulator
-//      UDID:  emulator-5554
-        //--huawei device
-//      device_name:  RNE-L01
-//      UDID:  2VN5T18607003425
-        //--samsung device
-//        5210d014508dc3e1
-        //name=SM-A520F
+
+		configurationGet = Configuration.getInstance();
         
-////      DEBUG
-//		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AOSP_on_IA_Emulator");
-//		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.0");
-//		capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
-//		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.martitech.marti.dev");
-//		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.martitech.marti.ui.activities.splash.Splash");
-//		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-////		DEBUG--
+		if (System.getProperty("platformName").equals("android")) {
+
+        String device_udid = configurationGet.device_udid();
+        String device_name = configurationGet.device_name();
+        String platform_version = configurationGet.platform_version();
+        String appium_server = configurationGet.appium_server();
+        String app_package = configurationGet.app_package();
+        String app_activity = configurationGet.app_activity();
+
+		capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device_name);
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platform_version);
+		capabilities.setCapability(MobileCapabilityType.UDID, device_udid);
+		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, app_package);
+		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, app_activity);
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
+//		capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 		
-		
-		androidDriver = new AndroidDriver<AndroidElement>(appiumURL, capabilities);
+		androidDriver = new AndroidDriver<AndroidElement>(new URL(appium_server), capabilities);
 		androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//açılırken telefonu sifirlar (lokasyon)
 		androidDriver.setLocation(new Location(41.006405, 29.074996, 1)); //ofis
+		
+		}
+		else if (System.getProperty("platformName").equals("ios"))
+		{
+			 String device_udid = configurationGet.device_udid();
+		        String device_name = configurationGet.device_name();
+		        String platform_version = configurationGet.platform_version();
+		        String automation_name = configurationGet.automation_name();
+		        String device_bundle_id = configurationGet.ipa_bundle_id();
+		        String appium_server = configurationGet.appium_server();
+		        String ipa_folder = configurationGet.ipa_folder();
+		        String ipa_file = configurationGet.ipa_file();
+				
+				capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device_name);
+				capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platform_version);
+				capabilities.setCapability(MobileCapabilityType.UDID, device_udid);
+				capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, device_bundle_id);
+				capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
+				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, automation_name);
+
+				
+				iosDriver = new IOSDriver<IOSElement>(new URL(appium_server), capabilities);
+				iosDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
+				//açılırken telefonun lokasyonunu sifirlar
+				iosDriver.setLocation(new Location(41.006405, 29.074996, 1)); //ofis
+
+			
+		}
+		
+			logger = extent.createTest(method.getName());
+			logger.info("Driver has been initialized and the test has started.");
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
     }
     
     /**
      * Run After each test method
      */
     @AfterMethod(alwaysRun = true)
-    public void tearDown(ITestResult result){
-//		String temp = null;
+    public void tearDown(ITestResult result) {
+		String temp = null;
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 			System.out.println("*******************************");
 			System.out.println("TEST FAILURE || " + result.getInstanceName() + "." + result.getName());
-			System.out.println("******************************* \n\n");
-			System.out.println("Error : " + result.getThrowable().getMessage());
+			System.out.println("*******************************");
+			System.out.println("Error : " + result.getThrowable().getMessage() + " \n\n");
 
-//			temp = ExtentReportUtilities.getScreenshot(androidDriver);
-			//logger.fail("error : " + result.getThrowable().getMessage());  ////////////////////extendi acicagin zaman bunu acmayi unutmas
-//					MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-
-//			if (ride_app_test_parameters[caseId][1] != "0") {//bunu db de browser falan ekledin onun için koymuştum. tekrar dene
-//				temp = ExtentReportUtilities.getScreenshot(driver);
-//				logger.fail("error : " + result.getThrowable().getMessage(),
-//						MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-//			}
-//			extent.flush();  BU NEDEN BURDA VAR? EXTENT RAPORLA ALAKALI SORUN CIKARSA BUNU ACIP DENERSIN
+			if (System.getProperty("platformName").equals("android")) {
+				temp = ExtentReportUtilities.getScreenshot(androidDriver);
+			} else if (System.getProperty("platformName").equals("ios")) {
+				temp = ExtentReportUtilities.getScreenshot(iosDriver);
+			}
+			try {
+				logger.fail(result.getThrowable().getMessage(),
+						MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			extent.flush();
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
-//			logger.info("Test succeeded.");
+			logger.info("Test succeeded.");
 			System.out.println("*******************************");
 			System.out.println("TEST SUCCESS || " + result.getInstanceName() + "." + result.getName());
 			System.out.println("******************************* \n\n");
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			System.out.println("!!!!! ERROR === " + result.getThrowable().getMessage());
+			if (System.getProperty("platformName").equals("android")) {
+				temp = ExtentReportUtilities.getScreenshot(androidDriver);
+			} else if (System.getProperty("platformName").equals("ios")) {
+				temp = ExtentReportUtilities.getScreenshot(iosDriver);
+			}
+			try {
+				logger.skip(result.getThrowable().getMessage(),
+						MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println(result.getThrowable().getMessage());
+			System.out.println("========================================================================");
+			System.out.println("*******************************************");
+			System.out.println(">>>>>>>>>>>>>>>>>  Test will be run again..  <<<<<<<<<<<<<<<<<<<<<<");
+			System.out.println("*******************************************");
+			System.out.println("========================================================================");
 		}
 
-		androidDriver.quit();
-//		if (driver == null)
-//			driver.quit();
+		if (System.getProperty("platformName").equals("android")) {
+			androidDriver.quit();
+		} else if (System.getProperty("platformName").equals("ios")) {
+			iosDriver.quit();
+		}
+
     }
     
 	@AfterSuite
 	public void afterSuite() {
-//		extent.flush();
+		extent.flush();
 	}
 	
-//    /**
-//     * Take Screenshot
-//     * @param name file name
-//     * @return true if successful
-//     */
-//    private boolean takeScreenshot(final String name) {
-//        String screenshotDirectory = System.getProperty("appium.screenshots.dir");
-//        File screenshot = driver.getScreenshotAs(OutputType.FILE);
-//        return screenshot.renameTo(new File(screenshotDirectory, String.format("%s.png", name)));
-//    }
+	////////////////////////////////////////////////////////////BI ARA BASKA CLASS YAPARSIN
+public String get_token(int case_id) throws Exception{
+		
+		String endPoint = "";
+		String accessToken = "";
+		String otp = "";
+		RestAssured.baseURI = baseUrl;
+		
+		endPoint = "/v"+ testParameters[15][4] +"/dispatch/" + testParameters[15][1];
+		otp = provider.ExecuteScalar("select sms_code from customers where mobile_phone ='" + testParameters[case_id][6] + "';", "martiDB");
+				
+			Response response = RestAssured
+					.given()
+					.header("timezone", "3")
+					.contentType("application/json")
+					.body("{ \"smsCode\": \""+ otp +"\", \"mobilePhoneCountryCode\": \"90\", \"mobilePhone\": \"" + testParameters[case_id][6] + "\" }")
+					.when()
+					.post(endPoint)
+					.then()
+					.extract()
+					.response();
+			accessToken = response.path("data.accessToken");
+			
+			return accessToken;
+	}
 	
+	// dynamic_parameter alanı "NULL" değilse parametreler dinamik olarak geliyor demektir.
+	protected String run_ws(int case_id, String access_token, String dynamic_parameter) {
+		
+//		String tcId 			= testParameters[case_id][0];
+		String endPoint			= testParameters[case_id][1];
+//		String type				= testParameters[case_id][2];
+		String statusCode 		= testParameters[case_id][3];
+		String version 			= testParameters[case_id][4];
+		String inputParameters	= testParameters[case_id][5];
+
+		
+		//////////set parameters////////////////
+		//*
+		endPoint = "/v"+ version +"/dispatch/" + endPoint;
+		//*
+		if (inputParameters == null) {
+			inputParameters = "";
+		}
+		
+		if (dynamic_parameter != null) {
+			inputParameters = dynamic_parameter;
+		}
+		
+		//////////////////////////--
+		
+		RestAssured.baseURI = baseUrl;
+		Response response = RestAssured
+				.given()
+				.header("X-ACCESS-TOKEN", access_token)
+//				.header("User-Agent", "Marti/1.0 (com.martitech.marti; build:9; iOS 12.1.2) Alamofire/4.8.0")  // silersin
+				.header("timezone", "3")
+				.contentType("application/json;charset=utf-8")
+				.body(inputParameters)
+				.when()
+				.post(endPoint)
+				.then()
+				.statusCode(Integer.parseInt(statusCode))
+//				.body("isSuccess", equalTo(true))   // e bunu acarsin. bu onemli..
+//				.body("message", equalTo("SUCCESS"))
+				.extract()
+				.response();
+			
+		//gelen response daki "message" alanını kontrol eder. true = SUCCESS
+		assertEquals(response.getBody().asString().substring(response.getBody().asString().indexOf("message") + 9, response.getBody().asString().indexOf(",", response.getBody().asString().indexOf("message"))).replace("\"", ""), "SUCCESS");
+
+		//kapatirsin yayinlamadan once
+		System.out.println("STARTING -- EP_NAME: " + endPoint + " --- RESPONSE: " + response.getBody().asString() + "\n--");
+		
+		// *******************RESPONSE CHECK************************
+		for (int i = 8; i < testParameters[case_id].length; i++) {
+			if (testParameters[case_id][i] != null) {
+				assertTrue(response.getBody().asString().contains(testParameters[case_id][i]));
+			}
+		}
+		
+		return response.getBody().asString();
+		
+	}
 }

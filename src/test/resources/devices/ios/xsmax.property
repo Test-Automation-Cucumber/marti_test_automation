@@ -1,0 +1,6 @@
+==================================>>>>>>> emulator_1 <<<<<<==============================
+device.udid				=00008020-001615201A28002E
+platform.version		=13
+device.name				=iPhone
+automation.name			=XCUITest
+appium.server			=http://127.0.0.1:4723/wd/hub

@@ -326,8 +326,22 @@ public class PageBaseAndroid {
 		} catch (Exception ex) {
 		}
 	}
+	
+	
+//===========================================================================Attribute Properties
+	
+	//checking control
+	protected boolean getCheckedValue(String pure_element, String attribute) {
+		By elementBy = findElements(pure_element, 0);
+		waitClickable(elementBy);
+
+		List<AndroidElement> elements = androidDriver.findElements(elementBy);
+		return Boolean.parseBoolean(elements.get(0).getAttribute(attribute));
+	}
+	
 
 //===========================================================================Special for Elements
+
 	// Exists Element
 	/**
 	 * @param elementBy
