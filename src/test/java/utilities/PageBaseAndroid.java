@@ -7,7 +7,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.html5.Location;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.mobile.NetworkConnection;
 import org.openqa.selenium.mobile.NetworkConnection.ConnectionType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -214,6 +217,35 @@ public class PageBaseAndroid {
 		List<AndroidElement> elements = androidDriver.findElements(elementBy);
 		elements.get(index).click();
 	}
+	
+	// Long Click By Method
+	protected void longClick(String pure_element, int index) {
+		By elementBy = findElements(pure_element, index);
+//		waitClickable(elementBy);
+
+		List<AndroidElement> elements = androidDriver.findElements(elementBy);
+//		elements.get(index).click();
+//		
+//		TouchActions action = new TouchActions(androidDriver);
+//		action.longPress(elements.get(index));
+//		action.perform();
+//		
+		
+		
+		///test
+	Point location = elements.get(index).getLocation();
+System.out.println(location);
+
+location.x = location.x + 500;
+
+
+TouchAction touchAction=new TouchAction(androidDriver);
+touchAction.longPress(PointOption.point(location)).perform();
+
+
+
+	}
+	
 
 //===========================================================================Write Text
 	// Write By Text

@@ -1,0 +1,3 @@
+==================================>>>>>>> Slack <<<<<<==============================
+app.package				=com.Slack
+app.activity			=com.Slack.ui.HomeActivity

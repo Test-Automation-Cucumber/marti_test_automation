@@ -94,6 +94,7 @@ public class Scooter {
 	public Scooter addScooter(String scooter_code) {
 		try {
 			provider.ExecuteCommand("delete from rides where scooter_id = (select id from scooters where code ='" + scooter_code + "');"
+					+ "delete from scooter_repair_records where scooter_id = (select id from scooters where code ='" + scooter_code + "');"
 					+ "delete from reservations where scooter_id = (select id from scooters where code ='" + scooter_code + "');"
 					+ "delete from scooters where code ='" + scooter_code + "';"
 					+ "INSERT INTO public.scooters (code, version, status_id, battery_status, last_known_point, last_update_time, module_battery_status, lock_code, sim_card_no, is_available, timezone, last_ride_id, last_stolen_time, mqtt_password, firmware_version, bt_mac, hdop, attention, geofence_group, need_repair, need_repair_note, gsm_available, gsm_location, mobile_phone_number, total_km, last_fota_time, sub_status, charging_station_id, scooter_body_version_id, starting_price, recurring_price, iot_locked, last_locked_time, life, reservation_price, created_at, last_check_time) VALUES "
@@ -196,5 +197,18 @@ public class Scooter {
 			e.printStackTrace();
 		}
 		return this;
+	}
+	
+	// *musterinin surus ekle
+	public String getScooterActiveRepairId(String scooter_code) {
+		String id = "";
+		try {
+		id = provider.ExecuteScalar("SELECT id from scooter_repair_records where scooter_id = (select id from scooters where code = '"+ scooter_code +"') and start_time is null",
+		"martiDB");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return id;
 	}
 	}

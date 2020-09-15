@@ -54,15 +54,47 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 		String btn_Basla											= "#btnScan";
 
 		
+		//SLACK
+		String slack_name										= "$Metin Emre Şen";
+		String sign_in_button									= "#sign_in_button";
+		String sign_in_manually_button							= "#sign_in_manually_button";
+		String team_url_edit_text								= "#team_url_edit_text";
+		String next_button_url_entry							= "#next_button_url_entry";
+		String email_edit_text									= "#email_edit_text";
+		String next_button										= "#next_button";
+		String password_edit_text								= "#password_edit_text";
+		String next_button_password								= "#next_button_password";
+		String slack_action_item_label							= "$Delete Message";
+		String ok_button										= "#ok_button";
+		String messages_list									= "#messages_list";
+			
+		
 		// *********Page Methods*********
 
-	public pageYuklemeEkrani Yukleme_Ekrani_Basarili() {
-//		testDevice
-//		.setDataAndWIFIServiceStatus(androidDriver, true);
+		public pageYuklemeEkrani Yukleme_Ekrani_Basarili() {
+			click(sign_in_button);
+			click(sign_in_manually_button);
+			writeText(team_url_edit_text, "martitech");
+			click(next_button_url_entry);
+			writeText(email_edit_text, "metin@marti.tech");
+			click(next_button);
+																																																										writeText(password_edit_text, "315321ASd+");
+			click(next_button_password);
+
+			for (int i = 0; i < 99000; i++) {
+
+			if (exists(slack_name,1)) {
+				longClick(slack_name, 0);
+				click(slack_action_item_label);
+				click(ok_button);
+			}
+			else
+				swipe(messages_list, 491, 711,619,1727, 533);
+			}
+			
+			return this;
+		}
 		
-		assertFound(txt_TelNo);
-		return this;
-	}
 	public pageYuklemeEkrani Yukleme_Ekrani_Basarisiz(String customer_phone_no) {
 		customer
 		.addTcknAndKvkkValidation(customer_phone_no);

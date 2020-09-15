@@ -67,6 +67,8 @@ public class Configuration {
 			//APP
 			if (System.getProperty("appName").equals("ride")) {
 				is = ClassLoader.getSystemResourceAsStream("apps\\android\\ride.property");}
+			else if (System.getProperty("appName").equals("slack")) {
+				is = ClassLoader.getSystemResourceAsStream("apps\\android\\slack.property");}
 			// app properties
 			reader = new InputStreamReader(is, "UTF-8");
 			configProps.load(reader);

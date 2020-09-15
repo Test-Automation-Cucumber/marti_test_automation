@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-API_Suite">
-              <span class="suite-name border-passed">API Suite</span>
+              <span class="suite-name border-failed">API Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-API_Suite">
-                    <span>C:\Users\emre\Desktop\marti_test_automation\src\test\resources\testng_ride_api.xml</span>
+                    <span>C:\Users\emre\Desktop\marti_test_automation\src\test\resources\testng_operator_api.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-API_Suite" class="hide-methods passed suite-API_Suite"> (hide)</a> <!-- hide-methods passed suite-API_Suite -->
-                      <a href="#" panel-name="suite-API_Suite" class="show-methods passed suite-API_Suite"> (show)</a> <!-- show-methods passed suite-API_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-API_Suite" class="hide-methods failed suite-API_Suite"> (hide)</a> <!-- hide-methods failed suite-API_Suite -->
+                      <a href="#" panel-name="suite-API_Suite" class="show-methods failed suite-API_Suite"> (show)</a> <!-- show-methods failed suite-API_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-API_Suite">
+                    <div class="method-list-content failed suite-API_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-API_Suite" title="tests.ride.api.Marti_App_API" hash-for-method="TC_001_app_getConfig">TC_001_app_getConfig</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API_Suite" title="tests.ride.api.Marti_Operator_App_API" hash-for-method="TC_028_swapper_batteryDetail">TC_028_swapper_batteryDetail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-API_Suite -->
+                    </div> <!-- method-list-content failed suite-API_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,25 +117,33 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-API_Suite" class="panel API_Suite">
-          <div class="suite-API_Suite-class-passed">
+          <div class="suite-API_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.ride.api.Marti_App_API</span>
+              <img src="failed.png"/>
+              <span class="class-name">tests.ride.api.Marti_Operator_App_API</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_001_app_getConfig">
-                  </a> <!-- TC_001_app_getConfig -->
-                  <span class="method-name">TC_001_app_getConfig</span>
+                  <a name="TC_028_swapper_batteryDetail">
+                  </a> <!-- TC_028_swapper_batteryDetail -->
+                  <span class="method-name">TC_028_swapper_batteryDetail</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [SUCCESS] but found [BATTERY_NOT_FOUND]
+	at utilities.TestBase.run_ws(TestBase.java:310)
+	at tests.ride.api.Marti_Operator_App_API.TC_028_swapper_batteryDetail(Marti_Operator_App_API.java:652)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-API_Suite-class-passed -->
+          </div> <!-- suite-API_Suite-class-failed -->
         </div> <!-- panel API_Suite -->
         <div panel-name="test-xml-API_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\emre\Desktop\marti_test_automation\src\test\resources\testng_ride_api.xml</span>
+            <span class="header-content">C:\Users\emre\Desktop\marti_test_automation\src\test\resources\testng_operator_api.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +152,7 @@
 &lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;API Suite&quot; parallel=&quot;classes&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;API Tests&quot; parallel=&quot;classes&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.ride.api.Marti_App_API&quot;/&gt;
+      &lt;class name=&quot;tests.ride.api.Marti_Operator_App_API&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- API Tests --&gt;
 &lt;/suite&gt; &lt;!-- API Suite --&gt;
@@ -186,14 +194,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_001_app_getConfig')
-data.setCell(0, 2, 'tests.ride.api.Marti_App_API')
-data.setCell(0, 3, 79537);
+data.setCell(0, 1, 'TC_028_swapper_batteryDetail')
+data.setCell(0, 2, 'tests.ride.api.Marti_Operator_App_API')
+data.setCell(0, 3, 4318);
 window.suiteTableData['API_Suite']= { tableData: data, tableDiv: 'times-div-API_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-API_Suite">
               </div> <!-- times-div-API_Suite -->
             </div> <!-- times-div -->
@@ -219,30 +227,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.ride.api.Marti_App_API</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.ride.api.Marti_Operator_App_API</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">159 ms</span>
+                <span class="method-start">141 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void tests.ride.api.Marti_App_API.TC_001_app_getConfig() throws java.lang.Exception)</span>
-                <span class="method-start">1617 ms</span>
+                <span class="method-name">setUp(public void tests.ride.api.Marti_Operator_App_API.TC_028_swapper_batteryDetail() throws java.lang.Ex...)</span>
+                <span class="method-start">1525 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC_001_app_getConfig</span>
-                <span class="method-start">1625 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_028_swapper_batteryDetail</span>
+                <span class="method-start">1533 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=TC_001_app_getConfig status=SUCCESS method=Marti_App_API.TC_001_app_getConfig()[pri...)</span>
-                <span class="method-start">81166 ms</span>
+                <span class="method-name">tearDown([TestResult name=TC_028_swapper_batteryDetail status=FAILURE method=Marti_Operator_App_API.TC_028_sw...)</span>
+                <span class="method-start">5853 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">81193 ms</span>
+                <span class="method-start">6114 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

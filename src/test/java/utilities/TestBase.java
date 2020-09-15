@@ -8,6 +8,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
@@ -27,7 +28,6 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import dbmodel.Provider;
-import dbmodel.DataPreparation.TestDevice;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -55,11 +55,19 @@ public class TestBase {
 	public String baseUrl;
 	
 	public TestBase() {
-    	//android cihaz secimi.
-//		System.setProperty("deviceName", "SM-A520F");
-    	//ios cihaz secimi.
-		System.setProperty("deviceName", "iPhone5S");
-    
+//		//Android
+//		System.setProperty("platformName", "android");
+//		System.setProperty("deviceName", "Emulator_1");
+//		System.setProperty("appName", "slack");
+//		
+//		//IOS
+//		System.setProperty("platformName", "ios");
+//		System.setProperty("deviceName", "iPhone5S");
+//
+		System.setProperty("platformName", "api");
+		System.setProperty("appName", "operator");
+		
+		
 	}
 
     @BeforeSuite
@@ -72,8 +80,6 @@ public class TestBase {
     
     @BeforeClass(alwaysRun = true)
     public void beforeClass() {
-
-
     	testParameters = provider.GetDataTable(queryGetParameters, "automationDB");
     }
     
@@ -221,9 +227,10 @@ public String get_token(int case_id) throws Exception{
 		String otp = "";
 		RestAssured.baseURI = baseUrl;
 		
-		endPoint = "/v"+ testParameters[15][4] +"/dispatch/" + testParameters[15][1];
-		otp = provider.ExecuteScalar("select sms_code from customers where mobile_phone ='" + testParameters[case_id][6] + "';", "martiDB");
-				
+		
+		if (System.getProperty("appName").equals("ride")) {
+			endPoint = "/v"+ testParameters[15][4] +"/dispatch/" + testParameters[15][1];
+			otp = provider.ExecuteScalar("select sms_code from customers where mobile_phone ='" + testParameters[case_id][6] + "';", "martiDB");
 			Response response = RestAssured
 					.given()
 					.header("timezone", "3")
@@ -235,7 +242,25 @@ public String get_token(int case_id) throws Exception{
 					.extract()
 					.response();
 			accessToken = response.path("data.accessToken");
-			
+		}
+		else if (System.getProperty("appName").equals("operator")) {
+			endPoint = "/v"+ testParameters[59][4] +"/dispatch/" + testParameters[59][1];
+			otp = provider.ExecuteScalar("select otp_token from users where mobile_phone = '" + testParameters[case_id][6] + "';", "martiDB");
+			Response response = RestAssured
+					.given()
+					.header("timezone", "3")
+					.contentType("application/json")
+					.body("{ \"mobilePhoneNumber\": \""+ testParameters[case_id][6] +"\", \"token\": \""+ otp +"\" }")
+					.when()
+					.post(endPoint)
+					.then()
+					.extract()
+					.response();
+//				System.out.println(response.getBody().asString());
+				accessToken = response.path("data.accessToken");
+		}
+
+		
 			return accessToken;
 	}
 	

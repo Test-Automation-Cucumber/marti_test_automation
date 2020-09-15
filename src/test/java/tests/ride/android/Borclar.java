@@ -19,12 +19,9 @@ public class Borclar extends TestBase {
 	String param_4;
 	String param_5;
 	
-	
 // *********Constructor*********
 	public Borclar() {
-		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
-		System.setProperty("platformName", "android");
-		System.setProperty("appName", "ride");
+		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";		
 	}
 
 // ******************************************************* TEST ***********************************************************

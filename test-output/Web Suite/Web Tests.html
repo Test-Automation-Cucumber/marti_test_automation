@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>48/5/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 04 16:18:49 EET 2020</td>
+<td>Started on:</td><td>Tue Sep 15 13:47:59 EET 2020</td>
 </tr>
-<tr><td>Total time:</td><td>4179 seconds (4179160 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1984 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,270 +68,6 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.Menu.setUp()'><b>setUp</b><br>Test class: tests.Menu<br>Parameters: public void tests.Menu.TC_066_Yardim_Dokumanina_Erisim()</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace58010268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace58010268'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
-	at sun.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
-</pre></div></td>
-<td>30</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.setUp()'><b>setUp</b><br>Test class: tests.Menu<br>Parameters: public void tests.Menu.TC_067_Cikis()</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace406342466", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace406342466'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
-	at sun.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20897ms.
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
-</pre></div></td>
-<td>21</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -339,61 +75,27 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Ana_Ekran.TC_017_Tckn_Gecersiz()'><b>TC_017_Tckn_Gecersiz</b><br>Test class: tests.Ana_Ekran</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: android:id/button1 (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageAnaEkran.Tckn_Gecersiz(pageAnaEkran.java:96)
-	at tests.Ana_Ekran.TC_017_Tckn_Gecersiz(Ana_Ekran.java:46)
+<td title='tests.ride.android.Yukleme_Ekrani.TC_001_Yukleme_Ekrani_Basarili()'><b>TC_001_Yukleme_Ekrani_Basarili</b><br>Test class: tests.ride.android.Yukleme_Ekrani</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_001_Yukleme_Ekrani_Basarili(Yukleme_Ekrani.java:31)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 03886a49-0134-489f-af4c-05a3eb5381ae
-*** Element info: {Using=id, value=android:id/button1}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1251417488", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1251417488'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: android:id/button1 (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageAnaEkran.Tckn_Gecersiz(pageAnaEkran.java:96)
-	at tests.Ana_Ekran.TC_017_Tckn_Gecersiz(Ana_Ekran.java:46)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace392616506", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace392616506'><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_001_Yukleme_Ekrani_Basarili(Yukleme_Ekrani.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -407,963 +109,37 @@ Session ID: 03886a49-0134-489f-af4c-05a3eb5381ae
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 03886a49-0134-489f-af4c-05a3eb5381ae
-*** Element info: {Using=id, value=android:id/button1}
-	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-</pre></div></td>
-<td>71</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_018_Odeme_Yontemi_Yok()'><b>TC_018_Odeme_Yontemi_Yok</b><br>Test class: tests.Ana_Ekran</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnPayDebt (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageAnaEkran.Odeme_Yontemi_Yok(pageAnaEkran.java:112)
-	at tests.Ana_Ekran.TC_018_Odeme_Yontemi_Yok(Ana_Ekran.java:56)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: c5b1d3e9-b5bf-4ed2-987e-58a0ed2f1bd4
-*** Element info: {Using=id, value=btnPayDebt}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace573524246", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace573524246'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnPayDebt (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageAnaEkran.Odeme_Yontemi_Yok(pageAnaEkran.java:112)
-	at tests.Ana_Ekran.TC_018_Odeme_Yontemi_Yok(Ana_Ekran.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: c5b1d3e9-b5bf-4ed2-987e-58a0ed2f1bd4
-*** Element info: {Using=id, value=btnPayDebt}
-	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-</pre></div></td>
-<td>61</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme()'><b>TC_053_Varsayilan_Kredi_Karti_Degistirme</b><br>Test class: tests.Menu</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: selected (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:206)
-	at pages.device.pageMenu.Varsayilan_Kredi_Karti_Degistirme(pageMenu.java:195)
-	at tests.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme(Menu.java:77)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: c2009840-afd7-456a-93b3-eea5aa44ed2b
-*** Element info: {Using=id, value=selected}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1912034319", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1912034319'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: selected (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:206)
-	at pages.device.pageMenu.Varsayilan_Kredi_Karti_Degistirme(pageMenu.java:195)
-	at tests.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme(Menu.java:77)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: c2009840-afd7-456a-93b3-eea5aa44ed2b
-*** Element info: {Using=id, value=selected}
-	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-</pre></div></td>
-<td>56</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_054_Kredi_Karti_Ekleme_Basarili()'><b>TC_054_Kredi_Karti_Ekleme_Basarili</b><br>Test class: tests.Menu</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageMenu.Kredi_Karti_Ekleme_Basarili(pageMenu.java:218)
-	at tests.Menu.TC_054_Kredi_Karti_Ekleme_Basarili(Menu.java:87)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 3cbacf04-8438-4026-bf1a-17f52864a322
-*** Element info: {Using=id, value=btnAddCard}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2066020690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2066020690'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageMenu.Kredi_Karti_Ekleme_Basarili(pageMenu.java:218)
-	at tests.Menu.TC_054_Kredi_Karti_Ekleme_Basarili(Menu.java:87)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 3cbacf04-8438-4026-bf1a-17f52864a322
-*** Element info: {Using=id, value=btnAddCard}
-	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-</pre></div></td>
-<td>59</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz()'><b>TC_055_Kredi_Karti_Ekleme_Basarisiz</b><br>Test class: tests.Menu</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageMenu.Kredi_Karti_Ekleme_Basarisiz(pageMenu.java:247)
-	at tests.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz(Menu.java:97)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: d4c91453-9383-49cd-ab3e-e17f079053c7
-*** Element info: {Using=id, value=btnAddCard}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace411943558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace411943558'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:160)
-	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:192)
-	at pages.device.pageMenu.Kredi_Karti_Ekleme_Basarisiz(pageMenu.java:247)
-	at tests.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz(Menu.java:97)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: SM-A520F, platformName: android, platformVersion: 9.0, udid: 5210d014508dc3e1}, deviceApiLevel: 26, deviceManufacturer: samsung, deviceModel: SM-A520F, deviceName: 5210d014508dc3e1, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: 5210d014508dc3e1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, takesScreenshot: true, udid: 5210d014508dc3e1, viewportRect: {height: 1848, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: d4c91453-9383-49cd-ab3e-e17f079053c7
-*** Element info: {Using=id, value=btnAddCard}
-	at sun.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 17 more
-</pre></div></td>
-<td>58</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.Yukleme_Ekrani.TC_001_Yukleme_Ekrani_Basarisiz()'><b>TC_001_Yukleme_Ekrani_Basarisiz</b><br>Test class: tests.Yukleme_Ekrani</td>
-<td></td>
-<td>19</td>
-<td>tests.Yukleme_Ekrani@3c419631</td></tr>
-<tr>
-<td title='tests.Yukleme_Ekrani.TC_002_Uygulama_Baslangici_Basarili()'><b>TC_002_Uygulama_Baslangici_Basarili</b><br>Test class: tests.Yukleme_Ekrani</td>
-<td></td>
-<td>18</td>
-<td>tests.Yukleme_Ekrani@3c419631</td></tr>
-<tr>
-<td title='tests.Yukleme_Ekrani.TC_004_Oturum_Kontrolu_Basarili()'><b>TC_004_Oturum_Kontrolu_Basarili</b><br>Test class: tests.Yukleme_Ekrani</td>
-<td></td>
-<td>19</td>
-<td>tests.Yukleme_Ekrani@3c419631</td></tr>
-<tr>
-<td title='tests.Yukleme_Ekrani.TC_005_Surus_Kontrolu()'><b>TC_005_Surus_Kontrolu</b><br>Test class: tests.Yukleme_Ekrani</td>
-<td></td>
-<td>28</td>
-<td>tests.Yukleme_Ekrani@3c419631</td></tr>
-<tr>
-<td title='tests.Yukleme_Ekrani.TC_007_Tckn_Kontrolu()'><b>TC_007_Tckn_Kontrolu</b><br>Test class: tests.Yukleme_Ekrani</td>
-<td></td>
-<td>35</td>
-<td>tests.Yukleme_Ekrani@3c419631</td></tr>
-<tr>
-<td title='tests.Giris_Ekrani.TC_011_Giris_Basarisiz()'><b>TC_011_Giris_Basarisiz</b><br>Test class: tests.Giris_Ekrani</td>
-<td></td>
-<td>7</td>
-<td>tests.Giris_Ekrani@418e7838</td></tr>
-<tr>
-<td title='tests.Giris_Ekrani.TC_012_Dogrulama_Basarisiz()'><b>TC_012_Dogrulama_Basarisiz</b><br>Test class: tests.Giris_Ekrani</td>
-<td></td>
-<td>21</td>
-<td>tests.Giris_Ekrani@418e7838</td></tr>
-<tr>
-<td title='tests.Giris_Ekrani.TC_013_Tekrar_Kod_Gonder()'><b>TC_013_Tekrar_Kod_Gonder</b><br>Test class: tests.Giris_Ekrani</td>
-<td></td>
-<td>34</td>
-<td>tests.Giris_Ekrani@418e7838</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_016_Surus_Baslat()'><b>TC_016_Surus_Baslat</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>33</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_020_Surus_Baslatma_Kod_Girisi()'><b>TC_020_Surus_Baslatma_Kod_Girisi</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>34</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_021_Surus_Baslat_Basarili()'><b>TC_021_Surus_Baslat_Basarili</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>39</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak()'><b>TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>39</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_023_Daha_Cok_Marti()'><b>TC_023_Daha_Cok_Marti</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>27</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme()'><b>TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>50</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme()'><b>TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>54</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_026_Bize_Ulasin_Yanlis_Park()'><b>TC_026_Bize_Ulasin_Yanlis_Park</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>49</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_027_Bize_Ulasin_Acil_Durum_Paylas()'><b>TC_027_Bize_Ulasin_Acil_Durum_Paylas</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>37</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Ana_Ekran.TC_028_Bildirimleri_Kontrol_Etme()'><b>TC_028_Bildirimleri_Kontrol_Etme</b><br>Test class: tests.Ana_Ekran</td>
-<td></td>
-<td>29</td>
-<td>tests.Ana_Ekran@61230f6a</td></tr>
-<tr>
-<td title='tests.Borclar.TC_029_Borclu_Kullanici()'><b>TC_029_Borclu_Kullanici</b><br>Test class: tests.Borclar</td>
-<td></td>
-<td>35</td>
-<td>tests.Borclar@3c130745</td></tr>
-<tr>
-<td title='tests.Borclar.TC_030_Borclu_Kullanici_Plus_15()'><b>TC_030_Borclu_Kullanici_Plus_15</b><br>Test class: tests.Borclar</td>
-<td></td>
-<td>33</td>
-<td>tests.Borclar@3c130745</td></tr>
-<tr>
-<td title='tests.Borclar.TC_031_Borc_Odeme()'><b>TC_031_Borc_Odeme</b><br>Test class: tests.Borclar</td>
-<td></td>
-<td>35</td>
-<td>tests.Borclar@3c130745</td></tr>
-<tr>
-<td title='tests.Borclar.TC_032_Borc_Odeme_Islemi_Basarili()'><b>TC_032_Borc_Odeme_Islemi_Basarili</b><br>Test class: tests.Borclar</td>
-<td></td>
-<td>40</td>
-<td>tests.Borclar@3c130745</td></tr>
-<tr>
-<td title='tests.Borclar.TC_033_Borc_Odeme_Islemi_Basarisiz()'><b>TC_033_Borc_Odeme_Islemi_Basarisiz</b><br>Test class: tests.Borclar</td>
-<td></td>
-<td>40</td>
-<td>tests.Borclar@3c130745</td></tr>
-<tr>
-<td title='tests.Surus.TC_035_Surus_Baslat()'><b>TC_035_Surus_Baslat</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>34</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_036_Nasil_Surulur_Gecilmemis()'><b>TC_036_Nasil_Surulur_Gecilmemis</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>65</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_037_Acil_Mudahale()'><b>TC_037_Acil_Mudahale</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>32</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_038_Nasil_Surulur()'><b>TC_038_Nasil_Surulur</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>33</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_039_Ortalama()'><b>TC_039_Ortalama</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>42</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_040_Surus_Bitirme()'><b>TC_040_Surus_Bitirme</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>36</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_041_Park_Edilemez_Alan()'><b>TC_041_Park_Edilemez_Alan</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>42</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_042_Kilit_Takilmadi()'><b>TC_042_Kilit_Takilmadi</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>43</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_044_Surus_Bitir_Internet_Kapali()'><b>TC_044_Surus_Bitir_Internet_Kapali</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>43</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_045_Ceza_Kurallarina_Erisim()'><b>TC_045_Ceza_Kurallarina_Erisim</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>37</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_046_Odeme_Hatasi()'><b>TC_046_Odeme_Hatasi</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>46</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Surus.TC_047_Surus_Bitirme_Basarili()'><b>TC_047_Surus_Bitirme_Basarili</b><br>Test class: tests.Surus</td>
-<td></td>
-<td>48</td>
-<td>tests.Surus@cd3fee8</td></tr>
-<tr>
-<td title='tests.Menu.TC_049_Versiyon_Kontrol()'><b>TC_049_Versiyon_Kontrol</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>27</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_050_Profil_Duzenleme()'><b>TC_050_Profil_Duzenleme</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>32</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_051_Arkadasini_Davet_Et()'><b>TC_051_Arkadasini_Davet_Et</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>37</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_052_Surusleri_Inceleme()'><b>TC_052_Surusleri_Inceleme</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>34</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_056_Dil_Degistirme()'><b>TC_056_Dil_Degistirme</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>39</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_058_Kupon_Ekleme()'><b>TC_058_Kupon_Ekleme</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>54</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_059_Davet_Kodu_Girme()'><b>TC_059_Davet_Kodu_Girme</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>58</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_060_Arkadasini_Davet_Etme()'><b>TC_060_Arkadasini_Davet_Etme</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>38</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_061_Guvenlik_Dokumanina_Erisim()'><b>TC_061_Guvenlik_Dokumanina_Erisim</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>35</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_062_Nasil_Kullanilir_Erisim()'><b>TC_062_Nasil_Kullanilir_Erisim</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>48</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_063_Surus_Kurallarina_Erisim()'><b>TC_063_Surus_Kurallarina_Erisim</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>45</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_064_Kvkk_Aydinlatma_Metnine_Erisim()'><b>TC_064_Kvkk_Aydinlatma_Metnine_Erisim</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>32</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-<tr>
-<td title='tests.Menu.TC_065_Kullanim_Kosullarina_Erisim()'><b>TC_065_Kullanim_Kosullarina_Erisim</b><br>Test class: tests.Menu</td>
-<td></td>
-<td>35</td>
-<td>tests.Menu@3e2e18f2</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.Menu.TC_066_Yardim_Dokumanina_Erisim()'><b>TC_066_Yardim_Dokumanina_Erisim</b><br>Test class: tests.Menu</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace970709537", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace970709537'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
-	at sun.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
 </pre></div></td>
 <td>0</td>
-<td>tests.Menu@3e2e18f2</td></tr>
+<td>tests.ride.android.Yukleme_Ekrani@1aa7ecca</td></tr>
 <tr>
-<td title='tests.Menu.TC_067_Cikis()'><b>TC_067_Cikis</b><br>Test class: tests.Menu</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
+<td title='tests.ride.android.Yukleme_Ekrani.TC_001_Yukleme_Ekrani_Basarisiz()'><b>TC_001_Yukleme_Ekrani_Basarisiz</b><br>Test class: tests.ride.android.Yukleme_Ekrani</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_001_Yukleme_Ekrani_Basarisiz(Yukleme_Ekrani.java:42)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace920881055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace920881055'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:98)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:94)
-	at utilities.TestBase.setUp(TestBase.java:96)
-	at sun.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace227675587", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace227675587'><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_001_Yukleme_Ekrani_Basarisiz(Yukleme_Ekrani.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
@@ -1371,40 +147,161 @@ Driver info: driver.version: AndroidDriver
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 29 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\emre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 5210d014508dc3e1 install -r C:\\Users\\emre\\AppData\\Local\\Temp\\202084-32076-1xpkxzs.y2mil\\appium-uiautomator2-server-v4.5.5.apk&apos; exited with code 1&apos;; Stderr: &apos;adb: failed to install C:\Users\emre\AppData\Local\Temp\202084-32076-1xpkxzs.y2mil\appium-uiautomator2-server-v4.5.5.apk:&apos;; Code: &apos;1&apos;
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:392:37)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 33 more
 </pre></div></td>
 <td>0</td>
-<td>tests.Menu@3e2e18f2</td></tr>
+<td>tests.ride.android.Yukleme_Ekrani@1aa7ecca</td></tr>
+<tr>
+<td title='tests.ride.android.Yukleme_Ekrani.TC_002_Uygulama_Baslangici_Basarili()'><b>TC_002_Uygulama_Baslangici_Basarili</b><br>Test class: tests.ride.android.Yukleme_Ekrani</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_002_Uygulama_Baslangici_Basarili(Yukleme_Ekrani.java:52)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2005771570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2005771570'><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_002_Uygulama_Baslangici_Basarili(Yukleme_Ekrani.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.ride.android.Yukleme_Ekrani@1aa7ecca</td></tr>
+<tr>
+<td title='tests.ride.android.Yukleme_Ekrani.TC_004_Oturum_Kontrolu_Basarili()'><b>TC_004_Oturum_Kontrolu_Basarili</b><br>Test class: tests.ride.android.Yukleme_Ekrani</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_004_Oturum_Kontrolu_Basarili(Yukleme_Ekrani.java:70)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1015738070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1015738070'><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_004_Oturum_Kontrolu_Basarili(Yukleme_Ekrani.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.ride.android.Yukleme_Ekrani@1aa7ecca</td></tr>
+<tr>
+<td title='tests.ride.android.Yukleme_Ekrani.TC_005_Surus_Kontrolu()'><b>TC_005_Surus_Kontrolu</b><br>Test class: tests.ride.android.Yukleme_Ekrani</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_005_Surus_Kontrolu(Yukleme_Ekrani.java:80)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1148719854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1148719854'><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_005_Surus_Kontrolu(Yukleme_Ekrani.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.ride.android.Yukleme_Ekrani@1aa7ecca</td></tr>
+<tr>
+<td title='tests.ride.android.Yukleme_Ekrani.TC_007_Tckn_Kontrolu()'><b>TC_007_Tckn_Kontrolu</b><br>Test class: tests.ride.android.Yukleme_Ekrani</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_007_Tckn_Kontrolu(Yukleme_Ekrani.java:98)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1153765157", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1153765157'><pre>java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at utilities.PageBaseAndroid.&lt;init&gt;(PageBaseAndroid.java:40)
+	at pages.device.android.pageYuklemeEkrani.&lt;init&gt;(pageYuklemeEkrani.java:23)
+	at tests.ride.android.Yukleme_Ekrani.TC_007_Tckn_Kontrolu(Yukleme_Ekrani.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.ride.android.Yukleme_Ekrani@1aa7ecca</td></tr>
 </table><p>
 </body>
 </html>

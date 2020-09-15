@@ -9,10 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">API Suite</th></tr>
-<tr><td><a href="#t0">API Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">81.016</td><td></td><td></td></tr>
+<tr><td><a href="#t0">API Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5.960</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">API Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">API Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.ride.api.Marti_App_API</td><td><a href="#m0">TC_001_app_getConfig</a></td><td rowspan="1">1599738415929</td><td rowspan="1">79537</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">API Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">API Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.ride.api.Marti_Operator_App_API</td><td><a href="#m0">TC_028_swapper_batteryDetail</a></td><td rowspan="1">1600179913739</td><td rowspan="1">4318</td></tr></tbody>
 </table>
-<h2>API Tests</h2><h3 id="m0">tests.ride.api.Marti_App_API#TC_001_app_getConfig</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>API Tests</h2><h3 id="m0">tests.ride.api.Marti_Operator_App_API#TC_028_swapper_batteryDetail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [SUCCESS] but found [BATTERY_NOT_FOUND]
+	at utilities.TestBase.run_ws(TestBase.java:310)
+	at tests.ride.api.Marti_Operator_App_API.TC_028_swapper_batteryDetail(Marti_Operator_App_API.java:652)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

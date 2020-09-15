@@ -22,8 +22,6 @@ public class Surus extends TestBase {
 // *********Constructor*********
 	public Surus() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
-		System.setProperty("platformName", "android");
-		System.setProperty("appName", "ride");
 	}
 
 // ******************************************************* TEST ***********************************************************

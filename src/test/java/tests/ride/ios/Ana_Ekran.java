@@ -22,8 +22,7 @@ public class Ana_Ekran extends TestBase {
 // *********Constructor*********
 	public Ana_Ekran() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
-		System.setProperty("platformName", "ios");
-		System.setProperty("appName", "ride");
+
 	}
 
 // ******************************************************* TEST ***********************************************************

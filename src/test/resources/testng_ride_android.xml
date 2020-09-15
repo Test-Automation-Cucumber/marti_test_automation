@@ -5,11 +5,11 @@
 <test name="Web Tests">
 	<classes>
 	<class name="tests.ride.android.Yukleme_Ekrani" />
-	<class name="tests.ride.android.Giris_Ekrani" />
-	<class name="tests.ride.android.Ana_Ekran" />
-	<class name="tests.ride.android.Borclar" />
-	<class name="tests.ride.android.Surus" />
-	<class name="tests.ride.android.Menu" />
+<!-- 	<class name="tests.ride.android.Giris_Ekrani" /> -->
+<!-- 	<class name="tests.ride.android.Ana_Ekran" /> -->
+<!-- 	<class name="tests.ride.android.Borclar" /> -->
+<!-- 	<class name="tests.ride.android.Surus" /> -->
+<!-- 	<class name="tests.ride.android.Menu" /> -->
 	</classes>
     </test>
 </suite>

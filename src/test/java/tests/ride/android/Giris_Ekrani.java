@@ -20,8 +20,6 @@ public class Giris_Ekrani extends TestBase {
 // *********Constructor*********
 	public Giris_Ekrani() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
-		System.setProperty("platformName", "android");
-		System.setProperty("appName", "ride");
 	}
 
 // ******************************************************* TEST ***********************************************************
