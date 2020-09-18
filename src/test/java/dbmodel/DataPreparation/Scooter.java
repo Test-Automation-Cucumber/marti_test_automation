@@ -42,7 +42,6 @@ public class Scooter {
 		return this;
 		}
 		
-	
 	//*scooterın şarj durumunun değiştirilmesi.
 	public Scooter setBatteryLevel(String scooter, String new_battery_level) throws Throwable {
 		if (scooter.length() < 4) {
@@ -211,4 +210,37 @@ public class Scooter {
 		}
 		return id;
 	}
+	
+	public String addNewBattery(String scooter_code) {
+		String id = "";
+		try {
+			//BATARYALARI AYARLAR -- WAREHOUSE HARD 8 GIRDIN INSERT ICINDE.
+			provider.ExecuteCommand("delete from batteries where serial_no = 'BT-" + scooter_code + "';"
+					+ "INSERT INTO public.batteries (serial_no, life, scooter_id, status, body_version_id, warehouse_id, price, swappable_battery_status, stock_code) VALUES "
+					+ "('BT-" + scooter_code + "', 0, NULL, 1, 4, 8, 0.00, 1, NULL)", "martiDB");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return id;
+	}
+	
+//	public Scooter addSwapperTaks(String scooter_code, String userPhoneNumber) {  bu olmadi yaa silersin..
+////		String id = "";
+//		try {
+//			provider.ExecuteCommand("delete from tasks where scooter_id = (select id from scooters where code = '"+ scooter_code +"'); "
+//					+ "INSERT INTO tasks (created_by,task_owner,status,priority,created_date,start_date,end_date,cancelled_by,scooter_id,task_type,to_location,task_count,blocked_by,task_location,blocked_reason,battery_id,valid_until) VALUES "
+//					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"1'),1,'sxk9m8gz8',NULL,0,'sxk9m8gz8',NULL,NULL,'2020-03-10 23:00:00.000');"
+//						, "martiDB");
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return this;
+//	}
+//	
+//	//TASKLARI AYARLAR
+
+			
+	
 	}

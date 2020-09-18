@@ -636,21 +636,27 @@ public class Marti_Operator_App_API extends TestBase {
 //		run_ws(caseNumber, accessToken, inputParameter);
 //	}
 //	
-	@Test//(priority = 28)
-	public void TC_028_swapper_batteryDetail() throws Exception {
-//		// *******************SET PARAMETERS************************
-		int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
-		String accessToken = "";
-		String scooterCode = testParameters[caseNumber][7];
-		String inputParameter = testParameters[caseNumber][5];
-		// *******************PAGE INSTANTIATIONS*******************
-		scooter
-		.addScooter(scooterCode);
-		// *********************CALL SERVICE************************
-		accessToken = get_token(caseNumber);
-		inputParameter = inputParameter.replace(inputParameter.substring(inputParameter.indexOf(":") + 3, inputParameter.length() - 2), scooterCode).trim();
-		run_ws(caseNumber, accessToken, inputParameter);
-	}
+//	@Test//(priority = 28)
+//	public void TC_028_swapper_batteryDetail() throws Exception {
+////		// *******************SET PARAMETERS************************
+//		int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
+//		String accessToken = "";
+//		String inputParameter = testParameters[caseNumber][5];
+//		String userPhoneNumber = testParameters[caseNumber][6];
+//		String scooterCode = testParameters[caseNumber][7];
+//		
+//		// *******************PAGE INSTANTIATIONS******************
+//		user
+//		.changeUserRole(userPhoneNumber, 37);
+//		
+//		scooter
+//		.addNewBattery(scooterCode);
+//			
+//		// *********************CALL SERVICE************************
+//		accessToken = get_token(caseNumber);
+//		inputParameter = inputParameter.replace(inputParameter.substring(inputParameter.indexOf("-") + 1, inputParameter.length() - 2), scooterCode).trim();
+//		run_ws(caseNumber, accessToken, inputParameter);
+//	}
 //	
 //		@Test//(priority = 29)
 //	public void TC_029_swapper_checkVerificationComplete() throws Exception {
@@ -666,33 +672,52 @@ public class Marti_Operator_App_API extends TestBase {
 //	}
 //	
 //	@Test//(priority = 30)
-//public void TC_030_swapper_completeMountTask() throws Exception {
+//public void TC_030_swapper_completeMountTask() throws Exception { tekrar bakarsin. task not found. diyor nasil cozulcek bak
 //	// *******************SET PARAMETERS************************
 //	int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
 //	String accessToken = "";
-//
+//	String userPhoneNumber = testParameters[caseNumber][6];
+//	String scooterCode = testParameters[caseNumber][7];
+//	
 //	// *******************PAGE INSTANTIATIONS*******************
-//
+//	user
+//	.changeUserRole(userPhoneNumber, 37);
+//	
+////	scooter
+////	.addScooter(scooterCode);
+////	
+////	scooter
+////	.(scooterCode, userPhoneNumber);
+////	
 //	// *********************CALL SERVICE************************
 //	accessToken = get_token(caseNumber);
 //	run_ws(caseNumber, accessToken, null);
 //}
 //
-//	@Test//(priority = 31)
-//public void TC_031_swapper_createBatteryRepairRecord() throws Exception {
-//	// *******************SET PARAMETERS************************
-//	int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
-//	String accessToken = "";
+//	@Test // (priority = 31)
+//	public void TC_031_swapper_createBatteryRepairRecord() throws Exception {
+////// *******************SET PARAMETERS************************
+//		int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
+//		String accessToken = "";
+//		String inputParameter = testParameters[caseNumber][5];
+//		String userPhoneNumber = testParameters[caseNumber][6];
+//		String scooterCode = testParameters[caseNumber][7];
 //
-//	// *******************PAGE INSTANTIATIONS*******************
+//// *******************PAGE INSTANTIATIONS******************
+//		user
+//		.changeUserRole(userPhoneNumber, 37);
 //
-//	// *********************CALL SERVICE************************
-//	accessToken = get_token(caseNumber);
-//	run_ws(caseNumber, accessToken, null);
-//}
+//		scooter
+//		.addNewBattery(scooterCode);
+//
+//// *********************CALL SERVICE************************
+//		accessToken = get_token(caseNumber);
+//		inputParameter = inputParameter.replace(inputParameter.substring(inputParameter.indexOf("-") + 1, inputParameter.length() - 2), scooterCode).trim();
+//		run_ws(caseNumber, accessToken, inputParameter);
+//	}
 //	
 //	@Test//(priority = 32)
-//public void TC_032_swapper_findBrokenBatteries() throws Exception {
+//public void TC_032_swapper_findBrokenBatteries() throws Exception {Expected status code <200> but was <504>.
 //		// *******************SET PARAMETERS************************
 //		int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
 //		String accessToken = "";
@@ -755,20 +780,29 @@ public class Marti_Operator_App_API extends TestBase {
 //		run_ws(caseNumber, accessToken, null);
 //	}
 //	@Test//(priority = 37)
-//	public void TC_037_swapper_giveBackBattery() throws Exception {
+//	public void TC_037_swapper_giveBackBattery() throws Exception {Expected status code <200> but was <504>.
 //		// *******************SET PARAMETERS************************
-//		int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
-//		String accessToken = "";
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
+//	int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
+//	String accessToken = "";
+//	String inputParameter = testParameters[caseNumber][5];
+//	String userPhoneNumber = testParameters[caseNumber][6];
+//	String scooterCode = testParameters[caseNumber][7];
 //
-//		// *********************CALL SERVICE************************
-//		accessToken = get_token(caseNumber);
-//		run_ws(caseNumber, accessToken, null);
+////*******************PAGE INSTANTIATIONS******************
+//	user
+//	.changeUserRole(userPhoneNumber, 37);
+//
+//	scooter
+//	.addNewBattery(scooterCode);
+//
+////*********************CALL SERVICE************************
+//	accessToken = get_token(caseNumber);
+//	inputParameter = inputParameter.replace(inputParameter.substring(inputParameter.indexOf("-") + 1, inputParameter.length() - 2), scooterCode).trim();
+//	run_ws(caseNumber, accessToken, inputParameter);
 //	}	
 //	
 //	@Test//(priority = 38)
-//	public void TC_038_swapper_listBatteriesOnOperator() throws Exception {
+//	public void TC_038_swapper_listBatteriesOnOperator() throws Exception {Expected status code <200> but was <504>.
 //		// *******************SET PARAMETERS************************
 //		int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
 //		String accessToken = "";

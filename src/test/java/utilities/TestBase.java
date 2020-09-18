@@ -256,7 +256,7 @@ public String get_token(int case_id) throws Exception{
 					.then()
 					.extract()
 					.response();
-//				System.out.println(response.getBody().asString());
+				System.out.println(response.getBody().asString());
 				accessToken = response.path("data.accessToken");
 		}
 

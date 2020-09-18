@@ -7,10 +7,10 @@
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="TC_038_swapper_listBatteriesOnOperator"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
-          <include name="TC_028_swapper_batteryDetail"/>
         </methods>
       </class> <!-- tests.ride.api.Marti_Operator_App_API -->
     </classes>
