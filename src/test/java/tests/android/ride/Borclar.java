@@ -3,9 +3,9 @@ package tests.android.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import pages.android.ride.pageBorclar;
+import pages.android.ride.pageGirisEkrani;
 import utilities.TestBase;
-import pages.android.pageBorclar;
-import pages.android.pageGirisEkrani;
 
 public class Borclar extends TestBase {
 	Provider provider = new Provider();

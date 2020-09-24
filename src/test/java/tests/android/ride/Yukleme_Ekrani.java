@@ -3,7 +3,7 @@ package tests.android.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
-import pages.android.pageYuklemeEkrani;
+import pages.android.ride.pageYuklemeEkrani;
 import utilities.TestBase;
 
 public class Yukleme_Ekrani extends TestBase {

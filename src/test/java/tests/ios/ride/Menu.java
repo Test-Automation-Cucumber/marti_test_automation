@@ -3,7 +3,7 @@ package tests.ios.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
-import pages.ios.pageMenu;
+import pages.ios.ride.pageMenu;
 import utilities.TestBase;
 
 public class Menu extends TestBase {

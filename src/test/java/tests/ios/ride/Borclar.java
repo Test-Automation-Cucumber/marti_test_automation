@@ -3,8 +3,8 @@ package tests.ios.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
-import pages.ios.pageBorclar;
-import pages.ios.pageGirisEkrani;
+import pages.ios.ride.pageBorclar;
+import pages.ios.ride.pageGirisEkrani;
 import utilities.TestBase;
 
 public class Borclar extends TestBase {

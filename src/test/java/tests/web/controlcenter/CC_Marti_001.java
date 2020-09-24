@@ -3,13 +3,12 @@ package tests.web.controlcenter;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
-import pages.ios.pageYuklemeEkrani;
+import pages.web.controlcenter.*;
 import utilities.TestBase;
 
 public class CC_Marti_001 extends TestBase {
 	Provider provider = new Provider();
-	pageYuklemeEkrani yukleme_Ekrani;
-	String methodName;
+	HomePage homePage;
 	String param_1;
 	String param_2;
 
@@ -27,9 +26,12 @@ public class CC_Marti_001 extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		
 		// *******************PAGE INSTANTIATIONS*******************
-		yukleme_Ekrani = new pageYuklemeEkrani(iosDriver);
+		homePage = new HomePage(driver);
+		
 		// ***********PAGE METHODS**************
-		yukleme_Ekrani.Surus_Kontrolu(param_1, param_2);
+		homePage
+		.goToUrl("https://www.google.com.tr");
 	}
 }

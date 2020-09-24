@@ -3,7 +3,7 @@ package tests.ios.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
-import pages.ios.pageYuklemeEkrani;
+import pages.ios.ride.pageYuklemeEkrani;
 import utilities.TestBase;
 
 public class Yukleme_Ekrani extends TestBase {

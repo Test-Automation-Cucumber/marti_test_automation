@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [API Suite]" parallel="classes">
-  <test thread-count="1" name="API Tests(failed)" parallel="classes">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
+  <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.ride.api.Marti_Operator_App_API">
+      <class name="tests.web.controlcenter.CC_Marti_001">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="TC_038_swapper_listBatteriesOnOperator"/>
+          <include name="TC_001_Surus_Kontrolu"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- tests.ride.api.Marti_Operator_App_API -->
+      </class> <!-- tests.web.controlcenter.CC_Marti_001 -->
     </classes>
-  </test> <!-- API Tests(failed) -->
-</suite> <!-- Failed suite [API Suite] -->
+  </test> <!-- Web Tests(failed) -->
+</suite> <!-- Failed suite [Web Suite] -->

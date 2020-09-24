@@ -3,9 +3,9 @@ package tests.ios.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import pages.ios.ride.pageAnaEkran;
+import pages.ios.ride.pageYuklemeEkrani;
 import utilities.TestBase;
-import pages.ios.pageAnaEkran;
-import pages.ios.pageYuklemeEkrani;
 
 public class Ana_Ekran extends TestBase {
 	Provider provider = new Provider();

@@ -3,9 +3,9 @@ package tests.android.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import pages.android.ride.pageAnaEkran;
+import pages.android.ride.pageSurus;
 import utilities.TestBase;
-import pages.android.pageAnaEkran;
-import pages.android.pageSurus;
 
 public class Surus extends TestBase {
 	Provider provider = new Provider();

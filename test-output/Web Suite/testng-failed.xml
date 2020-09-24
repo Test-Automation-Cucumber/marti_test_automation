@@ -3,21 +3,16 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
   <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.ride.android.Yukleme_Ekrani">
+      <class name="tests.web.controlcenter.CC_Marti_001">
         <methods>
           <include name="beforeSuite"/>
-          <include name="TC_002_Uygulama_Baslangici_Basarili"/>
-          <include name="TC_004_Oturum_Kontrolu_Basarili"/>
           <include name="afterSuite"/>
-          <include name="TC_001_Yukleme_Ekrani_Basarili"/>
+          <include name="TC_001_Surus_Kontrolu"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
-          <include name="TC_001_Yukleme_Ekrani_Basarisiz"/>
-          <include name="TC_007_Tckn_Kontrolu"/>
-          <include name="TC_005_Surus_Kontrolu"/>
         </methods>
-      </class> <!-- tests.ride.android.Yukleme_Ekrani -->
+      </class> <!-- tests.web.controlcenter.CC_Marti_001 -->
     </classes>
   </test> <!-- Web Tests(failed) -->
 </suite> <!-- Failed suite [Web Suite] -->

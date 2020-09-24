@@ -3,9 +3,9 @@ package tests.ios.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import pages.ios.ride.pageAnaEkran;
+import pages.ios.ride.pageSurus;
 import utilities.TestBase;
-import pages.ios.pageAnaEkran;
-import pages.ios.pageSurus;
 
 public class Surus extends TestBase {
 	Provider provider = new Provider();

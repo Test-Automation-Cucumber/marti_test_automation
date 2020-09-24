@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import utilities.TestBase;
 import dbmodel.*;
-import pages.ios.pageGirisEkrani;
+import pages.ios.ride.pageGirisEkrani;
 
 public class Giris_Ekrani extends TestBase {
 	Provider provider = new Provider();

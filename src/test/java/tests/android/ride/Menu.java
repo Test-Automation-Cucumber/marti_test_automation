@@ -3,9 +3,9 @@ package tests.android.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import pages.android.ride.pageGirisEkrani;
+import pages.android.ride.pageMenu;
 import utilities.TestBase;
-import pages.android.pageGirisEkrani;
-import pages.android.pageMenu;
 
 public class Menu extends TestBase {
 	Provider provider = new Provider();
