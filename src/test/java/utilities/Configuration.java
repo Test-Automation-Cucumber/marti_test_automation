@@ -23,6 +23,7 @@ public class Configuration {
     private String ipa_bundle_id;
     private String ipa_folder;
     private String ipa_file;
+    private String site_url;
     
     public static Configuration getInstance() {
         if (instance == null) {
@@ -76,13 +77,12 @@ public class Configuration {
 			this.app_activity = configProps.getProperty("app.activity");
 			}
 			
-			else if(System.getProperty("platformName").equals("ios"))
-			{
+			else if(System.getProperty("platformName").equals("ios")) {
 				//DEVICES
 				if (System.getProperty("deviceName").equals("iPhone5S")) 
 					is = ClassLoader.getSystemResourceAsStream("devices\\ios\\iPhone5S.property");
 				else if (System.getProperty("deviceName").equals("xsmax"))
-					is = ClassLoader.getSystemResourceAsStream("devices\\ios\\xsmax.property");;
+					is = ClassLoader.getSystemResourceAsStream("devices\\ios\\xsmax.property");
 				
 				// device properties
 				Reader reader = new InputStreamReader(is, "UTF-8");
@@ -93,7 +93,6 @@ public class Configuration {
 				this.automation_name = configProps.getProperty("automation.name");
 				this.appium_server = configProps.getProperty("appium.server");
 				
-				
 				//APP
 				if (System.getProperty("appName").equals("ride"))
 					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\ride.property");
@@ -103,6 +102,17 @@ public class Configuration {
 				this.ipa_bundle_id = configProps.getProperty("ipa.bundle_id");
 				this.ipa_folder = configProps.getProperty("ipa.folder");
 				this.ipa_file = configProps.getProperty("ipa.file");
+			}
+			
+			else if (System.getProperty("platformName").equals("web")) {
+				if (System.getProperty("appName").equals("controlcenter")) {
+					is = ClassLoader.getSystemResourceAsStream("apps\\web\\staging_cc.property");
+				}
+				// app properties
+				Reader reader = new InputStreamReader(is, "UTF-8");
+				configProps.load(reader);
+				this.site_url = configProps.getProperty("site.url");
+
 			}
 			
 		}
@@ -163,5 +173,9 @@ public class Configuration {
 	public String ipa_file() {
 		return ipa_file;
 	}
+	public String site_url() {
+		return site_url;
+	}
 
+	
 }

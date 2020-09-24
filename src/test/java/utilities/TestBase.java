@@ -13,7 +13,14 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.html5.Location;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -42,7 +49,8 @@ import java.util.concurrent.TimeUnit;
  * Created by Metin.
  */
 public class TestBase {
-	protected static AndroidDriver<AndroidElement> androidDriver;
+	protected WebDriver driver;
+	protected AndroidDriver<AndroidElement> androidDriver;  // bu staticti neden bilmiyorum. bi ara bakarsin.
 	protected IOSDriver<IOSElement> iosDriver;
     protected String[][] testParameters;
     protected String queryGetParameters;
@@ -55,19 +63,25 @@ public class TestBase {
 	public String baseUrl;
 	
 	public TestBase() {
+
+//		//WEB
+		System.setProperty("platformName", "web");
+		System.setProperty("browserName", "chrome");
+		System.setProperty("appName", "controlcenter");
+		
 //		//Android
 //		System.setProperty("platformName", "android");
 //		System.setProperty("deviceName", "Emulator_1");
 //		System.setProperty("appName", "slack");
 //		
 //		//IOS
-//		System.setProperty("platformName", "ios");
+//		System.setProperty("platformName", "ios");   BUNU TEST CLASS'LARINDA DA CAGIRIYORSUN. BI DENE BAKALIM BURDAN SILEREK CALISTIRMAYI NE OLACAK.
 //		System.setProperty("deviceName", "iPhone5S");
 //
-		System.setProperty("platformName", "api");
-		System.setProperty("appName", "operator");
-		
-		
+//		//API
+//		System.setProperty("platformName", "api");
+//		System.setProperty("appName", "operator"); //ride, operator
+
 	}
 
     @BeforeSuite
@@ -89,11 +103,36 @@ public class TestBase {
     	caseId = Integer.parseInt(method.getName().substring(method.getName().lastIndexOf(".") + 4, method.getName().lastIndexOf(".") + 7));
 		
     	System.out.println(">>>>>>>>>>>>>>  TEST METHOD STARTING : " + method.getName());
-        DesiredCapabilities capabilities = new DesiredCapabilities();
 
 		configurationGet = Configuration.getInstance();
-        
-		if (System.getProperty("platformName").equals("android")) {
+		
+		if (System.getProperty("platformName").equals("web")) {
+			if (System.getProperty("browserName").equals("chrome")) {
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//drivers//chromeDriver//chromedriver.exe");
+				driver = new ChromeDriver(chromeOptions());
+				driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+				driver.manage().window().maximize();
+//                      driver.manage().window().setPosition(new Point(0, 0));
+//                      driver.manage().window().setSize(new Dimension(1920, 1080));
+//                      System.out.println("Window width: " + driver.manage().window().getSize().getWidth());
+//                      System.out.println("Window height: " + driver.manage().window().getSize().getHeight());
+			}
+			else if (System.getProperty("browserName").equals("firefox")) {
+				System.setProperty("webdriver.gecko.driver",
+						System.getProperty("user.dir") + "//drivers//geckoDriver//geckodriver.exe");
+				driver = new FirefoxDriver(firefoxOptions());
+				driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+				driver.manage().window().maximize();
+			}
+			else if (System.getProperty("browserName").equals("ie")) {
+				System.setProperty("webdriver.ie.driver",
+						System.getProperty("user.dir") + "//drivers//ieDriver//IEDriverServer_x32.exe");
+				driver = new InternetExplorerDriver(ieCapabilities());
+				driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
+				driver.manage().window().maximize();
+			}
+		}
+		else if (System.getProperty("platformName").equals("android")) {
 
         String device_udid = configurationGet.device_udid();
         String device_name = configurationGet.device_name();
@@ -102,6 +141,7 @@ public class TestBase {
         String app_package = configurationGet.app_package();
         String app_activity = configurationGet.app_activity();
 
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device_name);
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platform_version);
@@ -118,8 +158,7 @@ public class TestBase {
 		androidDriver.setLocation(new Location(41.006405, 29.074996, 1)); //ofis
 		
 		}
-		else if (System.getProperty("platformName").equals("ios"))
-		{
+		else if (System.getProperty("platformName").equals("ios")) {
 			 String device_udid = configurationGet.device_udid();
 		        String device_name = configurationGet.device_name();
 		        String platform_version = configurationGet.platform_version();
@@ -129,6 +168,7 @@ public class TestBase {
 		        String ipa_folder = configurationGet.ipa_folder();
 		        String ipa_file = configurationGet.ipa_file();
 				
+		        DesiredCapabilities capabilities = new DesiredCapabilities();// SIKINTI OLURSA BUNU IFLERIN DISINA AL OYLE DENE..
 				capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device_name);
 				capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platform_version);
 				capabilities.setCapability(MobileCapabilityType.UDID, device_udid);
@@ -141,11 +181,8 @@ public class TestBase {
 				iosDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
 				//açılırken telefonun lokasyonunu sifirlar
-				iosDriver.setLocation(new Location(41.006405, 29.074996, 1)); //ofis
-
-			
+				iosDriver.setLocation(new Location(41.006405, 29.074996, 1)); //ofis    BELKI BUNU BI ARA EKLERSIN CONFIGE
 		}
-		
 			logger = extent.createTest(method.getName());
 			logger.info("Driver has been initialized and the test has started.");
 		} catch (Exception ex) {
@@ -165,8 +202,10 @@ public class TestBase {
 			System.out.println("TEST FAILURE || " + result.getInstanceName() + "." + result.getName());
 			System.out.println("*******************************");
 			System.out.println("Error : " + result.getThrowable().getMessage() + " \n\n");
-
-			if (System.getProperty("platformName").equals("android")) {
+			
+			if (System.getProperty("platformName").equals("web")) {
+				temp = ExtentReportUtilities.getScreenshot(driver);
+			} else if (System.getProperty("platformName").equals("android")) {
 				temp = ExtentReportUtilities.getScreenshot(androidDriver);
 			} else if (System.getProperty("platformName").equals("ios")) {
 				temp = ExtentReportUtilities.getScreenshot(iosDriver);
@@ -186,7 +225,9 @@ public class TestBase {
 			System.out.println("******************************* \n\n");
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			System.out.println("!!!!! ERROR === " + result.getThrowable().getMessage());
-			if (System.getProperty("platformName").equals("android")) {
+			if (System.getProperty("platformName").equals("web")) {
+				temp = ExtentReportUtilities.getScreenshot(driver);
+			} else if (System.getProperty("platformName").equals("android")) {
 				temp = ExtentReportUtilities.getScreenshot(androidDriver);
 			} else if (System.getProperty("platformName").equals("ios")) {
 				temp = ExtentReportUtilities.getScreenshot(iosDriver);
@@ -205,8 +246,10 @@ public class TestBase {
 			System.out.println("*******************************************");
 			System.out.println("========================================================================");
 		}
-
-		if (System.getProperty("platformName").equals("android")) {
+		
+		if (System.getProperty("platformName").equals("web")) {
+			driver.quit();
+    	} else if (System.getProperty("platformName").equals("android")) {
 			androidDriver.quit();
 		} else if (System.getProperty("platformName").equals("ios")) {
 			iosDriver.quit();
@@ -217,6 +260,40 @@ public class TestBase {
 	@AfterSuite
 	public void afterSuite() {
 		extent.flush();
+	}
+	
+	
+	private ChromeOptions chromeOptions() {
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--test-type");
+		chromeOptions.addArguments("--disable-popup-blocking");
+		chromeOptions.addArguments("--ignore-certificate-errors");
+		chromeOptions.addArguments("--disable-translate");
+		chromeOptions.addArguments("--start-maximized");
+		chromeOptions.addArguments("--disable-notifications");
+		return chromeOptions;
+	}
+
+	private FirefoxOptions firefoxOptions() {
+		FirefoxOptions firefoxOptions = new FirefoxOptions();
+		firefoxOptions.addArguments("--test-type");
+		firefoxOptions.addArguments("--disable-popup-blocking");
+		firefoxOptions.addArguments("--ignore-certificate-errors");
+		firefoxOptions.addArguments("--disable-translate");
+		firefoxOptions.addArguments("--start-maximized");
+		firefoxOptions.addArguments("--disable-notifications");
+		return firefoxOptions;
+	}
+
+	private InternetExplorerOptions ieCapabilities() {
+		InternetExplorerOptions options = new InternetExplorerOptions();
+		options.setCapability("nativeEvents", false);
+		options.setCapability("unexpectedAlertBehaviour", "accept");
+		// options.setCapability("ignoreProtectedModeSettings", true);
+		options.setCapability("disable-popup-blocking", true);
+		options.setCapability("enablePersistentHover", true);
+		options.setCapability("ignoreZoomSetting", true);
+		return options;
 	}
 	
 	////////////////////////////////////////////////////////////BI ARA BASKA CLASS YAPARSIN

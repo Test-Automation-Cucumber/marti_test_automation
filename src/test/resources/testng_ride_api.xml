@@ -5,7 +5,7 @@
 <test name="API Tests">
   
    		<classes>
-				 <class name="tests.ride.api.Marti_App_API"/>
+				 <class name="tests.api.Marti_App_API"/>
         </classes>
     </test>
 </suite>
