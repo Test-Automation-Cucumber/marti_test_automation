@@ -1,4 +1,4 @@
-package DataPreparetion;
+package DataPreparation;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -14,11 +14,11 @@ import java.text.DateFormat;
 import javax.mail.*;
 import javax.mail.internet.*;
 
-public class Prepare_Rebalancer extends TestBase {
+public class Data_Rebalancer extends TestBase {
 
 	Provider provider;
 
-	public Prepare_Rebalancer() throws Throwable {
+	public Data_Rebalancer() throws Throwable {
 		provider = new Provider();
 	}
 

@@ -2,50 +2,50 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Web Suite" duration-ms="22434" started-at="2020-09-24T14:17:47Z" finished-at="2020-09-24T14:18:09Z">
+  <suite name="Web Suite" duration-ms="48635" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:20:41Z">
     <groups>
     </groups>
-    <test name="Web Tests" duration-ms="22434" started-at="2020-09-24T14:17:47Z" finished-at="2020-09-24T14:18:09Z">
-      <class name="tests.web.controlcenter.CC_Marti_001">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.web.controlcenter.CC_Marti_001@72d1ad2e]" name="beforeSuite" is-config="true" duration-ms="151" started-at="2020-09-24T14:17:47Z" finished-at="2020-09-24T14:17:47Z">
+    <test name="Web Tests" duration-ms="48635" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:20:41Z">
+      <class name="tests.android.security.Arac_Teslim">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="beforeSuite" is-config="true" duration-ms="129" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:19:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.web.controlcenter.CC_Marti_001@72d1ad2e]" name="beforeClass" is-config="true" duration-ms="1252" started-at="2020-09-24T14:17:47Z" finished-at="2020-09-24T14:17:48Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="beforeClass" is-config="true" duration-ms="1593" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:19:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.web.controlcenter.CC_Marti_001@72d1ad2e]" name="setUp" is-config="true" duration-ms="5400" started-at="2020-09-24T14:17:48Z" finished-at="2020-09-24T14:17:53Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="setUp" is-config="true" duration-ms="10253" started-at="2020-09-29T14:19:54Z" finished-at="2020-09-29T14:20:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.web.controlcenter.CC_Marti_001.TC_001_Surus_Kontrolu()]]>
+                <![CDATA[public void tests.android.security.Arac_Teslim.TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC_001_Surus_Kontrolu()[pri:0, instance:tests.web.controlcenter.CC_Marti_001@72d1ad2e]" name="TC_001_Surus_Kontrolu" duration-ms="15156" started-at="2020-09-24T14:17:53Z" finished-at="2020-09-24T14:18:08Z">
+        <test-method status="PASS" signature="TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay()[pri:32, instance:tests.android.security.Arac_Teslim@31610302]" name="TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay" duration-ms="36258" started-at="2020-09-29T14:20:04Z" finished-at="2020-09-29T14:20:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_001_Surus_Kontrolu -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.web.controlcenter.CC_Marti_001@72d1ad2e]" name="tearDown" is-config="true" duration-ms="608" started-at="2020-09-24T14:18:08Z" finished-at="2020-09-24T14:18:09Z">
+        </test-method> <!-- TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="tearDown" is-config="true" duration-ms="516" started-at="2020-09-29T14:20:40Z" finished-at="2020-09-29T14:20:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_001_Surus_Kontrolu status=SUCCESS method=CC_Marti_001.TC_001_Surus_Kontrolu()[pri:0, instance:tests.web.controlcenter.CC_Marti_001@72d1ad2e] output={null}]]]>
+                <![CDATA[[TestResult name=TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay status=SUCCESS method=Arac_Teslim.TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay()[pri:32, instance:tests.android.security.Arac_Teslim@31610302] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.web.controlcenter.CC_Marti_001@72d1ad2e]" name="afterSuite" is-config="true" duration-ms="251" started-at="2020-09-24T14:18:09Z" finished-at="2020-09-24T14:18:09Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="afterSuite" is-config="true" duration-ms="352" started-at="2020-09-29T14:20:41Z" finished-at="2020-09-29T14:20:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.web.controlcenter.CC_Marti_001 -->
+      </class> <!-- tests.android.security.Arac_Teslim -->
     </test> <!-- Web Tests -->
   </suite> <!-- Web Suite -->
 </testng-results>

@@ -3,16 +3,16 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
   <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.web.controlcenter.CC_Marti_001">
+      <class name="tests.android.security.Arac_Teslim">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="TC_001_Surus_Kontrolu"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
+          <include name="TC_027_Arac_Teslim_Al_Basarili_Sorun_Var"/>
         </methods>
-      </class> <!-- tests.web.controlcenter.CC_Marti_001 -->
+      </class> <!-- tests.android.security.Arac_Teslim -->
     </classes>
   </test> <!-- Web Tests(failed) -->
 </suite> <!-- Failed suite [Web Suite] -->

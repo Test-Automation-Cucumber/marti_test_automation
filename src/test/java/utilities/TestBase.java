@@ -64,15 +64,15 @@ public class TestBase {
 	
 	public TestBase() {
 
-//		//WEB
-		System.setProperty("platformName", "web");
-		System.setProperty("browserName", "chrome");
-		System.setProperty("appName", "controlcenter");
+////		//WEB
+//		System.setProperty("platformName", "web");
+//		System.setProperty("browserName", "chrome");
+//		System.setProperty("appName", "controlcenter");
 		
-//		//Android
-//		System.setProperty("platformName", "android");
-//		System.setProperty("deviceName", "Emulator_1");
-//		System.setProperty("appName", "slack");
+		//Android
+		System.setProperty("platformName", "android");
+		System.setProperty("deviceName", "Emulator_1");
+		System.setProperty("appName", "security");
 //		
 //		//IOS
 //		System.setProperty("platformName", "ios");   BUNU TEST CLASS'LARINDA DA CAGIRIYORSUN. BI DENE BAKALIM BURDAN SILEREK CALISTIRMAYI NE OLACAK.
@@ -149,7 +149,7 @@ public class TestBase {
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, app_package);
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, app_activity);
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-//		capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+//		capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
 		
 		androidDriver = new AndroidDriver<AndroidElement>(new URL(appium_server), capabilities);
 		androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

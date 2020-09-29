@@ -1,4 +1,4 @@
-package DataPreparetion;
+package DataPreparation;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -19,7 +19,7 @@ import dbmodel.*;
 //import dbmodel.DataPreparation.MobilServiceData;
 import java.text.DateFormat;
 
-public class Prepare_MobilService extends TestBase {
+public class Data_MobilService extends TestBase {
 	Provider provider;
 	
 	// ******************************************GLOBAL_PARAMETERS**************************************
@@ -31,7 +31,7 @@ public class Prepare_MobilService extends TestBase {
 	String resetVehiclePlate;	 	
 	String resetUserEmail;
 
-	public Prepare_MobilService() throws Throwable {
+	public Data_MobilService() throws Throwable {
 		provider = new Provider();
 	}
 

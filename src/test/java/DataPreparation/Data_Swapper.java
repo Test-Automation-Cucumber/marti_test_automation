@@ -1,4 +1,4 @@
-package DataPreparetion;
+package DataPreparation;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -18,7 +18,7 @@ import utilities.TestBase;
 import dbmodel.*;
 import java.text.DateFormat;
 
-public class Prepare_Swapper extends TestBase {
+public class Data_Swapper extends TestBase {
 
 	Provider provider;
 //	MobilServiceData rideAppData;
@@ -32,7 +32,7 @@ public class Prepare_Swapper extends TestBase {
 	String resetWarehouse;
 	String resetUserEmail; 	
 	
-	public Prepare_Swapper() throws Throwable {
+	public Data_Swapper() throws Throwable {
 		provider = new Provider();
 	}
 

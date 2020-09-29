@@ -62,7 +62,8 @@ public class Provider {
 		return value;
 	}
 
-	public String ExecuteScalar(String query, String env) throws Exception {
+	public String ExecuteScalar(String query, String env) {
+		try{
 		Connection con = MyConnectionString(env);
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(query);
@@ -72,6 +73,11 @@ public class Provider {
 		rs.close();
 		st.close();
 		return value;
+		}
+		catch(Exception ex) {
+		return null;	
+		}
+		
 	}
 
 	public void ExecuteCommand(String query, String env) throws Exception {

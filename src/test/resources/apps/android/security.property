@@ -1,0 +1,3 @@
+==================================>>>>>>> Security <<<<<<==============================
+app.package				=com.martitech.security.dev
+app.activity			=com.martitech.login.ui.LoginActivity

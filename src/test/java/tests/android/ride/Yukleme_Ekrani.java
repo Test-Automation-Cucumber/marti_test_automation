@@ -23,35 +23,36 @@ public class Yukleme_Ekrani extends TestBase {
 
 // ******************************************************* TEST ***********************************************************
 
-	//ekran cok hizli yuklendigi icin splash screen ekrani yakalamiyor.
-	@Test(priority = 0)   //SLACK ICIN YAPTIN
-	public void TC_001_Yukleme_Ekrani_Basarili() {
-// ***********PAGE INSTANTIATIONS*******
-		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
-		
-		// ***********PAGE METHODS**************
-		yukleme_Ekrani
-		.Yukleme_Ekrani_Basarili();
-	}
-	@Test(priority = 1) // ,dependsOnMethods="method1"
-	public void TC_001_Yukleme_Ekrani_Basarisiz() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-		// *******************PAGE INSTANTIATIONS*******************
-		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
-		// ***********PAGE METHODS**************
-		yukleme_Ekrani.Yukleme_Ekrani_Basarisiz(param_1);
-	}
-
-	@Test(priority = 2)
-	public void TC_002_Uygulama_Baslangici_Basarili() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-		// *******************PAGE INSTANTIATIONS*******************
-		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
-		// ***********PAGE METHODS**************
-		yukleme_Ekrani.Uygulama_Baslangici_Basarili();
-	}
+//	//ekran cok hizli yuklendigi icin splash screen ekrani yakalamiyor.
+//	@Test(priority = 0)   SLACK ICIN YAPTIN
+//	public void TC_001_Yukleme_Ekrani_Basarili() {
+//// ***********PAGE INSTANTIATIONS*******
+//		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+//		
+//		// ***********PAGE METHODS**************
+//		yukleme_Ekrani
+//		.Yukleme_Ekrani_Basarili();
+//	}
+//	
+//	@Test(priority = 1) // ,dependsOnMethods="method1"
+//	public void TC_001_Yukleme_Ekrani_Basarisiz() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//		// *******************PAGE INSTANTIATIONS*******************
+//		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+//		// ***********PAGE METHODS**************
+//		yukleme_Ekrani.Yukleme_Ekrani_Basarisiz(param_1);
+//	}
+//
+//	@Test(priority = 2)
+//	public void TC_002_Uygulama_Baslangici_Basarili() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//		// *******************PAGE INSTANTIATIONS*******************
+//		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+//		// ***********PAGE METHODS**************
+//		yukleme_Ekrani.Uygulama_Baslangici_Basarili();
+//	}
 //	@Test(priority = 3)
 //	public void TC_003_Konum_Izni_Kontrolu() {  konumla alakali caseler sikinti cikariyor
 //		// *******************SET PARAMETERS************************
