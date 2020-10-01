@@ -52,8 +52,8 @@ public class PageBaseAndroid {
 			elementBy = MobileBy// linktexti dene
 					.AndroidUIAutomator("text(\"" + pure_element.substring(1) + "\").instance(" + index + ")");
 		} else if (pure_element.substring(0, 1).equals("@")) {
-			elementBy = MobileBy // accessibilityID ile daha hizli olur ama bunla devam et.
-					.AndroidUIAutomator("description(\"" + pure_element.substring(1) + "\").instance(" + index + ")");
+			elementBy = MobileBy.AccessibilityId(pure_element.substring(1)); // accessibilityID ile daha hizli olur ama bunla devam et.
+//					.AndroidUIAutomator("description(\"" + pure_element.substring(1) + "\").instance(" + index + ")");
 		} else if (pure_element.substring(0, 1).equals("#")) {
 			elementBy = MobileBy.id(pure_element.substring(1));
 		}
@@ -399,10 +399,10 @@ public class PageBaseAndroid {
 	}
 
 	// Get Element Size
-	protected int getSize(String pure_element) {
+	protected int getSize(String pure_element, int index) {
 		try {
 			androidDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-			By elementBy = findElements(pure_element, 0);
+			By elementBy = findElements(pure_element, index);
 			List<AndroidElement> elements = androidDriver.findElements(elementBy);
 			return elements.size();
 		} catch (Exception ex) {

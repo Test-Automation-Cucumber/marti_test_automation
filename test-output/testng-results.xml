@@ -2,50 +2,50 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Web Suite" duration-ms="48635" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:20:41Z">
+  <suite name="Web Suite" duration-ms="47445" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:12:23Z">
     <groups>
     </groups>
-    <test name="Web Tests" duration-ms="48635" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:20:41Z">
-      <class name="tests.android.security.Arac_Teslim">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="beforeSuite" is-config="true" duration-ms="129" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:19:52Z">
+    <test name="Web Tests" duration-ms="47445" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:12:23Z">
+      <class name="tests.android.security.Harita_Detay">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="beforeSuite" is-config="true" duration-ms="206" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:11:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="beforeClass" is-config="true" duration-ms="1593" started-at="2020-09-29T14:19:52Z" finished-at="2020-09-29T14:19:54Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="beforeClass" is-config="true" duration-ms="1670" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:11:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="setUp" is-config="true" duration-ms="10253" started-at="2020-09-29T14:19:54Z" finished-at="2020-09-29T14:20:04Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="setUp" is-config="true" duration-ms="19763" started-at="2020-09-30T14:11:38Z" finished-at="2020-09-30T14:11:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.android.security.Arac_Teslim.TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay()]]>
+                <![CDATA[public void tests.android.security.Harita_Detay.TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay()[pri:32, instance:tests.android.security.Arac_Teslim@31610302]" name="TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay" duration-ms="36258" started-at="2020-09-29T14:20:04Z" finished-at="2020-09-29T14:20:40Z">
+        <test-method status="PASS" signature="TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu()[pri:58, instance:tests.android.security.Harita_Detay@31610302]" name="TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu" duration-ms="25195" started-at="2020-09-30T14:11:57Z" finished-at="2020-09-30T14:12:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="tearDown" is-config="true" duration-ms="516" started-at="2020-09-29T14:20:40Z" finished-at="2020-09-29T14:20:41Z">
+        </test-method> <!-- TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="tearDown" is-config="true" duration-ms="788" started-at="2020-09-30T14:12:23Z" finished-at="2020-09-30T14:12:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay status=SUCCESS method=Arac_Teslim.TC_032_Arac_Teslim_Al_Basarisiz_Eksik_Detay()[pri:32, instance:tests.android.security.Arac_Teslim@31610302] output={null}]]]>
+                <![CDATA[[TestResult name=TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu status=SUCCESS method=Harita_Detay.TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu()[pri:58, instance:tests.android.security.Harita_Detay@31610302] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.android.security.Arac_Teslim@31610302]" name="afterSuite" is-config="true" duration-ms="352" started-at="2020-09-29T14:20:41Z" finished-at="2020-09-29T14:20:41Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="afterSuite" is-config="true" duration-ms="395" started-at="2020-09-30T14:12:23Z" finished-at="2020-09-30T14:12:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.android.security.Arac_Teslim -->
+      </class> <!-- tests.android.security.Harita_Detay -->
     </test> <!-- Web Tests -->
   </suite> <!-- Web Suite -->
 </testng-results>

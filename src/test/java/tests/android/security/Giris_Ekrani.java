@@ -77,6 +77,15 @@ public class Giris_Ekrani extends TestBase {
 		// ***********PAGE METHODS**************
 		giris_Ekrani.Giris_Basarili(param_1);
 	}
+	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 11)
+	public void TC_011_Giris_Basarili() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		// *******************PAGE INSTANTIATIONS*******************
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		// ***********PAGE METHODS**************
+		giris_Ekrani.Giris_Basarili(param_1);
+	}
 	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 12)
 	public void TC_012_Hatali_Otp() {
 		// *******************SET PARAMETERS************************

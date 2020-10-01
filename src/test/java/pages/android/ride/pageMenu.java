@@ -223,7 +223,7 @@ public class pageMenu extends PageBaseAndroid {
 			click(txt_18Yas);
 			click(btn_Kaydet);
 			
-		    assertEquals(getSize(chb_KrediKarti), 1);	
+		    assertEquals(getSize(chb_KrediKarti, 0), 1);	
 			
 //			customer
 //			.deleteCreditCards(customer_phone_number)

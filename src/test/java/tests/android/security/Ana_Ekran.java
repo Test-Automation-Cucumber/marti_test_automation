@@ -66,7 +66,7 @@ public class Ana_Ekran extends TestBase {
 		// ***********CASE DEPENDENCIES**************
 		user
 		.addVehicleToUser(param_1, param_3)
-		.addUserShift(param_1, param_3);
+		.addSecurityUserShift(param_1, param_3);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani

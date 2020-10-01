@@ -12,7 +12,6 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 	Customer customer;
 	Scooter scooter;
 	TestDevice testDevice;
-	pageGirisEkrani giris_Ekrani;	
 
 	
 	// *********Constructor*********
@@ -22,20 +21,18 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 			customer = new Customer();
 			scooter = new Scooter();
 			testDevice = new TestDevice();
-			
-			giris_Ekrani = new pageGirisEkrani(this.androidDriver);
 		}
 
 		// *****************************************Web Elements***********************************
 		
 		// *****************General
-		String ProgressBar 											= "#progressBar"; //PROGRESS BAR
+		String btn_SahayaGit 											= "#goToTasks";
 
 		
 		// *********Page Methods*********
 
-		public pageYuklemeEkrani TC_001_Yukleme_Ekrani_Kamera_Izni() {
-			
+		public pageYuklemeEkrani Yukleme_Ekrani_Kamera_Izni() {
+
 		return this;
 	}
 }

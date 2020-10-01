@@ -37,7 +37,7 @@ public class pageAracTeslim extends PageBaseAndroid {
 		private	String btn_FotoCek													= "#capture_button";
 		private	String rdb_SorunYok													= "#radioNo";
 		private	String rdb_SorunVar													= "#radioYes";
-		private	String rdb_SorunDetay												= "#issue";		
+		private	String txt_SorunDetay												= "#issue";		
 		private	String btn_DevamEt													= "#btnNext";
 		private String img_MartiLogo												= "#appLogo";
 		private String btn_Tamam													= "#android:id/button1";
@@ -95,7 +95,7 @@ public class pageAracTeslim extends PageBaseAndroid {
 			click(btn_FotoCek);
 			
 			click(rdb_SorunVar);
-			writeText(rdb_SorunDetay, "otomasyon");
+			writeText(txt_SorunDetay, "otomasyon");
 			click(btn_DevamEt);
 			
 			assertFound(img_MartiLogo);
@@ -179,7 +179,7 @@ public class pageAracTeslim extends PageBaseAndroid {
 			click(btn_FotoCek);
 			
 			click(rdb_SorunVar);
-			writeText(rdb_SorunDetay, "oto");
+			writeText(txt_SorunDetay, "oto");
 			click(btn_DevamEt);
 
 			assertEquals(popup_Message, "Sorun alanına en az 5 karakter girişi olmalıdır.");
@@ -187,6 +187,152 @@ public class pageAracTeslim extends PageBaseAndroid {
 
 			return this;
 		}
+		
+		public pageAracTeslim Arac_Teslim_Et_Basarili_Sorun_Yok() {
+			click(btn_AracTeslimEt);
+			writeText(txt_AracKmGir, "10");
+			
+			click(img_AracFoto_1);
+			click(btn_FotoCek);			
+			
+			click(img_AracFoto_2);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_3);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_4);
+			click(btn_FotoCek);
+			
+			swipe(txt_AracKmGir, 303, 975,346,231, 300);
+			
+			click(img_AracFoto_5);
+			click(btn_FotoCek);
+			click(btn_DevamEt);
+			
+			assertFound(img_MartiLogo);
+
+			return this;
+		}
+		
+		public pageAracTeslim Arac_Teslim_Et_Basarili_Sorun_Var() {
+			click(btn_AracTeslimEt);
+			writeText(txt_AracKmGir, "10");
+			
+			click(img_AracFoto_1);
+			click(btn_FotoCek);			
+			
+			click(img_AracFoto_2);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_3);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_4);
+			click(btn_FotoCek);
+			
+			swipe(txt_AracKmGir, 303, 975,346,231, 300);
+			
+			click(img_AracFoto_5);
+			click(btn_FotoCek);
+			
+			click(rdb_SorunVar);
+			writeText(txt_SorunDetay, "otomasyon");
+			click(btn_DevamEt);
+
+			assertFound(img_MartiLogo);
+
+			return this;
+		}
+		
+		public pageAracTeslim Arac_Teslim_Et_Basarisiz_Hatali_KM() {
+			click(btn_AracTeslimEt);
+			writeText(txt_AracKmGir, "0");
+			
+			click(img_AracFoto_1);
+			click(btn_FotoCek);			
+			
+			click(img_AracFoto_2);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_3);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_4);
+			click(btn_FotoCek);
+			
+			swipe(txt_AracKmGir, 303, 975,346,231, 300);
+			
+			click(img_AracFoto_5);
+			click(btn_FotoCek);
+			
+			click(rdb_SorunYok);
+			click(btn_DevamEt);
+			
+			assertEquals(popup_Message, "Geçerli bir KM değeri girin.");
+			click(btn_Tamam);
+			
+			return this;
+		}
+		
+		public pageAracTeslim Arac_Teslim_Et_Basarisiz_Eksik_Foto() {
+			click(btn_AracTeslimEt);
+			writeText(txt_AracKmGir, "5");
+			
+			click(img_AracFoto_1);
+			click(btn_FotoCek);			
+			
+			click(img_AracFoto_3);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_4);
+			click(btn_FotoCek);
+			
+			swipe(txt_AracKmGir, 303, 975,346,231, 300);
+			
+			click(img_AracFoto_5);
+			click(btn_FotoCek);
+			
+			click(rdb_SorunYok);
+			click(btn_DevamEt);
+			
+			assertEquals(popup_Message, "Araç fotoğrafı eksik olamaz.");
+			click(btn_Tamam);
+			
+			return this;
+		}
+		
+		public pageAracTeslim Arac_Teslim_Et_Basarisiz_Eksik_Detay() {
+			click(btn_AracTeslimEt);
+			writeText(txt_AracKmGir, "10");
+			
+			click(img_AracFoto_1);
+			click(btn_FotoCek);			
+			
+			click(img_AracFoto_2);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_3);
+			click(btn_FotoCek);
+			
+			click(img_AracFoto_4);
+			click(btn_FotoCek);
+			
+			swipe(txt_AracKmGir, 303, 975,346,231, 300);
+			
+			click(img_AracFoto_5);
+			click(btn_FotoCek);
+			
+			click(rdb_SorunVar);
+			writeText(txt_SorunDetay, "oto");
+			click(btn_DevamEt);
+
+			assertEquals(popup_Message, "Sorun alanına en az 5 karakter girişi olmalıdır.");
+			click(btn_Tamam);
+
+			return this;
+		}
+		
 		
 		
 		

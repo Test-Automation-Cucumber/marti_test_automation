@@ -41,7 +41,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		// *********Page Methods*********
 	
 		public void skipOneSignalId() {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 15; i++) {
 			if (!exists(popup_Message, 1)) {
 				return;
 			}
@@ -167,6 +167,11 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			assertFound(img_MartiLogo);
 			return this;
 		}
+		public pageGirisEkrani Tanimlanmamis_Vardiya() {
+
+			return this;
+		}
+		
 		
 		
 }
