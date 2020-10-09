@@ -120,8 +120,7 @@ public class pageMenu extends PageBaseIos {
 		}	
 		
 		public pageMenu Profil_Duzenleme(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(btn_Duzenle);
@@ -132,11 +131,8 @@ public class pageMenu extends PageBaseIos {
 			return this;
 		}
 		public pageMenu Arkadasini_Davet_Et(String customer_phone_number) {
-			customer
-			.deleteCustomerCoupons(customer_phone_number);
-			
-			giris_Ekrani
-			.Login(customer_phone_number);
+
+
 						
 			assertFound(img_NotifyIcon);
 			click(btn_Menu);
@@ -144,11 +140,9 @@ public class pageMenu extends PageBaseIos {
 			return this;
 		}
 		public pageMenu Kampanyalar_Arkadasini_Davet_Et(String customer_phone_number) {
-			customer
-			.deleteCustomerCoupons(customer_phone_number);
+
 			
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			assertFound(img_NotifyIcon);
 			click(btn_Menu);
@@ -181,12 +175,9 @@ public class pageMenu extends PageBaseIos {
 			return this;
 		}
 		public pageMenu Surusleri_Inceleme(String customer_phone_number) {
-			customer
-			.deleteCustomerRides(customer_phone_number)
-			.deleteCustomerReservations(customer_phone_number);
+
 			
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_Suruslerim);
@@ -194,9 +185,9 @@ public class pageMenu extends PageBaseIos {
 			click(btn_Geri);
 			return this;
 		}
-		public pageMenu SurusDetayiInceleme(String customer_phone_number, String scooter_code) {
+		public pageMenu SurusDetayiInceleme(String customer_phone_number, String scooter_code, String scooter_location) {
 			scooter
-			.addScooter(scooter_code);
+			.addScooter(scooter_code, scooter_location);
 			
 			customer
 			.addCustomerFinishedRide(customer_phone_number, scooter_code);
@@ -208,13 +199,9 @@ public class pageMenu extends PageBaseIos {
 		}	
 		
 		public pageMenu Varsayilan_Kredi_Karti_Degistirme(String customer_phone_number) {
-			customer
-			.deleteCreditCards(customer_phone_number)
-			.addCreditCard(customer_phone_number);
-			customer.addErrorCreditCard(customer_phone_number);
+
 			
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_Odeme);
@@ -231,11 +218,9 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Kredi_Karti_Ekleme_Basarili(String customer_phone_number) {
-			customer
-			.deleteCreditCards(customer_phone_number);
+
 			
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_Odeme);
@@ -257,11 +242,9 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Kredi_Karti_Ekleme_Basarisiz(String customer_phone_number) {
-			customer
-			.deleteCreditCards(customer_phone_number);
+
 			
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_Odeme);
@@ -286,8 +269,7 @@ public class pageMenu extends PageBaseIos {
 		
 		public pageMenu Dil_Degistirme(String customer_phone_number) {
 			
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_DilDegistir);
@@ -303,8 +285,7 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Yardim_Dokumanina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);
@@ -317,8 +298,7 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Kullanim_Kosullarina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_Sozlesmeler);
@@ -332,8 +312,7 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Kvkk_Aydinlatma_Metnine_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_Sozlesmeler);
@@ -347,8 +326,6 @@ public class pageMenu extends PageBaseIos {
 		}
 
 		public pageMenu Guvenlik_Dokumanina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Login(customer_phone_number);
 			click(btn_Menu);
 			click(li_Sozlesmeler);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);
@@ -362,9 +339,7 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Surus_Kurallarina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Login(customer_phone_number);
-			
+
 			click(btn_Menu);
 			click(li_SurusKurallari);
 			wait(3);
@@ -379,8 +354,7 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Nasil_Kullanilir(String customer_phone_number) {
-			giris_Ekrani
-			.Login(customer_phone_number);
+
 			
 			click(btn_Menu);
 			click(li_NasilSurulur);
@@ -395,10 +369,8 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Kampanyalar_Arkadasini_Davet_Etme(String customer_phone_number) {
-			customer
-			.deleteCustomerRides(customer_phone_number);
-			giris_Ekrani
-			.Login(customer_phone_number);
+
+
 			
 			click(btn_Menu);
 			click(li_Kampanyalar);
@@ -410,9 +382,6 @@ public class pageMenu extends PageBaseIos {
 		}	
 		
 		public pageMenu Cikis(String customer_phone_number) {
-			giris_Ekrani
-			.Login(customer_phone_number);
-			
 			click(btn_Menu);
 			wait(2);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);

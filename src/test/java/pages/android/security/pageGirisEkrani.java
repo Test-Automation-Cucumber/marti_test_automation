@@ -4,6 +4,7 @@ import dbmodel.Provider;
 import dbmodel.DataPreparation.Customer;
 import dbmodel.DataPreparation.Scooter;
 import dbmodel.DataPreparation.TestDevice;
+import dbmodel.DataPreparation.User;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import utilities.PageBaseAndroid;
@@ -13,6 +14,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 	Customer customer;
 	Scooter scooter;
 	TestDevice testDevice;
+	User user;
 	
 	// *********Constructor*********
 		public pageGirisEkrani(AndroidDriver<AndroidElement> androidDriver) {
@@ -21,6 +23,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			customer = new Customer();
 			scooter = new Scooter();
 			testDevice = new TestDevice();
+			user = new User();
 		}
 
 		// *****************************************Web Elements***********************************
@@ -34,12 +37,9 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		private String btn_DevamEt													= "#btnNext";
 		private String btn_TekrarGonder												= "#btnResend";
 		private String img_MartiLogo												= "#appLogo";
-		
-		
-		//spinLoader  dursun burda
+
 		
 		// *********Page Methods*********
-	
 		public void skipOneSignalId() {
 		for (int i = 0; i < 15; i++) {
 			if (!exists(popup_Message, 1)) {
@@ -51,23 +51,22 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			}
 			else
 				break;
+			}
 		}
-	}
 		public pageGirisEkrani Giris_Basarisiz_Baglanti_Yok() {
 			testDevice
-			.setWIFIServiceStatus(androidDriver, false)
-			.setDataServiceStatus(androidDriver, false);
-			
-			
+			.setAndroidWIFIServiceStatus(androidDriver, false)
+			.setAndroidDataServiceStatus(androidDriver, false);
+
 			testDevice
-			.setWIFIServiceStatus(androidDriver, true)
-			.setDataServiceStatus(androidDriver, true);
+			.setAndroidWIFIServiceStatus(androidDriver, true)
+			.setAndroidDataServiceStatus(androidDriver, true);
 			return this;
 		}		
 		public pageGirisEkrani Giris_Basarisiz_Telefon_No_Yok() {
 			testDevice
-			.setWIFIServiceStatus(androidDriver, true)
-			.setDataServiceStatus(androidDriver, true);
+			.setAndroidWIFIServiceStatus(androidDriver, true)
+			.setAndroidDataServiceStatus(androidDriver, true);
 			
 			click(btn_GirisYap);
 			skipOneSignalId();
@@ -92,7 +91,6 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			skipOneSignalId();
 			assertEquals(popup_Message, "Kullanıcı bulunamadı, telefonunu doğru girdiğine emin ol.");
 			click(btn_Tamam);
-			
 			return this;
 		}		
 		public pageGirisEkrani Giris_Basarisiz_Yanlis_Rol() {
@@ -101,7 +99,6 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			skipOneSignalId();
 			assertEquals(popup_Message, "Rolün geçersiz, bir hata olduğunu düşünüyorsan Vardiya Amiri’ne bildir.");
 			click(btn_Tamam);
-			
 			return this;
 		}		
 		public pageGirisEkrani Giris_Basarili(String phone_number) {
@@ -149,7 +146,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			assertNotContent(otp1, otp2);	//tekrar gonder dendikten sonra gelen otp ile ilk gelen otp yi karsilastirir.	
+//			assertNotContent(otp1, otp2);	//tekrar gonder dendikten sonra gelen otp ile ilk gelen otp yi karsilastirir.	
 			
 			writeText(txt_Otp, otp2);
 			click(btn_DevamEt);
@@ -164,13 +161,21 @@ public class pageGirisEkrani extends PageBaseAndroid {
 						"martiDB");
 			writeText(txt_Otp, otp1);
 			click(btn_DevamEt);
+			return this;
+		}
+		public pageGirisEkrani Tanimlanmamis_Vardiya(String userPhoneNumber) {
+//			click(btn_AracTeslimAl);
+			assertEquals(popup_Message, "Vardiyan henüz başlamadı, vardiyanda bir hata olduğunu düşünüyorsan Vardiya Amiri’ne bildir.");
+			click(btn_Tamam);
+			assertFound(txt_PhoneNumber);
+			return this;
+		}
+		public pageGirisEkrani Tanimlanmamis_Vardiyali_Giris(String userPhoneNumber) {
 			assertFound(img_MartiLogo);
 			return this;
 		}
-		public pageGirisEkrani Tanimlanmamis_Vardiya() {
-
-			return this;
-		}
+		
+		
 		
 		
 		

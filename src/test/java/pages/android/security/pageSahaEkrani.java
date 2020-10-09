@@ -28,11 +28,15 @@ public class pageSahaEkrani extends PageBaseAndroid {
 		
 		// *****************General
 		String btn_SahayaGit 											= "#goToTasks";
-		String btn_ArizaBildir 											= "btnReportIssue";
+		String btn_ArizaBildir 											= "#btnReportIssue";
 		String li_TumIslerim 											= "#txtWorkOrderList";
 		String lbl_VeriBulunamadi										= "#txtDataNotFound";
 		String li_DepoyaGit												= "#txtWareHouse";
 		String img_MartiLogo											= "#appLogo";
+		String btn_GoreveBasla											= "#btnMultiTask";
+		String popup_Tamam												= "#android:id/button1";
+		String btn_Geri													= "#backText";
+		String popup_Message											= "#android:id/message";
 		
 		// *********Page Methods*********
 
@@ -62,25 +66,24 @@ public class pageSahaEkrani extends PageBaseAndroid {
 			assertFound("$Kayıp");
 			assertFound("$Kilit Kontrol");
 			assertFound("$Müşteri");
-			
 			return this;
 		}
 		
-		public pageSahaEkrani Depoya_Git_Secenegi() {
+		public pageSahaEkrani Kapatilmamis_Is_Emri() {
 			click(btn_SahayaGit);
 			swipe(btn_ArizaBildir, 238, 1683, 196, 316, 612);
-			click(li_DepoyaGit);
-			assertFound(img_MartiLogo);
-			
+			click(li_TumIslerim);
+			click("$Kayıp");
+			click(btn_GoreveBasla);
+			click(popup_Tamam);
+			click(btn_Geri);
+			click("$Kilit Kontrol");
+			assertContains(popup_Message, "Öncelikle aktif iş emrini tamamlamalısın");
+			click(popup_Tamam);
 			return this;
 		}
 		
-		public pageSahaEkrani Ariza_Bildir() {
-			click(btn_SahayaGit);
-			click(btn_ArizaBildir);
-			
-			return this;
-		}
+		
 		
 		
 }

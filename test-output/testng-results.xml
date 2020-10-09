@@ -1,51 +1,2205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="23" ignored="10" total="63" passed="30">
   <reporter-output>
   </reporter-output>
-  <suite name="Web Suite" duration-ms="47445" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:12:23Z">
+  <suite name="Web Suite" duration-ms="2022786" started-at="2020-10-09T13:07:57Z" finished-at="2020-10-09T13:41:40Z">
     <groups>
     </groups>
-    <test name="Web Tests" duration-ms="47445" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:12:23Z">
-      <class name="tests.android.security.Harita_Detay">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="beforeSuite" is-config="true" duration-ms="206" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:11:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="beforeClass" is-config="true" duration-ms="1670" started-at="2020-09-30T14:11:36Z" finished-at="2020-09-30T14:11:38Z">
+    <test name="Web Tests" duration-ms="2022786" started-at="2020-10-09T13:07:57Z" finished-at="2020-10-09T13:41:40Z">
+      <class name="tests.android.ride.Menu">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="beforeClass" is-config="true" duration-ms="993" started-at="2020-10-09T13:26:59Z" finished-at="2020-10-09T13:27:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="setUp" is-config="true" duration-ms="19763" started-at="2020-09-30T14:11:38Z" finished-at="2020-09-30T14:11:57Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="11991" started-at="2020-10-09T13:27:00Z" finished-at="2020-10-09T13:27:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.android.security.Harita_Detay.TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu()]]>
+                <![CDATA[public void tests.android.ride.Menu.TC_049_Versiyon_Kontrol()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu()[pri:58, instance:tests.android.security.Harita_Detay@31610302]" name="TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu" duration-ms="25195" started-at="2020-09-30T14:11:57Z" finished-at="2020-09-30T14:12:23Z">
+        <test-method status="PASS" signature="TC_049_Versiyon_Kontrol()[pri:49, instance:tests.android.ride.Menu@16d04d3d]" name="TC_049_Versiyon_Kontrol" duration-ms="19460" started-at="2020-10-09T13:27:12Z" finished-at="2020-10-09T13:27:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="tearDown" is-config="true" duration-ms="788" started-at="2020-09-30T14:12:23Z" finished-at="2020-09-30T14:12:23Z">
+        </test-method> <!-- TC_049_Versiyon_Kontrol -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="648" started-at="2020-10-09T13:27:32Z" finished-at="2020-10-09T13:27:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu status=SUCCESS method=Harita_Detay.TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu()[pri:58, instance:tests.android.security.Harita_Detay@31610302] output={null}]]]>
+                <![CDATA[[TestResult name=TC_049_Versiyon_Kontrol status=SUCCESS method=Menu.TC_049_Versiyon_Kontrol()[pri:49, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.android.security.Harita_Detay@31610302]" name="afterSuite" is-config="true" duration-ms="395" started-at="2020-09-30T14:12:23Z" finished-at="2020-09-30T14:12:24Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13197" started-at="2020-10-09T13:27:32Z" finished-at="2020-10-09T13:27:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_050_Profil_Duzenleme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_050_Profil_Duzenleme()[pri:50, instance:tests.android.ride.Menu@16d04d3d]" name="TC_050_Profil_Duzenleme" duration-ms="21518" started-at="2020-10-09T13:27:46Z" finished-at="2020-10-09T13:28:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_050_Profil_Duzenleme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="661" started-at="2020-10-09T13:28:07Z" finished-at="2020-10-09T13:28:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_050_Profil_Duzenleme status=SUCCESS method=Menu.TC_050_Profil_Duzenleme()[pri:50, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12138" started-at="2020-10-09T13:28:08Z" finished-at="2020-10-09T13:28:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_051_Arkadasini_Davet_Et()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_051_Arkadasini_Davet_Et()[pri:51, instance:tests.android.ride.Menu@16d04d3d]" name="TC_051_Arkadasini_Davet_Et" duration-ms="59307" started-at="2020-10-09T13:28:20Z" finished-at="2020-10-09T13:29:19Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+at utilities.PageBaseAndroid.swipe(PageBaseAndroid.java:469)
+at pages.android.ride.pageMenu.Davet_Baglantisi_Gonderme(pageMenu.java:129)
+at tests.android.ride.Menu.TC_051_Arkadasini_Davet_Et(Menu.java:86)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NQRRDTM', ip: '192.168.8.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 6da685b5-bfc4-43c0-bd19-c565ec4f01ae
+*** Element info: {Using=id, value=appTitle}
+at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_051_Arkadasini_Davet_Et -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="878" started-at="2020-10-09T13:29:19Z" finished-at="2020-10-09T13:29:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_051_Arkadasini_Davet_Et status=FAILURE method=Menu.TC_051_Arkadasini_Davet_Et()[pri:51, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13931" started-at="2020-10-09T13:29:20Z" finished-at="2020-10-09T13:29:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_052_Surusleri_Inceleme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_052_Surusleri_Inceleme()[pri:52, instance:tests.android.ride.Menu@16d04d3d]" name="TC_052_Surusleri_Inceleme" duration-ms="27577" started-at="2020-10-09T13:29:34Z" finished-at="2020-10-09T13:30:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_052_Surusleri_Inceleme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="774" started-at="2020-10-09T13:30:02Z" finished-at="2020-10-09T13:30:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_052_Surusleri_Inceleme status=SUCCESS method=Menu.TC_052_Surusleri_Inceleme()[pri:52, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13499" started-at="2020-10-09T13:30:02Z" finished-at="2020-10-09T13:30:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_053_Varsayilan_Kredi_Karti_Degistirme()[pri:53, instance:tests.android.ride.Menu@16d04d3d]" name="TC_053_Varsayilan_Kredi_Karti_Degistirme" duration-ms="51909" started-at="2020-10-09T13:30:16Z" finished-at="2020-10-09T13:31:08Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: selected (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: selected (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+at utilities.PageBaseAndroid.click(PageBaseAndroid.java:202)
+at pages.android.ride.pageMenu.Varsayilan_Kredi_Karti_Degistirme(pageMenu.java:163)
+at tests.android.ride.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme(Menu.java:134)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NQRRDTM', ip: '192.168.8.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: d2dc2220-dc26-4ec6-8558-24691de79f1c
+*** Element info: {Using=id, value=selected}
+at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_053_Varsayilan_Kredi_Karti_Degistirme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="978" started-at="2020-10-09T13:31:08Z" finished-at="2020-10-09T13:31:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_053_Varsayilan_Kredi_Karti_Degistirme status=FAILURE method=Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme()[pri:53, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13137" started-at="2020-10-09T13:31:09Z" finished-at="2020-10-09T13:31:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_054_Kredi_Karti_Ekleme_Basarili()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_054_Kredi_Karti_Ekleme_Basarili()[pri:54, instance:tests.android.ride.Menu@16d04d3d]" name="TC_054_Kredi_Karti_Ekleme_Basarili" duration-ms="52038" started-at="2020-10-09T13:31:22Z" finished-at="2020-10-09T13:32:14Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+at utilities.PageBaseAndroid.click(PageBaseAndroid.java:188)
+at pages.android.ride.pageMenu.Kredi_Karti_Ekleme_Basarili(pageMenu.java:180)
+at tests.android.ride.Menu.TC_054_Kredi_Karti_Ekleme_Basarili(Menu.java:154)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NQRRDTM', ip: '192.168.8.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 755817d7-12bf-489f-8bea-949dd5d81c48
+*** Element info: {Using=id, value=btnAddCard}
+at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_054_Kredi_Karti_Ekleme_Basarili -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="926" started-at="2020-10-09T13:32:14Z" finished-at="2020-10-09T13:32:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_054_Kredi_Karti_Ekleme_Basarili status=FAILURE method=Menu.TC_054_Kredi_Karti_Ekleme_Basarili()[pri:54, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12239" started-at="2020-10-09T13:32:15Z" finished-at="2020-10-09T13:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_055_Kredi_Karti_Ekleme_Basarisiz()[pri:55, instance:tests.android.ride.Menu@16d04d3d]" name="TC_055_Kredi_Karti_Ekleme_Basarisiz" duration-ms="1585" started-at="2020-10-09T13:32:27Z" finished-at="2020-10-09T13:32:29Z">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NQRRDTM', ip: '192.168.8.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NQRRDTM', ip: '192.168.8.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: driver.version: AndroidDriver
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+at utilities.PageBaseAndroid.writeText(PageBaseAndroid.java:244)
+at pages.android.ride.pageGirisEkrani.Giris_Basarili(pageGirisEkrani.java:43)
+at tests.android.ride.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz(Menu.java:171)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_055_Kredi_Karti_Ekleme_Basarisiz -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="931" started-at="2020-10-09T13:32:29Z" finished-at="2020-10-09T13:32:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_055_Kredi_Karti_Ekleme_Basarisiz status=FAILURE method=Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz()[pri:55, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12261" started-at="2020-10-09T13:32:30Z" finished-at="2020-10-09T13:32:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_056_Dil_Degistirme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_056_Dil_Degistirme()[pri:56, instance:tests.android.ride.Menu@16d04d3d]" name="TC_056_Dil_Degistirme" duration-ms="26339" started-at="2020-10-09T13:32:42Z" finished-at="2020-10-09T13:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_056_Dil_Degistirme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="693" started-at="2020-10-09T13:33:08Z" finished-at="2020-10-09T13:33:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_056_Dil_Degistirme status=SUCCESS method=Menu.TC_056_Dil_Degistirme()[pri:56, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12841" started-at="2020-10-09T13:33:09Z" finished-at="2020-10-09T13:33:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_058_Kupon_Ekleme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_058_Kupon_Ekleme()[pri:58, instance:tests.android.ride.Menu@16d04d3d]" name="TC_058_Kupon_Ekleme" duration-ms="47982" started-at="2020-10-09T13:33:22Z" finished-at="2020-10-09T13:34:10Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[element : #imageView25 || expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: element : #imageView25 || expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+at pages.android.ride.pageMenu.Arkadasini_Davet_Et(pageMenu.java:105)
+at tests.android.ride.Menu.TC_058_Kupon_Ekleme(Menu.java:215)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_058_Kupon_Ekleme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="929" started-at="2020-10-09T13:34:10Z" finished-at="2020-10-09T13:34:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_058_Kupon_Ekleme status=FAILURE method=Menu.TC_058_Kupon_Ekleme()[pri:58, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12142" started-at="2020-10-09T13:34:11Z" finished-at="2020-10-09T13:34:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_059_Davet_Kodu_Girme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_059_Davet_Kodu_Girme()[pri:59, instance:tests.android.ride.Menu@16d04d3d]" name="TC_059_Davet_Kodu_Girme" duration-ms="61957" started-at="2020-10-09T13:34:23Z" finished-at="2020-10-09T13:35:25Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.AndroidUIAutomator: text("Panoya kopyala").instance(0) (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.AndroidUIAutomator: text("Panoya kopyala").instance(0) (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+at utilities.PageBaseAndroid.click(PageBaseAndroid.java:188)
+at pages.android.ride.pageMenu.Kampanyalar_Arkadasini_Davet_Et(pageMenu.java:117)
+at tests.android.ride.Menu.TC_059_Davet_Kodu_Girme(Menu.java:236)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NQRRDTM', ip: '192.168.8.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 5a2385cf-95de-4fd7-8f10-9206c2164913
+*** Element info: {Using=-android uiautomator, value=text("Panoya kopyala").instance(0)}
+at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:210)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_059_Davet_Kodu_Girme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="844" started-at="2020-10-09T13:35:25Z" finished-at="2020-10-09T13:35:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_059_Davet_Kodu_Girme status=FAILURE method=Menu.TC_059_Davet_Kodu_Girme()[pri:59, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="14085" started-at="2020-10-09T13:35:26Z" finished-at="2020-10-09T13:35:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_060_Arkadasini_Davet_Etme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_060_Arkadasini_Davet_Etme()[pri:60, instance:tests.android.ride.Menu@16d04d3d]" name="TC_060_Arkadasini_Davet_Etme" duration-ms="58501" started-at="2020-10-09T13:35:40Z" finished-at="2020-10-09T13:36:38Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+at utilities.PageBaseAndroid.swipe(PageBaseAndroid.java:469)
+at pages.android.ride.pageMenu.Davet_Baglantisi_Gonderme(pageMenu.java:129)
+at pages.android.ride.pageMenu.Kampanyalar_Arkadasini_Davet_Etme(pageMenu.java:311)
+at tests.android.ride.Menu.TC_060_Arkadasini_Davet_Etme(Menu.java:252)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NQRRDTM', ip: '192.168.8.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 5c919cd8-346f-4615-b65d-a53f231c4384
+*** Element info: {Using=id, value=appTitle}
+at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 18 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_060_Arkadasini_Davet_Etme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="940" started-at="2020-10-09T13:36:38Z" finished-at="2020-10-09T13:36:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_060_Arkadasini_Davet_Etme status=FAILURE method=Menu.TC_060_Arkadasini_Davet_Etme()[pri:60, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12757" started-at="2020-10-09T13:36:39Z" finished-at="2020-10-09T13:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_061_Guvenlik_Dokumanina_Erisim()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_061_Guvenlik_Dokumanina_Erisim()[pri:61, instance:tests.android.ride.Menu@16d04d3d]" name="TC_061_Guvenlik_Dokumanina_Erisim" duration-ms="30302" started-at="2020-10-09T13:36:52Z" finished-at="2020-10-09T13:37:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_061_Guvenlik_Dokumanina_Erisim -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="762" started-at="2020-10-09T13:37:22Z" finished-at="2020-10-09T13:37:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_061_Guvenlik_Dokumanina_Erisim status=SUCCESS method=Menu.TC_061_Guvenlik_Dokumanina_Erisim()[pri:61, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13051" started-at="2020-10-09T13:37:23Z" finished-at="2020-10-09T13:37:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_062_Nasil_Kullanilir_Erisim()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_062_Nasil_Kullanilir_Erisim()[pri:62, instance:tests.android.ride.Menu@16d04d3d]" name="TC_062_Nasil_Kullanilir_Erisim" duration-ms="40538" started-at="2020-10-09T13:37:36Z" finished-at="2020-10-09T13:38:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_062_Nasil_Kullanilir_Erisim -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="749" started-at="2020-10-09T13:38:17Z" finished-at="2020-10-09T13:38:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_062_Nasil_Kullanilir_Erisim status=SUCCESS method=Menu.TC_062_Nasil_Kullanilir_Erisim()[pri:62, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13849" started-at="2020-10-09T13:38:17Z" finished-at="2020-10-09T13:38:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_063_Surus_Kurallarina_Erisim()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_063_Surus_Kurallarina_Erisim()[pri:63, instance:tests.android.ride.Menu@16d04d3d]" name="TC_063_Surus_Kurallarina_Erisim" duration-ms="40142" started-at="2020-10-09T13:38:31Z" finished-at="2020-10-09T13:39:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_063_Surus_Kurallarina_Erisim -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="628" started-at="2020-10-09T13:39:11Z" finished-at="2020-10-09T13:39:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_063_Surus_Kurallarina_Erisim status=SUCCESS method=Menu.TC_063_Surus_Kurallarina_Erisim()[pri:63, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12723" started-at="2020-10-09T13:39:12Z" finished-at="2020-10-09T13:39:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_064_Kvkk_Aydinlatma_Metnine_Erisim()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_064_Kvkk_Aydinlatma_Metnine_Erisim()[pri:64, instance:tests.android.ride.Menu@16d04d3d]" name="TC_064_Kvkk_Aydinlatma_Metnine_Erisim" duration-ms="24390" started-at="2020-10-09T13:39:25Z" finished-at="2020-10-09T13:39:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_064_Kvkk_Aydinlatma_Metnine_Erisim -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="695" started-at="2020-10-09T13:39:49Z" finished-at="2020-10-09T13:39:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_064_Kvkk_Aydinlatma_Metnine_Erisim status=SUCCESS method=Menu.TC_064_Kvkk_Aydinlatma_Metnine_Erisim()[pri:64, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="12354" started-at="2020-10-09T13:39:50Z" finished-at="2020-10-09T13:40:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_065_Kullanim_Kosullarina_Erisim()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_065_Kullanim_Kosullarina_Erisim()[pri:65, instance:tests.android.ride.Menu@16d04d3d]" name="TC_065_Kullanim_Kosullarina_Erisim" duration-ms="22159" started-at="2020-10-09T13:40:02Z" finished-at="2020-10-09T13:40:24Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Kullanım Koşulları] but found [Kullanıcı Sözleşmesi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Kullanım Koşulları] but found [Kullanıcı Sözleşmesi]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at utilities.PageBaseAndroid.assertEquals(PageBaseAndroid.java:288)
+at pages.android.ride.pageMenu.Kullanim_Kosullarina_Erisim(pageMenu.java:252)
+at tests.android.ride.Menu.TC_065_Kullanim_Kosullarina_Erisim(Menu.java:339)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_065_Kullanim_Kosullarina_Erisim -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="1112" started-at="2020-10-09T13:40:24Z" finished-at="2020-10-09T13:40:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_065_Kullanim_Kosullarina_Erisim status=FAILURE method=Menu.TC_065_Kullanim_Kosullarina_Erisim()[pri:65, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13406" started-at="2020-10-09T13:40:25Z" finished-at="2020-10-09T13:40:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_066_Yardim_Dokumanina_Erisim()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_066_Yardim_Dokumanina_Erisim()[pri:66, instance:tests.android.ride.Menu@16d04d3d]" name="TC_066_Yardim_Dokumanina_Erisim" duration-ms="24138" started-at="2020-10-09T13:40:39Z" finished-at="2020-10-09T13:41:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_066_Yardim_Dokumanina_Erisim -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="607" started-at="2020-10-09T13:41:03Z" finished-at="2020-10-09T13:41:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_066_Yardim_Dokumanina_Erisim status=SUCCESS method=Menu.TC_066_Yardim_Dokumanina_Erisim()[pri:66, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="setUp" is-config="true" duration-ms="13464" started-at="2020-10-09T13:41:04Z" finished-at="2020-10-09T13:41:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Menu.TC_067_Cikis()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_067_Cikis()[pri:67, instance:tests.android.ride.Menu@16d04d3d]" name="TC_067_Cikis" duration-ms="22400" started-at="2020-10-09T13:41:17Z" finished-at="2020-10-09T13:41:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_067_Cikis -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Menu@16d04d3d]" name="tearDown" is-config="true" duration-ms="601" started-at="2020-10-09T13:41:39Z" finished-at="2020-10-09T13:41:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_067_Cikis status=SUCCESS method=Menu.TC_067_Cikis()[pri:67, instance:tests.android.ride.Menu@16d04d3d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.android.ride.Menu -->
+      <class name="tests.android.ride.Ana_Ekran">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="beforeClass" is-config="true" duration-ms="884" started-at="2020-10-09T13:11:46Z" finished-at="2020-10-09T13:11:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="12294" started-at="2020-10-09T13:11:47Z" finished-at="2020-10-09T13:11:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_016_Surus_Baslat()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_016_Surus_Baslat()[pri:16, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_016_Surus_Baslat" duration-ms="56035" started-at="2020-10-09T13:11:59Z" finished-at="2020-10-09T13:12:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[element : #light || expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: element : #light || expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+at pages.android.ride.pageAnaEkran.Surus_Baslat(pageAnaEkran.java:74)
+at tests.android.ride.Ana_Ekran.TC_016_Surus_Baslat(Ana_Ekran.java:52)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_016_Surus_Baslat -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="1273" started-at="2020-10-09T13:12:55Z" finished-at="2020-10-09T13:12:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_016_Surus_Baslat status=FAILURE method=Ana_Ekran.TC_016_Surus_Baslat()[pri:16, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="12156" started-at="2020-10-09T13:12:56Z" finished-at="2020-10-09T13:13:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_017_Tckn_Gecersiz()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_017_Tckn_Gecersiz()[pri:17, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_017_Tckn_Gecersiz" duration-ms="26496" started-at="2020-10-09T13:13:09Z" finished-at="2020-10-09T13:13:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_017_Tckn_Gecersiz -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="818" started-at="2020-10-09T13:13:35Z" finished-at="2020-10-09T13:13:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_017_Tckn_Gecersiz status=SUCCESS method=Ana_Ekran.TC_017_Tckn_Gecersiz()[pri:17, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="13358" started-at="2020-10-09T13:13:36Z" finished-at="2020-10-09T13:13:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_018_Odeme_Yontemi_Yok()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_018_Odeme_Yontemi_Yok()[pri:18, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_018_Odeme_Yontemi_Yok" duration-ms="24547" started-at="2020-10-09T13:13:49Z" finished-at="2020-10-09T13:14:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_018_Odeme_Yontemi_Yok -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="599" started-at="2020-10-09T13:14:14Z" finished-at="2020-10-09T13:14:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_018_Odeme_Yontemi_Yok status=SUCCESS method=Ana_Ekran.TC_018_Odeme_Yontemi_Yok()[pri:18, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="13531" started-at="2020-10-09T13:14:14Z" finished-at="2020-10-09T13:14:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_020_Surus_Baslatma_Kod_Girisi()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_020_Surus_Baslatma_Kod_Girisi()[pri:20, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_020_Surus_Baslatma_Kod_Girisi" duration-ms="25778" started-at="2020-10-09T13:14:28Z" finished-at="2020-10-09T13:14:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_020_Surus_Baslatma_Kod_Girisi -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="784" started-at="2020-10-09T13:14:54Z" finished-at="2020-10-09T13:14:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_020_Surus_Baslatma_Kod_Girisi status=SUCCESS method=Ana_Ekran.TC_020_Surus_Baslatma_Kod_Girisi()[pri:20, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="11975" started-at="2020-10-09T13:14:54Z" finished-at="2020-10-09T13:15:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_021_Surus_Baslat_Basarili()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_021_Surus_Baslat_Basarili()[pri:21, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_021_Surus_Baslat_Basarili" duration-ms="29263" started-at="2020-10-09T13:15:06Z" finished-at="2020-10-09T13:15:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_021_Surus_Baslat_Basarili -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="796" started-at="2020-10-09T13:15:36Z" finished-at="2020-10-09T13:15:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_021_Surus_Baslat_Basarili status=SUCCESS method=Ana_Ekran.TC_021_Surus_Baslat_Basarili()[pri:21, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="12824" started-at="2020-10-09T13:15:36Z" finished-at="2020-10-09T13:15:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak()[pri:22, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak" duration-ms="31021" started-at="2020-10-09T13:15:49Z" finished-at="2020-10-09T13:16:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="737" started-at="2020-10-09T13:16:20Z" finished-at="2020-10-09T13:16:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak status=SUCCESS method=Ana_Ekran.TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak()[pri:22, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="12231" started-at="2020-10-09T13:16:21Z" finished-at="2020-10-09T13:16:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_023_Daha_Cok_Marti()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_023_Daha_Cok_Marti()[pri:23, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_023_Daha_Cok_Marti" duration-ms="18354" started-at="2020-10-09T13:16:33Z" finished-at="2020-10-09T13:16:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_023_Daha_Cok_Marti -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="634" started-at="2020-10-09T13:16:52Z" finished-at="2020-10-09T13:16:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_023_Daha_Cok_Marti status=SUCCESS method=Ana_Ekran.TC_023_Daha_Cok_Marti()[pri:23, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="13645" started-at="2020-10-09T13:16:52Z" finished-at="2020-10-09T13:17:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme()[pri:24, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme" duration-ms="34311" started-at="2020-10-09T13:17:06Z" finished-at="2020-10-09T13:17:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="681" started-at="2020-10-09T13:17:40Z" finished-at="2020-10-09T13:17:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme status=SUCCESS method=Ana_Ekran.TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme()[pri:24, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="12249" started-at="2020-10-09T13:17:41Z" finished-at="2020-10-09T13:17:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme()[pri:25, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme" duration-ms="40963" started-at="2020-10-09T13:17:53Z" finished-at="2020-10-09T13:18:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="624" started-at="2020-10-09T13:18:34Z" finished-at="2020-10-09T13:18:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme status=SUCCESS method=Ana_Ekran.TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme()[pri:25, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="12135" started-at="2020-10-09T13:18:35Z" finished-at="2020-10-09T13:18:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_026_Bize_Ulasin_Yanlis_Park()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_026_Bize_Ulasin_Yanlis_Park()[pri:26, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_026_Bize_Ulasin_Yanlis_Park" duration-ms="31315" started-at="2020-10-09T13:18:47Z" finished-at="2020-10-09T13:19:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_026_Bize_Ulasin_Yanlis_Park -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="568" started-at="2020-10-09T13:19:18Z" finished-at="2020-10-09T13:19:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_026_Bize_Ulasin_Yanlis_Park status=SUCCESS method=Ana_Ekran.TC_026_Bize_Ulasin_Yanlis_Park()[pri:26, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="12153" started-at="2020-10-09T13:19:19Z" finished-at="2020-10-09T13:19:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_027_Bize_Ulasin_Acil_Durum_Paylas()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_027_Bize_Ulasin_Acil_Durum_Paylas()[pri:27, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_027_Bize_Ulasin_Acil_Durum_Paylas" duration-ms="26800" started-at="2020-10-09T13:19:31Z" finished-at="2020-10-09T13:19:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_027_Bize_Ulasin_Acil_Durum_Paylas -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="682" started-at="2020-10-09T13:19:58Z" finished-at="2020-10-09T13:19:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_027_Bize_Ulasin_Acil_Durum_Paylas status=SUCCESS method=Ana_Ekran.TC_027_Bize_Ulasin_Acil_Durum_Paylas()[pri:27, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="setUp" is-config="true" duration-ms="13055" started-at="2020-10-09T13:19:58Z" finished-at="2020-10-09T13:20:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Ana_Ekran.TC_028_Bildirimleri_Kontrol_Etme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_028_Bildirimleri_Kontrol_Etme()[pri:28, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="TC_028_Bildirimleri_Kontrol_Etme" duration-ms="21380" started-at="2020-10-09T13:20:11Z" finished-at="2020-10-09T13:20:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_028_Bildirimleri_Kontrol_Etme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Ana_Ekran@1189dd52]" name="tearDown" is-config="true" duration-ms="668" started-at="2020-10-09T13:20:33Z" finished-at="2020-10-09T13:20:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_028_Bildirimleri_Kontrol_Etme status=SUCCESS method=Ana_Ekran.TC_028_Bildirimleri_Kontrol_Etme()[pri:28, instance:tests.android.ride.Ana_Ekran@1189dd52] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.android.ride.Ana_Ekran -->
+      <class name="tests.android.ride.Giris_Ekrani">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="beforeClass" is-config="true" duration-ms="953" started-at="2020-10-09T13:10:25Z" finished-at="2020-10-09T13:10:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="setUp" is-config="true" duration-ms="13410" started-at="2020-10-09T13:10:26Z" finished-at="2020-10-09T13:10:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Giris_Ekrani.TC_011_Giris_Basarisiz()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_011_Giris_Basarisiz()[pri:11, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="TC_011_Giris_Basarisiz" duration-ms="4790" started-at="2020-10-09T13:10:39Z" finished-at="2020-10-09T13:10:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011_Giris_Basarisiz -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="tearDown" is-config="true" duration-ms="722" started-at="2020-10-09T13:10:44Z" finished-at="2020-10-09T13:10:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_011_Giris_Basarisiz status=SUCCESS method=Giris_Ekrani.TC_011_Giris_Basarisiz()[pri:11, instance:tests.android.ride.Giris_Ekrani@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="setUp" is-config="true" duration-ms="14281" started-at="2020-10-09T13:10:45Z" finished-at="2020-10-09T13:10:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Giris_Ekrani.TC_012_Dogrulama_Basarisiz()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_012_Dogrulama_Basarisiz()[pri:12, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="TC_012_Dogrulama_Basarisiz" duration-ms="16555" started-at="2020-10-09T13:10:59Z" finished-at="2020-10-09T13:11:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012_Dogrulama_Basarisiz -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="tearDown" is-config="true" duration-ms="676" started-at="2020-10-09T13:11:16Z" finished-at="2020-10-09T13:11:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_012_Dogrulama_Basarisiz status=SUCCESS method=Giris_Ekrani.TC_012_Dogrulama_Basarisiz()[pri:12, instance:tests.android.ride.Giris_Ekrani@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="setUp" is-config="true" duration-ms="13599" started-at="2020-10-09T13:11:16Z" finished-at="2020-10-09T13:11:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Giris_Ekrani.TC_013_Tekrar_Kod_Gonder()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_013_Tekrar_Kod_Gonder()[pri:13, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="TC_013_Tekrar_Kod_Gonder" duration-ms="14810" started-at="2020-10-09T13:11:30Z" finished-at="2020-10-09T13:11:45Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.assertNotEquals(Assert.java:1157)
+at org.testng.Assert.assertNotEquals(Assert.java:1162)
+at utilities.PageBaseAndroid.assertNotContent(PageBaseAndroid.java:313)
+at pages.android.ride.pageGirisEkrani.Tekrar_Kod_Gonder(pageGirisEkrani.java:117)
+at tests.android.ride.Giris_Ekrani.TC_013_Tekrar_Kod_Gonder(Giris_Ekrani.java:71)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013_Tekrar_Kod_Gonder -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Giris_Ekrani@7e07db1f]" name="tearDown" is-config="true" duration-ms="1023" started-at="2020-10-09T13:11:45Z" finished-at="2020-10-09T13:11:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_013_Tekrar_Kod_Gonder status=FAILURE method=Giris_Ekrani.TC_013_Tekrar_Kod_Gonder()[pri:13, instance:tests.android.ride.Giris_Ekrani@7e07db1f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.android.ride.Giris_Ekrani -->
+      <class name="tests.android.ride.Borclar">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="beforeClass" is-config="true" duration-ms="1103" started-at="2020-10-09T13:20:34Z" finished-at="2020-10-09T13:20:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="setUp" is-config="true" duration-ms="13159" started-at="2020-10-09T13:20:35Z" finished-at="2020-10-09T13:20:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Borclar.TC_029_Borclu_Kullanici()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_029_Borclu_Kullanici()[pri:29, instance:tests.android.ride.Borclar@36bc55de]" name="TC_029_Borclu_Kullanici" duration-ms="25971" started-at="2020-10-09T13:20:48Z" finished-at="2020-10-09T13:21:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_029_Borclu_Kullanici -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="tearDown" is-config="true" duration-ms="859" started-at="2020-10-09T13:21:14Z" finished-at="2020-10-09T13:21:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_029_Borclu_Kullanici status=SUCCESS method=Borclar.TC_029_Borclu_Kullanici()[pri:29, instance:tests.android.ride.Borclar@36bc55de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="setUp" is-config="true" duration-ms="13447" started-at="2020-10-09T13:21:15Z" finished-at="2020-10-09T13:21:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Borclar.TC_030_Borclu_Kullanici_Plus_15()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_030_Borclu_Kullanici_Plus_15()[pri:30, instance:tests.android.ride.Borclar@36bc55de]" name="TC_030_Borclu_Kullanici_Plus_15" duration-ms="25711" started-at="2020-10-09T13:21:28Z" finished-at="2020-10-09T13:21:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_030_Borclu_Kullanici_Plus_15 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="tearDown" is-config="true" duration-ms="611" started-at="2020-10-09T13:21:54Z" finished-at="2020-10-09T13:21:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_030_Borclu_Kullanici_Plus_15 status=SUCCESS method=Borclar.TC_030_Borclu_Kullanici_Plus_15()[pri:30, instance:tests.android.ride.Borclar@36bc55de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="setUp" is-config="true" duration-ms="12228" started-at="2020-10-09T13:21:54Z" finished-at="2020-10-09T13:22:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Borclar.TC_031_Borc_Odeme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_031_Borc_Odeme()[pri:31, instance:tests.android.ride.Borclar@36bc55de]" name="TC_031_Borc_Odeme" duration-ms="26378" started-at="2020-10-09T13:22:07Z" finished-at="2020-10-09T13:22:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_031_Borc_Odeme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="tearDown" is-config="true" duration-ms="678" started-at="2020-10-09T13:22:33Z" finished-at="2020-10-09T13:22:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_031_Borc_Odeme status=SUCCESS method=Borclar.TC_031_Borc_Odeme()[pri:31, instance:tests.android.ride.Borclar@36bc55de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="setUp" is-config="true" duration-ms="12120" started-at="2020-10-09T13:22:34Z" finished-at="2020-10-09T13:22:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Borclar.TC_032_Borc_Odeme_Islemi_Basarili()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_032_Borc_Odeme_Islemi_Basarili()[pri:32, instance:tests.android.ride.Borclar@36bc55de]" name="TC_032_Borc_Odeme_Islemi_Basarili" duration-ms="33007" started-at="2020-10-09T13:22:46Z" finished-at="2020-10-09T13:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_032_Borc_Odeme_Islemi_Basarili -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="tearDown" is-config="true" duration-ms="629" started-at="2020-10-09T13:23:19Z" finished-at="2020-10-09T13:23:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_032_Borc_Odeme_Islemi_Basarili status=SUCCESS method=Borclar.TC_032_Borc_Odeme_Islemi_Basarili()[pri:32, instance:tests.android.ride.Borclar@36bc55de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="setUp" is-config="true" duration-ms="12327" started-at="2020-10-09T13:23:19Z" finished-at="2020-10-09T13:23:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Borclar.TC_033_Borc_Odeme_Islemi_Basarisiz()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_033_Borc_Odeme_Islemi_Basarisiz()[pri:33, instance:tests.android.ride.Borclar@36bc55de]" name="TC_033_Borc_Odeme_Islemi_Basarisiz" duration-ms="32697" started-at="2020-10-09T13:23:32Z" finished-at="2020-10-09T13:24:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_033_Borc_Odeme_Islemi_Basarisiz -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Borclar@36bc55de]" name="tearDown" is-config="true" duration-ms="744" started-at="2020-10-09T13:24:04Z" finished-at="2020-10-09T13:24:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_033_Borc_Odeme_Islemi_Basarisiz status=SUCCESS method=Borclar.TC_033_Borc_Odeme_Islemi_Basarisiz()[pri:33, instance:tests.android.ride.Borclar@36bc55de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.android.ride.Borclar -->
+      <class name="tests.android.ride.Yukleme_Ekrani">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="beforeSuite" is-config="true" duration-ms="154" started-at="2020-10-09T13:07:57Z" finished-at="2020-10-09T13:07:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="beforeClass" is-config="true" duration-ms="3668" started-at="2020-10-09T13:07:57Z" finished-at="2020-10-09T13:08:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="setUp" is-config="true" duration-ms="16498" started-at="2020-10-09T13:08:01Z" finished-at="2020-10-09T13:08:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Yukleme_Ekrani.TC_004_Oturum_Kontrolu_Basarili()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_004_Oturum_Kontrolu_Basarili()[pri:4, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="TC_004_Oturum_Kontrolu_Basarili" duration-ms="16990" started-at="2020-10-09T13:08:17Z" finished-at="2020-10-09T13:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_Oturum_Kontrolu_Basarili -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="tearDown" is-config="true" duration-ms="767" started-at="2020-10-09T13:08:34Z" finished-at="2020-10-09T13:08:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_004_Oturum_Kontrolu_Basarili status=SUCCESS method=Yukleme_Ekrani.TC_004_Oturum_Kontrolu_Basarili()[pri:4, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="setUp" is-config="true" duration-ms="12420" started-at="2020-10-09T13:08:35Z" finished-at="2020-10-09T13:08:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Yukleme_Ekrani.TC_005_Surus_Kontrolu()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_005_Surus_Kontrolu()[pri:5, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="TC_005_Surus_Kontrolu" duration-ms="55294" started-at="2020-10-09T13:08:48Z" finished-at="2020-10-09T13:09:43Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[element : #btnEndRide || expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: element : #btnEndRide || expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+at pages.android.ride.pageYuklemeEkrani.Surus_Kontrolu(pageYuklemeEkrani.java:147)
+at tests.android.ride.Yukleme_Ekrani.TC_005_Surus_Kontrolu(Yukleme_Ekrani.java:105)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_Surus_Kontrolu -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="tearDown" is-config="true" duration-ms="1936" started-at="2020-10-09T13:09:43Z" finished-at="2020-10-09T13:09:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_005_Surus_Kontrolu status=FAILURE method=Yukleme_Ekrani.TC_005_Surus_Kontrolu()[pri:5, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="setUp" is-config="true" duration-ms="13529" started-at="2020-10-09T13:09:45Z" finished-at="2020-10-09T13:09:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Yukleme_Ekrani.TC_007_Tckn_Kontrolu()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_007_Tckn_Kontrolu()[pri:7, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="TC_007_Tckn_Kontrolu" duration-ms="25993" started-at="2020-10-09T13:09:58Z" finished-at="2020-10-09T13:10:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_Tckn_Kontrolu -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="tearDown" is-config="true" duration-ms="706" started-at="2020-10-09T13:10:24Z" finished-at="2020-10-09T13:10:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_007_Tckn_Kontrolu status=SUCCESS method=Yukleme_Ekrani.TC_007_Tckn_Kontrolu()[pri:7, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.android.ride.Yukleme_Ekrani@35cabb2a]" name="afterSuite" is-config="true" duration-ms="38" started-at="2020-10-09T13:41:40Z" finished-at="2020-10-09T13:41:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.android.security.Harita_Detay -->
+      </class> <!-- tests.android.ride.Yukleme_Ekrani -->
+      <class name="tests.android.ride.Surus">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="beforeClass" is-config="true" duration-ms="1027" started-at="2020-10-09T13:24:05Z" finished-at="2020-10-09T13:24:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="16656" started-at="2020-10-09T13:24:06Z" finished-at="2020-10-09T13:24:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_035_Surus_Baslat()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_035_Surus_Baslat()[pri:35, instance:tests.android.ride.Surus@564fabc8]" name="TC_035_Surus_Baslat" duration-ms="1" started-at="2020-10-09T13:24:23Z" finished-at="2020-10-09T13:24:23Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_035_Surus_Baslat(Surus.java:56)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_035_Surus_Baslat -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1166" started-at="2020-10-09T13:24:23Z" finished-at="2020-10-09T13:24:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_035_Surus_Baslat status=FAILURE method=Surus.TC_035_Surus_Baslat()[pri:35, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="16402" started-at="2020-10-09T13:24:24Z" finished-at="2020-10-09T13:24:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_036_Nasil_Surulur_Gecilmemis()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_036_Nasil_Surulur_Gecilmemis()[pri:36, instance:tests.android.ride.Surus@564fabc8]" name="TC_036_Nasil_Surulur_Gecilmemis" duration-ms="1" started-at="2020-10-09T13:24:40Z" finished-at="2020-10-09T13:24:40Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_036_Nasil_Surulur_Gecilmemis(Surus.java:88)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_036_Nasil_Surulur_Gecilmemis -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1254" started-at="2020-10-09T13:24:40Z" finished-at="2020-10-09T13:24:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_036_Nasil_Surulur_Gecilmemis status=FAILURE method=Surus.TC_036_Nasil_Surulur_Gecilmemis()[pri:36, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="13911" started-at="2020-10-09T13:24:42Z" finished-at="2020-10-09T13:24:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_037_Acil_Mudahale()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_037_Acil_Mudahale()[pri:37, instance:tests.android.ride.Surus@564fabc8]" name="TC_037_Acil_Mudahale" duration-ms="1" started-at="2020-10-09T13:24:56Z" finished-at="2020-10-09T13:24:56Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_037_Acil_Mudahale(Surus.java:118)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_037_Acil_Mudahale -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1069" started-at="2020-10-09T13:24:56Z" finished-at="2020-10-09T13:24:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_037_Acil_Mudahale status=FAILURE method=Surus.TC_037_Acil_Mudahale()[pri:37, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="12072" started-at="2020-10-09T13:24:57Z" finished-at="2020-10-09T13:25:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_038_Nasil_Surulur()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_038_Nasil_Surulur()[pri:38, instance:tests.android.ride.Surus@564fabc8]" name="TC_038_Nasil_Surulur" duration-ms="1" started-at="2020-10-09T13:25:09Z" finished-at="2020-10-09T13:25:09Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_038_Nasil_Surulur(Surus.java:151)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_038_Nasil_Surulur -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1011" started-at="2020-10-09T13:25:09Z" finished-at="2020-10-09T13:25:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_038_Nasil_Surulur status=FAILURE method=Surus.TC_038_Nasil_Surulur()[pri:38, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="12146" started-at="2020-10-09T13:25:10Z" finished-at="2020-10-09T13:25:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_039_Ortalama()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_039_Ortalama()[pri:39, instance:tests.android.ride.Surus@564fabc8]" name="TC_039_Ortalama" duration-ms="1" started-at="2020-10-09T13:25:22Z" finished-at="2020-10-09T13:25:22Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_039_Ortalama(Surus.java:184)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_039_Ortalama -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="980" started-at="2020-10-09T13:25:22Z" finished-at="2020-10-09T13:25:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_039_Ortalama status=FAILURE method=Surus.TC_039_Ortalama()[pri:39, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="13321" started-at="2020-10-09T13:25:23Z" finished-at="2020-10-09T13:25:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_040_Surus_Bitirme()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_040_Surus_Bitirme()[pri:40, instance:tests.android.ride.Surus@564fabc8]" name="TC_040_Surus_Bitirme" duration-ms="1" started-at="2020-10-09T13:25:36Z" finished-at="2020-10-09T13:25:36Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_040_Surus_Bitirme(Surus.java:218)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_040_Surus_Bitirme -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1102" started-at="2020-10-09T13:25:36Z" finished-at="2020-10-09T13:25:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_040_Surus_Bitirme status=FAILURE method=Surus.TC_040_Surus_Bitirme()[pri:40, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="12173" started-at="2020-10-09T13:25:37Z" finished-at="2020-10-09T13:25:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_041_Park_Edilemez_Alan()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_041_Park_Edilemez_Alan()[pri:41, instance:tests.android.ride.Surus@564fabc8]" name="TC_041_Park_Edilemez_Alan" duration-ms="0" started-at="2020-10-09T13:25:49Z" finished-at="2020-10-09T13:25:49Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_041_Park_Edilemez_Alan(Surus.java:251)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_041_Park_Edilemez_Alan -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1013" started-at="2020-10-09T13:25:49Z" finished-at="2020-10-09T13:25:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_041_Park_Edilemez_Alan status=FAILURE method=Surus.TC_041_Park_Edilemez_Alan()[pri:41, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="12932" started-at="2020-10-09T13:25:51Z" finished-at="2020-10-09T13:26:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_042_Kilit_Takilmadi()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_042_Kilit_Takilmadi()[pri:42, instance:tests.android.ride.Surus@564fabc8]" name="TC_042_Kilit_Takilmadi" duration-ms="0" started-at="2020-10-09T13:26:03Z" finished-at="2020-10-09T13:26:03Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_042_Kilit_Takilmadi(Surus.java:284)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_042_Kilit_Takilmadi -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="983" started-at="2020-10-09T13:26:03Z" finished-at="2020-10-09T13:26:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_042_Kilit_Takilmadi status=FAILURE method=Surus.TC_042_Kilit_Takilmadi()[pri:42, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="12301" started-at="2020-10-09T13:26:04Z" finished-at="2020-10-09T13:26:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_044_Surus_Bitir_Internet_Kapali()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_044_Surus_Bitir_Internet_Kapali()[pri:44, instance:tests.android.ride.Surus@564fabc8]" name="TC_044_Surus_Bitir_Internet_Kapali" duration-ms="1" started-at="2020-10-09T13:26:17Z" finished-at="2020-10-09T13:26:17Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_044_Surus_Bitir_Internet_Kapali(Surus.java:328)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_044_Surus_Bitir_Internet_Kapali -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1101" started-at="2020-10-09T13:26:17Z" finished-at="2020-10-09T13:26:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_044_Surus_Bitir_Internet_Kapali status=FAILURE method=Surus.TC_044_Surus_Bitir_Internet_Kapali()[pri:44, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="12150" started-at="2020-10-09T13:26:18Z" finished-at="2020-10-09T13:26:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_045_Ceza_Kurallarina_Erisim()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_045_Ceza_Kurallarina_Erisim()[pri:45, instance:tests.android.ride.Surus@564fabc8]" name="TC_045_Ceza_Kurallarina_Erisim" duration-ms="1" started-at="2020-10-09T13:26:30Z" finished-at="2020-10-09T13:26:30Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_045_Ceza_Kurallarina_Erisim(Surus.java:361)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_045_Ceza_Kurallarina_Erisim -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1020" started-at="2020-10-09T13:26:30Z" finished-at="2020-10-09T13:26:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_045_Ceza_Kurallarina_Erisim status=FAILURE method=Surus.TC_045_Ceza_Kurallarina_Erisim()[pri:45, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="13274" started-at="2020-10-09T13:26:31Z" finished-at="2020-10-09T13:26:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_046_Odeme_Hatasi()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_046_Odeme_Hatasi()[pri:46, instance:tests.android.ride.Surus@564fabc8]" name="TC_046_Odeme_Hatasi" duration-ms="1" started-at="2020-10-09T13:26:44Z" finished-at="2020-10-09T13:26:44Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_046_Odeme_Hatasi(Surus.java:392)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_046_Odeme_Hatasi -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1098" started-at="2020-10-09T13:26:44Z" finished-at="2020-10-09T13:26:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_046_Odeme_Hatasi status=FAILURE method=Surus.TC_046_Odeme_Hatasi()[pri:46, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="setUp" is-config="true" duration-ms="12890" started-at="2020-10-09T13:26:45Z" finished-at="2020-10-09T13:26:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.android.ride.Surus.TC_047_Surus_Bitirme_Basarili()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="TC_047_Surus_Bitirme_Basarili()[pri:47, instance:tests.android.ride.Surus@564fabc8]" name="TC_047_Surus_Bitirme_Basarili" duration-ms="0" started-at="2020-10-09T13:26:58Z" finished-at="2020-10-09T13:26:58Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at tests.android.ride.Surus.TC_047_Surus_Bitirme_Basarili(Surus.java:424)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_047_Surus_Bitirme_Basarili -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.android.ride.Surus@564fabc8]" name="tearDown" is-config="true" duration-ms="1071" started-at="2020-10-09T13:26:58Z" finished-at="2020-10-09T13:26:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_047_Surus_Bitirme_Basarili status=FAILURE method=Surus.TC_047_Surus_Bitirme_Basarili()[pri:47, instance:tests.android.ride.Surus@564fabc8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.android.ride.Surus -->
     </test> <!-- Web Tests -->
   </suite> <!-- Web Suite -->
 </testng-results>

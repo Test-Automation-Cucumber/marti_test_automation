@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Web Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>30/23/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 30 17:11:36 EET 2020</td>
+<td>Started on:</td><td>Fri Oct 09 16:07:57 EET 2020</td>
 </tr>
-<tr><td>Total time:</td><td>47 seconds (47445 ms)</td>
+<tr><td>Total time:</td><td>2022 seconds (2022786 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,1131 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.android.ride.Yukleme_Ekrani.TC_005_Surus_Kontrolu()'><b>TC_005_Surus_Kontrolu</b><br>Test class: tests.android.ride.Yukleme_Ekrani</td>
+<td><div><pre>java.lang.AssertionError: element : #btnEndRide || expected [true] but found [false]
+	at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+	at pages.android.ride.pageYuklemeEkrani.Surus_Kontrolu(pageYuklemeEkrani.java:147)
+	at tests.android.ride.Yukleme_Ekrani.TC_005_Surus_Kontrolu(Yukleme_Ekrani.java:105)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace286400425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace286400425'><pre>java.lang.AssertionError: element : #btnEndRide || expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+	at pages.android.ride.pageYuklemeEkrani.Surus_Kontrolu(pageYuklemeEkrani.java:147)
+	at tests.android.ride.Yukleme_Ekrani.TC_005_Surus_Kontrolu(Yukleme_Ekrani.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>55</td>
+<td>tests.android.ride.Yukleme_Ekrani@35cabb2a</td></tr>
+<tr>
+<td title='tests.android.ride.Giris_Ekrani.TC_013_Tekrar_Kod_Gonder()'><b>TC_013_Tekrar_Kod_Gonder</b><br>Test class: tests.android.ride.Giris_Ekrani</td>
+<td><div><pre>java.lang.AssertionError: null
+	at utilities.PageBaseAndroid.assertNotContent(PageBaseAndroid.java:313)
+	at pages.android.ride.pageGirisEkrani.Tekrar_Kod_Gonder(pageGirisEkrani.java:117)
+	at tests.android.ride.Giris_Ekrani.TC_013_Tekrar_Kod_Gonder(Giris_Ekrani.java:71)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1674951663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1674951663'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.assertNotEquals(Assert.java:1157)
+	at org.testng.Assert.assertNotEquals(Assert.java:1162)
+	at utilities.PageBaseAndroid.assertNotContent(PageBaseAndroid.java:313)
+	at pages.android.ride.pageGirisEkrani.Tekrar_Kod_Gonder(pageGirisEkrani.java:117)
+	at tests.android.ride.Giris_Ekrani.TC_013_Tekrar_Kod_Gonder(Giris_Ekrani.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>14</td>
+<td>tests.android.ride.Giris_Ekrani@7e07db1f</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_016_Surus_Baslat()'><b>TC_016_Surus_Baslat</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td><div><pre>java.lang.AssertionError: element : #light || expected [true] but found [false]
+	at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+	at pages.android.ride.pageAnaEkran.Surus_Baslat(pageAnaEkran.java:74)
+	at tests.android.ride.Ana_Ekran.TC_016_Surus_Baslat(Ana_Ekran.java:52)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1298158532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1298158532'><pre>java.lang.AssertionError: element : #light || expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+	at pages.android.ride.pageAnaEkran.Surus_Baslat(pageAnaEkran.java:74)
+	at tests.android.ride.Ana_Ekran.TC_016_Surus_Baslat(Ana_Ekran.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>56</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_035_Surus_Baslat()'><b>TC_035_Surus_Baslat</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_035_Surus_Baslat(Surus.java:56)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1451009554", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1451009554'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_035_Surus_Baslat(Surus.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_036_Nasil_Surulur_Gecilmemis()'><b>TC_036_Nasil_Surulur_Gecilmemis</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_036_Nasil_Surulur_Gecilmemis(Surus.java:88)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace961303860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace961303860'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_036_Nasil_Surulur_Gecilmemis(Surus.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_037_Acil_Mudahale()'><b>TC_037_Acil_Mudahale</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_037_Acil_Mudahale(Surus.java:118)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace704789056", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace704789056'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_037_Acil_Mudahale(Surus.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_038_Nasil_Surulur()'><b>TC_038_Nasil_Surulur</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_038_Nasil_Surulur(Surus.java:151)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1662961837", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1662961837'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_038_Nasil_Surulur(Surus.java:151)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_039_Ortalama()'><b>TC_039_Ortalama</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_039_Ortalama(Surus.java:184)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1136821425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1136821425'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_039_Ortalama(Surus.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_040_Surus_Bitirme()'><b>TC_040_Surus_Bitirme</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_040_Surus_Bitirme(Surus.java:218)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace794060517", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace794060517'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_040_Surus_Bitirme(Surus.java:218)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_041_Park_Edilemez_Alan()'><b>TC_041_Park_Edilemez_Alan</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_041_Park_Edilemez_Alan(Surus.java:251)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace366674381", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace366674381'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_041_Park_Edilemez_Alan(Surus.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_042_Kilit_Takilmadi()'><b>TC_042_Kilit_Takilmadi</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_042_Kilit_Takilmadi(Surus.java:284)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace329593150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace329593150'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_042_Kilit_Takilmadi(Surus.java:284)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_044_Surus_Bitir_Internet_Kapali()'><b>TC_044_Surus_Bitir_Internet_Kapali</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_044_Surus_Bitir_Internet_Kapali(Surus.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1467348142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1467348142'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_044_Surus_Bitir_Internet_Kapali(Surus.java:328)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_045_Ceza_Kurallarina_Erisim()'><b>TC_045_Ceza_Kurallarina_Erisim</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_045_Ceza_Kurallarina_Erisim(Surus.java:361)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace920324998", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace920324998'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_045_Ceza_Kurallarina_Erisim(Surus.java:361)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_046_Odeme_Hatasi()'><b>TC_046_Odeme_Hatasi</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_046_Odeme_Hatasi(Surus.java:392)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1596360019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1596360019'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_046_Odeme_Hatasi(Surus.java:392)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Surus.TC_047_Surus_Bitirme_Basarili()'><b>TC_047_Surus_Bitirme_Basarili</b><br>Test class: tests.android.ride.Surus</td>
+<td><div><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_047_Surus_Bitirme_Basarili(Surus.java:424)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace829098154", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace829098154'><pre>java.lang.NullPointerException
+	at tests.android.ride.Surus.TC_047_Surus_Bitirme_Basarili(Surus.java:424)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>tests.android.ride.Surus@564fabc8</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_051_Arkadasini_Davet_Et()'><b>TC_051_Arkadasini_Davet_Et</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.swipe(PageBaseAndroid.java:469)
+	at pages.android.ride.pageMenu.Davet_Baglantisi_Gonderme(pageMenu.java:129)
+	at tests.android.ride.Menu.TC_051_Arkadasini_Davet_Et(Menu.java:86)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 6da685b5-bfc4-43c0-bd19-c565ec4f01ae
+*** Element info: {Using=id, value=appTitle}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace736273163", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace736273163'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.swipe(PageBaseAndroid.java:469)
+	at pages.android.ride.pageMenu.Davet_Baglantisi_Gonderme(pageMenu.java:129)
+	at tests.android.ride.Menu.TC_051_Arkadasini_Davet_Et(Menu.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 6da685b5-bfc4-43c0-bd19-c565ec4f01ae
+*** Element info: {Using=id, value=appTitle}
+	at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+</pre></div></td>
+<td>59</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme()'><b>TC_053_Varsayilan_Kredi_Karti_Degistirme</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: selected (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:202)
+	at pages.android.ride.pageMenu.Varsayilan_Kredi_Karti_Degistirme(pageMenu.java:163)
+	at tests.android.ride.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme(Menu.java:134)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: d2dc2220-dc26-4ec6-8558-24691de79f1c
+*** Element info: {Using=id, value=selected}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1591763717", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1591763717'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: selected (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:202)
+	at pages.android.ride.pageMenu.Varsayilan_Kredi_Karti_Degistirme(pageMenu.java:163)
+	at tests.android.ride.Menu.TC_053_Varsayilan_Kredi_Karti_Degistirme(Menu.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: d2dc2220-dc26-4ec6-8558-24691de79f1c
+*** Element info: {Using=id, value=selected}
+	at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+</pre></div></td>
+<td>51</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_054_Kredi_Karti_Ekleme_Basarili()'><b>TC_054_Kredi_Karti_Ekleme_Basarili</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:188)
+	at pages.android.ride.pageMenu.Kredi_Karti_Ekleme_Basarili(pageMenu.java:180)
+	at tests.android.ride.Menu.TC_054_Kredi_Karti_Ekleme_Basarili(Menu.java:154)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 755817d7-12bf-489f-8bea-949dd5d81c48
+*** Element info: {Using=id, value=btnAddCard}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2147202328", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2147202328'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btnAddCard (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:188)
+	at pages.android.ride.pageMenu.Kredi_Karti_Ekleme_Basarili(pageMenu.java:180)
+	at tests.android.ride.Menu.TC_054_Kredi_Karti_Ekleme_Basarili(Menu.java:154)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 755817d7-12bf-489f-8bea-949dd5d81c48
+*** Element info: {Using=id, value=btnAddCard}
+	at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+</pre></div></td>
+<td>52</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz()'><b>TC_055_Kredi_Karti_Ekleme_Basarisiz</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.writeText(PageBaseAndroid.java:244)
+	at pages.android.ride.pageGirisEkrani.Giris_Basarili(pageGirisEkrani.java:43)
+	at tests.android.ride.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz(Menu.java:171)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace697554388", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace697554388'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.writeText(PageBaseAndroid.java:244)
+	at pages.android.ride.pageGirisEkrani.Giris_Basarili(pageGirisEkrani.java:43)
+	at tests.android.ride.Menu.TC_055_Kredi_Karti_Ekleme_Basarisiz(Menu.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>1</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_058_Kupon_Ekleme()'><b>TC_058_Kupon_Ekleme</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>java.lang.AssertionError: element : #imageView25 || expected [true] but found [false]
+	at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+	at pages.android.ride.pageMenu.Arkadasini_Davet_Et(pageMenu.java:105)
+	at tests.android.ride.Menu.TC_058_Kupon_Ekleme(Menu.java:215)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1195176497", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1195176497'><pre>java.lang.AssertionError: element : #imageView25 || expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at utilities.PageBaseAndroid.assertFound(PageBaseAndroid.java:323)
+	at pages.android.ride.pageMenu.Arkadasini_Davet_Et(pageMenu.java:105)
+	at tests.android.ride.Menu.TC_058_Kupon_Ekleme(Menu.java:215)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>47</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_059_Davet_Kodu_Girme()'><b>TC_059_Davet_Kodu_Girme</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.AndroidUIAutomator: text(&quot;Panoya kopyala&quot;).instance(0) (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:188)
+	at pages.android.ride.pageMenu.Kampanyalar_Arkadasini_Davet_Et(pageMenu.java:117)
+	at tests.android.ride.Menu.TC_059_Davet_Kodu_Girme(Menu.java:236)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 5a2385cf-95de-4fd7-8f10-9206c2164913
+*** Element info: {Using=-android uiautomator, value=text(&quot;Panoya kopyala&quot;).instance(0)}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:210)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1719877916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1719877916'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.AndroidUIAutomator: text(&quot;Panoya kopyala&quot;).instance(0) (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.click(PageBaseAndroid.java:188)
+	at pages.android.ride.pageMenu.Kampanyalar_Arkadasini_Davet_Et(pageMenu.java:117)
+	at tests.android.ride.Menu.TC_059_Davet_Kodu_Girme(Menu.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 5a2385cf-95de-4fd7-8f10-9206c2164913
+*** Element info: {Using=-android uiautomator, value=text(&quot;Panoya kopyala&quot;).instance(0)}
+	at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.FindsByAndroidUIAutomator.findElementByAndroidUIAutomator(FindsByAndroidUIAutomator.java:38)
+	at io.appium.java_client.MobileBy$ByAndroidUIAutomator.findElement(MobileBy.java:210)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+</pre></div></td>
+<td>61</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_060_Arkadasini_Davet_Etme()'><b>TC_060_Arkadasini_Davet_Etme</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.swipe(PageBaseAndroid.java:469)
+	at pages.android.ride.pageMenu.Davet_Baglantisi_Gonderme(pageMenu.java:129)
+	at pages.android.ride.pageMenu.Kampanyalar_Arkadasini_Davet_Etme(pageMenu.java:311)
+	at tests.android.ride.Menu.TC_060_Arkadasini_Davet_Etme(Menu.java:252)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 5c919cd8-346f-4615-b65d-a53f231c4384
+*** Element info: {Using=id, value=appTitle}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 18 more
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1262515043", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1262515043'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: appTitle (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilities.PageBaseAndroid.waitClickable(PageBaseAndroid.java:156)
+	at utilities.PageBaseAndroid.swipe(PageBaseAndroid.java:469)
+	at pages.android.ride.pageMenu.Davet_Baglantisi_Gonderme(pageMenu.java:129)
+	at pages.android.ride.pageMenu.Kampanyalar_Arkadasini_Davet_Etme(pageMenu.java:311)
+	at tests.android.ride.Menu.TC_060_Arkadasini_Davet_Etme(Menu.java:252)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NQRRDTM&apos;, ip: &apos;192.168.8.120&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.martitech.marti.ui.acti..., appPackage: com.martitech.marti.dev, autoGrantPermissions: true, deviceName: Emulator_1, platformName: android, platformVersion: 9.0, udid: emulator-5554}, deviceApiLevel: 29, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 72, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 5c919cd8-346f-4615-b65d-a53f231c4384
+*** Element info: {Using=id, value=appTitle}
+	at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 18 more
+</pre></div></td>
+<td>58</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_065_Kullanim_Kosullarina_Erisim()'><b>TC_065_Kullanim_Kosullarina_Erisim</b><br>Test class: tests.android.ride.Menu</td>
+<td><div><pre>java.lang.AssertionError: expected [Kullanım Koşulları] but found [Kullanıcı Sözleşmesi]
+	at utilities.PageBaseAndroid.assertEquals(PageBaseAndroid.java:288)
+	at pages.android.ride.pageMenu.Kullanim_Kosullarina_Erisim(pageMenu.java:252)
+	at tests.android.ride.Menu.TC_065_Kullanim_Kosullarina_Erisim(Menu.java:339)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace861027732", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace861027732'><pre>java.lang.AssertionError: expected [Kullanım Koşulları] but found [Kullanıcı Sözleşmesi]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at utilities.PageBaseAndroid.assertEquals(PageBaseAndroid.java:288)
+	at pages.android.ride.pageMenu.Kullanim_Kosullarina_Erisim(pageMenu.java:252)
+	at tests.android.ride.Menu.TC_065_Kullanim_Kosullarina_Erisim(Menu.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>22</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +1200,155 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.android.security.Harita_Detay.TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu()'><b>TC_058_Baska_Bir_Gorev_Yapacagim_Kontrolu</b><br>Test class: tests.android.security.Harita_Detay</td>
+<td title='tests.android.ride.Yukleme_Ekrani.TC_004_Oturum_Kontrolu_Basarili()'><b>TC_004_Oturum_Kontrolu_Basarili</b><br>Test class: tests.android.ride.Yukleme_Ekrani</td>
+<td></td>
+<td>16</td>
+<td>tests.android.ride.Yukleme_Ekrani@35cabb2a</td></tr>
+<tr>
+<td title='tests.android.ride.Yukleme_Ekrani.TC_007_Tckn_Kontrolu()'><b>TC_007_Tckn_Kontrolu</b><br>Test class: tests.android.ride.Yukleme_Ekrani</td>
 <td></td>
 <td>25</td>
-<td>tests.android.security.Harita_Detay@31610302</td></tr>
+<td>tests.android.ride.Yukleme_Ekrani@35cabb2a</td></tr>
+<tr>
+<td title='tests.android.ride.Giris_Ekrani.TC_011_Giris_Basarisiz()'><b>TC_011_Giris_Basarisiz</b><br>Test class: tests.android.ride.Giris_Ekrani</td>
+<td></td>
+<td>4</td>
+<td>tests.android.ride.Giris_Ekrani@7e07db1f</td></tr>
+<tr>
+<td title='tests.android.ride.Giris_Ekrani.TC_012_Dogrulama_Basarisiz()'><b>TC_012_Dogrulama_Basarisiz</b><br>Test class: tests.android.ride.Giris_Ekrani</td>
+<td></td>
+<td>16</td>
+<td>tests.android.ride.Giris_Ekrani@7e07db1f</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_017_Tckn_Gecersiz()'><b>TC_017_Tckn_Gecersiz</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>26</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_018_Odeme_Yontemi_Yok()'><b>TC_018_Odeme_Yontemi_Yok</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>24</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_020_Surus_Baslatma_Kod_Girisi()'><b>TC_020_Surus_Baslatma_Kod_Girisi</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>25</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_021_Surus_Baslat_Basarili()'><b>TC_021_Surus_Baslat_Basarili</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>29</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak()'><b>TC_022_Surus_Baslat_Basarisiz_Martiya_Uzak</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>31</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_023_Daha_Cok_Marti()'><b>TC_023_Daha_Cok_Marti</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>18</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme()'><b>TC_024_Bize_Ulasin_Kilit_Problemi_Bildirme</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>34</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme()'><b>TC_025_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>40</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_026_Bize_Ulasin_Yanlis_Park()'><b>TC_026_Bize_Ulasin_Yanlis_Park</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>31</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_027_Bize_Ulasin_Acil_Durum_Paylas()'><b>TC_027_Bize_Ulasin_Acil_Durum_Paylas</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>26</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Ana_Ekran.TC_028_Bildirimleri_Kontrol_Etme()'><b>TC_028_Bildirimleri_Kontrol_Etme</b><br>Test class: tests.android.ride.Ana_Ekran</td>
+<td></td>
+<td>21</td>
+<td>tests.android.ride.Ana_Ekran@1189dd52</td></tr>
+<tr>
+<td title='tests.android.ride.Borclar.TC_029_Borclu_Kullanici()'><b>TC_029_Borclu_Kullanici</b><br>Test class: tests.android.ride.Borclar</td>
+<td></td>
+<td>25</td>
+<td>tests.android.ride.Borclar@36bc55de</td></tr>
+<tr>
+<td title='tests.android.ride.Borclar.TC_030_Borclu_Kullanici_Plus_15()'><b>TC_030_Borclu_Kullanici_Plus_15</b><br>Test class: tests.android.ride.Borclar</td>
+<td></td>
+<td>25</td>
+<td>tests.android.ride.Borclar@36bc55de</td></tr>
+<tr>
+<td title='tests.android.ride.Borclar.TC_031_Borc_Odeme()'><b>TC_031_Borc_Odeme</b><br>Test class: tests.android.ride.Borclar</td>
+<td></td>
+<td>26</td>
+<td>tests.android.ride.Borclar@36bc55de</td></tr>
+<tr>
+<td title='tests.android.ride.Borclar.TC_032_Borc_Odeme_Islemi_Basarili()'><b>TC_032_Borc_Odeme_Islemi_Basarili</b><br>Test class: tests.android.ride.Borclar</td>
+<td></td>
+<td>33</td>
+<td>tests.android.ride.Borclar@36bc55de</td></tr>
+<tr>
+<td title='tests.android.ride.Borclar.TC_033_Borc_Odeme_Islemi_Basarisiz()'><b>TC_033_Borc_Odeme_Islemi_Basarisiz</b><br>Test class: tests.android.ride.Borclar</td>
+<td></td>
+<td>32</td>
+<td>tests.android.ride.Borclar@36bc55de</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_049_Versiyon_Kontrol()'><b>TC_049_Versiyon_Kontrol</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>19</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_050_Profil_Duzenleme()'><b>TC_050_Profil_Duzenleme</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>21</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_052_Surusleri_Inceleme()'><b>TC_052_Surusleri_Inceleme</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>27</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_056_Dil_Degistirme()'><b>TC_056_Dil_Degistirme</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>26</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_061_Guvenlik_Dokumanina_Erisim()'><b>TC_061_Guvenlik_Dokumanina_Erisim</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>30</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_062_Nasil_Kullanilir_Erisim()'><b>TC_062_Nasil_Kullanilir_Erisim</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>40</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_063_Surus_Kurallarina_Erisim()'><b>TC_063_Surus_Kurallarina_Erisim</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>40</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_064_Kvkk_Aydinlatma_Metnine_Erisim()'><b>TC_064_Kvkk_Aydinlatma_Metnine_Erisim</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>24</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_066_Yardim_Dokumanina_Erisim()'><b>TC_066_Yardim_Dokumanina_Erisim</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>24</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
+<tr>
+<td title='tests.android.ride.Menu.TC_067_Cikis()'><b>TC_067_Cikis</b><br>Test class: tests.android.ride.Menu</td>
+<td></td>
+<td>22</td>
+<td>tests.android.ride.Menu@16d04d3d</td></tr>
 </table><p>
 </body>
 </html>

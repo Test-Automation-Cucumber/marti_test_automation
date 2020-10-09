@@ -51,17 +51,9 @@ public class pageBorclar extends PageBaseIos {
 
 		public pageBorclar Borclu_Kullanici(String customer_phone_no, String scooter_code) {
 			
-			customer.deleteCreditCards(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.deleteCustomerDebt(customer_phone_no)
-			.addCustomerDebt(customer_phone_no, 14);
-	
-			scooter
-			.deleteScooterReservations(scooter_code)
-			.deleteScooterRides(scooter_code);
 
-			giris_Ekrani
-			.Login(customer_phone_no);
+
+
 			
 			assertFound(img_NotifyIcon);
 			
@@ -77,12 +69,9 @@ public class pageBorclar extends PageBaseIos {
 		}	
 		
 		public pageBorclar Borclu_Kullanici_Plus_15(String customer_phone_no) {
-				customer
-				.deleteCustomerDebt(customer_phone_no)
-				.addCustomerDebt(customer_phone_no, 16);
 
-				giris_Ekrani
-				.Login(customer_phone_no);
+
+
 			assertFound(img_NotifyIcon);
 			
 			wait(4);
@@ -98,13 +87,8 @@ public class pageBorclar extends PageBaseIos {
 		}
 
 		public pageBorclar Borc_Odeme(String customer_phone_no) {
-				customer.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no)
-				.addCustomerDebt(customer_phone_no, 11);
 
-				giris_Ekrani
-				.Login(customer_phone_no);
+
 				
 			assertFound(img_NotifyIcon);
 			
@@ -121,13 +105,7 @@ public class pageBorclar extends PageBaseIos {
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarili(String customer_phone_no) {
 			
-			customer.deleteCreditCards(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.deleteCustomerDebt(customer_phone_no)
-			.addCustomerDebt(customer_phone_no, 11);
-	
-			giris_Ekrani
-			.Login(customer_phone_no);
+
 			
 			assertFound(img_NotifyIcon);
 			wait(4);
@@ -147,14 +125,9 @@ public class pageBorclar extends PageBaseIos {
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarisiz(String customer_phone_no) {
 
-			customer
-			.deleteCreditCards(customer_phone_no)
-			.addErrorCreditCard(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.addCustomerDebt(customer_phone_no, 11);
+
 			
-			giris_Ekrani
-			.Login(customer_phone_no);
+
 			
 			assertFound(img_NotifyIcon);
 			wait(4);

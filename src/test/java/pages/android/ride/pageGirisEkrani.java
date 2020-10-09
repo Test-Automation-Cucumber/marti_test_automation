@@ -34,7 +34,6 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		private	String lbl_KullanimKosullari								= "#appTitle";
 		private	String txt_PhonePrefix										= "#phonePrefix";
 		private	String cmb_CountryName										= "#countryName";
-		private String btn_NasilKullanilirIleri								= "#btnOk";
 		private String check_KullaniciSozlesmesi							= "#userAgreementConfirm";
 		
 		

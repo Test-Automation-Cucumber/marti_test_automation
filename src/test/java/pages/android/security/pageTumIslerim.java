@@ -28,7 +28,7 @@ public class pageTumIslerim extends PageBaseAndroid {
 		
 		// *****************General
 		String btn_SahayaGit 											= "#goToTasks";
-		String btn_ArizaBildir 											= "btnReportIssue";
+		String btn_ArizaBildir 											= "#btnReportIssue";
 		String li_TumIslerim 											= "#txtWorkOrderList";
 		String lbl_VeriBulunamadi										= "#txtDataNotFound";
 		String btn_GoreveBasla											= "#btnMultiTask";

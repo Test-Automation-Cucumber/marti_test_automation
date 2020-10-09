@@ -68,17 +68,17 @@ public class TestBase {
 //		System.setProperty("platformName", "web");
 //		System.setProperty("browserName", "chrome");
 //		System.setProperty("appName", "controlcenter");
-		
-		//Android
+	
+//	Android
 		System.setProperty("platformName", "android");
 		System.setProperty("deviceName", "Emulator_1");
-		System.setProperty("appName", "security");
-//		
-//		//IOS
-//		System.setProperty("platformName", "ios");   BUNU TEST CLASS'LARINDA DA CAGIRIYORSUN. BI DENE BAKALIM BURDAN SILEREK CALISTIRMAYI NE OLACAK.
+		System.setProperty("appName", "ride");
+
+//		System.setProperty("platformName", "ios");
 //		System.setProperty("deviceName", "iPhone5S");
-//
-//		//API
+//		System.setProperty("appName", "healthchecker");
+		
+		//API
 //		System.setProperty("platformName", "api");
 //		System.setProperty("appName", "operator"); //ride, operator
 
@@ -175,7 +175,7 @@ public class TestBase {
 				capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, device_bundle_id);
 				capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
 				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, automation_name);
-
+				capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
 				
 				iosDriver = new IOSDriver<IOSElement>(new URL(appium_server), capabilities);
 				iosDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

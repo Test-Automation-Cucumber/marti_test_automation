@@ -6,7 +6,10 @@ import dbmodel.Provider;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.connection.ConnectionState;
-import io.appium.java_client.android.connection.ConnectionStateBuilder;
+//import io.appium.java_client.android.connection.ConnectionStateBuilder;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
+import utilities.PageBaseIos;
 
 public class TestDevice {
 	Provider provider = new Provider();
@@ -16,7 +19,7 @@ public class TestDevice {
 
 	}
 	
-	public TestDevice setLocationServiceStatus(boolean status) {
+	public TestDevice setAndroidLocationServiceStatus(boolean status) {
 		String cmd = "";
 		if (status)
 			cmd = "adb shell settings put secure location_providers_allowed +network & adb shell settings put secure location_providers_allowed +gps";
@@ -32,7 +35,7 @@ public class TestDevice {
 		return this;
 	}
 	
-	public TestDevice resetLoginStatus(String phone_number) {
+	public TestDevice resetCustomerLoginStatus(String phone_number) {
 		try {
 			provider.ExecuteCommand(
 					"update customers set access_token = NULL where mobile_phone = '" + phone_number + "';",
@@ -44,7 +47,7 @@ public class TestDevice {
 		return this;
 	}
 	
-	public TestDevice setWIFIServiceStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
+	public TestDevice setAndroidWIFIServiceStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
 		ConnectionState conStatus = androidDriver.getConnection();
 		
 		if (status) {
@@ -59,7 +62,7 @@ public class TestDevice {
 		return this;
 	}
 	
-	public TestDevice setDataServiceStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
+	public TestDevice setAndroidDataServiceStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
 		ConnectionState conStatus = androidDriver.getConnection();
 		
 		if (status) {
@@ -74,7 +77,7 @@ public class TestDevice {
 		return this;
 	}
 	
-	public TestDevice setAirPlaneStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
+	public TestDevice setAndroidAirPlaneStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
 		ConnectionState conStatus = androidDriver.getConnection();
 		
 		if (status) {
@@ -89,12 +92,12 @@ public class TestDevice {
 		return this;
 	}
 	
-	protected TestDevice setBatteryLevel(AndroidDriver<AndroidElement> androidDriver, int level) {
+	protected TestDevice setAndroidBatteryLevel(AndroidDriver<AndroidElement> androidDriver, int level) {
 		androidDriver.setPowerCapacity(level);
 		return this;
 	}
 	
-	public TestDevice setCamPermissionStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
+	public TestDevice setAndroidCamPermissionStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
 		String packageName= androidDriver.getCurrentPackage();
 		 String grantCameraPermission= "adb shell pm grant " + packageName +" android.permission.CAMERA";
 		 String revokeCameraPermission= "adb shell pm revoke " + packageName +" android.permission.CAMERA";
@@ -110,8 +113,78 @@ public class TestDevice {
 			return this;
 		}
 	
+/////////////////////////////////////////  IOS  ///////////////////////////////////////////////
+	
+	
+	public void setWIFIServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
+//		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
+//		String tagName = element.getAttribute("content-desc");
+		
+		PageBaseIos pageBaseIos = new PageBaseIos(iosDriver);
+		
+		pageBaseIos.swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
+		
+		if (status) {
+			if (pageBaseIos.getValue("#wifi-button").equals("0")) {
+				pageBaseIos.click("#wifi-button");
+			}
+		} else {
+			if (pageBaseIos.getValue("#wifi-button").equals("1")) {
+				pageBaseIos.click("#wifi-button");
+				if( pageBaseIos.exists("#Yakınlardaki Wi-Fi Bağlantısı Yarına Kadar Kesiliyor", 2))
+					pageBaseIos.click("#Tamam");
+			}
+		}
+		clickToHomeButton(iosDriver);
+	}
+	
+	public void setDataServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
+//		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
+//		String tagName = element.getAttribute("content-desc");
+		
+		PageBaseIos pageBaseIos = new PageBaseIos(iosDriver);
+		
+		pageBaseIos.swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
+		
+		if (status) {
+			if (pageBaseIos.getValue("#cellular-data-button").equals("0")) {
+				pageBaseIos.click("#cellular-data-button");
+			}
+		} else {
+			if (pageBaseIos.getValue("#cellular-data-button").equals("1")) {
+				pageBaseIos.click("#cellular-data-button");
+			}
+		}
+		clickToHomeButton(iosDriver);
+	}
+	
+	public void setAirPlaneServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
+//		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
+//		String tagName = element.getAttribute("content-desc");
+		
+		PageBaseIos pageBaseIos = new PageBaseIos(iosDriver);
+		
+		pageBaseIos.swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
+		
+		if (status) {
+			if (pageBaseIos.getValue("#airplane-mode-button").equals("0")) {
+				pageBaseIos.click("#airplane-mode-button");
+			}
+		} else {
+			if (pageBaseIos.getValue("#airplane-mode-button").equals("1")) {
+				pageBaseIos.click("#airplane-mode-button");
+			}
+		}
+		clickToHomeButton(iosDriver);
+	}
 
-
+	protected void clickToHomeButton(IOSDriver iosDriver) {
+		iosDriver.executeScript("client:client.deviceAction(\"Home\")");
+	}
+	
 	
 	
 	

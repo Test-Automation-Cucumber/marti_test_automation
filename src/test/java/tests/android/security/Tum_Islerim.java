@@ -4,10 +4,8 @@ import org.testng.annotations.Test;
 
 import dbmodel.Provider;
 import dbmodel.DataPreparation.User;
-import pages.android.security.pageAracTeslim;
 import pages.android.security.pageGirisEkrani;
 import pages.android.security.pageTumIslerim;
-import pages.android.security.pageYuklemeEkrani;
 import utilities.TestBase;
 
 public class Tum_Islerim extends TestBase {
@@ -28,8 +26,8 @@ public class Tum_Islerim extends TestBase {
 
 // ******************************************************* TEST ***********************************************************
 
-	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 54)
-	public void TC_054_Tum_Islerim_Listesi() {
+	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 29)
+	public void TC_030_Tum_Islerim_Listesi() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
@@ -55,7 +53,7 @@ public class Tum_Islerim extends TestBase {
 		tum_Islerim
 		.Tum_Islerim_Listesi(param_2);
 	}
-	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 55)
+	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 30)
 	public void TC_055_Tum_Islerim_Detay_Aktif_Isi_Yok() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
@@ -82,8 +80,8 @@ public class Tum_Islerim extends TestBase {
 		tum_Islerim
 		.Tum_Islerim_Detay_Aktif_Isi_Yok();
 	}
-	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 56)
-	public void TC_056_Tum_Islerim_Detay_Aktif_Isi_Var() {
+	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 31)
+	public void TC_032_Tum_Islerim_Detay_Aktif_Isi_Var() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];

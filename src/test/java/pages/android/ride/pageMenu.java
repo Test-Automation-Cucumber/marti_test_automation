@@ -9,7 +9,7 @@ import utilities.PageBaseAndroid;
 public class pageMenu extends PageBaseAndroid {
 	AndroidDriver<AndroidElement> androidDriver;
 	TestDevice testDevice;
-	pageGirisEkrani giris_Ekrani;	
+//	pageGirisEkrani giris_Ekrani;	
 	Customer customer;
 	Scooter scooter;
 	
@@ -21,7 +21,7 @@ public class pageMenu extends PageBaseAndroid {
 //			testDevice = new TestDevice();
 			customer = new Customer();
 			scooter = new Scooter();
-			giris_Ekrani = new pageGirisEkrani(this.androidDriver);
+//			giris_Ekrani = new pageGirisEkrani(this.androidDriver);
 			
 		}
 
@@ -85,17 +85,12 @@ public class pageMenu extends PageBaseAndroid {
 		// *********Page Methods*********
 
 		public pageMenu Versiyon_Kontrol(String phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(phone_number);
-			
 			click(btn_Menu);
 			assertFound(lbl_Version);
 			return this;
 		}	
 		
 		public pageMenu Profil_Duzenleme(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
 			click(btn_Menu);
 			click(btn_Edit);
 			assertEquals(txt_PhoneNumber, customer_phone_number);
@@ -106,25 +101,13 @@ public class pageMenu extends PageBaseAndroid {
 			assertFound(btn_Edit);
 			return this;
 		}
-		public pageMenu Arkadasini_Davet_Et(String customer_phone_number) {
-			customer
-			.deleteCustomerCoupons(customer_phone_number);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-						
+		public pageMenu Arkadasini_Davet_Et(String customer_phone_number) {			
 			assertFound(img_NotifyIcon);
 			click(btn_Menu);
 			click(li_ArkadasiniDavetEt);
 			return this;
 		}
 		public pageMenu Kampanyalar_Arkadasini_Davet_Et(String customer_phone_number) {
-			customer
-			.deleteCustomerCoupons(customer_phone_number);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			assertFound(img_NotifyIcon);
 			click(btn_Menu);
 			click(li_Kampanyalar);
@@ -153,13 +136,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 				
 		public pageMenu Surusleri_Inceleme(String customer_phone_number) {
-			customer
-			.deleteCustomerRides(customer_phone_number)
-			.deleteCustomerReservations(customer_phone_number);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(li_Suruslerim);
 			assertEquals(lbl_SuruslerimContent, "Henüz hiç MARTI sürüşün yok, ilk MARTI yolculuğuna çıkmanın tam zamanı!");
@@ -167,9 +143,9 @@ public class pageMenu extends PageBaseAndroid {
 			return this;
 		}
 		
-		public pageMenu SurusDetayiInceleme(String customer_phone_number, String scooter_code) {
+		public pageMenu SurusDetayiInceleme(String customer_phone_number, String scooter_code, String scooter_location) {
 			scooter
-			.addScooter(scooter_code);
+			.addScooter(scooter_code, scooter_location);
 			
 			customer
 			.addCustomerFinishedRide(customer_phone_number, scooter_code);
@@ -181,14 +157,6 @@ public class pageMenu extends PageBaseAndroid {
 		}	
 		
 		public pageMenu Varsayilan_Kredi_Karti_Degistirme(String customer_phone_number) {
-			customer
-			.deleteCreditCards(customer_phone_number)
-			.addCreditCard(customer_phone_number);
-			customer.addErrorCreditCard(customer_phone_number);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(btn_Odeme);
 			
@@ -204,12 +172,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Kredi_Karti_Ekleme_Basarili(String customer_phone_number) {
-			customer
-			.deleteCreditCards(customer_phone_number);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(btn_Odeme);
 			
@@ -233,12 +195,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Kredi_Karti_Ekleme_Basarisiz(String customer_phone_number) {
-			customer
-			.deleteCreditCards(customer_phone_number);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(btn_Odeme);
 			
@@ -262,10 +218,6 @@ public class pageMenu extends PageBaseAndroid {
 		}	
 		
 		public pageMenu Dil_Degistirme(String customer_phone_number) {
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(li_DilDegistir);
 			click(chb_Language, 1);
@@ -280,9 +232,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Yardim_Dokumanina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			assertFound(lbl_Title);
 			swipe(lbl_Title, 303, 975,346,231, 300);
@@ -295,9 +244,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Kullanim_Kosullarina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			assertFound(lbl_Title);
 			click(li_Sozlesmeler);
@@ -310,8 +256,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Kvkk_Aydinlatma_Metnine_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
 			click(btn_Menu);
 			assertFound(lbl_Title);
 			click(li_Sozlesmeler);
@@ -324,8 +268,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 
 		public pageMenu Guvenlik_Dokumanina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
 			click(btn_Menu);
 			click(li_Sozlesmeler);
 			swipe(lbl_Title, 303, 975,346,231, 300);
@@ -337,9 +279,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Surus_Kurallarina_Erisim(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(li_SurusKurallari);
 			wait(3);
@@ -352,9 +291,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Nasil_Kullanilir(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(li_NasilKullanilir);
 			wait(2);
@@ -367,10 +303,6 @@ public class pageMenu extends PageBaseAndroid {
 		}
 		
 		public pageMenu Kampanyalar_Arkadasini_Davet_Etme(String customer_phone_number) {
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			click(li_Kampanyalar);
 			click(btn_ArkadasiniDavetEt);
@@ -381,9 +313,6 @@ public class pageMenu extends PageBaseAndroid {
 		}	
 		
 		public pageMenu Cikis(String customer_phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_number);
-			
 			click(btn_Menu);
 			wait(2);
 			swipe(lbl_Title, 303, 975,346,231, 300);

@@ -67,12 +67,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 		// *********Page Methods*********
 
 		public pageAnaEkran Surus_Baslat(String customer_phone_no) {
-			customer
-			.deleteCustomerDebt(customer_phone_no);
-					
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
@@ -80,15 +74,8 @@ public class pageAnaEkran extends PageBaseAndroid {
 			assertFound(btn_Light);
 			return this;
 		}	
-		public pageAnaEkran Tckn_Gecersiz(String phone_number) {
-			
-			customer
-			.deleteTcknValidation(phone_number);
-			
-			giris_Ekrani
-			.Giris_Basarili(phone_number);
+		public pageAnaEkran Tckn_Gecersiz(String phone_number) {			
 			assertFound(img_NotifyIcon);
-
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
@@ -100,11 +87,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 		}	
 		
 		public pageAnaEkran Odeme_Yontemi_Yok(String customer_phone_no) {
-			customer.deleteCreditCards(customer_phone_no);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
@@ -123,7 +105,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 				customer.deleteCustomerDebt(customer_phone_no);
 
 			String appPackageName=androidDriver.getCurrentPackage();
-			testDevice.setCamPermissionStatus(androidDriver, false);
+			testDevice.setAndroidCamPermissionStatus(androidDriver, false);
 			androidDriver.closeApp();
 			androidDriver.activateApp(appPackageName);
 			
@@ -139,15 +121,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}		
 		public pageAnaEkran Surus_Baslatma_Kod_Girisi(String customer_phone_no) {
-				customer
-				.addTcknAndKvkkValidation(customer_phone_no)
-				.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no);
-				
-				giris_Ekrani
-				.Giris_Basarili(customer_phone_no);
-				
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
@@ -158,15 +131,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}
 		public pageAnaEkran Surus_Baslat_Basarili(String customer_phone_no, String scooter_code) {
-	     	customer
-	     	.addTcknAndKvkkValidation(customer_phone_no)
-	     	.deleteCreditCards(customer_phone_no)
-	     	.addCreditCard(customer_phone_no);
-	     	customer.deleteCustomerDebt(customer_phone_no);
-				
-			scooter
-			.addScooter(scooter_code);
-						
 			giris_Ekrani
 			.Giris_Basarili(customer_phone_no);
 				
@@ -180,19 +144,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}
 		public pageAnaEkran Surus_Baslat_Basarisiz_Martiya_Uzak(String customer_phone_no, String scooter_code) {
-				customer
-				.addTcknAndKvkkValidation(customer_phone_no)
-				.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no);
-			
-			scooter
-			.addScooter(scooter_code)
-			.setLastKnowPointToScooter(scooter_code, "sxk9q130z");
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			
 //			String appPackageName=androidDriver.getCurrentPackage();
 //			androidDriver.closeApp();
 //			androidDriver.activateApp(appPackageName);
@@ -209,10 +160,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}
 		
-		public pageAnaEkran Daha_Cok_Marti(String customer_phone_no) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			
+		public pageAnaEkran Daha_Cok_Marti() {
 			assertFound(btn_Basla);
 			click(btn_DahaCokMarti);
 			assertEquals(popup_Message, "Bulunduğun bölgede daha çok MARTI görmek ister misin?");
@@ -220,13 +168,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 		}
 		
 		public pageAnaEkran Bize_Ulasin_Kilit_Problemi_Bildirme(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
-			
 			click(btn_BizeUlasin);
 			click(btn_KilitProblemi);
 			click(btn_Kaydet);
@@ -259,11 +201,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 		}
 		
 		public pageAnaEkran Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
 			
 			click(btn_BizeUlasin);
@@ -304,13 +241,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 		}
 		
 		public pageAnaEkran Bize_Ulasin_Yanlis_Park(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
-			
 			click(btn_BizeUlasin);
 			click(btn_YanlisPark);
 			click(btn_Kaydet);
@@ -343,12 +274,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 		}
 		
 		public pageAnaEkran Bize_Ulasin_Acil_Durum_Paylas(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			
 			assertFound(img_NotifyIcon);
 			click(btn_BizeUlasin);
 			click(btn_AcilDurumPaylas);
@@ -371,9 +296,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 		
 		
 		public pageAnaEkran Bildirimleri_Kontrol_Etme(String customer_phone_no) {
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			
 			click(img_NotifyIcon);
 			assertFound(list_Notify);
 			click(btn_Geri);

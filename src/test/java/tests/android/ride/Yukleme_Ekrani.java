@@ -3,13 +3,18 @@ package tests.android.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import dbmodel.DataPreparation.Customer;
+import dbmodel.DataPreparation.Scooter;
+import pages.android.ride.pageGirisEkrani;
 import pages.android.ride.pageYuklemeEkrani;
 import utilities.TestBase;
 
 public class Yukleme_Ekrani extends TestBase {
 	Provider provider = new Provider();
 	pageYuklemeEkrani yukleme_Ekrani;
-	String methodName;
+	pageGirisEkrani giris_Ekrani;
+	Customer customer;
+	Scooter scooter;
 	String param_1;
 	String param_2;
 	String param_3;
@@ -66,20 +71,49 @@ public class Yukleme_Ekrani extends TestBase {
 	public void TC_004_Oturum_Kontrolu_Basarili() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerReservations(param_1)
+		.addTcknAndKvkkValidation(param_1);
+		
 		// ***********PAGE METHODS**************
-		yukleme_Ekrani.Oturum_Kontrolu_Basarili(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);	
 	}
 	@Test(priority = 5)
 	public void TC_005_Surus_Kontrolu() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		scooter
+		.addScooter(param_2, param_3);
+				
+		customer
+		.deleteCustomerRides(param_1)
+		.addCustomerContinuesRide(param_1, param_2);
+		
 		// ***********PAGE METHODS**************
-		yukleme_Ekrani.Surus_Kontrolu(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		yukleme_Ekrani
+		.Surus_Kontrolu(param_1, param_2);
 	}
 //	@Test(priority = 6)  bu case'in kosabilmesi icin hq alaninda başka scooter olmamasi gerekiyor
 //	public void TC_006_Rezervasyon_Kontrolu() {
@@ -96,8 +130,19 @@ public class Yukleme_Ekrani extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteTcknValidation(param_1);
+		
 		// ***********PAGE METHODS**************
-		yukleme_Ekrani.Tckn_Kontrolu(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		yukleme_Ekrani
+		.Tckn_Kontrolu(param_1);
 	}
 ////	@Test(priority = 8)
 ////	public void TC_008_Kvkk_Kontrolu() {

@@ -56,7 +56,7 @@ public class pageSurus extends PageBaseAndroid {
 		
 		// *********Page Methods*********
 
-		public pageSurus Surus_Basladi_Kodlu_Kilit(String customer_phone_no, String scooter_code) {
+		public pageSurus Surus_Basladi_Kodlu_Kilit(String customer_phone_no, String scooter_code, String scooter_location) {
 			customer
 			.deleteCustomerRides(customer_phone_no)
 			.deleteCustomerDebt(customer_phone_no)
@@ -65,7 +65,7 @@ public class pageSurus extends PageBaseAndroid {
 			.addCreditCard(customer_phone_no);
 			
 			scooter
-			.addScooter(scooter_code)
+			.addScooter(scooter_code, scooter_location)
 			.addScooterFinishedRide(customer_phone_no, scooter_code)
 			.addScooterRide(customer_phone_no, scooter_code)
 			.lockScooter(scooter_code);
@@ -86,21 +86,7 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}	
 		
-		public pageSurus Surus_Basladi_IOT_Kilit(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.unlockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+		public pageSurus Surus_Basladi_IOT_Kilit(String customer_phone_no, String scooter_code) {			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
@@ -115,18 +101,9 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 		public pageSurus Nasil_Surulur_Gecilmemis(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
+
 			
-			scooter
-			.addScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 
 			assertFound(btn_Basla);
 			wait(4);
@@ -157,23 +134,6 @@ public class pageSurus extends PageBaseAndroid {
 	}
 		
 		public pageSurus Acil_Mudahale(String customer_phone_no, String scooter_code) {
-		
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
-			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
@@ -189,21 +149,9 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 		public pageSurus Nasil_Surulur(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
+
 			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -220,21 +168,9 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 		public pageSurus Ortalama(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
+
 			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -257,18 +193,7 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}		
 		public pageSurus Surus_Bitirme(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
-			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
+
 			
 			giris_Ekrani
 			.Giris_Basarili(customer_phone_no);
@@ -289,21 +214,9 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}
 		public pageSurus Park_Edilemez_Alan(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
+
 			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -332,21 +245,9 @@ public class pageSurus extends PageBaseAndroid {
 		}	
 		
 		public pageSurus Kilit_Takilmadi(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
+
 			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -398,21 +299,8 @@ public class pageSurus extends PageBaseAndroid {
 //		}		
 		
 	public pageSurus Surus_Bitir_Internet_Kapali(String customer_phone_no, String scooter_code) {
-		customer
-		.deleteCustomerRides(customer_phone_no)
-		.deleteCustomerDebt(customer_phone_no)
-		.deleteCreditCards(customer_phone_no)
-		.addCustomer(customer_phone_no)
-		.addCreditCard(customer_phone_no);
-		customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
-		
-		scooter
-		.addScooter(scooter_code)
-		.addScooterRide(customer_phone_no, scooter_code)
-		.lockScooter(scooter_code);
-		
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);
+
+
 		
 		while (exists(lbl_NasilKullanilir, 5)) {
 			click(btn_Ileri);
@@ -421,16 +309,16 @@ public class pageSurus extends PageBaseAndroid {
 		
 		assertFound(btn_FotoCekBitir);
 		testDevice
-		.setWIFIServiceStatus(androidDriver, false)
-		.setDataServiceStatus(androidDriver, false);
+		.setAndroidWIFIServiceStatus(androidDriver, false)
+		.setAndroidDataServiceStatus(androidDriver, false);
 		click(btn_FotoCekBitir);
 		waitLoadingImage();
 		click(btn_Bitir);
 		wait(5);
 		assertFound(btn_Bitir);
 		testDevice
-		.setWIFIServiceStatus(androidDriver, true)
-		.setDataServiceStatus(androidDriver, true);
+		.setAndroidWIFIServiceStatus(androidDriver, true)
+		.setAndroidDataServiceStatus(androidDriver, true);
 		
 		customer 
 		.deleteCustomerRides(customer_phone_no);
@@ -439,21 +327,9 @@ public class pageSurus extends PageBaseAndroid {
 	}
 		
 		public pageSurus Ceza_Kurallarina_Erisim(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
+
 			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -473,21 +349,9 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}
 		public pageSurus Odeme_Hatasi(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addErrorCreditCard(customer_phone_no)
-			.addCustomerFinishedRide(customer_phone_no, scooter_code);
+
 			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -511,21 +375,9 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 		public pageSurus Surus_Bitirme_Basarili(String customer_phone_no, String scooter_code) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			customer.addCustomerFinishedRide(customer_phone_no, scooter_code);
+
 			
-			scooter
-			.addScooter(scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);

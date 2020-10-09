@@ -4,10 +4,10 @@
 <suite name="Web Suite" preserve-order="true" parallel="classes" thread-count="1">
 <test name="Web Tests">
 	<classes>
-	<class name="tests.android.ride.Yukleme_Ekrani" />
-	<class name="tests.android.ride.Giris_Ekrani" />
-	<class name="tests.android.ride.Ana_Ekran" />
-	<class name="tests.android.ride.Borclar" />
+<!-- 	<class name="tests.android.ride.Yukleme_Ekrani" /> -->
+<!-- 	<class name="tests.android.ride.Giris_Ekrani" /> -->
+<!-- 	<class name="tests.android.ride.Ana_Ekran" /> -->
+<!-- 	<class name="tests.android.ride.Borclar" /> -->
 	<class name="tests.android.ride.Surus" />
 	<class name="tests.android.ride.Menu" />
 	</classes>

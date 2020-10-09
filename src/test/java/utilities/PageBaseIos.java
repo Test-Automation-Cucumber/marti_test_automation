@@ -36,7 +36,7 @@ public class PageBaseIos {
 	}
 
 //===========================================================================Waiting..
-	protected By findElements(String pure_element, int index) {
+	public By findElements(String pure_element, int index) {
 		By elementBy = null;
 //		waitLoadingImage();
 		if (pure_element.substring(0, 1).equals("*")) {
@@ -48,11 +48,10 @@ public class PageBaseIos {
 		} else if (pure_element.substring(0, 1).equals("#")) {
 			elementBy = MobileBy.id(pure_element.substring(1));
 		}
-		
 		return elementBy;
 	}
 
-	protected By quickFindElements(String pure_element, int index) {
+	public By quickFindElements(String pure_element, int index) {
 		By elementBy = null;
 		if (pure_element.substring(0, 1).equals("*")) {
 			elementBy = MobileBy.name(pure_element.substring(1));
@@ -104,7 +103,7 @@ public class PageBaseIos {
 
 //===========================================================================Click
 	// Click By Method
-	protected void click(String pure_element) {
+	public void click(String pure_element) {
 		By elementBy = findElements(pure_element, 0);
 		waitClickable(elementBy);
 		iosDriver.findElement(elementBy).click();
@@ -182,7 +181,7 @@ public class PageBaseIos {
 	
 //===========================================================================Get Value
 		// Get Value
-		protected String getValue(String pure_element) {
+		public String getValue(String pure_element) {
 			By elementBy = findElements(pure_element, 0);
 			waitClickable(elementBy);
 
@@ -191,7 +190,7 @@ public class PageBaseIos {
 		}
 
 		// Get Value
-		protected String getValue(String pure_element, int index) {
+		public String getValue(String pure_element, int index) {
 			By elementBy = findElements(pure_element, index);
 			waitClickable(elementBy);
 
@@ -268,7 +267,7 @@ public class PageBaseIos {
 	 * @param second    -- set seconds to wait element in page
 	 * @return returns true or false regarding to element existing
 	 */
-	protected boolean exists(String pure_element, int second) {
+	public boolean exists(String pure_element, int second) {
 		try {
 			iosDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 			List<IOSElement> elements = null;
@@ -378,66 +377,66 @@ public class PageBaseIos {
 		}
 	}
 	
-	protected void setWIFIServiceStatus(boolean status) {
-		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
-//		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
-//		String tagName = element.getAttribute("content-desc");
-		
-		swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
-		
-		if (status) {
-			if (getValue("#wifi-button").equals("0")) {
-				click("#wifi-button");
-			}
-		} else {
-			if (getValue("#wifi-button").equals("1")) {
-				click("#wifi-button");
-				if( exists("#Yakınlardaki Wi-Fi Bağlantısı Yarına Kadar Kesiliyor", 2))
-					click("#Tamam");
-			}
-		}
-		clickToHomeButton();
-	}
+//	protected void setWIFIServiceStatus(boolean status) {
+//		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
+////		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
+////		String tagName = element.getAttribute("content-desc");
+//		
+//		swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
+//		
+//		if (status) {
+//			if (getValue("#wifi-button").equals("0")) {
+//				click("#wifi-button");
+//			}
+//		} else {
+//			if (getValue("#wifi-button").equals("1")) {
+//				click("#wifi-button");
+//				if( exists("#Yakınlardaki Wi-Fi Bağlantısı Yarına Kadar Kesiliyor", 2))
+//					click("#Tamam");
+//			}
+//		}
+//		clickToHomeButton();
+//	}
+//	
+//	protected void setDataServiceStatus(boolean status) {
+//		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
+////		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
+////		String tagName = element.getAttribute("content-desc");
+//		
+//		swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
+//		
+//		if (status) {
+//			if (getValue("#cellular-data-button").equals("0")) {
+//				click("#cellular-data-button");
+//			}
+//		} else {
+//			if (getValue("#cellular-data-button").equals("1")) {
+//				click("#cellular-data-button");
+//			}
+//		}
+//		clickToHomeButton();
+//	}
+//	
+//	protected void setAirPlaneServiceStatus(boolean status) {
+//		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
+////		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
+////		String tagName = element.getAttribute("content-desc");
+//		
+//		swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
+//		
+//		if (status) {
+//			if (getValue("#airplane-mode-button").equals("0")) {
+//				click("#airplane-mode-button");
+//			}
+//		} else {
+//			if (getValue("#airplane-mode-button").equals("1")) {
+//				click("#airplane-mode-button");
+//			}
+//		}
+//		clickToHomeButton(iosDriver);
+//	}
 	
-	protected void setDataServiceStatus(boolean status) {
-		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
-//		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
-//		String tagName = element.getAttribute("content-desc");
-		
-		swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
-		
-		if (status) {
-			if (getValue("#cellular-data-button").equals("0")) {
-				click("#cellular-data-button");
-			}
-		} else {
-			if (getValue("#cellular-data-button").equals("1")) {
-				click("#cellular-data-button");
-			}
-		}
-		clickToHomeButton();
-	}
-	
-	protected void setAirPlaneServiceStatus(boolean status) {
-		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
-//		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
-//		String tagName = element.getAttribute("content-desc");
-		
-		swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
-		
-		if (status) {
-			if (getValue("#airplane-mode-button").equals("0")) {
-				click("#airplane-mode-button");
-			}
-		} else {
-			if (getValue("#airplane-mode-button").equals("1")) {
-				click("#airplane-mode-button");
-			}
-		}
-		clickToHomeButton();
-	}
-	
-	protected void clickToHomeButton() {
-//		iosDriver.executeScript("client:client.deviceAction(\"Home\")");
+	protected void clickToHomeButton(IOSDriver iosDriver) {
+		iosDriver.executeScript("client:client.deviceAction(\"Home\")");
 	}
 }

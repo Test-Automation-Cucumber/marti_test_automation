@@ -4,14 +4,13 @@
 <suite name="Web Suite" preserve-order="true" parallel="classes" thread-count="1">
 <test name="Web Tests">
 	<classes>
-<!-- 	<class name="tests.android.security.Yukleme_Ekrani" /> -->
 <!-- 	<class name="tests.android.security.Giris_Ekrani" /> -->
 <!-- 	<class name="tests.android.security.Ana_Ekran" /> -->
 <!-- 	<class name="tests.android.security.Arac_Teslim" /> -->
 <!-- 	<class name="tests.android.security.Saha_Ekrani" /> -->
 <!-- 	<class name="tests.android.security.Tum_Islerim" /> -->
 	<class name="tests.android.security.Harita_Detay" />
-
+	<class name="tests.android.security.Ariza_Bildir" />
 	</classes>
     </test>
 </suite>

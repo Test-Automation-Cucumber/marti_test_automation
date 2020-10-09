@@ -98,6 +98,22 @@ public class Configuration {
 				//APP
 				if (System.getProperty("appName").equals("ride"))
 					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\ride.property");
+				else if (System.getProperty("appName").equals("healthchecker"))
+					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\healthchecker.property");
+				else if (System.getProperty("appName").equals("mobileservice"))
+					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\mobileservice.property");
+				else if (System.getProperty("appName").equals("rebalancer"))
+					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\rebalancer.property");
+				else if (System.getProperty("appName").equals("security"))
+					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\security.property");
+				else if (System.getProperty("appName").equals("healthchecker"))
+					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\swapper.property");
+				else if (System.getProperty("appName").equals("healthchecker"))
+					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\technicalservice.property");
+				else if (System.getProperty("appName").equals("healthchecker"))
+					is = ClassLoader.getSystemResourceAsStream("apps\\ios\\warehouse.property");
+				
+				
 				// app properties
 				reader = new InputStreamReader(is, "UTF-8");
 				configProps.load(reader);

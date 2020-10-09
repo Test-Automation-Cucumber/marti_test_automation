@@ -5,29 +5,6 @@ import dbmodel.Provider;
 public class Scooter {
 	Provider provider = new Provider();
 
-	// *********Constructor*********
-	public Scooter() {
-
-	}
-	
-//	// *scooter olustur
-//	public Scooter setScooterForAutomation(String scooter_code) {
-//		try {
-//			provider.ExecuteCommand("delete from rides where scooter_id = (select id from scooters where code = '" + scooter_code + "');"
-//					+ "delete from reservations where scooter_id = (select id from scooters where code = '" + scooter_code + "');",
-//					"martiDB");
-//			
-//			provider.ExecuteCommand("delete from scooters where code = "+ scooter_code +";"
-//					+ "INSERT INTO public.scooters (code, version, status_id, battery_status, last_known_point, last_update_time, module_battery_status, lock_code, sim_card_no, is_available, timezone, last_ride_id, last_stolen_time, mqtt_password, firmware_version, bt_mac, hdop, attention, geofence_group, need_repair, need_repair_note, gsm_available, gsm_location, mobile_phone_number, total_km, last_fota_time, sub_status, charging_station_id, scooter_body_version_id, starting_price, recurring_price, iot_locked, last_locked_time, life, reservation_price, created_at, last_check_time) VALUES "
-//					+ "('" + scooter_code + "', 1, 1, 95, 'sxk9m8gz5', '2020-06-16 12:12:08.174', 22, '1234', '1234', true, 3, 0, NULL, NULL, '1.008.285', NULL, 4.4, false, 10, false, '', true, 'sxk9m8gz5', '5066174696', 20, '2020-01-30 14:05:00.000', NULL, NULL, 4, 1.99, 0.59, true, NULL, 0, 0.39, '2020-02-19 00:00:00.000', '2019-05-18 12:12:27.736');",
-//					"martiDB");
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return this;
-//		}
-	
 	// *scooterların last know pointlerinin set edilmesi.
 	public Scooter setLastKnowPointToScooter(String scooter, String geo_point) {
 		try {
@@ -64,7 +41,6 @@ public class Scooter {
 		return this;
 		}
 	
-	
 	//*scooterı arızalı statuse gecirme
 	public Scooter repairScooterStatus(String scooter, boolean need_repair) throws Throwable {
 		if (scooter.length() < 4) {
@@ -90,14 +66,14 @@ public class Scooter {
 		}
 	
 	//*scooter sürüşlerini temizle
-	public Scooter addScooter(String scooter_code) {
+	public Scooter addScooter(String scooter_code, String location) {
 		try {
 			provider.ExecuteCommand("delete from rides where scooter_id = (select id from scooters where code ='" + scooter_code + "');"
 					+ "delete from scooter_repair_records where scooter_id = (select id from scooters where code ='" + scooter_code + "');"
 					+ "delete from reservations where scooter_id = (select id from scooters where code ='" + scooter_code + "');"
 					+ "delete from scooters where code ='" + scooter_code + "';"
 					+ "INSERT INTO public.scooters (code, version, status_id, battery_status, last_known_point, last_update_time, module_battery_status, lock_code, sim_card_no, is_available, timezone, last_ride_id, last_stolen_time, mqtt_password, firmware_version, bt_mac, hdop, attention, geofence_group, need_repair, need_repair_note, gsm_available, gsm_location, mobile_phone_number, total_km, last_fota_time, sub_status, charging_station_id, scooter_body_version_id, starting_price, recurring_price, iot_locked, last_locked_time, life, reservation_price, created_at, last_check_time) VALUES "
-					+ "('"+ scooter_code +"', 1, 1, 95, 'sxk9m8gz5', '2020-06-16 12:12:08.174', 22, '1234', '1234', true, 3, 0, NULL, NULL, '1.008.285', NULL, 4.4, false, 10, false, '', true, 'sxk9m8gz5', '5066174696', 20, '2020-01-30 14:05:00.000', NULL, NULL, 4, 1.99, 0.59, true, NULL, 0, 0.39, '2020-02-19 00:00:00.000', '2019-05-18 12:12:27.736');",
+					+ "('"+ scooter_code +"', 1, 1, 95, '" + location + "', '2020-06-16 12:12:08.174', 22, '1234', '1234', true, 3, 0, NULL, NULL, '1.008.285', NULL, 4.4, false, 10, false, '', true, 'sxk9m8gz5', '5066174696', 20, '2020-01-30 14:05:00.000', NULL, NULL, 4, 1.99, 0.59, true, NULL, 0, 0.39, '2020-02-19 00:00:00.000', '2019-05-18 12:12:27.736');",
 					"martiDB");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -166,6 +142,7 @@ public class Scooter {
 			
 			return this;
 		}
+	
 	//*scooter'in surus suresini 7 dk geri alir.
 	public Scooter setRideTime(String scooter) {
 		try {
@@ -224,23 +201,6 @@ public class Scooter {
 		}
 		return id;
 	}
-	
-//	public Scooter addSwapperTaks(String scooter_code, String userPhoneNumber) {  bu olmadi yaa silersin..
-////		String id = "";
-//		try {
-//			provider.ExecuteCommand("delete from tasks where scooter_id = (select id from scooters where code = '"+ scooter_code +"'); "
-//					+ "INSERT INTO tasks (created_by,task_owner,status,priority,created_date,start_date,end_date,cancelled_by,scooter_id,task_type,to_location,task_count,blocked_by,task_location,blocked_reason,battery_id,valid_until) VALUES "
-//					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"1'),1,'sxk9m8gz8',NULL,0,'sxk9m8gz8',NULL,NULL,'2020-03-10 23:00:00.000');"
-//						, "martiDB");
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return this;
-//	}
-//	
-//	//TASKLARI AYARLAR
 
-			
 	
 	}

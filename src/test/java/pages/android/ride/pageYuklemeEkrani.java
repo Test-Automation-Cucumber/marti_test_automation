@@ -100,16 +100,16 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 		.addTcknAndKvkkValidation(customer_phone_no);
 		
 		testDevice
-		.setWIFIServiceStatus(androidDriver, false)
-		.setDataServiceStatus(androidDriver, false);
+		.setAndroidWIFIServiceStatus(androidDriver, false)
+		.setAndroidDataServiceStatus(androidDriver, false);
 
 		androidDriver.resetApp();
 		
 		click(btn_Kapat);
 		
 		testDevice
-		.setWIFIServiceStatus(androidDriver, true)
-		.setDataServiceStatus(androidDriver, true);
+		.setAndroidWIFIServiceStatus(androidDriver, true)
+		.setAndroidDataServiceStatus(androidDriver, true);
 		
 		return this;
 	}
@@ -138,27 +138,8 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 //		wait(5);
 //		return this;
 //	}
-	public pageYuklemeEkrani Oturum_Kontrolu_Basarili(String customer_phone_no) {
-		customer
-		.deleteCustomerRides(customer_phone_no)
-		.deleteCustomerReservations(customer_phone_no)
-		.addTcknAndKvkkValidation(customer_phone_no);
-		
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);	
-		return this;
-	}
-	public pageYuklemeEkrani Surus_Kontrolu(String customer_phone_no, String scooter_code) {
-		scooter
-		.addScooter(scooter_code);
-				
-		customer
-		.deleteCustomerRides(customer_phone_no)
-		.addCustomerContinuesRide(customer_phone_no, scooter_code);
 
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);	
-	
+	public pageYuklemeEkrani Surus_Kontrolu(String customer_phone_no, String scooter_code) {
 		while (exists(lbl_NasilKullanilir, 5)) {
 			click(btn_Ileri);
 			waitMilliSec(750);
@@ -170,44 +151,39 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 		
 		return this;
 	}	
-	public pageYuklemeEkrani Rezervasyon_Kontrolu(String customer_phone_no, String scooter_code) {
-		customer
-		.deleteCustomerRides(customer_phone_no)
-		.deleteCustomerReservations(customer_phone_no);
-		
-		scooter
-		.addScooter(scooter_code);
-
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);
-		
-		findScooter("AUT1");
-				
-		click(btn_ReserveEt);
-		wait(2);
-		click(btn_ReserveEt2);
-		waitLoadingImage();
-		click(btn_ReserveIptalEt);
-		assertEquals(popup_Message, "Rezervasyonunu iptal etmek istediğine emin misin?");
-		click(btn_HayirTesekkurler);
-		click(btn_ReserveIptalEt);
-		click(btn_Tamam);
-		waitLoadingImage();
-		assertFound(btn_Ileri);
-		click(btn_Ileri);
-		assertFound(btn_Basla);
-		customer
-		.deleteCustomerReservations(customer_phone_no);
-		
-		return this;
-	}
+//	public pageYuklemeEkrani Rezervasyon_Kontrolu(String customer_phone_no, String scooter_code) {
+//		customer
+//		.deleteCustomerRides(customer_phone_no)
+//		.deleteCustomerReservations(customer_phone_no);
+//		
+//		scooter
+//		.addScooter(scooter_code);
+//
+//		giris_Ekrani
+//		.Giris_Basarili(customer_phone_no);
+//		
+//		findScooter("AUT1");
+//				
+//		click(btn_ReserveEt);
+//		wait(2);
+//		click(btn_ReserveEt2);
+//		waitLoadingImage();
+//		click(btn_ReserveIptalEt);
+//		assertEquals(popup_Message, "Rezervasyonunu iptal etmek istediğine emin misin?");
+//		click(btn_HayirTesekkurler);
+//		click(btn_ReserveIptalEt);
+//		click(btn_Tamam);
+//		waitLoadingImage();
+//		assertFound(btn_Ileri);
+//		click(btn_Ileri);
+//		assertFound(btn_Basla);
+//		customer
+//		.deleteCustomerReservations(customer_phone_no);
+//		
+//		return this;
+//	}
 	public pageYuklemeEkrani Tckn_Kontrolu(String customer_phone_no) {
-		customer
-		.deleteTcknValidation(customer_phone_no);
-		
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);
-		
+
 //		String appPackageName = androidDriver.getCurrentPackage();
 //		androidDriver.closeApp();
 //		androidDriver.activateApp(appPackageName);
@@ -223,47 +199,47 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 		.addTcknAndKvkkValidation(customer_phone_no);
 		return this;
 	}
-	public pageYuklemeEkrani Kvkk_Kontrolu(String customer_phone_no) {
-		customer
-		.addTcknAndKvkkValidation(customer_phone_no)
-		.deleteKvkkValidation(customer_phone_no);
-		
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);
-		
+//	public pageYuklemeEkrani Kvkk_Kontrolu(String customer_phone_no) {
+//		customer
+//		.addTcknAndKvkkValidation(customer_phone_no)
+//		.deleteKvkkValidation(customer_phone_no);
+//		
+//		giris_Ekrani
+//		.Giris_Basarili(customer_phone_no);
+//		
+////		String appPackageName = androidDriver.getCurrentPackage();
+////		androidDriver.closeApp();
+////		androidDriver.activateApp(appPackageName);
+////		wait(2);
+//		
+//		click(btn_Kvkk);
+//
+//		waitLoadingImage();
+//		customer
+//		.addTcknAndKvkkValidation(customer_phone_no);
+//		return this;
+//	}
+//	public pageYuklemeEkrani Dinamik_Bildirim_Kontrolu(String customer_phone_no) {
+////		String geohash = GeoHash.geoHashStringWithCharacterPrecision(53.244664, -6.140530, 7);
+//		customer
+//		.activateLocalCampaign(customer_phone_no, true);
+//		
 //		String appPackageName = androidDriver.getCurrentPackage();
 //		androidDriver.closeApp();
 //		androidDriver.activateApp(appPackageName);
-//		wait(2);
-		
-		click(btn_Kvkk);
-
-		waitLoadingImage();
-		customer
-		.addTcknAndKvkkValidation(customer_phone_no);
-		return this;
-	}
-	public pageYuklemeEkrani Dinamik_Bildirim_Kontrolu(String customer_phone_no) {
-//		String geohash = GeoHash.geoHashStringWithCharacterPrecision(53.244664, -6.140530, 7);
-		customer
-		.activateLocalCampaign(customer_phone_no, true);
-		
-		String appPackageName = androidDriver.getCurrentPackage();
-		androidDriver.closeApp();
-		androidDriver.activateApp(appPackageName);
-
-//		androidDriver;
-//		String currentContext = appiumDriver.getContext();
-//		appiumDriver.context("NATIVE_APP");
-
-		// actions within the alert
-//		appiumDriver.findElement(By.xpath("//*[@text='TAMAM']")).click(); // put locator instead of OK_BUTTON_LOCATOR
-//		appiumDriver.context(currentContext);
- 
-        assertFound(img_DynamicPopup);
-		
-		return this;
-	}
+//
+////		androidDriver;
+////		String currentContext = appiumDriver.getContext();
+////		appiumDriver.context("NATIVE_APP");
+//
+//		// actions within the alert
+////		appiumDriver.findElement(By.xpath("//*[@text='TAMAM']")).click(); // put locator instead of OK_BUTTON_LOCATOR
+////		appiumDriver.context(currentContext);
+// 
+//        assertFound(img_DynamicPopup);
+//		
+//		return this;
+//	}
 
 	
 }

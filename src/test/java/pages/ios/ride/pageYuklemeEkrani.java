@@ -85,7 +85,7 @@ public class pageYuklemeEkrani extends PageBaseIos {
 	public pageYuklemeEkrani Uygulama_Baslangici_Basarili(String customer_phone_number) {
 		if (exists(btn_Basla, 3)) {
 			testDevice
-			.resetLoginStatus(customer_phone_number);
+			.resetCustomerLoginStatus(customer_phone_number);
 			click(btn_Basla);
 		}
 		
@@ -112,26 +112,10 @@ public class pageYuklemeEkrani extends PageBaseIos {
 //		wait(5);
 //		return this;
 //	}
-	public pageYuklemeEkrani Oturum_Kontrolu_Basarili(String customer_phone_no) {
-		customer
-		.deleteCustomerRides(customer_phone_no)
-		.deleteCustomerReservations(customer_phone_no)
-		.addTcknAndKvkkValidation(customer_phone_no);
-		
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);	
-		return this;
-	}
 	public pageYuklemeEkrani Surus_Kontrolu(String customer_phone_no, String scooter_code) {
-		scooter
-		.addScooter(scooter_code);
-				
-		customer
-		.deleteCustomerRides(customer_phone_no)
-		.addCustomerContinuesRide(customer_phone_no, scooter_code);
 
-		giris_Ekrani
-		.Giris_Basarili(customer_phone_no);	
+
+
 		
 		while (exists(lbl_NasilKullanilir, 5)) {
 			click(btn_Ileri);
@@ -176,11 +160,9 @@ public class pageYuklemeEkrani extends PageBaseIos {
 		return this;
 	}
 	public pageYuklemeEkrani Tckn_Kontrolu(String customer_phone_no) {
-		customer
-		.deleteTcknValidation(customer_phone_no);
+
 		
-		giris_Ekrani
-		.Login(customer_phone_no);
+
 		
 		click(btn_Basla);
 		assertFound(popup_Hata);

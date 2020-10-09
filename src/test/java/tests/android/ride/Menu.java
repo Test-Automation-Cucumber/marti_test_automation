@@ -3,6 +3,7 @@ package tests.android.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import dbmodel.DataPreparation.Customer;
 import pages.android.ride.pageGirisEkrani;
 import pages.android.ride.pageMenu;
 import utilities.TestBase;
@@ -11,7 +12,7 @@ public class Menu extends TestBase {
 	Provider provider = new Provider();
 	pageMenu menu;
 	pageGirisEkrani giris_Ekrani;
-	String methodName;
+	Customer customer;
 	String param_1;
 	String param_2;
 	String param_3;
@@ -29,18 +30,36 @@ public class Menu extends TestBase {
 	public void TC_049_Versiyon_Kontrol() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
-		menu.Versiyon_Kontrol(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Versiyon_Kontrol(param_1);
 	}
 	@Test(priority = 50)
 	public void TC_050_Profil_Duzenleme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+	
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
+
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Profil_Duzenleme(param_1);
 	}
@@ -48,9 +67,20 @@ public class Menu extends TestBase {
 	public void TC_051_Arkadasini_Davet_Et() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerCoupons(param_1);
+		
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Arkadasini_Davet_Et(param_1)
 		.Davet_Baglantisi_Gonderme(param_1);
@@ -60,20 +90,46 @@ public class Menu extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerReservations(param_1);
+		
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Surusleri_Inceleme(param_1)
-		.SurusDetayiInceleme(param_1, param_2);
+		.SurusDetayiInceleme(param_1, param_2, param_3);
 	}
 	@Test(priority = 53)
 	public void TC_053_Varsayilan_Kredi_Karti_Degistirme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		customer
+		.addErrorCreditCard(param_1);
+		
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Varsayilan_Kredi_Karti_Degistirme(param_1);
 	}
@@ -83,7 +139,17 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCreditCards(param_1);
+		
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Kredi_Karti_Ekleme_Basarili(param_1);
 	}
@@ -91,9 +157,19 @@ public class Menu extends TestBase {
 	public void TC_055_Kredi_Karti_Ekleme_Basarisiz() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCreditCards(param_1);
+		
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Kredi_Karti_Ekleme_Basarisiz(param_1);
 	}
@@ -101,14 +177,22 @@ public class Menu extends TestBase {
 	public void TC_056_Dil_Degistirme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Dil_Degistirme(param_1);
 	}
 ////	@Test(priority = 57)
-////	public void TC_057_Kampanyalari_Incele() {
+////	public void TC_057_Kampanyalari_Incele() {  bu case'i ebir daha yazmak lazim
 ////		// *******************PAGE INSTANTIATIONS*******************
 ////		menu = new pageMenu(androidDriver);
 ////
@@ -123,6 +207,9 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		//burda giris_erkanı class'i yokmu ya nasil yani ?
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
 		menu
 		.Arkadasini_Davet_Et(param_1)
@@ -135,7 +222,16 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+	
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerCoupons(param_1);
+		
 		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
 		menu
 		.Kampanyalar_Arkadasini_Davet_Et(param_1)
 		.Kupon_Ekleme(param_1);
@@ -146,8 +242,14 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
 		// ***********PAGE METHODS**************
-		menu.Kampanyalar_Arkadasini_Davet_Etme(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Kampanyalar_Arkadasini_Davet_Etme(param_1);
 	}
 	@Test(priority = 61)
 	public void TC_061_Guvenlik_Dokumanina_Erisim() {
@@ -155,8 +257,16 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
-		menu.Guvenlik_Dokumanina_Erisim(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Guvenlik_Dokumanina_Erisim(param_1);
 	}
 	@Test(priority = 62)
 	public void TC_062_Nasil_Kullanilir_Erisim() {
@@ -164,8 +274,16 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
-		menu.Nasil_Kullanilir(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Nasil_Kullanilir(param_1);
 	}
 	@Test(priority = 63)
 	public void TC_063_Surus_Kurallarina_Erisim() {
@@ -173,17 +291,35 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+	
+		// ***********CASE DEPENDENCIES**************
+		
+		
 		// ***********PAGE METHODS**************
-		menu.Surus_Kurallarina_Erisim(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Surus_Kurallarina_Erisim(param_1);
 	}
 	@Test(priority = 64)
 	public void TC_064_Kvkk_Aydinlatma_Metnine_Erisim() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
-		menu.Kvkk_Aydinlatma_Metnine_Erisim(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Kvkk_Aydinlatma_Metnine_Erisim(param_1);
 	}
 	@Test(priority = 65)
 	public void TC_065_Kullanim_Kosullarina_Erisim() {
@@ -191,8 +327,16 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
-		menu.Kullanim_Kosullarina_Erisim(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Kullanim_Kosullarina_Erisim(param_1);
 	}
 	@Test(priority = 66)
 	public void TC_066_Yardim_Dokumanina_Erisim() {
@@ -200,8 +344,16 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
-		menu.Yardim_Dokumanina_Erisim(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);		
+		
+		menu
+		.Yardim_Dokumanina_Erisim(param_1);
 	}
 	@Test(priority = 67)
 	public void TC_067_Cikis() {
@@ -209,8 +361,16 @@ public class Menu extends TestBase {
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
 		// ***********PAGE METHODS**************
-		menu.Cikis(param_1);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		menu
+		.Cikis(param_1);
 	}
 }
 

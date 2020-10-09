@@ -36,30 +36,39 @@ public class Giris_Ekrani extends TestBase {
 	public void TC_011_Giris_Basarisiz() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
 		// ***********PAGE METHODS**************
-		giris_Ekrani.Giris_Basarisiz();
+		giris_Ekrani
+		.Giris_Basarisiz();
 	}
 
 	@Test(priority = 12)
 	public void TC_012_Dogrulama_Basarisiz() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
 		// ***********PAGE METHODS**************
-		giris_Ekrani.Dogrulama_Basarisiz(param_1);
+		giris_Ekrani
+		.Dogrulama_Basarisiz(param_1);
 	}
 
 	@Test(priority = 13)
 	public void TC_013_Tekrar_Kod_Gonder() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
 		// ***********PAGE METHODS**************
-		giris_Ekrani.Tekrar_Kod_Gonder(param_1);
+		giris_Ekrani
+		.Tekrar_Kod_Gonder(param_1);
 	}
 
 //	@Test(priority = 14)

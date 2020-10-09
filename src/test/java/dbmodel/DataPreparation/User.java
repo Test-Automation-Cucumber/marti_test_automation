@@ -146,7 +146,7 @@ public class User {
 				+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"4'),13,'"+location.substring(0,8)+"s',0,NULL,'"+location.substring(0,8)+"s',NULL,NULL,'2020-08-11 23:00:00.000'),"
 				+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"5'),14,'"+location.substring(0,8)+"6',0,NULL,'"+location.substring(0,8)+"6',NULL,NULL,'2020-08-11 23:00:00.000');"
 				, "martiDB");
-
+		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -158,7 +158,8 @@ public class User {
 			try {
 				scooter_code = scooter_code.toUpperCase();
 				//CREATE NEW SCOOTER(S)
-				provider.ExecuteCommand("delete from rides where scooter_id in (select id from scooters where code in ('" + scooter_code + "')); "
+				provider.ExecuteCommand("delete from security_action_logs where user_id = (select id from users where mobile_phone = '90"+ userPhoneNumber +"'); "
+						+ "delete from rides where scooter_id in (select id from scooters where code in ('" + scooter_code + "')); "
 						+ "delete from reservations where scooter_id in (select id from scooters where code in ('" + scooter_code + "')); "
 						+ "delete from scooters where code in ('" + scooter_code + "'); "
 						+ "delete from operator_action_log where scooter_id in (select id from scooters where code in ('" + scooter_code + "')); "
@@ -198,7 +199,7 @@ public class User {
 			//TASKLARI AYARLAR
 			provider.ExecuteCommand("delete from tasks where task_owner = (select id from users where mobile_phone = '90"+ userPhoneNumber +"'); "
 					+ "INSERT INTO tasks (created_by,task_owner,status,priority,created_date,start_date,end_date,cancelled_by,scooter_id,task_type,to_location,task_count,blocked_by,task_location,blocked_reason,battery_id,valid_until) VALUES "
-					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,3,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),10,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
+					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,3,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),11,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
 					, "martiDB");
 			
 			} catch (Exception e) {
@@ -225,7 +226,7 @@ public class User {
 			//TASKLARI AYARLAR
 			provider.ExecuteCommand("delete from tasks where task_owner = (select id from users where mobile_phone = '90"+ userPhoneNumber +"'); "
 					+ "INSERT INTO tasks (created_by,task_owner,status,priority,created_date,start_date,end_date,cancelled_by,scooter_id,task_type,to_location,task_count,blocked_by,task_location,blocked_reason,battery_id,valid_until) VALUES "
-					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,2,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),10,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
+					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,2,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),12,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
 					, "martiDB");
 			
 			} catch (Exception e) {
@@ -252,9 +253,9 @@ public class User {
 			//TASKLARI AYARLAR
 			provider.ExecuteCommand("delete from tasks where task_owner = (select id from users where mobile_phone = '90"+ userPhoneNumber +"'); "
 					+ "INSERT INTO tasks (created_by,task_owner,status,priority,created_date,start_date,end_date,cancelled_by,scooter_id,task_type,to_location,task_count,blocked_by,task_location,blocked_reason,battery_id,valid_until) VALUES "
-					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),10,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
+					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),13,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
 					, "martiDB");
-			
+						
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -279,7 +280,7 @@ public class User {
 			//TASKLARI AYARLAR
 			provider.ExecuteCommand("delete from tasks where task_owner = (select id from users where mobile_phone = '90"+ userPhoneNumber +"'); "
 					+ "INSERT INTO tasks (created_by,task_owner,status,priority,created_date,start_date,end_date,cancelled_by,scooter_id,task_type,to_location,task_count,blocked_by,task_location,blocked_reason,battery_id,valid_until) VALUES "
-					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),10,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
+					+ " ((select id from users where mobile_phone = '90"+ userPhoneNumber +"'),(select id from users where mobile_phone = '90"+ userPhoneNumber +"'),1,1,now(),NULL,NULL,NULL,(select id from scooters where code = '"+ scooter_code +"'),14,'"+location+"',0,NULL,'"+location+"',NULL,NULL,'2020-08-11 23:00:00.000');"
 					, "martiDB");
 			
 			} catch (Exception e) {

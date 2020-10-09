@@ -96,6 +96,7 @@ public class pageAracTeslim extends PageBaseAndroid {
 			
 			click(rdb_SorunVar);
 			writeText(txt_SorunDetay, "otomasyon");
+			swipe(txt_SorunDetay, 303, 975,346,231, 300);
 			click(btn_DevamEt);
 			
 			assertFound(img_MartiLogo);
@@ -180,6 +181,8 @@ public class pageAracTeslim extends PageBaseAndroid {
 			
 			click(rdb_SorunVar);
 			writeText(txt_SorunDetay, "oto");
+			swipe(txt_SorunDetay, 303, 975,346,231, 300);
+			
 			click(btn_DevamEt);
 
 			assertEquals(popup_Message, "Sorun alanına en az 5 karakter girişi olmalıdır.");
@@ -238,6 +241,8 @@ public class pageAracTeslim extends PageBaseAndroid {
 			
 			click(rdb_SorunVar);
 			writeText(txt_SorunDetay, "otomasyon");
+			swipe(txt_SorunDetay, 303, 975,346,231, 300);
+			
 			click(btn_DevamEt);
 
 			assertFound(img_MartiLogo);
@@ -294,6 +299,8 @@ public class pageAracTeslim extends PageBaseAndroid {
 			click(btn_FotoCek);
 			
 			click(rdb_SorunYok);
+			swipe(rdb_SorunYok, 303, 975,346,231, 300);
+			
 			click(btn_DevamEt);
 			
 			assertEquals(popup_Message, "Araç fotoğrafı eksik olamaz.");
@@ -325,8 +332,10 @@ public class pageAracTeslim extends PageBaseAndroid {
 			
 			click(rdb_SorunVar);
 			writeText(txt_SorunDetay, "oto");
+			
+			swipe(txt_SorunDetay, 303, 975,346,231, 300);
 			click(btn_DevamEt);
-
+			
 			assertEquals(popup_Message, "Sorun alanına en az 5 karakter girişi olmalıdır.");
 			click(btn_Tamam);
 

@@ -3,6 +3,7 @@ package pages.android.security;
 
 import org.openqa.selenium.html5.Location;
 
+import dbmodel.Provider;
 //import ch.hsr.geohash.GeoHash;
 import dbmodel.DataPreparation.*;
 import io.appium.java_client.android.AndroidDriver;
@@ -15,7 +16,7 @@ public class pageHaritaDetay extends PageBaseAndroid {
 	Scooter scooter;
 	TestDevice testDevice;
 	pageHaritaDetay saha_Ekrani;	
-
+	Provider provider;
 	
 	// *********Constructor*********
 		public pageHaritaDetay(AndroidDriver<AndroidElement> androidDriver) {
@@ -24,6 +25,7 @@ public class pageHaritaDetay extends PageBaseAndroid {
 			customer = new Customer();
 			scooter = new Scooter();
 			testDevice = new TestDevice();
+			provider = new Provider();
 		}
 
 		// *****************************************Web Elements***********************************
@@ -167,14 +169,23 @@ public class pageHaritaDetay extends PageBaseAndroid {
 			click("$Kayıp");
 			click(btn_GoreveBasla);
 			click(popup_Tamam);
+			wait(1);
 			swipe(btn_Calinmis, 238, 1683, 196, 316, 612);
+			
 			click(btn_ZiliCaldir);
-			assertEquals(popup_Message, "Martının zili çalıdırıldı. 15 sn sonra tekrar çaldırabilirsin.");
+			assertContains(popup_Message, "15 sn sonra tekrar çaldırabilirsin.");
+											
 			click(popup_Tamam);
-			assertFound(btn_FarAcKapat);
+			wait(1);
+			click(btn_ZiliCaldir);
+			assertNotFound(popup_Message, 1);
+			
+			click(btn_FarAcKapat);
 			click(btn_FotoYaBak);
 			click(btn_X);
 			click(btn_NavigasyonAl);
+			wait(3);
+			back();
 			click(chb_TumKonumlariGoster);
 			wait(1);
 			click(chb_TumKonumlariGoster);
@@ -217,6 +228,8 @@ public class pageHaritaDetay extends PageBaseAndroid {
 			click(popup_Iptal);
 			
 			click(btn_GoreviTamamla);
+			assertEquals(popup_Message, "Görevi tamamladığına emin misin ?");
+			click(popup_Tamam);
 			assertEquals(popup_Message, "Görev tamamlandı olarak işaretlendi");
 			click(popup_Tamam);
 			assertFound(btn_ArizaBildir);
@@ -255,12 +268,36 @@ public class pageHaritaDetay extends PageBaseAndroid {
 			click(popup_Iptal);
 			
 			click(btn_GoreviTamamla);
+			assertEquals(popup_Message, "Görevi tamamladığına emin misin ?");
+			click(popup_Tamam);
 			assertEquals(popup_Message, "Görev tamamlandı olarak işaretlendi");
 			click(popup_Tamam);
 			assertFound(btn_ArizaBildir);
 			
 			return this;
 		}
+		
+		public pageHaritaDetay Calinmis_Basarili(String userPhoneNumber, String scooter_code) {
+			click(btn_SahayaGit);
+			swipe(btn_ArizaBildir, 238, 1683, 196, 316, 612);
+			click(li_TumIslerim);
+			click("$Çalıntı");
+			click(btn_GoreveBasla);
+			click(popup_Tamam);
+			click(btn_GosterilenYerdeyim);
+			try {
+				provider.ExecuteCommand("update security_action_logs set action_time = (now() - interval '15 minute') where user_id = (select id from users where mobile_phone = '90" + userPhoneNumber + "');"
+						, "martiDB");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			click(btn_Calinmis);
+			assertEquals(popup_Message, "Scooter çalıntı olarak işaretlendi.");
+			click(popup_Tamam);
+			return this;
+		}
+		
 		
 		
 }

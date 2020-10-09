@@ -78,11 +78,9 @@ public class pageAnaEkran extends PageBaseIos {
 		// *********Page Methods*********
 
 		public pageAnaEkran Surus_Baslat(String customer_phone_no) {
-			customer
-			.deleteCustomerDebt(customer_phone_no);
+
 					
-			giris_Ekrani
-			.Login(customer_phone_no);
+
 			
 			if (exists(btn_OkudumAnladim, 5)) {
 				click(btn_OkudumAnladim);
@@ -95,8 +93,7 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}	
 		public pageAnaEkran Tckn_Gecersiz(String phone_number) {
-			customer
-			.deleteTcknValidation(phone_number);
+
 			
 			giris_Ekrani
 			.Login(phone_number);
@@ -111,10 +108,8 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}	
 		public pageAnaEkran Odeme_Yontemi_Yok(String customer_phone_no) {
-			customer.deleteCreditCards(customer_phone_no);
-			
-			giris_Ekrani
-			.Login(customer_phone_no);
+
+
 			
 			assertFound(btn_Basla);
 			wait(4);
@@ -144,14 +139,8 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}		
 		public pageAnaEkran Surus_Baslatma_Kod_Girisi(String customer_phone_no) {
-				customer
-				.addTcknAndKvkkValidation(customer_phone_no)
-				.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no);
-				
-				giris_Ekrani
-				.Login(customer_phone_no);
+
+
 				
 			assertFound(btn_Basla);
 			wait(4);
@@ -162,17 +151,9 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}
 		public pageAnaEkran Surus_Baslat_Basarili(String customer_phone_no, String scooter_code) {
-	     	customer
-	     	.addTcknAndKvkkValidation(customer_phone_no)
-	     	.deleteCreditCards(customer_phone_no)
-	     	.addCreditCard(customer_phone_no);
-	     	customer.deleteCustomerDebt(customer_phone_no);
-				
-			scooter
-			.addScooter(scooter_code);
+
 						
-			giris_Ekrani
-			.Login(customer_phone_no);
+
 				
 			assertFound(btn_Basla);
 			wait(4);
@@ -183,19 +164,6 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}
 		public pageAnaEkran Surus_Baslat_Basarisiz_Martiya_Uzak(String customer_phone_no, String scooter_code) {
-				customer
-				.addTcknAndKvkkValidation(customer_phone_no)
-				.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no);
-			
-			scooter
-			.addScooter(scooter_code)
-			.setLastKnowPointToScooter(scooter_code, "sxk9q130z");
-			
-			giris_Ekrani
-			.Login(customer_phone_no);
-			
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
@@ -209,8 +177,7 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}
 		public pageAnaEkran Daha_Cok_Marti(String customer_phone_no) {
-			giris_Ekrani
-			.Login(customer_phone_no);
+
 			
 			assertFound(btn_Basla);
 			click(btn_DahaCokMarti);
@@ -372,8 +339,7 @@ public class pageAnaEkran extends PageBaseIos {
 		
 		
 		public pageAnaEkran Bildirimleri_Kontrol_Etme(String customer_phone_no) {
-			giris_Ekrani
-			.Login(customer_phone_no);
+
 			
 			click(img_NotifyIcon);
 			assertFound(list_Notify);

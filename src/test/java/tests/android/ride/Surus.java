@@ -3,15 +3,19 @@ package tests.android.ride;
 import org.testng.annotations.Test;
 
 import dbmodel.Provider;
+import dbmodel.DataPreparation.Customer;
+import dbmodel.DataPreparation.Scooter;
 import pages.android.ride.pageAnaEkran;
+import pages.android.ride.pageGirisEkrani;
 import pages.android.ride.pageSurus;
 import utilities.TestBase;
 
 public class Surus extends TestBase {
 	Provider provider = new Provider();
 	pageSurus surus;
-	pageAnaEkran ana_Ekran;
-	String methodName;
+	pageGirisEkrani giris_Ekrani;
+	Customer customer;
+	Scooter scooter;
 	String param_1;
 	String param_2;
 	String param_3;
@@ -41,10 +45,33 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.unlockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Surus_Basladi_IOT_Kilit(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Surus_Basladi_IOT_Kilit(param_1, param_2);
 	}
 
 	@Test(priority = 36)
@@ -52,10 +79,31 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		
+		scooter
+		.addScooter(param_2, param_3);
+		
 		// ***********PAGE METHODS**************
-		surus.Nasil_Surulur_Gecilmemis(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Nasil_Surulur_Gecilmemis(param_1, param_2);
 	}
 
 	@Test(priority = 37)
@@ -63,10 +111,34 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Acil_Mudahale(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Acil_Mudahale(param_1, param_2);
 	}
 
 	@Test(priority = 38)
@@ -74,10 +146,34 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Nasil_Surulur(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Nasil_Surulur(param_1, param_2);
 	}
 
 	@Test(priority = 39)
@@ -85,10 +181,35 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer
+		.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Ortalama(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Ortalama(param_1, param_2);
 	}
 
 	@Test(priority = 40)
@@ -96,10 +217,34 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Surus_Bitirme(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Surus_Bitirme(param_1, param_2);
 	}
 
 	@Test(priority = 41)
@@ -107,10 +252,34 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Park_Edilemez_Alan(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Park_Edilemez_Alan(param_1, param_2);
 	}
 
 	@Test(priority = 42)
@@ -118,10 +287,34 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Kilit_Takilmadi(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Kilit_Takilmadi(param_1, param_2);
 	}
 
 //	@Test(priority = 43)
@@ -140,10 +333,35 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer
+		.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Surus_Bitir_Internet_Kapali(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Surus_Bitir_Internet_Kapali(param_1, param_2);
 	}
 
 	@Test(priority = 45)
@@ -151,10 +369,33 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
 		// ***********PAGE METHODS**************
-		surus.Ceza_Kurallarina_Erisim(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Ceza_Kurallarina_Erisim(param_1, param_2);
 	}
 
 	@Test(priority = 46)
@@ -162,10 +403,33 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addErrorCreditCard(param_1)
+		.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
 		// ***********PAGE METHODS**************
-		surus.Odeme_Hatasi(param_1, param_2);
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Odeme_Hatasi(param_1, param_2);
 	}
 
 	@Test(priority = 47)
@@ -173,10 +437,34 @@ public class Surus extends TestBase {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		surus = new pageSurus(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerRides(param_1)
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCustomer(param_1)
+		.addCreditCard(param_1);
+		customer.addCustomerFinishedRide(param_1, param_2);
+		
+		scooter
+		.addScooter(param_2, param_3)
+		.addScooterRide(param_1, param_2)
+		.lockScooter(param_2);
+		
 		// ***********PAGE METHODS**************
-		surus.Surus_Bitirme_Basarili(param_1, param_2)
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		surus
+		.Surus_Bitirme_Basarili(param_1, param_2)
 		.Yolculugu_Degerlendirme(param_1);
 	}
 }

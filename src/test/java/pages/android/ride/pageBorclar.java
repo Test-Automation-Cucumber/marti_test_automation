@@ -10,16 +10,13 @@ public class pageBorclar extends PageBaseAndroid {
 	AndroidDriver<AndroidElement> androidDriver;
 	TestDevice testDevice;
 	Customer customer;
-	pageGirisEkrani giris_Ekrani;	
 
-	
 	// *********Constructor*********
 		public pageBorclar(AndroidDriver<AndroidElement> androidDriver) {
 			super(androidDriver);
 			this.androidDriver = androidDriver;
 			testDevice = new TestDevice();
 			customer = new Customer();
-			giris_Ekrani = new pageGirisEkrani(this.androidDriver);
 			
 		}
 
@@ -41,24 +38,10 @@ public class pageBorclar extends PageBaseAndroid {
 		String popup_TAMAM													= "#android:id/button1";	
 		
 		
-		
-		
 		// *********Page Methods*********
 
 		public pageBorclar Borclu_Kullanici(String customer_phone_no) {
-			try {
-				customer.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no)
-				.addCustomerDebt(customer_phone_no, 14);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
-			
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
@@ -72,14 +55,7 @@ public class pageBorclar extends PageBaseAndroid {
 		}	
 		
 		public pageBorclar Borclu_Kullanici_Plus_15(String customer_phone_no) {
-				customer
-				.deleteCustomerDebt(customer_phone_no)
-				.addCustomerDebt(customer_phone_no, 16);
-
-				giris_Ekrani
-				.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
-			
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
@@ -93,15 +69,7 @@ public class pageBorclar extends PageBaseAndroid {
 		}
 
 		public pageBorclar Borc_Odeme(String customer_phone_no) {
-				customer.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no)
-				.addCustomerDebt(customer_phone_no, 11);
-
-				giris_Ekrani
-				.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
-			
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
@@ -115,14 +83,6 @@ public class pageBorclar extends PageBaseAndroid {
 			return this;
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarili(String customer_phone_no) {
-			
-				customer.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no)
-				.addCustomerDebt(customer_phone_no, 11);
-
-				giris_Ekrani
-				.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
 			wait(4);
 			click(btn_Basla);
@@ -140,15 +100,6 @@ public class pageBorclar extends PageBaseAndroid {
 			return this;
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarisiz(String customer_phone_no) {
-
-				customer
-				.deleteCreditCards(customer_phone_no)
-				.addErrorCreditCard(customer_phone_no)
-				.deleteCustomerDebt(customer_phone_no)
-				.addCustomerDebt(customer_phone_no, 11);
-				
-				giris_Ekrani
-				.Giris_Basarili(customer_phone_no);
 			assertFound(img_NotifyIcon);
 			wait(4);
 			click(btn_Basla);

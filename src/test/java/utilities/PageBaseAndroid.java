@@ -34,14 +34,11 @@ public class PageBaseAndroid {
 	public PageBaseAndroid(AndroidDriver androidDriver) {
 		this.androidDriver = androidDriver;
 		wait = new WebDriverWait(androidDriver, 30);
-//		androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 //===========================================================================Waiting..
 	protected By findElements(String pure_element, int index) {
 		By elementBy = null;
-		waitLoadingImage();
-
 		if (pure_element.substring(0, 1).equals("*")) {
 			elementBy = MobileBy
 					.AndroidUIAutomator("resourceId(\"" + pure_element.substring(1) + "\").instance(" + index + ")"); // instancelari silebilirsin.
@@ -166,7 +163,7 @@ public class PageBaseAndroid {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(MobileBy.id("progressBar")));
 		} catch (Exception ex) {
 		} finally {
-			androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			androidDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
 	}
 
@@ -306,6 +303,11 @@ public class PageBaseAndroid {
 		Assert.assertEquals(text_1, text_2);
 	}
 	
+	// Assert Contains
+	protected void assertContains(String pure_element, String text_2) {
+		Assert.assertTrue(readText(pure_element).contains(text_2));
+	}
+		
 	// Assert Not Content
 	protected void assertNotContent(String text_1, String text_2) {
 		Assert.assertNotEquals(text_1, text_2);
@@ -331,23 +333,21 @@ public class PageBaseAndroid {
 		}
 	}
 
-	// Assert Not Found
-	protected void assertNotFound(String pure_element) {
-		try {
-			if (androidDriver.findElements(findElements(pure_element, 0)).size() != 0) {
-				throw new Exception();
-			}
-		} catch (Exception ex) {
-		}
-	}
 
 	// Assert Not Found
 	protected void assertNotFound(String pure_element, int index) {
 		try {
-			if (androidDriver.findElements(findElements(pure_element, index)).size() != 0) {
-				throw new Exception();
+			androidDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+		
+			for (int i = 0; i < index; i++) {
+					if (androidDriver.findElements(findElements(pure_element, index)).size() != 0)
+						throw new Exception();
+				wait(1);
 			}
-		} catch (Exception ex) {
+		} catch (Exception e) {
+		} finally {
+			
+			androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 	}
 	
@@ -408,7 +408,7 @@ public class PageBaseAndroid {
 		} catch (Exception ex) {
 			return 0;
 		} finally {
-			androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			androidDriver.manage().timeouts().implicitlyWait(39, TimeUnit.SECONDS);
 		}
 	}
 
@@ -465,9 +465,9 @@ public class PageBaseAndroid {
 	public void swipe(String elementofNextPage, int firstPointX, int firstPointY, int secondPointX, int secondPointY,
 			int dragTimeMS) {
 
-		findElements(elementofNextPage, 0);// kaydırma işlemi öncesi ekranda olmasi gereken bir elementi gormesi icin
-											// gerekli.
-
+		waitLoadingImage();
+		waitClickable(findElements(elementofNextPage, 0));
+		
 		new TouchAction(androidDriver).press(PointOption.point(firstPointX, firstPointY))
 				.waitAction(waitOptions(Duration.ofMillis(dragTimeMS)))
 				.moveTo(PointOption.point(secondPointX, secondPointY)).release().perform();

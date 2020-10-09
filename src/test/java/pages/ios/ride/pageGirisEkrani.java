@@ -68,7 +68,7 @@ public class pageGirisEkrani extends PageBaseIos {
 			return this;
 
 		else if (exists(btn_FotoCekBitir, 1)) {
-			testDevice.resetLoginStatus(customer_phone_number);
+			testDevice.resetCustomerLoginStatus(customer_phone_number);
 			click(btn_FotoCekBitir);
 			click(btn_Tamam);
 		}
@@ -119,7 +119,7 @@ public class pageGirisEkrani extends PageBaseIos {
 		//giris yap
 		public pageGirisEkrani Giris_Basarili(String customer_phone_number) {
 		if (!exists(btn_ChangeEnv, 5)) {
-			testDevice.resetLoginStatus(customer_phone_number);
+			testDevice.resetCustomerLoginStatus(customer_phone_number);
 			if (exists(img_NotifyIcon, 1)) {
 				click(img_NotifyIcon);
 			} else {
@@ -172,7 +172,7 @@ public class pageGirisEkrani extends PageBaseIos {
 			//login durumdami kontrol eder, login ise logoff olur.
 			if (exists(img_NotifyIcon, 3)) {
 				testDevice
-				.resetLoginStatus(customer_phone_number);
+				.resetCustomerLoginStatus(customer_phone_number);
 				click(img_NotifyIcon);
 			}
 			
@@ -186,7 +186,7 @@ public class pageGirisEkrani extends PageBaseIos {
 			//login durumdami kontrol eder, login ise logoff olur.
 			if (exists(img_NotifyIcon, 3)) {
 				testDevice
-				.resetLoginStatus(customer_phone_number);
+				.resetCustomerLoginStatus(customer_phone_number);
 				click(img_NotifyIcon);
 			}			
 			
@@ -215,7 +215,7 @@ public class pageGirisEkrani extends PageBaseIos {
 			//login durumdami kontrol eder, login ise logoff olur.
 			if (exists(img_NotifyIcon, 3)) {
 				testDevice
-				.resetLoginStatus(customer_phone_number);
+				.resetCustomerLoginStatus(customer_phone_number);
 				click(img_NotifyIcon);
 			}	                                                                        
 			
@@ -267,7 +267,7 @@ public class pageGirisEkrani extends PageBaseIos {
 			//login durumdami kontrol eder, login ise logoff olur.
 			if (exists(img_NotifyIcon, 3)) {
 				testDevice
-				.resetLoginStatus(customer_phone_number);
+				.resetCustomerLoginStatus(customer_phone_number);
 				click(img_NotifyIcon);
 			}	 
 			

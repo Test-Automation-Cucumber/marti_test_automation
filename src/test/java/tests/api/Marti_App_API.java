@@ -266,7 +266,7 @@ public class Marti_App_API extends TestBase {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 		
 		// *********************CALL SERVICE************************
 		accessToken = get_token(caseNumber);
@@ -329,7 +329,7 @@ public class Marti_App_API extends TestBase {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 		
 		customer
 		.deleteCustomerRides(customerPhoneNumber)
@@ -550,7 +550,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 		
 		rideId = customer
 		.addCustomerContinuesRide(customerPhoneNumber, scooterCode);
@@ -593,7 +593,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 
 		customer
 		.addCustomerContinuesRide(customerPhoneNumber, scooterCode);
@@ -615,7 +615,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 
 		customer
 		.addCustomerReservations(customerPhoneNumber);
@@ -635,7 +635,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 
 		customer
 		.addCustomerReservations(customerPhoneNumber);
@@ -659,7 +659,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 
 		// *********************CALL SERVICE************************
 		accessToken = get_token(caseNumber);
@@ -683,7 +683,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 		
 		rideId = customer
 		.addCustomerContinuesRide(customerPhoneNumber, scooterCode);
@@ -727,7 +727,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 		
 		// *********************CALL SERVICE************************
 		accessToken = get_token(caseNumber);
@@ -751,7 +751,7 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		scooter
-		.addScooter(scooterCode);
+		.addScooter(scooterCode, "sxk9m8gyf");
 		
 		rideId = customer
 		.addCustomerContinuesRide(customerPhoneNumber, scooterCode);
