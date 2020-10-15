@@ -40,7 +40,7 @@ public class pageMenu extends PageBaseAndroid {
 		String popup_HAYIR													= "#android:id/button2";
 		String li_ArkadasiniDavetEt											= "#inviteFriend";
 		String btn_ArkadasiniDavetEt										= "#btnInviteFriend";
-		String popup_PanoyaKopyala											= "$Panoya kopyala";
+		String popup_PanoyaKopyala											= "#android:id/copy_button";  //
 		String li_Suruslerim												= "#rideHistory";
 		String lbl_SuruslerimContent										= "#noDataText";
 		String li_SurusDetay												= "#map";
@@ -48,8 +48,8 @@ public class pageMenu extends PageBaseAndroid {
 		String btn_Odeme													= "#payment";
 		String chb_ErrorCreditCard											= "$HATALI KART";
 		String chb_CreditCard												= "$AUTO AUTOMATION";
-		String lbl_KrediKartlariContent										= "#noDataText";
-		String btn_KrediKartiEkle											= "#btnAddCard";
+		String lbl_KrediKartlariContent										= "#com.martitech.marti.dev:id/noDataText";
+		String btn_KrediKartiEkle											= "#com.martitech.marti.dev:id/btnPayDebt";
 		String txt_KartUzerindekiIsim										= "#name";
 		String txt_KartNumarasi												= "#cardNumber";
 		String txt_AyYil													= "#expiryDate";
@@ -62,7 +62,7 @@ public class pageMenu extends PageBaseAndroid {
 		String btn_Basla													= "#btnScan";
 		String li_Yardim													= "#help";
 		String lbl_Title													= "#appTitle";
-		String li_KullanimKosullari											= "#termsService";
+		String li_KullaniciSozlesmesi										= "#termsService";
 		String li_AydinlatmaMetni											= "#kvvkk";
 		String li_Guvenlik													= "#safety";
 		String li_NasilKullanilir											= "#howtoride";
@@ -76,7 +76,7 @@ public class pageMenu extends PageBaseAndroid {
 		String txt_KuponKoduGir												= "#couponCode";
 		String txt_CouponContent											= "#amontText";
 		String lbl_MerhabaFullName											= "#fullName";
-		String chb_KrediKarti												= "#selected";  //com.martitech.marti.dev:id/selected
+		String chb_KrediKarti												= "#com.martitech.marti.dev:id/selectIcon";  //com.martitech.marti.dev:id/selected
 		String img_GiftBox													= "#giftBox";
 		String li_Sozlesmeler												= "#agreementTitle";
 		String txt_MartiNedir												= "$Martı Nedir?";
@@ -126,7 +126,7 @@ public class pageMenu extends PageBaseAndroid {
 			assertFound(img_GiftBox);
 			click(btn_ArkadasiniDavetEt);
 			wait(2);
-			swipe(lbl_Title, 303, 975,346,231, 300);
+//			swipe(lbl_Title, 303, 975,346,231, 300);
 			click(popup_PanoyaKopyala);
 			click(btn_Geri);
 			int count = customer.countCustomerCoupon(customer_phone_number);
@@ -184,7 +184,7 @@ public class pageMenu extends PageBaseAndroid {
 			writeText(txt_CVC, "234");			
 			click(txt_18Yas);
 			click(btn_Kaydet);
-			
+			waitLoadingImage();
 		    assertEquals(getSize(chb_KrediKarti, 0), 1);	
 			
 //			customer
@@ -248,10 +248,10 @@ public class pageMenu extends PageBaseAndroid {
 			assertFound(lbl_Title);
 			click(li_Sozlesmeler);
 			swipe(lbl_Title, 303, 975,346,231, 300);
-			click(li_KullanimKosullari);
-			assertEquals(lbl_Title, "Kullanım Koşulları");
+			click(li_KullaniciSozlesmesi);
+			assertEquals(lbl_Title, "Kullanıcı Sözleşmesi");
 			click(btn_Geri);
-			assertFound(li_KullanimKosullari);
+			assertFound(li_KullaniciSozlesmesi);
 			return this;
 		}
 		

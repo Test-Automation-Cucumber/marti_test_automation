@@ -1,6 +1,5 @@
 package pages.ios.ride;
 
-
 import dbmodel.DataPreparation.*;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -13,22 +12,16 @@ public class pageMenu extends PageBaseIos {
 	Customer customer;
 	Scooter scooter;
 	
-	
 	// *********Constructor*********
 		public pageMenu(IOSDriver<IOSElement> androidDriver) {
 			super(androidDriver);
 			this.iosDriver = androidDriver;
-//			testDevice = new TestDevice();
 			customer = new Customer();
 			scooter = new Scooter();
 			giris_Ekrani = new pageGirisEkrani(this.iosDriver);
-			
 		}
 
 		// *****************************************Web Elements***********************************
-		
-		// *****************General
-		
 		String btn_Geri														= "#Geri";	
 		String li_ArkadasiniDavetEt											= "#ARKADAŞINI DAVET ET";
 		String btn_ArkadasiniDavetEt										= ".UIAButton";  //sayfada 2. sirada
@@ -42,8 +35,8 @@ public class pageMenu extends PageBaseIos {
 		String li_Kampanyalar												= "#KAMPANYALAR";
 		String li_NasilSurulur												= "#NASIL SÜRÜLÜR";
 		String li_SurusKurallari											= "#SÜRÜŞ KURALLARI";
-		String li_KullanimKosullari											= "#KULLANIM KOŞULLARI";
-		String li_AydinlatmaMetni											= "#AYDINLATMA METNI";
+		String li_KullanimKosullari											= "#KULLANICI SÖZLEŞMESİ";
+		String li_AydinlatmaMetni											= "#AYDINLATMA METNİ";
 		String li_Guvenlik													= "#GÜVENLİK";
 		String lbl_Guvenlik													= "#Güvenlik";
 		String li_Yardim													= "#YARDIM";
@@ -75,10 +68,6 @@ public class pageMenu extends PageBaseIos {
 		String btn_Tamam													= "#Tamam";
 		String btn_Evet														= "#Evet";
 		String btn_Bitir													= "#Bitir";
-		
-		
-		
-		
 		String btn_Menu														= "#menu";	
 		String lbl_Ayarlar													= "#AYARLAR";	
 		String txt_PhoneNumber												= "*Mobil Telefon Numarası";
@@ -94,25 +83,20 @@ public class pageMenu extends PageBaseIos {
 		String lbl_Title													= "#appTitle";
 		String li_NasilKullanilir											= "#howtoride";
 		String btn_DevamEt													= "#Devam Et";
-		String lbl_KisiselVerilerinKorunmasi								= "#Kişisel Verilerin Korunması";
+		String lbl_AydinlatmaMetni											= "#AYDINLATMA METNİ";
 		String lbl_KullaniciSozlesmesi										= "#KULLANICI SÖZLEŞMESİ";
 		String lbl_SikcaSorulanSorular										= "#Sıkça Sorulan Sorular";
-		
-		
 		String lbl_KuponBulunamadi											= "#Herhangi bir kupon bulunamadı.";
-
 		String txt_KuponKoduGir												= ".UIATextField";
 		String txt_CouponContent											= "#Sonraki sürüşünde kullanılacak 10 ₺ indirimin var.";
 		String lbl_MerhabaFullName											= "#fullName";
 		String lbl_SurusGecmisiContent										= "#Henüz hiç MARTI sürüşün yok, ilk MARTI yolculuğuna çıkmanın tam zamanı!"; //içerik 1. indexte
-
+		String popup_HataliKartText											= "#Kartın üzerindeki isim boş ya da eksik olamaz.";
 		
 		// *********Page Methods*********
-
 		public pageMenu Versiyon_Kontrol(String phone_number) {
 			giris_Ekrani
 			.Giris_Basarili(phone_number);
-			
 			click(btn_Menu);
 			swipe(lbl_Title, 303, 975,346,231, 300);
 			assertFound(lbl_Version);
@@ -120,8 +104,6 @@ public class pageMenu extends PageBaseIos {
 		}	
 		
 		public pageMenu Profil_Duzenleme(String customer_phone_number) {
-
-			
 			click(btn_Menu);
 			click(btn_Duzenle);
 			assertEquals(txt_PhoneNumber, customer_phone_number.substring(0,3) + " " + customer_phone_number.substring(3,6)+ " " + customer_phone_number.substring(6,8)+ " " + customer_phone_number.substring(8,10));
@@ -131,19 +113,12 @@ public class pageMenu extends PageBaseIos {
 			return this;
 		}
 		public pageMenu Arkadasini_Davet_Et(String customer_phone_number) {
-
-
-						
 			assertFound(img_NotifyIcon);
 			click(btn_Menu);
 			click(li_ArkadasiniDavetEt);
 			return this;
 		}
 		public pageMenu Kampanyalar_Arkadasini_Davet_Et(String customer_phone_number) {
-
-			
-
-			
 			assertFound(img_NotifyIcon);
 			click(btn_Menu);
 			click(li_Kampanyalar);
@@ -161,7 +136,6 @@ public class pageMenu extends PageBaseIos {
 		}
 		public pageMenu Davet_Baglantisi_Gonderme(String customer_phone_number) {		
 			assertFound(img_GiftBox);
-			
 			click(btn_ArkadasiniDavetEt, 1);
 			wait(2);
 			click(popup_PanoyaKopyala);
@@ -171,14 +145,9 @@ public class pageMenu extends PageBaseIos {
 			}
 			int count = customer.countCustomerCoupon(customer_phone_number);
 			assertEquals(count, 1);
-			
 			return this;
 		}
 		public pageMenu Surusleri_Inceleme(String customer_phone_number) {
-
-			
-
-			
 			click(btn_Menu);
 			click(li_Suruslerim);
 			assertFound(lbl_SurusGecmisiContent);
@@ -188,10 +157,8 @@ public class pageMenu extends PageBaseIos {
 		public pageMenu SurusDetayiInceleme(String customer_phone_number, String scooter_code, String scooter_location) {
 			scooter
 			.addScooter(scooter_code, scooter_location);
-			
 			customer
-			.addCustomerFinishedRide(customer_phone_number, scooter_code);
-		
+			.addCustomerFinishedRide(customer_phone_number, scooter_code);		
 			click(li_Suruslerim);
 			click(li_SurusDetay);
 			assertFound(btn_FaturaGoruntule);
@@ -199,10 +166,6 @@ public class pageMenu extends PageBaseIos {
 		}	
 		
 		public pageMenu Varsayilan_Kredi_Karti_Degistirme(String customer_phone_number) {
-
-			
-
-			
 			click(btn_Menu);
 			click(li_Odeme);
 			
@@ -216,61 +179,40 @@ public class pageMenu extends PageBaseIos {
 			
 			return this;
 		}
-		
 		public pageMenu Kredi_Karti_Ekleme_Basarili(String customer_phone_number) {
-
-			
-
-			
 			click(btn_Menu);
 			click(li_Odeme);
-			
 			assertFound(lbl_KrediKartlariContent);
-			
 			click(btn_KrediKartiEkle);		
 			writeText(txt_KartUzerindekiIsim, "test otomasyon");
 			writeText(txt_KartNumarasi, "5890040000000016");	
 			writeText(txt_AyYil, "12/21");		
 			writeText(txt_CVC, "234");			
 			click(btn_Kaydet);
-			
 			customer
 			.deleteCreditCards(customer_phone_number)
 			.addCreditCard(customer_phone_number);
-			
 			return this;
 		}
-		
 		public pageMenu Kredi_Karti_Ekleme_Basarisiz(String customer_phone_number) {
-
-			
-
-			
 			click(btn_Menu);
 			click(li_Odeme);
-			
 			assertFound(lbl_KrediKartlariContent);
-			
 			click(btn_KrediKartiEkle);		
 			writeText(txt_KartUzerindekiIsim, "test");
 			writeText(txt_KartNumarasi, "5890040000006");	
 			writeText(txt_AyYil, "12/2");		
 			writeText(txt_CVC, "23");	
 			click(btn_Kaydet);
-			
-			assertEquals(popup_LutfenKrediKarti, "Lütfen kredi kartı bilgilerini kontrol et.");
+			assertFound(popup_HataliKartText);
 			click(popup_Tamam);
 			customer
 			.deleteCreditCards(customer_phone_number)
 			.addCreditCard(customer_phone_number);
-			
 			return this;
 		}	
 		
 		public pageMenu Dil_Degistirme(String customer_phone_number) {
-			
-
-			
 			click(btn_Menu);
 			click(li_DilDegistir);
 			click(chb_English);
@@ -285,8 +227,6 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Yardim_Dokumanina_Erisim(String customer_phone_number) {
-
-			
 			click(btn_Menu);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);	
@@ -297,9 +237,7 @@ public class pageMenu extends PageBaseIos {
 			return this;
 		}
 		
-		public pageMenu Kullanim_Kosullarina_Erisim(String customer_phone_number) {
-
-			
+		public pageMenu Kullanici_Sozlesmesine_Erisim(String customer_phone_number) {
 			click(btn_Menu);
 			click(li_Sozlesmeler);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);
@@ -312,14 +250,12 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Kvkk_Aydinlatma_Metnine_Erisim(String customer_phone_number) {
-
-			
 			click(btn_Menu);
 			click(li_Sozlesmeler);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);
 			swipe(lbl_Ayarlar, 303, 975,346,231, 1000);			
 			click(li_AydinlatmaMetni);
-			assertEquals(lbl_KisiselVerilerinKorunmasi, "Kişisel Verilerin Korunması");
+			assertFound(lbl_AydinlatmaMetni);
 			click(btn_Geri);
 			assertFound(li_AydinlatmaMetni);
 			return this;
@@ -339,7 +275,6 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Surus_Kurallarina_Erisim(String customer_phone_number) {
-
 			click(btn_Menu);
 			click(li_SurusKurallari);
 			wait(3);
@@ -354,8 +289,6 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Nasil_Kullanilir(String customer_phone_number) {
-
-			
 			click(btn_Menu);
 			click(li_NasilSurulur);
 			wait(2);
@@ -369,14 +302,10 @@ public class pageMenu extends PageBaseIos {
 		}
 		
 		public pageMenu Kampanyalar_Arkadasini_Davet_Etme(String customer_phone_number) {
-
-
-			
 			click(btn_Menu);
 			click(li_Kampanyalar);
 			click(btn_KampanyalarArkadasiniDavetEt);
 			waitLoadingImage();
-			
 			Davet_Baglantisi_Gonderme(customer_phone_number);
 			return this;
 		}	
@@ -397,16 +326,13 @@ public class pageMenu extends PageBaseIos {
 		
 		public pageMenu Kupon_Ekleme(String customer_phone_number) {
 			String couponCode = "";
-			
 			couponCode = customer
 			.deleteCustomerRides(customer_phone_number)
 			.getCustomerCoupon(customer_phone_number);
-
 			click(btn_Menu);
 			click(li_Kampanyalar);
 			click(btn_KuponlarimGoruntule);
-			assertFound(lbl_KuponBulunamadi);
-		
+			assertFound(lbl_KuponBulunamadi);		
 			//hatali kupon kodu ekleme
 			click(btn_KuponEkle);
 			writeText(txt_KuponKoduGir, "00000000");
@@ -414,30 +340,24 @@ public class pageMenu extends PageBaseIos {
 			click(btn_KuponEkle);
 			assertEquals(popup_GirdiginKuponKoduGecersiz, "Girdiğin kupon kodu geçersiz.");
 			click(popup_Tamam);
-			
 			//kupon kodu ekleme
-
 			writeText(txt_KuponKoduGir, couponCode);
 			click(btn_KuponEkle);
 			waitLoadingImage();
 			assertEquals(txt_CouponContent, "Sonraki sürüşünde kullanılacak 10 ₺ indirimin var.");
 			click(btn_Geri);
-
 			return this;
 		}
 		
 //		public pageMenu Davet_Kodu_Girme(String customer_phone_number) {
 //			String couponCode = "";
-//			
 //			couponCode = customer
 //			.deleteCustomerRides(customer_phone_number)
 //			.getCustomerCoupon(customer_phone_number);
-//			
 //			click(btn_Menu);
 //			click(li_Kampanyalar);
 //			click(btn_KuponlarimGoruntule);
 //			assertEquals(lbl_KuponBulunamadi, "Kupon bulunamadı.");
-//		
 //			//hatali kupon kodu ekleme
 //			click(btn_KuponEkle);
 //			writeText(txt_KuponKoduGir, "00000000");
@@ -445,15 +365,12 @@ public class pageMenu extends PageBaseIos {
 //			click(btn_KuponEkle);
 //			assertEquals(popup_Message, "Girdiğin kupon kodu geçersiz.");
 //			click(popup_TAMAM);
-//			
 //			//kupon kodu ekleme
-//
 //			writeText(txt_KuponKoduGir, couponCode);
 //			click(btn_KuponEkle);
 //			waitLoadingImage();
 //			assertEquals(txt_CouponContent, "Sonraki sürüşünde kullanılacak ₺10,00 indirimin var.");
 //			click(btn_Geri);
-//
 //			return this;
 //		}
 		

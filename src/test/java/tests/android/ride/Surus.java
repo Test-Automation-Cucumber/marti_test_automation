@@ -25,12 +25,16 @@ public class Surus extends TestBase {
 // *********Constructor*********
 	public Surus() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
+		System.setProperty("appName", "ride");
+		System.setProperty("platformName", "android");
+		System.setProperty("deviceName", "Emulator_1");
+		System.setProperty("startLogin", "no");
 	}
 
 // ******************************************************* TEST ***********************************************************
 
 //	@Test(priority = 34)
-//	public void TC_034_Surus_Basladi_Kodlu_Kilit() {
+//	public void TC_034_Surus_Basladi_Kodlu_Kilit() {  bu case'i kaldırdık
 //		// *******************SET PARAMETERS************************
 //		param_1 = testParameters[caseId][1];
 //		param_2 = testParameters[caseId][2];
@@ -58,7 +62,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		
 		scooter
@@ -72,6 +75,7 @@ public class Surus extends TestBase {
 		
 		surus
 		.Surus_Basladi_IOT_Kilit(param_1, param_2);
+		
 	}
 
 	@Test(priority = 36)
@@ -92,7 +96,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		
 		scooter
@@ -100,7 +103,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Nasil_Surulur_Gecilmemis(param_1, param_2);
@@ -124,7 +127,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer.addCustomerFinishedRide(param_1, param_2);
 		
@@ -135,7 +137,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Acil_Mudahale(param_1, param_2);
@@ -159,7 +161,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer.addCustomerFinishedRide(param_1, param_2);
 		
@@ -170,7 +171,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Nasil_Surulur(param_1, param_2);
@@ -194,7 +195,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer
 		.addCustomerFinishedRide(param_1, param_2);
@@ -206,7 +206,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Ortalama(param_1, param_2);
@@ -230,7 +230,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer.addCustomerFinishedRide(param_1, param_2);
 		
@@ -241,7 +240,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Surus_Bitirme(param_1, param_2);
@@ -265,7 +264,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer.addCustomerFinishedRide(param_1, param_2);
 		
@@ -276,7 +274,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Park_Edilemez_Alan(param_1, param_2);
@@ -300,7 +298,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer.addCustomerFinishedRide(param_1, param_2);
 		
@@ -311,7 +308,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Kilit_Takilmadi(param_1, param_2);
@@ -346,7 +343,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer
 		.addCustomerFinishedRide(param_1, param_2);
@@ -358,7 +354,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Surus_Bitir_Internet_Kapali(param_1, param_2);
@@ -382,9 +378,9 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
-		customer.addCustomerFinishedRide(param_1, param_2);
+		customer
+		.addCustomerFinishedRide(param_1, param_2);
 		
 		scooter
 		.addScooter(param_2, param_3)
@@ -392,7 +388,7 @@ public class Surus extends TestBase {
 		.lockScooter(param_2);
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Ceza_Kurallarina_Erisim(param_1, param_2);
@@ -416,7 +412,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addErrorCreditCard(param_1)
 		.addCustomerFinishedRide(param_1, param_2);
 		
@@ -424,9 +419,13 @@ public class Surus extends TestBase {
 		.addScooter(param_2, param_3)
 		.addScooterRide(param_1, param_2)
 		.lockScooter(param_2);
+		scooter
+		.setMinus5ForRideTime(param_2)
+		.setLastKnowPointToScooter(param_2, "sxk9jw876");
+		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Odeme_Hatasi(param_1, param_2);
@@ -450,7 +449,6 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
-		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		customer.addCustomerFinishedRide(param_1, param_2);
 		
@@ -461,7 +459,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Surus_Bitirme_Basarili(param_1, param_2)

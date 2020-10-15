@@ -140,6 +140,10 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 //	}
 
 	public pageYuklemeEkrani Surus_Kontrolu(String customer_phone_no, String scooter_code) {
+		String appPackageName = androidDriver.getCurrentPackage();
+		androidDriver.closeApp();
+		androidDriver.activateApp(appPackageName);
+		
 		while (exists(lbl_NasilKullanilir, 5)) {
 			click(btn_Ileri);
 			waitMilliSec(750);
@@ -187,6 +191,7 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 //		String appPackageName = androidDriver.getCurrentPackage();
 //		androidDriver.closeApp();
 //		androidDriver.activateApp(appPackageName);
+		
 		assertFound(btn_Basla);
 		wait(4);
 		click(btn_Basla);

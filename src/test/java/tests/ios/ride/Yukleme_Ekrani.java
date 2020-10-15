@@ -24,6 +24,10 @@ public class Yukleme_Ekrani extends TestBase {
 // *********Constructor*********
 	public Yukleme_Ekrani() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
+		System.setProperty("appName", "ride");
+		System.setProperty("platformName", "ios");
+		System.setProperty("deviceName", "iPhone5S");
+		System.setProperty("startLogin", "no");
 	}
 
 // ******************************************************* TEST ***********************************************************
@@ -71,7 +75,22 @@ public class Yukleme_Ekrani extends TestBase {
 //		yukleme_Ekrani.Konum_Izni_Kontrolu(param_1);
 //	}
 	@Test(priority = 4)
-	public void TC_004_Oturum_Kontrolu_Basarili() {
+	public void TC_004_Bildirim_Izin_Kontrolu() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		yukleme_Ekrani = new pageYuklemeEkrani(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		
+		// ***********PAGE METHODS**************
+
+	}
+	@Test(priority = 5)
+	public void TC_005_Oturum_Kontrolu_Basarili() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
@@ -90,8 +109,23 @@ public class Yukleme_Ekrani extends TestBase {
 		giris_Ekrani
 		.Giris_Basarili(param_1);	
 	}
-	@Test(priority = 5)
-	public void TC_005_Surus_Kontrolu() {
+	@Test(priority = 6)
+	public void TC_006_Oturum_Kontrolu_Basarili_Bildirim_Yok() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		yukleme_Ekrani = new pageYuklemeEkrani(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+
+		// ***********PAGE METHODS**************
+		
+	}
+	@Test(priority = 7)
+	public void TC_007_Surus_Kontrolu() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
@@ -110,6 +144,8 @@ public class Yukleme_Ekrani extends TestBase {
 		.deleteCustomerRides(param_1)
 		.addCustomerContinuesRide(param_1, param_2);
 		
+		scooter.setMinus5ForRideTime(param_2);
+		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
 		.Giris_Basarili(param_1);	
@@ -117,17 +153,23 @@ public class Yukleme_Ekrani extends TestBase {
 		yukleme_Ekrani
 		.Surus_Kontrolu(param_1, param_2);
 	}
-//	@Test(priority = 6)  bu case'in kosabilmesi icin hq alaninda başka scooter olmamasi gerekiyor
-//	public void TC_006_Rezervasyon_Kontrolu() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = ride_app_test_parameters[caseId][1];
-//		// *******************PAGE INSTANTIATIONS*******************
-//		yukleme_Ekrani = new pageYuklemeEkrani(iosDriver);
-//		// ***********PAGE METHODS**************
+	@Test(priority = 8)
+	public void TC_008_Rezervasyon_Kontrolu() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		yukleme_Ekrani = new pageYuklemeEkrani(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+
+		// ***********PAGE METHODS**************
 //		yukleme_Ekrani.Rezervasyon_Kontrolu(param_1);
-//	}
-	@Test(priority = 7)
-	public void TC_007_Tckn_Kontrolu() {
+	}
+	@Test(priority = 9)
+	public void TC_009_Tckn_Kontrolu() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
@@ -138,7 +180,9 @@ public class Yukleme_Ekrani extends TestBase {
 		scooter = new Scooter();
 		
 		// ***********CASE DEPENDENCIES**************
+		
 		customer
+		.deleteCustomerRides(param_1)
 		.deleteTcknValidation(param_1);
 		
 		// ***********PAGE METHODS**************
@@ -148,8 +192,8 @@ public class Yukleme_Ekrani extends TestBase {
 		yukleme_Ekrani
 		.Tckn_Kontrolu(param_1);
 	}
-//	@Test(priority = 8)
-//	public void TC_008_Kvkk_Kontrolu() {  bu kalkti
+//	@Test(priority = 10)
+//	public void TC_010_Kvkk_Kontrolu() {  bu kalkti
 //		// *******************SET PARAMETERS************************
 //		param_1 = ride_app_test_parameters[caseId][1];
 //		// *******************PAGE INSTANTIATIONS*******************
@@ -157,13 +201,27 @@ public class Yukleme_Ekrani extends TestBase {
 //		// ***********PAGE METHODS**************
 //		yukleme_Ekrani.Kvkk_Kontrolu(param_1);
 //	}
-//	@Test(priority = 9)
-//	public void Dinamik_Bildirim_Kontrolu() {
-//// *******************PAGE INSTANTIATIONS*******************
-//		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
-//
-//		// ***********PAGE METHODS**************
-//		yukleme_Ekrani
-//		.Dinamik_Bildirim_Kontrolu(customerPhoneNumber);
-//	}
+@Test(retryAnalyzer = utilities.RetryTest.class, priority = 11)
+	public void TC_011_Dinamik_Bildirim_Kontrolu() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		yukleme_Ekrani = new pageYuklemeEkrani(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.setExplicitConsentForm(param_1, true)
+		.addLocalCampaign(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		yukleme_Ekrani
+		.Dinamik_Bildirim_Kontrolu(param_1);
+	}
 }

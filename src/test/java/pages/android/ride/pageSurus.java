@@ -33,7 +33,7 @@ public class pageSurus extends PageBaseAndroid {
 		String btn_Ileri													= "#btnOk";
 		String lbl_NasilKullanilir											= "#textView14";
 		String btn_FotoCekBitir												= "#btnEndRide";
-		String btn_Bize_Ulasin												= "#needHelp";
+		String btn_Bize_Ulasin												= "#needHelp";  //com.martitech.marti.dev:id/needHelp
 		String popup_Message												= "#android:id/message";
 		String img_LockCode													= "#lockCodeText";
 		String btn_HowIt													= "#btnHowIt";
@@ -56,35 +56,35 @@ public class pageSurus extends PageBaseAndroid {
 		
 		// *********Page Methods*********
 
-		public pageSurus Surus_Basladi_Kodlu_Kilit(String customer_phone_no, String scooter_code, String scooter_location) {
-			customer
-			.deleteCustomerRides(customer_phone_no)
-			.deleteCustomerDebt(customer_phone_no)
-			.deleteCreditCards(customer_phone_no)
-			.addCustomer(customer_phone_no)
-			.addCreditCard(customer_phone_no);
-			
-			scooter
-			.addScooter(scooter_code, scooter_location)
-			.addScooterFinishedRide(customer_phone_no, scooter_code)
-			.addScooterRide(customer_phone_no, scooter_code)
-			.lockScooter(scooter_code);
-			
-
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			while (exists(lbl_NasilKullanilir, 5)) {
-				click(btn_Ileri);
-				waitMilliSec(750);
-			}
-			
-			assertFound(img_RideLockCode);
-			
-			customer 
-			.deleteCustomerRides(customer_phone_no);
-			
-			return this;
-		}	
+//		public pageSurus Surus_Basladi_Kodlu_Kilit(String customer_phone_no, String scooter_code, String scooter_location) {
+//			customer
+//			.deleteCustomerRides(customer_phone_no)
+//			.deleteCustomerDebt(customer_phone_no)
+//			.deleteCreditCards(customer_phone_no)
+//			.addCustomer(customer_phone_no)
+//			.addCreditCard(customer_phone_no);
+//			
+//			scooter
+//			.addScooter(scooter_code, scooter_location)
+//			.addScooterFinishedRide(customer_phone_no, scooter_code)
+//			.addScooterRide(customer_phone_no, scooter_code)
+//			.lockScooter(scooter_code);
+//			
+//
+//			giris_Ekrani
+//			.Giris_Basarili(customer_phone_no);
+//			while (exists(lbl_NasilKullanilir, 5)) {
+//				click(btn_Ileri);
+//				waitMilliSec(750);
+//			}
+//			
+//			assertFound(img_RideLockCode);
+//			
+//			customer 
+//			.deleteCustomerRides(customer_phone_no);
+//			
+//			return this;
+//		}	
 		
 		public pageSurus Surus_Basladi_IOT_Kilit(String customer_phone_no, String scooter_code) {			
 			while (exists(lbl_NasilKullanilir, 5)) {
@@ -94,17 +94,11 @@ public class pageSurus extends PageBaseAndroid {
 			
 			assertFound(img_KilidiAc);
 			
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			
 			return this;
 		}
 		
 		public pageSurus Nasil_Surulur_Gecilmemis(String customer_phone_no, String scooter_code) {
-
-			
-
-
 			assertFound(btn_Basla);
 			wait(4);
 			
@@ -134,7 +128,11 @@ public class pageSurus extends PageBaseAndroid {
 	}
 		
 		public pageSurus Acil_Mudahale(String customer_phone_no, String scooter_code) {
-			while (exists(lbl_NasilKullanilir, 5)) {
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
+			
+			while (exists(lbl_NasilKullanilir, 3)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
 			}
@@ -149,14 +147,15 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 		public pageSurus Nasil_Surulur(String customer_phone_no, String scooter_code) {
-
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 			
-
-			
-			while (exists(lbl_NasilKullanilir, 5)) {
+			while (exists(lbl_NasilKullanilir, 3)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
 			}
+			
 			
 			click(btn_HowIt);
 			assertFound(lbl_NasilKullanilir);
@@ -170,9 +169,11 @@ public class pageSurus extends PageBaseAndroid {
 		public pageSurus Ortalama(String customer_phone_no, String scooter_code) {
 
 			
-
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 			
-			while (exists(lbl_NasilKullanilir, 5)) {
+			while (exists(lbl_NasilKullanilir, 3)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
 			}
@@ -193,10 +194,9 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}		
 		public pageSurus Surus_Bitirme(String customer_phone_no, String scooter_code) {
-
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -214,10 +214,10 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}
 		public pageSurus Park_Edilemez_Alan(String customer_phone_no, String scooter_code) {
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 
-			
-
-			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
@@ -245,9 +245,9 @@ public class pageSurus extends PageBaseAndroid {
 		}	
 		
 		public pageSurus Kilit_Takilmadi(String customer_phone_no, String scooter_code) {
-
-			
-
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
@@ -300,7 +300,9 @@ public class pageSurus extends PageBaseAndroid {
 		
 	public pageSurus Surus_Bitir_Internet_Kapali(String customer_phone_no, String scooter_code) {
 
-
+		String appPackageName=androidDriver.getCurrentPackage();
+		androidDriver.closeApp();
+		androidDriver.activateApp(appPackageName);
 		
 		while (exists(lbl_NasilKullanilir, 5)) {
 			click(btn_Ileri);
@@ -328,7 +330,9 @@ public class pageSurus extends PageBaseAndroid {
 		
 		public pageSurus Ceza_Kurallarina_Erisim(String customer_phone_no, String scooter_code) {
 
-			
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
@@ -349,18 +353,15 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}
 		public pageSurus Odeme_Hatasi(String customer_phone_no, String scooter_code) {
-
-			
-
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
 			}
-			
-			scooter
-			.setRideTime(scooter_code);
-			
+					
 			click(btn_FotoCekBitir);
 			waitLoadingImage();
 			click(btn_Bitir);
@@ -375,14 +376,16 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 		public pageSurus Surus_Bitirme_Basarili(String customer_phone_no, String scooter_code) {
-
-			
-
+			String appPackageName=androidDriver.getCurrentPackage();
+			androidDriver.closeApp();
+			androidDriver.activateApp(appPackageName);
 			
 			while (exists(lbl_NasilKullanilir, 5)) {
 				click(btn_Ileri);
 				waitMilliSec(750);
 			}
+			scooter
+			.lockScooter(scooter_code);
 			
 			click(btn_FotoCekBitir);
 			waitLoadingImage();

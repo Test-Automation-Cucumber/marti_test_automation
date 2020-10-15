@@ -62,6 +62,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 		String chb_QrCodeOkunmuyor											= "#qrNotWork";	
 		String btn_YanlisPark												= "#wrongParking";	
 		String btn_AcilDurumPaylas											= "#otherIssue";	
+		String btn_OkudumOnayliyorum  							        	= "#OKUDUM, ONAYLIYORUM";
 		
 		
 		// *********Page Methods*********
@@ -294,15 +295,25 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}
 		
-		
 		public pageAnaEkran Bildirimleri_Kontrol_Etme(String customer_phone_no) {
 			click(img_NotifyIcon);
 			assertFound(list_Notify);
 			click(btn_Geri);
 			assertFound(img_NotifyIcon);
 			return this;
+		}	
+		
+		public pageAnaEkran Dinamik_Popup_Gosterme_Popup_Yok(String customer_phone_no) {
+			assertFound(btn_Basla);
+			return this;
 		}
-
+		
+		public pageAnaEkran Dinamik_Popup_Goster_Popup_Var(String customer_phone_no) {
+			click(btn_Basla);
+			return this;
+		}
+		
+		
 		
 }
 

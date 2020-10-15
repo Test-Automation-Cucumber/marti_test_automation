@@ -3,6 +3,7 @@ package dbmodel.DataPreparation;
 import java.io.IOException;
 
 import dbmodel.Provider;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.connection.ConnectionState;
@@ -38,12 +39,18 @@ public class TestDevice {
 	public TestDevice resetCustomerLoginStatus(String phone_number) {
 		try {
 			provider.ExecuteCommand(
-					"update customers set access_token = NULL where mobile_phone = '" + phone_number + "';",
-					"martiDB");
+				"update customers set access_token = NULL where mobile_phone = '" + phone_number + "';",
+				"martiDB");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return this;
+	}
+	
+	public TestDevice restartApp(AppiumDriver driver) {
+		driver.closeApp();
+		driver.launchApp();     
 		return this;
 	}
 	
@@ -116,7 +123,7 @@ public class TestDevice {
 /////////////////////////////////////////  IOS  ///////////////////////////////////////////////
 	
 	
-	public void setWIFIServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+	public TestDevice setWIFIServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
 		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
 //		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 //		String tagName = element.getAttribute("content-desc");
@@ -137,6 +144,8 @@ public class TestDevice {
 			}
 		}
 		clickToHomeButton(iosDriver);
+		
+		return this;
 	}
 	
 	public void setDataServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
@@ -160,7 +169,7 @@ public class TestDevice {
 		clickToHomeButton(iosDriver);
 	}
 	
-	public void setAirPlaneServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+	public TestDevice setAirPlaneServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
 		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
 //		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 //		String tagName = element.getAttribute("content-desc");
@@ -179,6 +188,8 @@ public class TestDevice {
 			}
 		}
 		clickToHomeButton(iosDriver);
+		
+		return this;
 	}
 
 	protected void clickToHomeButton(IOSDriver iosDriver) {

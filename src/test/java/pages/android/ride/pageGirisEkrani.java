@@ -35,11 +35,36 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		private	String txt_PhonePrefix										= "#phonePrefix";
 		private	String cmb_CountryName										= "#countryName";
 		private String check_KullaniciSozlesmesi							= "#userAgreementConfirm";
+		private String img_Logo												= "#appLogo";
+		private String lbl_KullaniciSozlesmesiAydinlatmaMetni				= "#userAgreementConfirmText";
+		private String chb_KullaniciSozlesmesiAydinlatmaMetni				= "#userAgreementConfirm";
+		private String chb_AcikRizaMetni									= "#explicitConsentTextConfirm";
+		private String lbl_KullaniciSozlesmesi								= "$KULLANICI SÖZLEŞMESİ";
+		private String btn_OkudumOnayliyorum								= "#btnReadTerms";
+		private String lbl_AydinlatmaMetniTitle								= "$Kişisel Verilerinizin İşlenme Amacı";
+		private String btn_Okudum											= "#btnReadKvvk";
+		private String lbl_AcikRizaMetniTitle								= "$KİŞİSEL VERİLERİN KORUNMASI VE İŞLENMESİNE İLİŞKİN AÇIK RIZA METNİ";
+		private String btn_OkudumOnayliyorumAcikRizaMetni					= "#btnAccept";
 		
 		
 		
 		// *********Page Methods*********
+	public pageGirisEkrani Login(String phone_number) {
+		if (System.getProperty("startLogin").equals("no")) {
+			if (exists(img_Logo, 5)) {
+				return this;
+			} else {
+				Giris_Basarili(phone_number);
+			}
+		} else if (System.getProperty("startLogin").equals("yes")) {
+			Giris_Basarili(phone_number);
+		}
+		return this;
+	}
+		
 		public pageGirisEkrani Giris_Basarili(String phone_number) {
+		
+		androidDriver.resetApp();
 		writeText(txt_PhoneNumber, phone_number);
 		
 		if(!getCheckedValue(check_KullaniciSozlesmesi, "checked"))
@@ -66,6 +91,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 	}
 		
 		public pageGirisEkrani Giris_Basarisiz() {
+			androidDriver.resetApp();
 			click(btn_Ileri);
 			assertEquals(popup_Message, "Lütfen telefon numaranı gir.");
 			click(btn_Tamam);
@@ -89,8 +115,9 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			return this;
 		}
 		
-		
 		public pageGirisEkrani Tekrar_Kod_Gonder(String phone_number) {
+			
+			androidDriver.resetApp();
 			writeText(txt_PhoneNumber, phone_number);
 			if(!getCheckedValue(check_KullaniciSozlesmesi, "checked"))
 				click(check_KullaniciSozlesmesi);
@@ -106,8 +133,15 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
+			for (int i = 0; i < 6; i++) {
+				wait(10);
+				click(btn_Ileri);
+				click(btn_Tamam);
+			}
 			click(btn_TekrarGonder);
 			wait(5);
+			
 			try {
 				otp2 = provider.ExecuteScalar("select sms_code from customers where mobile_phone = '" + phone_number + "';",
 						"martiDB");
@@ -128,9 +162,52 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		}
 		
 		public pageGirisEkrani Kullanici_Sozlesmesi() {
-			click(txt_KullaniciSozlesmesi);
-			assertFound(lbl_KullanimKosullari);
+			androidDriver.resetApp();
+			clickToCoordinateOfElement(chb_KullaniciSozlesmesiAydinlatmaMetni, 80, -60);  // kullanıcı sözlesmesi
+			assertFound(lbl_KullaniciSozlesmesi);
 			click(btn_Geri);
+			clickToCoordinateOfElement(chb_KullaniciSozlesmesiAydinlatmaMetni, 80, -60);  // kullanıcı sözlesmesi
+			click(btn_OkudumOnayliyorum);
+			try {
+			if (!getCheckedValue(chb_KullaniciSozlesmesiAydinlatmaMetni, "checked")) {
+				throw new Exception();
+			}
+			} catch (Exception ex) {
+			}
+			return this;
+		}
+		
+		public pageGirisEkrani Aydinlatma_Metni() {
+			androidDriver.resetApp();
+			clickToCoordinateOfElement(chb_KullaniciSozlesmesiAydinlatmaMetni, 80, 0);  // aydınlatma metni
+			assertFound(lbl_AydinlatmaMetniTitle);
+			click(btn_Geri);
+			clickToCoordinateOfElement(chb_KullaniciSozlesmesiAydinlatmaMetni, 80, 0);  // aydınlatma metni
+			click(btn_Okudum);
+			try {
+				if (!getCheckedValue(chb_KullaniciSozlesmesiAydinlatmaMetni, "checked")) {
+					throw new Exception();
+				}
+			} catch (Exception ex) {
+			}
+			return this;
+		}
+		
+		public pageGirisEkrani Acik_Riza_Metni() {
+			androidDriver.resetApp();
+			//Açık Rıza Metni Başlıyor.
+			clickToCoordinateOfElement(chb_AcikRizaMetni, 80, 0);  // açık rıza metni
+			assertFound(lbl_AcikRizaMetniTitle);
+			click(btn_Geri);
+			clickToCoordinateOfElement(chb_AcikRizaMetni, 80, 0);  // açık rıza metni
+			click(btn_OkudumOnayliyorumAcikRizaMetni);
+			try {
+				if (!getCheckedValue(chb_AcikRizaMetni, "checked")) {
+					throw new Exception();
+				}
+			} catch (Exception ex) {
+			}
+
 			return this;
 		}
 		

@@ -22,6 +22,10 @@ public class Menu extends TestBase {
 // *********Constructor*********
 	public Menu() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
+		System.setProperty("appName", "ride");
+		System.setProperty("platformName", "ios");
+		System.setProperty("deviceName", "iPhone5S");
+		System.setProperty("startLogin", "no");
 	}
 
 // ******************************************************* TEST ***********************************************************
@@ -145,7 +149,6 @@ public class Menu extends TestBase {
 		menu
 		.Kredi_Karti_Ekleme_Basarili(param_1);
 	}
-	
 	@Test(priority = 55)
 	public void TC_055_Kredi_Karti_Ekleme_Basarisiz() {
 		// *******************SET PARAMETERS************************
@@ -195,18 +198,21 @@ public class Menu extends TestBase {
 //		.Kampanyalari_Goruntule()
 //		.Kampanyalari_Incele();
 //	}
-	@Test(priority = 58)
+//	@Test(priority = 58)
 	public void TC_058_Kupon_Ekleme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(iosDriver);
-		
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
 		// ***********CASE DEPENDENCIES**************
 		
 		// ***********PAGE METHODS**************
-		menu  // burda login yokmu yaw ?
+		giris_Ekrani
+		.Login(param_1);
+		
+		menu
 		.Arkadasini_Davet_Et(param_1)
 		.Davet_Baglantisi_Gonderme(param_1)
 		.Kupon_Ekleme(param_1);
@@ -327,7 +333,7 @@ public class Menu extends TestBase {
 		.Kvkk_Aydinlatma_Metnine_Erisim(param_1);
 	}
 	@Test(priority = 65)
-	public void TC_065_Kullanim_Kosullarina_Erisim() {
+	public void TC_065_Kullanici_Sozlesmesine_Erisim() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
@@ -340,7 +346,7 @@ public class Menu extends TestBase {
 		.Login(param_1);
 		
 		menu
-		.Kullanim_Kosullarina_Erisim(param_1);
+		.Kullanici_Sozlesmesine_Erisim(param_1);
 	}
 	@Test(priority = 66)
 	public void TC_066_Yardim_Dokumanina_Erisim() {

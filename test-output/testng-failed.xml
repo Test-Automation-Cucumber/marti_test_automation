@@ -3,74 +3,48 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
   <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.android.ride.Ana_Ekran">
+      <class name="tests.ios.ride.Giris_Ekrani">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC_016_Surus_Baslat"/>
-        </methods>
-      </class> <!-- tests.android.ride.Ana_Ekran -->
-      <class name="tests.android.ride.Giris_Ekrani">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC_013_Tekrar_Kod_Gonder"/>
-        </methods>
-      </class> <!-- tests.android.ride.Giris_Ekrani -->
-      <class name="tests.android.ride.Yukleme_Ekrani">
-        <methods>
-          <include name="TC_005_Surus_Kontrolu"/>
+          <include name="TC_015_Ulke_Kodu_Degistirme"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- tests.android.ride.Yukleme_Ekrani -->
-      <class name="tests.android.ride.Surus">
+      </class> <!-- tests.ios.ride.Giris_Ekrani -->
+      <class name="tests.ios.ride.Menu">
         <methods>
-          <include name="TC_042_Kilit_Takilmadi"/>
-          <include name="TC_035_Surus_Baslat"/>
-          <include name="TC_041_Park_Edilemez_Alan"/>
-          <include name="afterSuite"/>
-          <include name="setUp"/>
-          <include name="TC_044_Surus_Bitir_Internet_Kapali"/>
-          <include name="beforeClass"/>
-          <include name="TC_040_Surus_Bitirme"/>
-          <include name="TC_037_Acil_Mudahale"/>
-          <include name="TC_047_Surus_Bitirme_Basarili"/>
           <include name="beforeSuite"/>
-          <include name="TC_046_Odeme_Hatasi"/>
-          <include name="tearDown"/>
-          <include name="TC_036_Nasil_Surulur_Gecilmemis"/>
-          <include name="TC_038_Nasil_Surulur"/>
-          <include name="TC_039_Ortalama"/>
-          <include name="TC_045_Ceza_Kurallarina_Erisim"/>
-        </methods>
-      </class> <!-- tests.android.ride.Surus -->
-      <class name="tests.android.ride.Menu">
-        <methods>
-          <include name="TC_058_Kupon_Ekleme"/>
           <include name="afterSuite"/>
-          <include name="setUp"/>
-          <include name="TC_051_Arkadasini_Davet_Et"/>
-          <include name="TC_054_Kredi_Karti_Ekleme_Basarili"/>
-          <include name="beforeClass"/>
-          <include name="TC_055_Kredi_Karti_Ekleme_Basarisiz"/>
-          <include name="beforeSuite"/>
-          <include name="TC_053_Varsayilan_Kredi_Karti_Degistirme"/>
-          <include name="TC_060_Arkadasini_Davet_Etme"/>
-          <include name="tearDown"/>
           <include name="TC_059_Davet_Kodu_Girme"/>
-          <include name="TC_065_Kullanim_Kosullarina_Erisim"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_055_Kredi_Karti_Ekleme_Basarisiz"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- tests.android.ride.Menu -->
+      </class> <!-- tests.ios.ride.Menu -->
+      <class name="tests.ios.ride.Ana_Ekran">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+          <include name="TC_021_Surus_Baslat_Basarili"/>
+        </methods>
+      </class> <!-- tests.ios.ride.Ana_Ekran -->
+      <class name="tests.ios.ride.Surus">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="TC_044_Surus_Bitir_Internet_Kapali"/>
+          <include name="TC_045_Ceza_Kurallarina_Erisim"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- tests.ios.ride.Surus -->
     </classes>
   </test> <!-- Web Tests(failed) -->
 </suite> <!-- Failed suite [Web Suite] -->

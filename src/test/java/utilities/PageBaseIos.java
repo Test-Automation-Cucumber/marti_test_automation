@@ -8,15 +8,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
-
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.offset.PointOption;
 
 import java.time.Duration;
@@ -105,7 +107,7 @@ public class PageBaseIos {
 	// Click By Method
 	public void click(String pure_element) {
 		By elementBy = findElements(pure_element, 0);
-		waitClickable(elementBy);
+//		waitClickable(elementBy);
 		iosDriver.findElement(elementBy).click();
 	}
 
@@ -119,11 +121,22 @@ public class PageBaseIos {
 	// Click By Method
 	protected void click(String pure_element, int index) {
 		By elementBy = findElements(pure_element, index);
-		waitClickable(elementBy);
+//		waitClickable(elementBy);
 
 		List<IOSElement> elements = iosDriver.findElements(elementBy);
 		elements.get(index).click();
 	}
+	
+//	// click to coorditane of element
+//	protected void clickToCoordinateOfElement(String pure_element, int coordinateX, int coordinateY) {
+//		By elementBy = findElements(pure_element, 0);
+////		waitClickable(elementBy);
+//		AppiumDriver appiumDriver = iosDriver;
+//		Actions builder = new Actions(appiumDriver);
+//		builder.moveToElement(appiumDriver.findElement(elementBy), coordinateX, coordinateY).click().build().perform();
+//
+//	}
+	
 
 //===========================================================================Write Text
 	// Write By Text

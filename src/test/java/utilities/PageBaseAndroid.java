@@ -9,7 +9,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.html5.Location;
-
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -234,6 +234,18 @@ public class PageBaseAndroid {
 		touchAction.longPress(PointOption.point(location)).perform();
 
 	}
+	
+	// click to coorditane of element X yukardan aşagı. Y soldak Saga
+	protected void clickToCoordinateOfElement(String pure_element, int coordinateX, int coordinateY) {
+		By elementBy = findElements(pure_element, 0);
+//		waitClickable(elementBy);
+
+		Actions builder = new Actions(androidDriver);
+		builder.moveToElement(androidDriver.findElement(elementBy), coordinateX, coordinateY).click().build().perform();
+
+	}
+	
+
 	
 
 //===========================================================================Write Text

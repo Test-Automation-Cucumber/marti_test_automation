@@ -2,4 +2,4 @@
 device.udid				=emulator-5554
 device.name				=Emulator_1
 platform.version		=9.0
-appium.server			=http://localhost:4723/wd/hub
+appium.server			=http://localhost:4713/wd/hub

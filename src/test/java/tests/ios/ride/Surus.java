@@ -25,6 +25,10 @@ public class Surus extends TestBase {
 // *********Constructor*********
 	public Surus() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
+		System.setProperty("appName", "ride");
+		System.setProperty("platformName", "ios");
+		System.setProperty("deviceName", "iPhone5S");
+		System.setProperty("startLogin", "no");
 	}
 
 // ******************************************************* TEST ***********************************************************
@@ -63,7 +67,6 @@ public class Surus extends TestBase {
 		surus
 		.Surus_Basladi_Kodlu_Kilit(param_1, param_2);
 	}
-
 	@Test(priority = 35)
 	public void TC_035_Surus_Baslat() {
 		// *******************SET PARAMETERS************************
@@ -98,7 +101,6 @@ public class Surus extends TestBase {
 		surus
 		.Surus_Basladi_IOT_Kilit(param_1, param_2);
 	}
-
 	@Test(priority = 36)
 	public void TC_036_Nasil_Surulur_Gecilmemis() {
 		// *******************SET PARAMETERS************************
@@ -130,7 +132,6 @@ public class Surus extends TestBase {
 		surus
 		.Nasil_Surulur_Gecilmemis(param_1, param_2);
 	}
-
 	@Test(priority = 37)
 	public void TC_037_Acil_Mudahale() {
 		// *******************SET PARAMETERS************************
@@ -169,7 +170,6 @@ public class Surus extends TestBase {
 		surus
 		.Acil_Mudahale(param_1, param_2);
 	}
-
 	@Test(priority = 38)
 	public void TC_038_Nasil_Surulur() {
 		// *******************SET PARAMETERS************************
@@ -205,7 +205,6 @@ public class Surus extends TestBase {
 		surus
 		.Nasil_Surulur(param_1, param_2);
 	}
-
 	@Test(priority = 39)
 	public void TC_039_Ortalama() {
 		// *******************SET PARAMETERS************************
@@ -240,7 +239,6 @@ public class Surus extends TestBase {
 		surus
 		.Ortalama(param_1, param_2);
 	}
-
 	@Test(priority = 40)
 	public void TC_040_Surus_Bitirme() {
 		// *******************SET PARAMETERS************************
@@ -275,7 +273,6 @@ public class Surus extends TestBase {
 		surus
 		.Surus_Bitirme(param_1, param_2);
 	}
-
 	@Test(priority = 41)
 	public void TC_041_Park_Edilemez_Alan() {
 		// *******************SET PARAMETERS************************
@@ -310,7 +307,6 @@ public class Surus extends TestBase {
 		surus
 		.Park_Edilemez_Alan(param_1, param_2);
 	}
-
 	@Test(priority = 42)
 	public void TC_042_Kilit_Takilmadi() {
 		// *******************SET PARAMETERS************************
@@ -345,7 +341,6 @@ public class Surus extends TestBase {
 		surus
 		.Kilit_Takilmadi(param_1, param_2);
 	}
-
 //	@Test(priority = 43)
 //	public void TC_043_Kamera_Izni_Verilmemis() {  app çalışırken izinleri işleyen case'lere sonra bak.
 //		// *******************SET PARAMETERS************************
@@ -356,7 +351,6 @@ public class Surus extends TestBase {
 //		// ***********PAGE METHODS**************
 //		surus.Kamera_Izni_Verilmemis();
 //	}
-
 	@Test(priority = 44)
 	public void TC_044_Surus_Bitir_Internet_Kapali() {
 		// *******************SET PARAMETERS************************
@@ -392,7 +386,6 @@ public class Surus extends TestBase {
 		surus
 		.Surus_Bitir_Internet_Kapali(param_1, param_2);
 	}
-
 	@Test(priority = 45)
 	public void TC_045_Ceza_Kurallarina_Erisim() {
 		// *******************SET PARAMETERS************************
@@ -428,7 +421,6 @@ public class Surus extends TestBase {
 		surus
 		.Ceza_Kurallarina_Erisim(param_1, param_2);
 	}
-
 	@Test(priority = 46)
 	public void TC_046_Odeme_Hatasi() {
 		// *******************SET PARAMETERS************************
@@ -463,7 +455,6 @@ public class Surus extends TestBase {
 		surus
 		.Odeme_Hatasi(param_1, param_2);
 	}
-
 	@Test(priority = 47)
 	public void TC_047_Surus_Bitirme_Basarili() {
 		// *******************SET PARAMETERS************************

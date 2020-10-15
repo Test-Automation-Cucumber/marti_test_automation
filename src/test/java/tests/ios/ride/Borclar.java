@@ -25,12 +25,16 @@ public class Borclar extends TestBase {
 // *********Constructor*********
 	public Borclar() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
+		System.setProperty("appName", "ride");
+		System.setProperty("platformName", "ios");
+		System.setProperty("deviceName", "iPhone5S");
+		System.setProperty("startLogin", "no");
 	}
 
 // ******************************************************* TEST ***********************************************************
 	
-	@Test(priority = 29)
-	public void TC_029_Borclu_Kullanici() {
+	@Test(priority = 43)
+	public void TC_043_Borclu_Kullanici() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		param_2 = testParameters[caseId][2];
@@ -113,11 +117,15 @@ public class Borclar extends TestBase {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		borclar = new pageBorclar(iosDriver);
-
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
 		// ***********CASE DEPENDENCIES**************
-		customer.deleteCreditCards(param_1)
+		customer
+		.deleteCreditCards(param_1)
 		.addCreditCard(param_1);
-		customer.deleteCustomerDebt(param_1)
+		customer
+		.deleteCustomerDebt(param_1)
 		.addCustomerDebt(param_1, 11);
 		
 		// ***********PAGE METHODS**************

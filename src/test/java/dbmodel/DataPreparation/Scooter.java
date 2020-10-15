@@ -143,8 +143,8 @@ public class Scooter {
 			return this;
 		}
 	
-	//*scooter'in surus suresini 7 dk geri alir.
-	public Scooter setRideTime(String scooter) {
+	//*scooter'in surus suresini 5 dk geri alir.
+	public Scooter setMinus5ForRideTime(String scooter) {
 		try {
 			if (scooter.length() < 4) {
 				throw new Exception("Scooter kodu yok");

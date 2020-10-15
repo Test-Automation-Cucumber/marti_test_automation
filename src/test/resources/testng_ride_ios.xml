@@ -4,12 +4,12 @@
 <suite name="Web Suite" preserve-order="true" parallel="classes" thread-count="1">
 <test name="Web Tests">
 	<classes>
-	<class name="tests.ride.ios.Yukleme_Ekrani" />
-	<class name="tests.ride.ios.Giris_Ekrani" />
-	<class name="tests.ride.ios.Ana_Ekran" />
-	<class name="tests.ride.ios.Borclar" />
-	<class name="tests.ride.ios.Surus" />
-	<class name="tests.ride.ios.Menu" />
+	<class name="tests.ios.ride.Yukleme_Ekrani" />
+<!-- 	<class name="tests.ios.ride.Giris_Ekrani" /> -->
+<!-- 	<class name="tests.ios.ride.Ana_Ekran" /> -->
+<!-- 	<class name="tests.ios.ride.Borclar" /> -->
+<!-- 	<class name="tests.ios.ride.Surus" /> -->
+<!-- 	<class name="tests.ios.ride.Menu" /> -->
 	</classes>
     </test>
 </suite>

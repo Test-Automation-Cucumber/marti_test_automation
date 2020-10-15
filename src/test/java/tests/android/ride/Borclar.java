@@ -22,12 +22,16 @@ public class Borclar extends TestBase {
 // *********Constructor*********
 	public Borclar() {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";		
+		System.setProperty("appName", "ride");
+		System.setProperty("platformName", "android");
+		System.setProperty("deviceName", "Emulator_1");
+		System.setProperty("startLogin", "no");
 	}
 
 // ******************************************************* TEST ***********************************************************
 	
-	@Test(priority = 29)
-	public void TC_029_Borclu_Kullanici() {
+	@Test(priority = 43)
+	public void TC_043_Borclu_Kullanici() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
@@ -46,7 +50,7 @@ public class Borclar extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		borclar
 		.Borclu_Kullanici(param_1);
@@ -68,7 +72,7 @@ public class Borclar extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		borclar
 		.Borclu_Kullanici_Plus_15(param_1);
@@ -90,7 +94,7 @@ public class Borclar extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		borclar
 		.Borc_Odeme(param_1);
@@ -113,7 +117,7 @@ public class Borclar extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		borclar
 		.Borc_Odeme_Islemi_Basarili(param_1);
@@ -138,7 +142,7 @@ public class Borclar extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		borclar
 		.Borc_Odeme_Islemi_Basarisiz(param_1);

@@ -5,11 +5,6 @@ import dbmodel.Provider;
 public class Customer {
 	Provider provider = new Provider();
 
-	// *********Constructor*********
-	public Customer() {
-
-	}
-	
 	// *musteri oluşturur
 	public Customer addCustomer(String customer_phone_no) {
 		try {
@@ -303,7 +298,6 @@ public class Customer {
 		return this;
 	}
 	
-	
 	// *musterinin borclarını sil
 	public Customer deleteCustomerDebt(String customer_phone_no) {
 		try {
@@ -354,12 +348,53 @@ public class Customer {
 	}
 	
 	// *musteriyi ofis etrafındaki bi alanda kampanyaya dahil eder.
-	public Customer activateLocalCampaign(String customer_phone_no, boolean status) {
+	public Customer addLocalCampaign(String customer_phone_no) {
 		try {
 		provider.ExecuteCommand("delete from customer_popups where customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "');"
-				+ "INSERT INTO customer_popups (customer_id, \"date\", user_id, is_read, popup_id, read_date) VALUES ((select id from customers where mobile_phone = '" + customer_phone_no + "'), (now() - interval '10 minute'), NULL, false, 2, NULL);"
-				+ "update campaign_locations set is_active = " + status + " where id = 1;",
-					"martiDB");
+				+ "INSERT INTO customer_popups (customer_id, \"date\", user_id, is_read, popup_id, read_date) VALUES"
+				+ " ((select id from customers where mobile_phone = '" + customer_phone_no + "'), (now() - interval '10 minute'), NULL, false, 2, NULL);"
+//				+ "update campaign_locations set is_active = " + status + " where id = 1;"
+				,	"martiDB");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	// *musteriyi ofis etrafındaki bi alanda kampanyaya dahil eder.
+	public Customer deleteLocalCampaign(String customer_phone_no) {
+		try {
+		provider.ExecuteCommand("delete from customer_popups where customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "');"
+				,	"martiDB");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	// *açık rıza metnini set eder
+	public Customer setExplicitConsentForm(String customer_phone_no, boolean status) {
+		try {
+		provider.ExecuteCommand("update customer_detail set is_explicit_consent_text_confirmed = " + status + " where  customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "');", "martiDB");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+	// *açık rıza metnini set eder
+	public Customer setMinus16DaysForExplicitConsentFormDate(String customer_phone_no) {
+		try {
+		provider.ExecuteCommand("update customer_detail set explicit_consent_text_update_date = (now() - interval '16 day') where  customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "');", "martiDB");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	// *açık rıza metnini set eder
+	public Customer minus14DaysForExplicitConsentFormDate(String customer_phone_no) {
+		try {
+		provider.ExecuteCommand("update customer_detail set explicit_consent_text_update_date = (now() - interval '14 day') where  customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "');", "martiDB");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

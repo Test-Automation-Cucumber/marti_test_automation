@@ -24,7 +24,7 @@ public class Configuration {
     private String ipa_folder;
     private String ipa_file;
     private String site_url;
-    
+
     public static Configuration getInstance() {
         if (instance == null) {
             createInstance();

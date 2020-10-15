@@ -70,13 +70,16 @@ public class TestBase {
 //		System.setProperty("appName", "controlcenter");
 	
 //	Android
-		System.setProperty("platformName", "android");
-		System.setProperty("deviceName", "Emulator_1");
-		System.setProperty("appName", "ride");
-
+//		System.setProperty("platformName", "android");
+//		System.setProperty("deviceName", "Emulator_1");
+//		System.setProperty("appName", "ride");
+//		System.setProperty("startLogin", "no");
+		
+//		IOS
 //		System.setProperty("platformName", "ios");
 //		System.setProperty("deviceName", "iPhone5S");
-//		System.setProperty("appName", "healthchecker");
+//		System.setProperty("appName", "ride");
+//		System.setProperty("startLogin", "no");
 		
 		//API
 //		System.setProperty("platformName", "api");
@@ -149,7 +152,7 @@ public class TestBase {
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, app_package);
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, app_activity);
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
-//		capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
+		capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 		
 		androidDriver = new AndroidDriver<AndroidElement>(new URL(appium_server), capabilities);
 		androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
