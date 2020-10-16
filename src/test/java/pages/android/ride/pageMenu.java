@@ -243,7 +243,7 @@ public class pageMenu extends PageBaseAndroid {
 			return this;
 		}
 		
-		public pageMenu Kullanim_Kosullarina_Erisim(String customer_phone_number) {
+		public pageMenu Kullanici_Sozlesmesine_Erisim(String customer_phone_number) {
 			click(btn_Menu);
 			assertFound(lbl_Title);
 			click(li_Sozlesmeler);

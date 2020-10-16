@@ -25,6 +25,10 @@ public class Ariza_Bildir extends TestBase {
 // *********Constructor*********
 	public Ariza_Bildir() {
 		queryGetParameters = "select * from security_app_test_parameters order by tc_id;";
+		System.setProperty("appName", "ride");
+		System.setProperty("platformName", "android");
+		System.setProperty("deviceName", "Emulator_1");
+		System.setProperty("startLogin", "no");
 	}
 
 // ******************************************************* TEST ***********************************************************

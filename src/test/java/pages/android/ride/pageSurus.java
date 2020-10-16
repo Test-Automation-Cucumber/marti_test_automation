@@ -56,35 +56,16 @@ public class pageSurus extends PageBaseAndroid {
 		
 		// *********Page Methods*********
 
-//		public pageSurus Surus_Basladi_Kodlu_Kilit(String customer_phone_no, String scooter_code, String scooter_location) {
-//			customer
-//			.deleteCustomerRides(customer_phone_no)
-//			.deleteCustomerDebt(customer_phone_no)
-//			.deleteCreditCards(customer_phone_no)
-//			.addCustomer(customer_phone_no)
-//			.addCreditCard(customer_phone_no);
-//			
-//			scooter
-//			.addScooter(scooter_code, scooter_location)
-//			.addScooterFinishedRide(customer_phone_no, scooter_code)
-//			.addScooterRide(customer_phone_no, scooter_code)
-//			.lockScooter(scooter_code);
-//			
-//
-//			giris_Ekrani
-//			.Giris_Basarili(customer_phone_no);
-//			while (exists(lbl_NasilKullanilir, 5)) {
-//				click(btn_Ileri);
-//				waitMilliSec(750);
-//			}
-//			
-//			assertFound(img_RideLockCode);
-//			
-//			customer 
-//			.deleteCustomerRides(customer_phone_no);
-//			
-//			return this;
-//		}	
+		public pageSurus Surus_Basladi_Kodlu_Kilit(String customer_phone_no, String scooter_code) {
+			while (exists(lbl_NasilKullanilir, 5)) {
+				click(btn_Ileri);
+				waitMilliSec(750);
+			}
+			assertFound(img_RideLockCode);
+			customer 
+			.deleteCustomerRides(customer_phone_no);
+			return this;
+		}	
 		
 		public pageSurus Surus_Basladi_IOT_Kilit(String customer_phone_no, String scooter_code) {			
 			while (exists(lbl_NasilKullanilir, 5)) {

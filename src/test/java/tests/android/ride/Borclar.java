@@ -56,8 +56,8 @@ public class Borclar extends TestBase {
 		.Borclu_Kullanici(param_1);
 			
 	}
-	@Test(priority = 30)
-	public void TC_030_Borclu_Kullanici_Plus_15() {
+	@Test(priority = 44)
+	public void TC_044_Borclu_Kullanici_Plus_15() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
@@ -77,8 +77,8 @@ public class Borclar extends TestBase {
 		borclar
 		.Borclu_Kullanici_Plus_15(param_1);
 		}
-	@Test(priority = 31)
-	public void TC_031_Borc_Odeme() {
+	@Test(priority = 45)
+	public void TC_045_Borc_Odeme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
@@ -98,10 +98,31 @@ public class Borclar extends TestBase {
 		
 		borclar
 		.Borc_Odeme(param_1);
-		
 	}
-	@Test(priority = 32)
-	public void TC_032_Borc_Odeme_Islemi_Basarili() {
+	@Test(priority = 46)
+	public void TC_046_Borc_Odeme_Cuzdan_Yeterli() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		// *******************PAGE INSTANTIATIONS*******************
+		borclar = new pageBorclar(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		customer.deleteCustomerDebt(param_1)
+		.addCustomerDebt(param_1, 11);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		borclar
+		.Borc_Odeme(param_1);
+	}
+	@Test(priority = 47)
+	public void TC_047_Borc_Odeme_Islemi_Basarili() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
@@ -123,8 +144,8 @@ public class Borclar extends TestBase {
 		.Borc_Odeme_Islemi_Basarili(param_1);
 		
 	}
-	@Test(priority = 33)
-	public void TC_033_Borc_Odeme_Islemi_Basarisiz() {
+	@Test(priority = 48)
+	public void TC_048_Borc_Odeme_Islemi_Basarisiz() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
