@@ -47,7 +47,8 @@ public class pageBorclar extends PageBaseIos {
 			click(btn_Basla);
 			click(popup_Tamam);
 			assertFound(btn_Light);			
-			customer.deleteCustomerDebt(customer_phone_no);
+			customer
+			.deleteCustomerDebt(customer_phone_no);
 			return this;
 		}	
 		
@@ -74,7 +75,8 @@ public class pageBorclar extends PageBaseIos {
 			waitLoadingImage();
 			assertFound(popup_BorcOde);
 			waitLoadingImage();
-			customer.deleteCustomerDebt(customer_phone_no);
+			customer
+			.deleteCustomerDebt(customer_phone_no);
 			return this;
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarili(String customer_phone_no) {

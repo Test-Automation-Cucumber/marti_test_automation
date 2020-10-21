@@ -8,8 +8,8 @@
 <!-- 	<class name="tests.android.ride.Giris_Ekrani" /> -->
 <!-- 	<class name="tests.android.ride.Ana_Ekran" /> -->
 <!-- 	<class name="tests.android.ride.Borclar" /> -->
-<!-- 	<class name="tests.android.ride.Surus" /> -->
-	<class name="tests.android.ride.Menu" />
+	<class name="tests.android.ride.Surus" />
+<!-- 	<class name="tests.android.ride.Menu" /> -->
 	</classes>
     </test>
 </suite>

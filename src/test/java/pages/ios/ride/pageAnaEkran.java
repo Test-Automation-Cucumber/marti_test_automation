@@ -41,7 +41,7 @@ public class pageAnaEkran extends PageBaseIos {
 		String btn_KilitProblemi											= "#Kilit Problemi";
 		String btn_Gonder													= "#Gönder";	
 		String popup_BosAlanlariDoldurmalisin								= "#Boş alanları doldurmalısın.";	
-		String txt_KonumTarifi												= "#Konum Tarifi";	
+		String txt_KonumTarifi												= "$reportLoc";	
 		String list_Notify													= "#Bildirimler";
 		String btn_Geri														= "#Geri";
 		String ProgressBar 													= "#progressBar";
@@ -65,6 +65,7 @@ public class pageAnaEkran extends PageBaseIos {
 		String btn_YanlisPark												= "#wrongParking";	
 		String btn_AcilDurumPaylas											= "#otherIssue";	
 		String popup_Campaign												= "#Burada senin için indirimimiz var!";	
+		String popup_AcikRizaMetniPopup										= "#OKUDUM, ONAYLIYORUM";	
 		
 		
 		
@@ -86,7 +87,8 @@ public class pageAnaEkran extends PageBaseIos {
 			waitLoadingImage();
 			click(btn_TAMAM);
 			assertFound(btn_Ileri);
-			customer.addTcknAndKvkkValidation(phone_number);
+			customer
+			.addTcknAndKvkkValidation(phone_number);
 			return this;
 		}	
 		public pageAnaEkran Odeme_Yontemi_Yok(String customer_phone_no) {
@@ -153,27 +155,23 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}
 		
-		public pageAnaEkran Bize_Ulasin_Kilit_Problemi_Bildirme(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+		public pageAnaEkran Bize_Ulasin_Kilit_Problemi_Bildirme(String customer_phone_no, String scooter_code) {
 			assertFound(img_NotifyIcon);
 			click(btn_BizeUlasin);
 			click(btn_KilitProblemi);
 			click(btn_Gonder);
 			assertEquals(popup_BosAlanlariDoldurmalisin, "Boş alanları doldurmalısın.");
 			click(btn_TAMAM);
-			writeText(txt_SeriNo, "AUT1");
+			writeText(txt_SeriNo, scooter_code);
 			click(btn_Gonder);
 			waitLoadingImage();
 			assertEquals(popup_BosAlanlariDoldurmalisin, "Boş alanları doldurmalısın.");
 			click(btn_TAMAM);			
-			writeText(txt_SorunDetay, "test otomasyon");
-			click(btn_TAMAM);			
-			click(btn_ParkImage);
-			click(btn_TakeFoto);
-			waitLoadingImage();
+//			writeText(txt_SorunDetay, "test otomasyon");
+//			click(btn_TAMAM);			
+//			click(btn_ParkImage);
+//			click(btn_TakeFoto);
+//			waitLoadingImage();
 			writeText(txt_KonumTarifi, "hq zone");
 			click(btn_TAMAM);			
 			click(btn_Gonder);
@@ -186,11 +184,7 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}
 		
-		public pageAnaEkran Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);		
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+		public pageAnaEkran Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme(String customer_phone_no, String scooter_code) {
 			assertFound(img_NotifyIcon);			
 			click(btn_BizeUlasin);
 			click(btn_HasarliSorunluMarti);
@@ -198,7 +192,7 @@ public class pageAnaEkran extends PageBaseIos {
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
 			click(btn_TAMAM);			
-			writeText(txt_SeriNo, "AUT1");
+			writeText(txt_SeriNo, scooter_code);
 			click(btn_Gonder);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
@@ -223,11 +217,7 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}
 		
-		public pageAnaEkran Bize_Ulasin_Yanlis_Park(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
+		public pageAnaEkran Bize_Ulasin_Yanlis_Park(String customer_phone_no, String scooter_code) {
 			assertFound(img_NotifyIcon);			
 			click(btn_BizeUlasin);
 			click(btn_YanlisPark);
@@ -254,11 +244,7 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}
 		
-		public pageAnaEkran Bize_Ulasin_Acil_Durum_Paylas(String customer_phone_no) {
-			customer
-			.deleteCustomerIssues(customer_phone_no);			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);			
+		public pageAnaEkran Bize_Ulasin_Acil_Durum_Paylas(String customer_phone_no) {	
 			assertFound(img_NotifyIcon);
 			click(btn_BizeUlasin);
 			click(btn_AcilDurumPaylas);
@@ -284,16 +270,26 @@ public class pageAnaEkran extends PageBaseIos {
 			assertFound(img_NotifyIcon);
 			return this;
 		}
+		
+		public pageAnaEkran Dinamik_Popup_Goster_Popup_Var(String customer_phone_no) {
+			assertFound(popup_Campaign);
+			return this;
+		}
 
 		public pageAnaEkran Dinamik_Popup_Gosterme_Popup_Yok(String customer_phone_no) {
 			assertNotFound(popup_Campaign);
 			return this;
 		}
 		
-		public pageAnaEkran Dinamik_Popup_Goster_Popup_Var(String customer_phone_no) {
-			assertFound(popup_Campaign);
+		public pageAnaEkran Acik_Riza_Metni_Goster_Popup_Var(String customer_phone_no) {
+			assertFound(popup_AcikRizaMetniPopup);
 			return this;
 		}
+		public pageAnaEkran Acik_Riza_Metni_Gosterme_Popup_Yok(String customer_phone_no) {
+			assertNotFound(popup_AcikRizaMetniPopup);
+			return this;
+		}
+		
 }
 
 

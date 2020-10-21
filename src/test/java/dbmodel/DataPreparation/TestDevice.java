@@ -54,6 +54,11 @@ public class TestDevice {
 		return this;
 	}
 	
+	public TestDevice resetApp(AppiumDriver driver) {
+		driver.resetApp();  
+		return this;
+	}
+	
 	public TestDevice setAndroidWIFIServiceStatus(AndroidDriver<AndroidElement> androidDriver, boolean status) {
 		ConnectionState conStatus = androidDriver.getConnection();
 		
@@ -133,11 +138,11 @@ public class TestDevice {
 		pageBaseIos.swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
 		
 		if (status) {
-			if (pageBaseIos.getValue("#wifi-button").equals("0")) {
+			if (pageBaseIos.getValue("#wifi-button", "value").equals("0")) {
 				pageBaseIos.click("#wifi-button");
 			}
 		} else {
-			if (pageBaseIos.getValue("#wifi-button").equals("1")) {
+			if (pageBaseIos.getValue("#wifi-button", "value").equals("1")) {
 				pageBaseIos.click("#wifi-button");
 				if( pageBaseIos.exists("#Yakınlardaki Wi-Fi Bağlantısı Yarına Kadar Kesiliyor", 2))
 					pageBaseIos.click("#Tamam");
@@ -158,11 +163,11 @@ public class TestDevice {
 		pageBaseIos.swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
 		
 		if (status) {
-			if (pageBaseIos.getValue("#cellular-data-button").equals("0")) {
+			if (pageBaseIos.getValue("#cellular-data-button", "value").equals("0")) {
 				pageBaseIos.click("#cellular-data-button");
 			}
 		} else {
-			if (pageBaseIos.getValue("#cellular-data-button").equals("1")) {
+			if (pageBaseIos.getValue("#cellular-data-button", "value").equals("1")) {
 				pageBaseIos.click("#cellular-data-button");
 			}
 		}
@@ -179,11 +184,11 @@ public class TestDevice {
 		pageBaseIos.swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
 		
 		if (status) {
-			if (pageBaseIos.getValue("#airplane-mode-button").equals("0")) {
+			if (pageBaseIos.getValue("#airplane-mode-button", "value").equals("0")) {
 				pageBaseIos.click("#airplane-mode-button");
 			}
 		} else {
-			if (pageBaseIos.getValue("#airplane-mode-button").equals("1")) {
+			if (pageBaseIos.getValue("#airplane-mode-button", "value").equals("1")) {
 				pageBaseIos.click("#airplane-mode-button");
 			}
 		}

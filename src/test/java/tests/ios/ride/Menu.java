@@ -425,12 +425,5 @@ public class Menu extends TestBase {
 		.Kupon_Ekleme(param_1);
 	}
 
-
-
-
-
-
-
-
 }
 

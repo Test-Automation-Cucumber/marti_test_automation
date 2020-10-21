@@ -45,8 +45,8 @@ public class pageGirisEkrani extends PageBaseIos {
 		String btn_TekrarGonder									        	= "#Tekrar Gönder";
 		String lbl_KullaniciSozlesmesi							        	= "#Kullanıcı Sözleşmesi’ni";
 		String lbl_TitleKullaniciSozlesmesi						        	= "#KULLANICI SÖZLEŞMESİ";
-		String txt_PhonePrefix									        	= "#phonePrefix";
-		String cmb_CountryName									        	= "#countryName";
+		String txt_PhonePrefix									        	= "#+90";
+		String cmb_CountryName									        	= "#Afghanistan";
 		String btn_FotoCekBitir									        	= "#FOTO ÇEK & BİTİR";
 		String lbl_AydinlatmaMetni								        	= "#Aydınlatma Metni’ni";
 		String btn_Okudum										        	= "#OKUDUM";
@@ -201,7 +201,7 @@ public class pageGirisEkrani extends PageBaseIos {
 		click(lbl_KullaniciSozlesmesi);
 		click(btn_OkudumAnladim);
 		try {
-			if (getSize(chb_SozlesmeOnayChecked, 1) < 1) {
+			if (getSize(chb_SozlesmeOnayChecked, 1) < 1 && getSize(chb_SozlesmeOnayChecked, 1) > 1) {
 				throw new Exception();
 			}
 		} catch (Exception ex) {
@@ -217,7 +217,7 @@ public class pageGirisEkrani extends PageBaseIos {
 		assertFound(lbl_AydinlatmaMetniTitle);
 		click(btn_Okudum);
 		try {
-			if (getSize(chb_SozlesmeOnayChecked, 1) < 1) {
+			if (getSize(chb_SozlesmeOnayChecked, 1) < 1 && getSize(chb_SozlesmeOnayChecked, 1) > 1) {
 				throw new Exception();
 			}
 		} catch (Exception ex) {
@@ -233,7 +233,7 @@ public class pageGirisEkrani extends PageBaseIos {
 		click(lbl_AcikRizaMetni);
 		click(btn_OkudumOnayliyorum);
 		try {
-			if (getSize(chb_SozlesmeOnayChecked, 1) < 2) {
+			if (getSize(chb_SozlesmeOnayChecked, 1) < 1 && getSize(chb_SozlesmeOnayChecked, 1) > 1) {
 				throw new Exception();
 			}
 		} catch (Exception ex) {
@@ -243,8 +243,9 @@ public class pageGirisEkrani extends PageBaseIos {
 		
 	public pageGirisEkrani Ulke_Kodu_Degistirme() {
 		click(txt_PhonePrefix);
-		click(cmb_CountryName, 1);
-//		assertNotEquals(txt_PhonePrefix, "+90");
+		click(cmb_CountryName);
+		assertNotFound(txt_PhonePrefix);
+
 		return this;
 	}
 }

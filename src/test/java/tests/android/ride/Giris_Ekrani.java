@@ -4,11 +4,13 @@ import org.testng.annotations.Test;
 
 import utilities.TestBase;
 import dbmodel.*;
+import dbmodel.DataPreparation.TestDevice;
 import pages.android.ride.pageGirisEkrani;
 
 public class Giris_Ekrani extends TestBase {
 	Provider provider = new Provider();
 	pageGirisEkrani giris_Ekrani;
+	TestDevice testDevice;
 	String param_1;
 	String param_2;
 	String param_3;
@@ -81,6 +83,11 @@ public class Giris_Ekrani extends TestBase {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		testDevice = new TestDevice();
+		
+		// ***********CASE DEPENDENCIES**************
+		testDevice
+		.resetApp(androidDriver);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
@@ -106,6 +113,10 @@ public class Giris_Ekrani extends TestBase {
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
 		
+		// ***********CASE DEPENDENCIES**************
+		testDevice
+		.resetApp(androidDriver);
+		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
 		.Acik_Riza_Metni();
@@ -115,9 +126,12 @@ public class Giris_Ekrani extends TestBase {
 	public void TC_019_Ulke_Kodu_Degistirme() { 
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+	
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
 		// ***********PAGE METHODS**************
+		
 		giris_Ekrani.Ulke_Kodu_Degistirme();
 	}
 }

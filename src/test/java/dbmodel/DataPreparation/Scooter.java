@@ -29,6 +29,17 @@ public class Scooter {
 				"martiDB");
 		return this;
 		}
+	//*scooterın şarj durumunun değiştirilmesi.
+	public String getBatteryLevel(String scooter) {
+		try {
+		if (scooter.length() < 4) {
+			throw new Exception("Scooter kodu yok");
+		}
+		}catch(Exception ex)
+		{}
+		return provider.ExecuteScalar("select battery_status scooters where code = " + scooter + "'",
+				"martiDB");
+		}
 		
 	//*scooterın body_versionlarının deiştirilmesi
 	public Scooter setScooterBodyVersion(String scooter, String body_version) throws Throwable {

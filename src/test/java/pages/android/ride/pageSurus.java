@@ -52,15 +52,22 @@ public class pageSurus extends PageBaseAndroid {
 		String img_NotifyIcon												= "#imageView25";	
 		String img_RideLockCode												= "#lockCodeCell";	
 		String img_KilidiAc													= "#unlockCell";	
-
+		String img_ScooterCode												= "#sctCodeText";	
+		String img_BatteryText												= "#batteryText";	
+		String img_DurationText												= "#durationText";	
+		
 		
 		// *********Page Methods*********
 
 		public pageSurus Surus_Basladi_Kodlu_Kilit(String customer_phone_no, String scooter_code) {
-			while (exists(lbl_NasilKullanilir, 5)) {
-				click(btn_Ileri);
-				waitMilliSec(750);
-			}
+//			while (exists(lbl_NasilKullanilir, 5)) {
+//				click(btn_Ileri);
+//				waitMilliSec(750);
+//			}
+			assertFound(img_DurationText);
+			assertEquals(img_ScooterCode, scooter_code);
+			String batteryLevel	= scooter.getBatteryLevel(scooter_code);
+			assertEquals(img_BatteryText, "%" + batteryLevel);
 			assertFound(img_RideLockCode);
 			customer 
 			.deleteCustomerRides(customer_phone_no);

@@ -67,7 +67,7 @@ public class PageBaseIos {
 		return elementBy;
 	}
 
-	protected void wait(int second) {
+	public void wait(int second) {
 		try {
 			TimeUnit.SECONDS.sleep(second);
 		} catch (InterruptedException e) {
@@ -193,13 +193,13 @@ public class PageBaseIos {
 	}
 	
 //===========================================================================Get Value
-		// Get Value
-		public String getValue(String pure_element) {
+		// Get Attribute
+		public String getValue(String pure_element, String attribute_name) {
 			By elementBy = findElements(pure_element, 0);
 			waitClickable(elementBy);
 
 			List<IOSElement> elements = iosDriver.findElements(elementBy);
-			return elements.get(0).getAttribute("value");
+			return elements.get(0).getAttribute(attribute_name);
 		}
 
 		// Get Value

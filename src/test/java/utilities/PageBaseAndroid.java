@@ -347,20 +347,14 @@ public class PageBaseAndroid {
 
 
 	// Assert Not Found
-	protected void assertNotFound(String pure_element, int index) {
-		try {
+	protected void assertNotFound(String pure_element) {
 			androidDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-		
-			for (int i = 0; i < index; i++) {
-					if (androidDriver.findElements(findElements(pure_element, index)).size() != 0)
-						throw new Exception();
-				wait(1);
-			}
-		} catch (Exception e) {
-		} finally {
-			
-			androidDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//			for (int i = 0; i < ; i++) {
+		if (androidDriver.findElements(findElements(pure_element, 0)).size() != 0) {
+			androidDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+			assertEquals(1, 0);
 		}
+		androidDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);		
 	}
 	
 	

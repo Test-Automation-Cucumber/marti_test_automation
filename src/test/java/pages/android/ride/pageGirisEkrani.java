@@ -162,7 +162,6 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		}
 		
 		public pageGirisEkrani Kullanici_Sozlesmesi() {
-			androidDriver.resetApp();
 			clickToCoordinateOfElement(chb_KullaniciSozlesmesiAydinlatmaMetni, 80, -60);  // kullanıcı sözlesmesi
 			assertFound(lbl_KullaniciSozlesmesi);
 			click(btn_Geri);
@@ -174,11 +173,17 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			}
 			} catch (Exception ex) {
 			}
+			try {
+				if (!getCheckedValue(chb_AcikRizaMetni, "unchecked")) {
+					throw new Exception();
+				}
+			} catch (Exception ex) {
+			}
+			
 			return this;
 		}
 		
 		public pageGirisEkrani Aydinlatma_Metni() {
-			androidDriver.resetApp();
 			clickToCoordinateOfElement(chb_KullaniciSozlesmesiAydinlatmaMetni, 80, 0);  // aydınlatma metni
 			assertFound(lbl_AydinlatmaMetniTitle);
 			click(btn_Geri);
@@ -190,11 +195,16 @@ public class pageGirisEkrani extends PageBaseAndroid {
 				}
 			} catch (Exception ex) {
 			}
+			try {
+				if (!getCheckedValue(chb_AcikRizaMetni, "unchecked")) {
+					throw new Exception();
+				}
+			} catch (Exception ex) {
+			}
 			return this;
 		}
 		
 		public pageGirisEkrani Acik_Riza_Metni() {
-			androidDriver.resetApp();
 			//Açık Rıza Metni Başlıyor.
 			clickToCoordinateOfElement(chb_AcikRizaMetni, 80, 0);  // açık rıza metni
 			assertFound(lbl_AcikRizaMetniTitle);
@@ -203,6 +213,12 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			click(btn_OkudumOnayliyorumAcikRizaMetni);
 			try {
 				if (!getCheckedValue(chb_AcikRizaMetni, "checked")) {
+					throw new Exception();
+				}
+			} catch (Exception ex) {
+			}
+			try {
+				if (!getCheckedValue(chb_KullaniciSozlesmesiAydinlatmaMetni, "unchecked")) {
 					throw new Exception();
 				}
 			} catch (Exception ex) {

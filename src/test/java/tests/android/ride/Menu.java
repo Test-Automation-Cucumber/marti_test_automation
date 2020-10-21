@@ -41,8 +41,8 @@ public class Menu extends TestBase {
 		// ***********CASE DEPENDENCIES**************
 		
 		// ***********PAGE METHODS**************
-		giris_Ekrani
-		.Login(param_1);
+//		giris_Ekrani
+//		.Login(param_1);
 		
 		menu
 		.Versiyon_Kontrol(param_1);
@@ -322,8 +322,6 @@ public class Menu extends TestBase {
 		menu
 		.Kullanici_Sozlesmesine_Erisim(param_1);
 	}
-	
-	
 	
 	
 	

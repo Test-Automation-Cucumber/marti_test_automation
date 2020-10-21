@@ -3,48 +3,16 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
   <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.ios.ride.Giris_Ekrani">
-        <methods>
-          <include name="TC_015_Ulke_Kodu_Degistirme"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- tests.ios.ride.Giris_Ekrani -->
-      <class name="tests.ios.ride.Menu">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="TC_059_Davet_Kodu_Girme"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="TC_055_Kredi_Karti_Ekleme_Basarisiz"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- tests.ios.ride.Menu -->
-      <class name="tests.ios.ride.Ana_Ekran">
+      <class name="tests.android.ride.Borclar">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
-          <include name="TC_021_Surus_Baslat_Basarili"/>
+          <include name="TC_048_Borc_Odeme_Islemi_Basarisiz"/>
         </methods>
-      </class> <!-- tests.ios.ride.Ana_Ekran -->
-      <class name="tests.ios.ride.Surus">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="TC_044_Surus_Bitir_Internet_Kapali"/>
-          <include name="TC_045_Ceza_Kurallarina_Erisim"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- tests.ios.ride.Surus -->
+      </class> <!-- tests.android.ride.Borclar -->
     </classes>
   </test> <!-- Web Tests(failed) -->
 </suite> <!-- Failed suite [Web Suite] -->

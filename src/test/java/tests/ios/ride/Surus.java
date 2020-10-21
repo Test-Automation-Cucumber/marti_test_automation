@@ -61,7 +61,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Surus_Basladi_Kodlu_Kilit(param_1, param_2);

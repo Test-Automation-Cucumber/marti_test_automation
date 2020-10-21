@@ -64,7 +64,8 @@ public class pageBorclar extends PageBaseAndroid {
 			click(popup_Tamam);
 			waitLoadingImage2();
 			assertFound(img_NotifyIcon);
-			customer.deleteCustomerDebt(customer_phone_no);
+			customer
+			.deleteCustomerDebt(customer_phone_no);
 			return this;
 		}
 

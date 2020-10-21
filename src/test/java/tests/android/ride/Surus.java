@@ -50,6 +50,7 @@ public class Surus extends TestBase {
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
+		.deleteCustomerReservations(param_1)
 		.addCustomer(param_1)
 		.addCreditCard(param_1);
 		
@@ -61,7 +62,7 @@ public class Surus extends TestBase {
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Giris_Basarili(param_1);
+		.Login(param_1);
 		
 		surus
 		.Surus_Basladi_Kodlu_Kilit(param_1, param_2);

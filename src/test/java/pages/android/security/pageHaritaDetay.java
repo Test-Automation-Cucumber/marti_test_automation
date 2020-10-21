@@ -178,7 +178,7 @@ public class pageHaritaDetay extends PageBaseAndroid {
 			click(popup_Tamam);
 			wait(1);
 			click(btn_ZiliCaldir);
-			assertNotFound(popup_Message, 1);
+			assertNotFound(popup_Message);
 			
 			click(btn_FarAcKapat);
 			click(btn_FotoYaBak);

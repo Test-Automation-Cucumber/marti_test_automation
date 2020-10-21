@@ -31,8 +31,7 @@ public class Borclar extends TestBase {
 		System.setProperty("startLogin", "no");
 	}
 
-// ******************************************************* TEST ***********************************************************
-	
+// ******************************************************* TEST ***********************************************************	
 	@Test(priority = 43)
 	public void TC_043_Borclu_Kullanici() {
 		// *******************SET PARAMETERS************************
@@ -64,7 +63,6 @@ public class Borclar extends TestBase {
 		borclar
 		.Borclu_Kullanici(param_1, param_2);
 		}
-	
 	@Test(priority = 44)
 	public void TC_044_Borclu_Kullanici_Plus_15() {
 		// *******************SET PARAMETERS************************
@@ -98,9 +96,11 @@ public class Borclar extends TestBase {
 		customer = new Customer();
 		
 		// ***********CASE DEPENDENCIES**************
-		customer.deleteCreditCards(param_1)
+		customer
+		.deleteCreditCards(param_1)
 		.addCreditCard(param_1);
-		customer.deleteCustomerDebt(param_1)
+		customer
+		.deleteCustomerDebt(param_1)
 		.addCustomerDebt(param_1, 11);
 
 		// ***********PAGE METHODS**************
@@ -120,17 +120,18 @@ public class Borclar extends TestBase {
 		customer = new Customer();
 		
 		// ***********CASE DEPENDENCIES**************
-		customer.deleteCreditCards(param_1)
+		customer
+		.deleteCreditCards(param_1)
 		.addCreditCard(param_1);
-		customer.deleteCustomerDebt(param_1)
+		customer
+		.deleteCustomerDebt(param_1)
 		.addCustomerDebt(param_1, 11);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
 		.Login(param_1);
 		
-		borclar
-		.Borc_Odeme(param_1);
+
 	}
 	@Test(priority = 47)
 	public void TC_047_Borc_Odeme_Islemi_Basarili() {

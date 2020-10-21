@@ -8,8 +8,8 @@
 <!-- 	<class name="tests.ios.ride.Giris_Ekrani" /> -->
 <!-- 	<class name="tests.ios.ride.Ana_Ekran" /> -->
 <!-- 	<class name="tests.ios.ride.Borclar" /> -->
-<!-- 	<class name="tests.ios.ride.Surus" /> -->
-	<class name="tests.ios.ride.Menu" />
+	<class name="tests.ios.ride.Surus" />
+<!-- 	<class name="tests.ios.ride.Menu" /> -->
 	</classes>
     </test>
 </suite>

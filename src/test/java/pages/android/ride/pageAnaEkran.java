@@ -62,7 +62,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 		String chb_QrCodeOkunmuyor											= "#qrNotWork";	
 		String btn_YanlisPark												= "#wrongParking";	
 		String btn_AcilDurumPaylas											= "#otherIssue";	
-		String btn_OkudumOnayliyorum  							        	= "#OKUDUM, ONAYLIYORUM";
+		String btn_OkudumOnayliyorum  							        	= "#btnAccept";
 		
 		
 		// *********Page Methods*********
@@ -83,7 +83,8 @@ public class pageAnaEkran extends PageBaseAndroid {
 			waitLoadingImage2();
 			click(btn_TAMAM);
 			assertFound(btn_Ileri);
-			customer.addTcknAndKvkkValidation(phone_number);
+			customer
+			.addTcknAndKvkkValidation(phone_number);
 			return this;
 		}	
 		
@@ -168,7 +169,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}
 		
-		public pageAnaEkran Bize_Ulasin_Kilit_Problemi_Bildirme(String customer_phone_no) {
+		public pageAnaEkran Bize_Ulasin_Kilit_Problemi_Bildirme(String customer_phone_no, String scooter_code) {
 			assertFound(img_NotifyIcon);
 			click(btn_BizeUlasin);
 			click(btn_KilitProblemi);
@@ -177,7 +178,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
 			click(btn_TAMAM);
 			
-			writeText(txt_SeriNo, "AUT1");
+			writeText(txt_SeriNo, scooter_code);
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
@@ -201,47 +202,40 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}
 		
-		public pageAnaEkran Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme(String customer_phone_no) {
+		public pageAnaEkran Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme(String customer_phone_no, String scooter_code) {
 			assertFound(img_NotifyIcon);
-			
 			click(btn_BizeUlasin);
 			click(btn_HasarliSorunluMarti);
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
-			click(btn_TAMAM);
-			
-			writeText(txt_SeriNo, "AUT1");
+			click(btn_TAMAM);			
+			writeText(txt_SeriNo, scooter_code);
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
-			click(btn_TAMAM);
-			
+			click(btn_TAMAM);		
 			click(chb_SarjiBitmis);
 			click(chb_FrenCalismiyor);
 			click(chb_GazCalismiyor);
 			click(chb_MartiHasarAlmis);
-			click(chb_QrCodeOkunmuyor);
-										
+			click(chb_QrCodeOkunmuyor);									
 			writeText(txt_SorunDetay, "test otomasyon");
 			swipe(txt_SorunDetay, 303, 975,346,231, 300);
 			click(btn_ParkImage);
 			click(btn_TakeFoto);
-			waitLoadingImage();
-			
+			waitLoadingImage();			
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Sorun bildirimin başarıyla gönderildi.");
 			click(btn_TAMAM);
-			assertFound(img_NotifyIcon);
-			
+			assertFound(img_NotifyIcon);			
 			int count = customer.countCustomerIssue(customer_phone_no);
-			assertEquals(count, 1);
-			
+			assertEquals(count, 1);		
 			return this;
 		}
 		
-		public pageAnaEkran Bize_Ulasin_Yanlis_Park(String customer_phone_no) {
+		public pageAnaEkran Bize_Ulasin_Yanlis_Park(String customer_phone_no, String scooter_code) {
 			assertFound(img_NotifyIcon);
 			click(btn_BizeUlasin);
 			click(btn_YanlisPark);
@@ -250,7 +244,7 @@ public class pageAnaEkran extends PageBaseAndroid {
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
 			click(btn_TAMAM);
 			
-			writeText(txt_SeriNo, "AUT1");
+			writeText(txt_SeriNo, scooter_code);
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
@@ -305,15 +299,32 @@ public class pageAnaEkran extends PageBaseAndroid {
 		
 		public pageAnaEkran Dinamik_Popup_Gosterme_Popup_Yok(String customer_phone_no) {
 			assertFound(btn_Basla);
+			wait(5);
+			click(btn_Basla);
+			waitLoadingImage2();
+			assertFound(btn_WriteCode);
 			return this;
 		}
 		
 		public pageAnaEkran Dinamik_Popup_Goster_Popup_Var(String customer_phone_no) {
+			assertFound(btn_Basla);
+			wait(5);
 			click(btn_Basla);
+			waitLoadingImage2();
+			assertNotFound(btn_WriteCode);
 			return this;
 		}
 		
+		public pageAnaEkran Acik_Riza_Metni_Gosterme_Popup_Yok(String customer_phone_no) {
+			wait(5);
+			assertFound(btn_Basla);
+			return this;
+		}
 		
+		public pageAnaEkran Acik_Riza_Metni_Goster_Popup_Var(String customer_phone_no) {
+			assertFound(btn_OkudumOnayliyorum);
+			return this;
+		}
 		
 }
 

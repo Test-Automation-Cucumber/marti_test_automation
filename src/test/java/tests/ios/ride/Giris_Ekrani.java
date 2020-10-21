@@ -27,7 +27,6 @@ public class Giris_Ekrani extends TestBase {
 	}
 
 // ******************************************************* TEST ***********************************************************
-
 	@Test(priority = 12)
 	public void TC_012_Giris_Basarili() {
 		// *******************SET PARAMETERS************************
@@ -109,6 +108,12 @@ public class Giris_Ekrani extends TestBase {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		testDevice = new TestDevice();
+		
+		// ***********CASE DEPENDENCIES**************
+		testDevice
+		.resetCustomerLoginStatus(param_1)
+		.restartApp(iosDriver);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
@@ -121,6 +126,12 @@ public class Giris_Ekrani extends TestBase {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		testDevice = new TestDevice();
+		
+		// ***********CASE DEPENDENCIES**************
+		testDevice
+		.resetCustomerLoginStatus(param_1)
+		.restartApp(iosDriver);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
