@@ -33,6 +33,7 @@ public class Menu extends TestBase {
 	public void TC_069_Versiyon_Kontrol() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		param_2 = testParameters[caseId][2];
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(androidDriver);
@@ -41,11 +42,11 @@ public class Menu extends TestBase {
 		// ***********CASE DEPENDENCIES**************
 		
 		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
+		giris_Ekrani
+		.Login(param_1);
 		
 		menu
-		.Versiyon_Kontrol(param_1);
+		.Versiyon_Kontrol(param_2);
 	}
 	@Test(priority = 70)
 	public void TC_070_Profil_Duzenleme() {

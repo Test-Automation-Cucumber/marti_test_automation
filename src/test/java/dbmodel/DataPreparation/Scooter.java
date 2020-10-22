@@ -37,7 +37,7 @@ public class Scooter {
 		}
 		}catch(Exception ex)
 		{}
-		return provider.ExecuteScalar("select battery_status scooters where code = " + scooter + "'",
+		return provider.ExecuteScalar("select battery_status from scooters where code = '" + scooter + "'",
 				"martiDB");
 		}
 		

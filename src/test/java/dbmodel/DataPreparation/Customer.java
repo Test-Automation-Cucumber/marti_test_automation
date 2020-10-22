@@ -40,6 +40,24 @@ public class Customer {
 		return this;
 	}
 	
+	// *ozet ekrani degerlerini getirir
+	public String getChargedRidePrice(String customer_phone_no) {
+		String actualPrice = "";
+		try {
+			if (customer_phone_no.length() < 9) {
+				throw new Exception("hatali musteri numarasi");
+			}
+			actualPrice = provider.ExecuteScalar(
+					"select charged_price from rides where  customer_id = (select id from customers where mobile_phone = '"
+							+ customer_phone_no + "') order by id desc",
+					"martiDB");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return actualPrice;
+	}
+	
 	// *musterinin surus ekle    -----------------buraya birde scooter kodu ekleyebilirsin. o scooterida hazir hale getirir. jenkinse zaten en az 1 scooter baglayacaksin.
 	public Customer addCustomerFinishedRide(String customer_phone_no, String scooter_code) {
 		try {

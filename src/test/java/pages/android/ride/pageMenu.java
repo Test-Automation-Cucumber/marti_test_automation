@@ -84,9 +84,10 @@ public class pageMenu extends PageBaseAndroid {
 		
 		// *********Page Methods*********
 
-		public pageMenu Versiyon_Kontrol(String phone_number) {
+		public pageMenu Versiyon_Kontrol(String version_text) {
 			click(btn_Menu);
-			assertFound(lbl_Version);
+			
+			assertEquals(lbl_Version, version_text);
 			return this;
 		}	
 		

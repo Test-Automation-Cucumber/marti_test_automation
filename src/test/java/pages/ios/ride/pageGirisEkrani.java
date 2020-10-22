@@ -59,7 +59,7 @@ public class pageGirisEkrani extends PageBaseIos {
 		// *********Page Methods*********
 		public pageGirisEkrani Login(String customer_phone_number) {
 			if (System.getProperty("startLogin").equals("no")) {
-				if (exists(img_Logo, 3) || exists(btn_FotoCekBitir, 3)) {
+				if (exists(img_Logo, 3)) {
 					return this;
 				} else {
 					Giris_Basarili(customer_phone_number);
