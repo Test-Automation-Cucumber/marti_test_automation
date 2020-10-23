@@ -14,7 +14,7 @@ import java.text.DateFormat;
 import javax.mail.*;
 import javax.mail.internet.*;
 
-public class Data_Health_Checker extends TestBase {
+public class Data_Health_Checker {
 
 	Provider provider;
 

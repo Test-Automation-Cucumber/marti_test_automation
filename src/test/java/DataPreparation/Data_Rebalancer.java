@@ -14,7 +14,7 @@ import java.text.DateFormat;
 import javax.mail.*;
 import javax.mail.internet.*;
 
-public class Data_Rebalancer extends TestBase {
+public class Data_Rebalancer {
 
 	Provider provider;
 

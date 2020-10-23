@@ -2,72 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Web Suite" duration-ms="7395" started-at="2020-10-23T11:53:07Z" finished-at="2020-10-23T11:53:14Z">
+  <suite name="Web Suite" duration-ms="4361" started-at="2020-10-23T11:56:55Z" finished-at="2020-10-23T11:56:59Z">
     <groups>
     </groups>
-    <test name="Web Tests" duration-ms="7395" started-at="2020-10-23T11:53:07Z" finished-at="2020-10-23T11:53:14Z">
+    <test name="Web Tests" duration-ms="4361" started-at="2020-10-23T11:56:55Z" finished-at="2020-10-23T11:56:59Z">
       <class name="DataPreparation.Data_MobilService">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:DataPreparation.Data_MobilService@74fe5c40]" name="beforeSuite" is-config="true" duration-ms="152" started-at="2020-10-23T11:53:07Z" finished-at="2020-10-23T11:53:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:DataPreparation.Data_MobilService@74fe5c40]" name="beforeClass" is-config="true" duration-ms="1157" started-at="2020-10-23T11:53:07Z" finished-at="2020-10-23T11:53:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:DataPreparation.Data_MobilService@74fe5c40]" name="setUp" is-config="true" duration-ms="2" started-at="2020-10-23T11:53:08Z" finished-at="2020-10-23T11:53:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void DataPreparation.Data_MobilService.SetCustomer() throws java.lang.Throwable]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="SetCustomer()[pri:0, instance:DataPreparation.Data_MobilService@74fe5c40]" name="SetCustomer" duration-ms="6212" started-at="2020-10-23T11:53:08Z" finished-at="2020-10-23T11:53:14Z">
+        <test-method status="PASS" signature="SetCustomer()[pri:0, instance:DataPreparation.Data_MobilService@6b927fb]" name="SetCustomer" duration-ms="4337" started-at="2020-10-23T11:56:55Z" finished-at="2020-10-23T11:56:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetCustomer -->
-        <test-method status="FAIL" signature="tearDown(org.testng.ITestResult)[pri:0, instance:DataPreparation.Data_MobilService@74fe5c40]" name="tearDown" is-config="true" duration-ms="2" started-at="2020-10-23T11:53:14Z" finished-at="2020-10-23T11:53:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=SetCustomer status=SUCCESS method=Data_MobilService.SetCustomer()[pri:0, instance:DataPreparation.Data_MobilService@74fe5c40] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at utilities.TestBase.tearDown(TestBase.java:225)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:DataPreparation.Data_MobilService@74fe5c40]" name="afterSuite" is-config="true" duration-ms="2" started-at="2020-10-23T11:53:15Z" finished-at="2020-10-23T11:53:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
       </class> <!-- DataPreparation.Data_MobilService -->
     </test> <!-- Web Tests -->
   </suite> <!-- Web Suite -->

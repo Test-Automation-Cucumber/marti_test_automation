@@ -18,7 +18,7 @@ import utilities.TestBase;
 import dbmodel.*;
 import java.text.DateFormat;
 
-public class Data_Swapper extends TestBase {
+public class Data_Swapper {
 
 	Provider provider;
 //	MobilServiceData rideAppData;
