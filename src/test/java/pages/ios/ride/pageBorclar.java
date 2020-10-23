@@ -8,11 +8,10 @@ import utilities.PageBaseIos;
 
 public class pageBorclar extends PageBaseIos {
 	IOSDriver<IOSElement> iosDriver;
+	pageGirisEkrani giris_Ekrani;
 	TestDevice testDevice;
 	Customer customer;
 	Scooter scooter;
-	pageGirisEkrani giris_Ekrani;	
-
 	
 	// *********Constructor*********
 		public pageBorclar(IOSDriver<IOSElement> iosDriver) {
@@ -46,9 +45,7 @@ public class pageBorclar extends PageBaseIos {
 			wait(4);
 			click(btn_Basla);
 			click(popup_Tamam);
-			assertFound(btn_Light);			
-			customer
-			.deleteCustomerDebt(customer_phone_no);
+			assertFound(btn_Light);
 			return this;
 		}	
 		
@@ -61,8 +58,6 @@ public class pageBorclar extends PageBaseIos {
 			click(popup_Tamam);
 			waitLoadingImage();
 			assertFound(img_NotifyIcon);
-			customer
-			.deleteCustomerDebt(customer_phone_no);
 			return this;
 		}
 
@@ -75,8 +70,6 @@ public class pageBorclar extends PageBaseIos {
 			waitLoadingImage();
 			assertFound(popup_BorcOde);
 			waitLoadingImage();
-			customer
-			.deleteCustomerDebt(customer_phone_no);
 			return this;
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarili(String customer_phone_no) {

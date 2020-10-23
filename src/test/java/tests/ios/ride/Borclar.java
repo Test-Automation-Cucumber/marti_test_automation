@@ -62,6 +62,9 @@ public class Borclar extends TestBase {
 		
 		borclar
 		.Borclu_Kullanici(param_1, param_2);
+		
+		customer
+		.deleteCustomerDebt(param_1);
 		}
 	@Test(priority = 44)
 	public void TC_044_Borclu_Kullanici_Plus_15() {
@@ -84,6 +87,9 @@ public class Borclar extends TestBase {
 		
 		borclar
 		.Borclu_Kullanici_Plus_15(param_1);
+		
+		customer
+		.deleteCustomerDebt(param_1);
 			}
 	@Test(priority = 45)
 	public void TC_045_Borc_Odeme() {
@@ -109,6 +115,9 @@ public class Borclar extends TestBase {
 		
 		borclar
 		.Borc_Odeme(param_1);
+		
+		customer
+		.deleteCustomerDebt(param_1);
 			}
 	@Test(priority = 46)
 	public void TC_046_Borc_Odeme_Cuzdan_Yeterli() {

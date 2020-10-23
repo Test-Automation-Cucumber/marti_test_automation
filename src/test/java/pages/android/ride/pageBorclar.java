@@ -8,16 +8,11 @@ import utilities.PageBaseAndroid;
 
 public class pageBorclar extends PageBaseAndroid {
 	AndroidDriver<AndroidElement> androidDriver;
-	TestDevice testDevice;
-	Customer customer;
 
 	// *********Constructor*********
 		public pageBorclar(AndroidDriver<AndroidElement> androidDriver) {
 			super(androidDriver);
 			this.androidDriver = androidDriver;
-			testDevice = new TestDevice();
-			customer = new Customer();
-			
 		}
 
 		// *****************************************Web Elements***********************************
@@ -39,18 +34,14 @@ public class pageBorclar extends PageBaseAndroid {
 		
 		
 		// *********Page Methods*********
-
 		public pageBorclar Borclu_Kullanici(String customer_phone_no) {
 			assertFound(img_NotifyIcon);
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
-
 			click(popup_Tamam);
 			waitLoadingImage2();
-			assertFound(btn_Light);
-			
-			customer.deleteCustomerDebt(customer_phone_no);
+			assertFound(btn_Light);		
 			return this;
 		}	
 		
@@ -59,13 +50,10 @@ public class pageBorclar extends PageBaseAndroid {
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
-			assertEquals(popup_MessageText, "Önceki sürüşlerinden kalan ₺16,00 bakiyeniz bulunduğu için yeni bir sürüş başlatamazsın. Şimdi ödeme yaparak devam etmek ister misiniz?");
-			
+			assertEquals(popup_MessageText, "Önceki sürüşlerinden kalan ₺16,00 bakiyeniz bulunduğu için yeni bir sürüş başlatamazsın. Şimdi ödeme yaparak devam etmek ister misiniz?");		
 			click(popup_Tamam);
 			waitLoadingImage2();
 			assertFound(img_NotifyIcon);
-			customer
-			.deleteCustomerDebt(customer_phone_no);
 			return this;
 		}
 
@@ -74,13 +62,10 @@ public class pageBorclar extends PageBaseAndroid {
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
-
 			click(popup_BorcOde);
 			waitLoadingImage2();
 			waitLoadingImage();
 			assertFound(btn_BorcOde);
-			
-			customer.deleteCustomerDebt(customer_phone_no);
 			return this;
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarili(String customer_phone_no) {

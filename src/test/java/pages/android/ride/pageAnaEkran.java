@@ -8,11 +8,10 @@ import utilities.PageBaseAndroid;
 
 public class pageAnaEkran extends PageBaseAndroid {
 	AndroidDriver<AndroidElement> androidDriver;
-	TestDevice testDevice;
 	pageGirisEkrani giris_Ekrani;	
 	Customer customer;
 	Scooter scooter;
-	
+	TestDevice testDevice;
 	
 	// *********Constructor*********
 		public pageAnaEkran(AndroidDriver<AndroidElement> androidDriver) {
@@ -83,8 +82,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 			waitLoadingImage2();
 			click(btn_TAMAM);
 			assertFound(btn_Ileri);
-			customer
-			.addTcknAndKvkkValidation(phone_number);
 			return this;
 		}	
 		
@@ -98,44 +95,44 @@ public class pageAnaEkran extends PageBaseAndroid {
 			return this;
 		}	
 		
-		public pageAnaEkran Surus_Baslatma_Kamera_Izni_Verilmemis(String customer_phone_no) {
-				
-			customer
-				.addTcknAndKvkkValidation(customer_phone_no)
-				.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no);
-
-			String appPackageName=androidDriver.getCurrentPackage();
-			testDevice.setAndroidCamPermissionStatus(androidDriver, false);
-			androidDriver.closeApp();
-			androidDriver.activateApp(appPackageName);
-			
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-			
-			assertFound(btn_Basla);
-			wait(4);
-			click(btn_Basla);
-			waitLoadingImage2();
-			assertFound(popup_IzinVer);
-			click(popup_IzinVer);
-			return this;
-		}		
+//		public pageAnaEkran Surus_Baslatma_Kamera_Izni_Verilmemis(String customer_phone_no) {
+//				
+//			customer
+//				.addTcknAndKvkkValidation(customer_phone_no)
+//				.deleteCreditCards(customer_phone_no)
+//				.addCreditCard(customer_phone_no);
+//				customer.deleteCustomerDebt(customer_phone_no);
+//
+//			String appPackageName=androidDriver.getCurrentPackage();
+//			testDevice.setAndroidCamPermissionStatus(androidDriver, false);
+//			androidDriver.closeApp();
+//			androidDriver.activateApp(appPackageName);
+//			
+//			giris_Ekrani
+//			.Giris_Basarili(customer_phone_no);
+//			
+//			assertFound(btn_Basla);
+//			wait(4);
+//			click(btn_Basla);
+//			waitLoadingImage2();
+//			assertFound(popup_IzinVer);
+//			click(popup_IzinVer);
+//			return this;
+//		}		
+		
 		public pageAnaEkran Surus_Baslatma_Kod_Girisi(String customer_phone_no) {
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
 			click(btn_WriteCode);
-			assertFound(txt_Kod);
-			
+			assertFound(txt_Kod);			
 			return this;
 		}
+		
 		public pageAnaEkran Surus_Baslat_Basarili(String customer_phone_no, String scooter_code) {
 			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);
-				
+			.Giris_Basarili(customer_phone_no);	
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
@@ -149,7 +146,6 @@ public class pageAnaEkran extends PageBaseAndroid {
 //			String appPackageName=androidDriver.getCurrentPackage();
 //			androidDriver.closeApp();
 //			androidDriver.activateApp(appPackageName);
-			
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
@@ -176,27 +172,23 @@ public class pageAnaEkran extends PageBaseAndroid {
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
-			click(btn_TAMAM);
-			
+			click(btn_TAMAM);			
 			writeText(txt_SeriNo, scooter_code);
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
-			click(btn_TAMAM);
-			
-			writeText(txt_SorunDetay, "test otomasyon");
-			
+			click(btn_TAMAM);		
+			writeText(txt_SorunDetay, "test otomasyon");		
 			click(btn_ParkImage);
 			click(btn_TakeFoto);
 			waitLoadingImage();
-			
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Sorun bildirimin başarıyla gönderildi.");
 			click(btn_TAMAM);
-			assertFound(img_NotifyIcon);
-			
-			int count = customer.countCustomerIssue(customer_phone_no);
+			assertFound(img_NotifyIcon);	
+			int count = customer
+					.countCustomerIssue(customer_phone_no);
 			assertEquals(count, 1);
 			
 			return this;
@@ -230,7 +222,8 @@ public class pageAnaEkran extends PageBaseAndroid {
 			assertEquals(popup_Message, "Sorun bildirimin başarıyla gönderildi.");
 			click(btn_TAMAM);
 			assertFound(img_NotifyIcon);			
-			int count = customer.countCustomerIssue(customer_phone_no);
+			int count = customer
+					.countCustomerIssue(customer_phone_no);
 			assertEquals(count, 1);		
 			return this;
 		}
@@ -242,27 +235,23 @@ public class pageAnaEkran extends PageBaseAndroid {
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
-			click(btn_TAMAM);
-			
+			click(btn_TAMAM);			
 			writeText(txt_SeriNo, scooter_code);
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Lütfen boş alanları doldurun");
-			click(btn_TAMAM);
-			
-			writeText(txt_SorunDetay, "test otomasyon");
-			
+			click(btn_TAMAM);			
+			writeText(txt_SorunDetay, "test otomasyon");			
 			click(btn_ParkImage);
 			click(btn_TakeFoto);
-			waitLoadingImage();
-			
+			waitLoadingImage();		
 			click(btn_Kaydet);
 			waitLoadingImage();
 			assertEquals(popup_Message, "Sorun bildirimin başarıyla gönderildi.");
 			click(btn_TAMAM);
 			assertFound(img_NotifyIcon);
-			
-			int count = customer.countCustomerIssue(customer_phone_no);
+			int count = customer
+					.countCustomerIssue(customer_phone_no);
 			assertEquals(count, 1);
 			
 			return this;
@@ -281,11 +270,10 @@ public class pageAnaEkran extends PageBaseAndroid {
 			waitLoadingImage();
 			assertEquals(popup_Message, "Acil durum bildirimini aldık, sana en kısa sürede telefonla ulaşacağız.");
 			click(btn_TAMAM);
-			assertFound(img_NotifyIcon);
-			
-			int count = customer.countCustomerIssue(customer_phone_no);
-			assertEquals(count, 1);
-			
+			assertFound(img_NotifyIcon);	
+			int count = customer
+					.countCustomerIssue(customer_phone_no);
+			assertEquals(count, 1);			
 			return this;
 		}
 		

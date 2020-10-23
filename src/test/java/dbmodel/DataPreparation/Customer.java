@@ -219,6 +219,23 @@ public class Customer {
 		return this;
 	}
 	
+	// *customer isim getir
+	public String getCustomerName(String customer_phone_no) {
+		String customerName = "";
+		try {
+			if (customer_phone_no.length() < 9) {
+				throw new Exception("hatali musteri numarasi");
+			}
+			customerName = provider.ExecuteScalar(
+					"select name from customers where mobile_phone = '"+ customer_phone_no + "';",
+					"martiDB");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return customerName.substring(0, customerName.lastIndexOf(" "));
+	}	
+	
 	// *customer rezervasyon temizle
 	public Customer deleteCustomerReservations(String customer_phone_no) {
 		try {

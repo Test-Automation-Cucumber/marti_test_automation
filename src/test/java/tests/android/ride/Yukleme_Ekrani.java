@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import dbmodel.Provider;
 import dbmodel.DataPreparation.Customer;
 import dbmodel.DataPreparation.Scooter;
+import dbmodel.DataPreparation.TestDevice;
 import pages.android.ride.pageGirisEkrani;
 import pages.android.ride.pageYuklemeEkrani;
 import utilities.TestBase;
@@ -15,6 +16,7 @@ public class Yukleme_Ekrani extends TestBase {
 	pageGirisEkrani giris_Ekrani;
 	Customer customer;
 	Scooter scooter;
+	TestDevice testDevice;
 	String param_1;
 	String param_2;
 	String param_3;
@@ -47,9 +49,14 @@ public class Yukleme_Ekrani extends TestBase {
 	public void TC_001_Yukleme_Ekrani_Basarisiz() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+		
 		// ***********PAGE METHODS**************
+		customer
+		.addTcknAndKvkkValidation(param_1);
+		
 		yukleme_Ekrani
 		.Yukleme_Ekrani_Basarisiz(param_1);
 	}
@@ -135,6 +142,7 @@ public class Yukleme_Ekrani extends TestBase {
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
 		customer = new Customer();
 		scooter = new Scooter();
+		testDevice = new TestDevice();
 		
 		// ***********CASE DEPENDENCIES**************
 		scooter
@@ -144,12 +152,19 @@ public class Yukleme_Ekrani extends TestBase {
 		.deleteCustomerRides(param_1)
 		.addCustomerContinuesRide(param_1, param_2);
 		
+		testDevice
+		.resetApp(androidDriver);
+		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
 		.Login(param_1);
 		
 		yukleme_Ekrani
 		.Surus_Kontrolu(param_1, param_2);
+		
+		customer
+		.deleteCustomerRides(param_1);
+		
 	}
 	@Test(priority = 8)
 	public void TC_008_Rezervasyon_Kontrolu() {
@@ -186,6 +201,9 @@ public class Yukleme_Ekrani extends TestBase {
 		
 		yukleme_Ekrani
 		.Tckn_Kontrolu(param_1);
+		
+		customer
+		.addTcknAndKvkkValidation(param_1);
 	}
 //	@Test(priority =10)
 //	public void TC_010_Kvkk_Kontrolu() { yeri değişti

@@ -37,6 +37,16 @@ public class Data_MobilService extends TestBase {
 
 	@Test(priority = 0)
 	public void SetCustomer() throws Throwable {
+		
+    	//DATA OLUSTURMA
+		System.setProperty("resetUserPhone", "5309945452");
+		System.setProperty("resetMartiName", "MTN3");
+		System.setProperty("resetScooterType", "Panzer");
+		System.setProperty("resetLocation", "sxk9m8gze");		
+		System.setProperty("resetTookVehicle", "Evet");
+		System.setProperty("resetSelectVehicle", "34 MOB 01");
+		System.setProperty("resetUserEmail", "metin@marti.tech");
+		
 		resetUserPhone = System.getProperty("resetUserPhone");
 		resetMartiName = System.getProperty("resetMartiName").substring(0, 3).toUpperCase();
 		resetLocation = System.getProperty("resetLocation");

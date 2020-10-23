@@ -96,9 +96,6 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 		}
 		
 	public pageYuklemeEkrani Yukleme_Ekrani_Basarisiz(String customer_phone_no) {
-		customer
-		.addTcknAndKvkkValidation(customer_phone_no);
-		
 		testDevice
 		.setAndroidWIFIServiceStatus(androidDriver, false)
 		.setAndroidDataServiceStatus(androidDriver, false);
@@ -139,20 +136,14 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 //		return this;
 //	}
 
-	public pageYuklemeEkrani Surus_Kontrolu(String customer_phone_no, String scooter_code) {
-		String appPackageName = androidDriver.getCurrentPackage();
-		androidDriver.closeApp();
-		androidDriver.activateApp(appPackageName);
-		
+	public pageYuklemeEkrani Surus_Kontrolu(String customer_phone_no, String scooter_code) {		
 		while (exists(lbl_NasilKullanilir, 5)) {
 			click(btn_Ileri);
 			waitMilliSec(750);
 		}
 		assertFound(btn_FotoCekBitir);
 		
-		customer
-		.deleteCustomerRides(customer_phone_no);
-		
+
 		return this;
 	}	
 //	public pageYuklemeEkrani Rezervasyon_Kontrolu(String customer_phone_no, String scooter_code) {
@@ -187,21 +178,12 @@ public class pageYuklemeEkrani extends PageBaseAndroid {
 //		return this;
 //	}
 	public pageYuklemeEkrani Tckn_Kontrolu(String customer_phone_no) {
-
-//		String appPackageName = androidDriver.getCurrentPackage();
-//		androidDriver.closeApp();
-//		androidDriver.activateApp(appPackageName);
-		
 		assertFound(btn_Basla);
 		wait(4);
 		click(btn_Basla);
 		assertEquals(popup_Message, "Profil bilgilerini doğrulayamadık. Bilgileri kimliğinde görüldüğü gibi, eksiksiz bir şekilde doldurmalısın. Profil bilgilerini güncellemezsen sürüşüne başlayamazsın.");
 		click(btn_Tamam);
-		
 		assertFound(txt_Tckn);
-		
-		customer
-		.addTcknAndKvkkValidation(customer_phone_no);
 		return this;
 	}
 //	public pageYuklemeEkrani Kvkk_Kontrolu(String customer_phone_no) {

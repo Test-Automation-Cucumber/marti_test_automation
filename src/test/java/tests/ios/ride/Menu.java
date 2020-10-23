@@ -33,6 +33,7 @@ public class Menu extends TestBase {
 	public void TC_069_Versiyon_Kontrol() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		param_3 = testParameters[caseId][3];
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		menu = new pageMenu(iosDriver);
@@ -45,7 +46,7 @@ public class Menu extends TestBase {
 		.Login(param_1);
 		
 		menu
-		.Versiyon_Kontrol(param_1);
+		.Versiyon_Kontrol(param_1, param_3);
 	}
 	@Test(priority = 70)
 	public void TC_070_Profil_Duzenleme() {
@@ -125,7 +126,12 @@ public class Menu extends TestBase {
 		.Login(param_1);
 		
 		menu
-		.Surusleri_Inceleme(param_1)
+		.Surusleri_Inceleme(param_1);
+		
+		customer
+		.addCustomerFinishedRide(param_1, param_2);	
+		
+		menu
 		.SurusDetayiInceleme(param_1, param_2, param_3);
 	}
 	@Test(priority = 74)
@@ -281,7 +287,6 @@ public class Menu extends TestBase {
 		menu
 		.Cikis(param_1);
 	}
-	
 	@Test(priority = 82)
 	public void TC_082_Yardim_Dokumanina_Erisim() {
 		// *******************SET PARAMETERS************************
@@ -337,7 +342,7 @@ public class Menu extends TestBase {
 	
 	
 	
-	@Test(priority = 53)
+	@Test(priority = 99)
 	public void TC_053_Varsayilan_Kredi_Karti_Degistirme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
@@ -360,8 +365,13 @@ public class Menu extends TestBase {
 		
 		menu
 		.Varsayilan_Kredi_Karti_Degistirme(param_1);
+		
+		customer
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		
 	}
-	@Test(priority = 54)
+	@Test(priority = 100)
 	public void TC_054_Kredi_Karti_Ekleme_Basarili() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
@@ -381,8 +391,13 @@ public class Menu extends TestBase {
 		
 		menu
 		.Kredi_Karti_Ekleme_Basarili(param_1);
+		
+		customer
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		
 	}
-	@Test(priority = 55)
+	@Test(priority = 101)
 	public void TC_055_Kredi_Karti_Ekleme_Basarisiz() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
@@ -402,10 +417,14 @@ public class Menu extends TestBase {
 		
 		menu
 		.Kredi_Karti_Ekleme_Basarisiz(param_1);
+		
+		customer
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
 	}
 
 
-//	@Test(priority = 58)
+	@Test(priority = 102)
 	public void TC_058_Kupon_Ekleme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];

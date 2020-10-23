@@ -8,10 +8,10 @@ import utilities.PageBaseIos;
 
 public class pageAnaEkran extends PageBaseIos {
 	IOSDriver<IOSElement> iosDriver;
-	TestDevice testDevice;
 	pageGirisEkrani giris_Ekrani;	
 	Customer customer;
 	Scooter scooter;
+	TestDevice testDevice;
 	
 	// *********Constructor*********
 		public pageAnaEkran(IOSDriver<IOSElement> iosDriver) {
@@ -79,16 +79,12 @@ public class pageAnaEkran extends PageBaseIos {
 			return this;
 		}	
 		public pageAnaEkran Tckn_Gecersiz(String phone_number) {
-			giris_Ekrani
-			.Login(phone_number);
 			assertFound(btn_Basla);
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage();
 			click(btn_TAMAM);
 			assertFound(btn_Ileri);
-			customer
-			.addTcknAndKvkkValidation(phone_number);
 			return this;
 		}	
 		public pageAnaEkran Odeme_Yontemi_Yok(String customer_phone_no) {
@@ -100,22 +96,23 @@ public class pageAnaEkran extends PageBaseIos {
 			assertFound(txt_CVCNumber);
 			return this;
 		}	
-		public pageAnaEkran Surus_Baslatma_Kamera_Izni_Verilmemis(String customer_phone_no) {	
-			customer
-				.addTcknAndKvkkValidation(customer_phone_no)
-				.deleteCreditCards(customer_phone_no)
-				.addCreditCard(customer_phone_no);
-				customer.deleteCustomerDebt(customer_phone_no);
-			giris_Ekrani
-			.Giris_Basarili(customer_phone_no);			
-			assertFound(btn_Basla);
-			wait(4);
-			click(btn_Basla);
-			waitLoadingImage();
-			assertFound(popup_IzinVer);
-			click(popup_IzinVer);
-			return this;
-		}		
+		
+//		public pageAnaEkran Surus_Baslatma_Kamera_Izni_Verilmemis(String customer_phone_no) {	
+//			customer
+//				.addTcknAndKvkkValidation(customer_phone_no)
+//				.deleteCreditCards(customer_phone_no)
+//				.addCreditCard(customer_phone_no);
+//				customer.deleteCustomerDebt(customer_phone_no);
+//			giris_Ekrani
+//			.Giris_Basarili(customer_phone_no);			
+//			assertFound(btn_Basla);
+//			wait(4);
+//			click(btn_Basla);
+//			waitLoadingImage();
+//			assertFound(popup_IzinVer);
+//			click(popup_IzinVer);
+//			return this;
+//		}		
 		
 		public pageAnaEkran Surus_Baslatma_Kod_Girisi(String customer_phone_no) {
 			assertFound(btn_Basla);
@@ -148,6 +145,7 @@ public class pageAnaEkran extends PageBaseIos {
 			click(btn_TAMAM);
 			return this;
 		}
+		
 		public pageAnaEkran Daha_Cok_Marti(String customer_phone_no) {
 			assertFound(btn_Basla);
 			click(btn_DahaCokMarti);

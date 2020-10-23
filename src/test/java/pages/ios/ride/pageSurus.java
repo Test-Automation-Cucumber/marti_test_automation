@@ -7,10 +7,10 @@ import utilities.PageBaseIos;
 
 public class pageSurus extends PageBaseIos {
 	IOSDriver<IOSElement> iosDriver;
-	TestDevice testDevice;
 	pageGirisEkrani giris_Ekrani;	
 	Customer customer;
 	Scooter scooter;
+	TestDevice testDevice;
 	
 	// *********Constructor*********
 		public pageSurus(IOSDriver<IOSElement> androidDriver) {
@@ -79,19 +79,11 @@ public class pageSurus extends PageBaseIos {
 			String batteryLevel	= scooter.getBatteryLevel(scooter_code);
 			assertFound("#% " + batteryLevel);
 			assertFound(img_KilidiAc);
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			return this;
 		}	
 		
 		public pageSurus Surus_Basladi_IOT_Kilit(String customer_phone_no, String scooter_code) {
-//			while (exists(lbl_NasilKullanilir, 5)) {
-//				click(btn_Ileri);
-//				waitMilliSec(750);
-//			}
 			assertFound(img_RideLockCode);
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			return this;
 		}
 		
@@ -122,9 +114,7 @@ public class pageSurus extends PageBaseIos {
 		while (exists(lbl_NasilKullanilir, 5)) {
 			click(btn_Ileri);
 			waitMilliSec(750);
-		}
-		customer 
-		.deleteCustomerRides(customer_phone_no);		
+		}		
 		return this;
 	}
 		
@@ -135,15 +125,12 @@ public class pageSurus extends PageBaseIos {
 //			}
 			click(btn_Bize_Ulasin);
 			assertEquals(popup_TeknikEkibinSanaUlasmasiniIstermisin, "Teknik ekibin sana ulaşmasını ister misin?");
-			customer 
-			.deleteCustomerRides(customer_phone_no);
+
 			return this;
 		}
 		public pageSurus Nasil_Surulur(String customer_phone_no, String scooter_code) {
 			click(btn_HowIt);
-			assertFound(lbl_QrCodeOkut);
-			customer 
-			.deleteCustomerRides(customer_phone_no);		
+			assertFound(lbl_QrCodeOkut);	
 			return this;
 		}
 		public pageSurus Ortalama(String customer_phone_no, String scooter_code) {
@@ -154,9 +141,7 @@ public class pageSurus extends PageBaseIos {
 			try {
 			if(exists(btn_Navigate, 2))
 				throw new Exception("Konuma git butonu bulundu !");
-			}catch(Exception ex) {}			
-			customer 
-			.deleteCustomerRides(customer_phone_no);			
+			}catch(Exception ex) {}		
 			return this;
 		}		
 		public pageSurus Surus_Bitirme(String customer_phone_no, String scooter_code) {		
@@ -166,9 +151,7 @@ public class pageSurus extends PageBaseIos {
 			assertFound(btn_Bitir);
 			click(btn_Bitir);
 			waitLoadingImage();
-			assertFound(btn_Tamam);		
-			customer 
-			.deleteCustomerRides(customer_phone_no);			
+			assertFound(btn_Tamam);				
 			return this;
 		}
 		public pageSurus Park_Edilemez_Alan(String customer_phone_no, String scooter_code) {	
@@ -183,9 +166,7 @@ public class pageSurus extends PageBaseIos {
 			assertEquals(popup_MartiyiBirakmakIstediginYer, "MARTI'yı bırakmak istediğin yer yasaklı park alanıdır. Haritada kırmızı olarak gösterilen alanlara park edemezsin.");
 			click(btn_Tamam);			
 			scooter
-			.setLastKnowPointToScooter(scooter_code, "sxk9m8gz8");  // ofis fence			
-			customer 
-			.deleteCustomerRides(customer_phone_no);			
+			.setLastKnowPointToScooter(scooter_code, "sxk9m8gz8");  // ofis fence						
 			return this;
 		}	
 		
@@ -198,11 +179,7 @@ public class pageSurus extends PageBaseIos {
 			click(btn_Bitir);
 			waitLoadingImage();
 			assertEquals(popup_MartiyiDogruKitlemediginden, "MARTI’yı doğru kilitlemediğin için sürüşünü bitiremiyoruz. Lütfen kilidi kontrol edip tekrar dene.");
-			click(btn_Tamam);		
-			scooter
-			.lockScooter(scooter_code);			
-			customer 
-			.deleteCustomerRides(customer_phone_no);			
+			click(btn_Tamam);					
 			return this;
 		}
 		
@@ -243,9 +220,7 @@ public class pageSurus extends PageBaseIos {
 		click(btn_Bitir);
 		assertFound(popup_BirHataOlustu);	
 //		testDevice.setAirPlaneServiceStatus(iosDriver, false);
-		testDevice.setWIFIServiceStatus(iosDriver, true);	
-		customer 
-		.deleteCustomerRides(customer_phone_no);	
+		testDevice.setWIFIServiceStatus(iosDriver, true);		
 		return this;
 	}
 		
@@ -255,9 +230,7 @@ public class pageSurus extends PageBaseIos {
 			click(lbl_AlertDesc);
 			assertFound(img_AlertContent);
 			click(btn_X);
-			assertFound(btn_Bitir);		
-			customer 
-			.deleteCustomerRides(customer_phone_no);		
+			assertFound(btn_Bitir);				
 			return this;
 		}
 		public pageSurus Odeme_Hatasi(String customer_phone_no, String scooter_code) {
@@ -273,8 +246,6 @@ public class pageSurus extends PageBaseIos {
 			waitLoadingImage();
 			assertEquals(popup_OdemeniGerceklestirmekIcin, "Ödemeni gerçekleştirmek için kart limitin yetersiz. Dilersen yeni bir kart ekleyerek ödemeni tamamlayabilirsin.");
 			click(btn_Tamam);		
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			return this;
 		}
 		
@@ -294,9 +265,7 @@ public class pageSurus extends PageBaseIos {
 			click(btn_SebebiNeydiki);		
 			click(btn_Gonder);
 			waitLoadingImage();
-			assertFound(img_NotifyIcon);			
-			customer 
-			.deleteCustomerRides(customer_phone_no);		
+			assertFound(img_NotifyIcon);					
 			return this;
 		}
 }

@@ -7,10 +7,10 @@ import utilities.PageBaseAndroid;
 
 public class pageSurus extends PageBaseAndroid {
 	AndroidDriver<AndroidElement> androidDriver;
-	TestDevice testDevice;
 	pageGirisEkrani giris_Ekrani;	
 	Customer customer;
 	Scooter scooter;
+	TestDevice testDevice;
 	
 	// *********Constructor*********
 		public pageSurus(AndroidDriver<AndroidElement> androidDriver) {
@@ -76,8 +76,7 @@ public class pageSurus extends PageBaseAndroid {
 			String batteryLevel	= scooter.getBatteryLevel(scooter_code);
 			assertEquals(img_BatteryText, "%" + batteryLevel);
 			assertFound(img_KilidiAc);
-			customer 
-			.deleteCustomerRides(customer_phone_no);
+
 			return this;
 		}	
 		
@@ -117,30 +116,18 @@ public class pageSurus extends PageBaseAndroid {
 			click(btn_Ileri);
 			waitMilliSec(750);
 		}
-		
-		customer 
-		.deleteCustomerRides(customer_phone_no);
-		
 		return this;
 	}
 		
-		public pageSurus Acil_Mudahale(String customer_phone_no, String scooter_code) {
-//			while (exists(lbl_NasilKullanilir, 3)) {
-//				click(btn_Ileri);
-//				waitMilliSec(750);
-//			}			
+		public pageSurus Acil_Mudahale(String customer_phone_no, String scooter_code) {		
 			click(btn_Bize_Ulasin);
 			assertEquals(popup_Message, "Teknik ekibin sana ulaşmasını ister misin?");			
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			return this;
 		}
 		
 		public pageSurus Nasil_Surulur(String customer_phone_no, String scooter_code) {
 			click(btn_HowIt);
-			assertFound(lbl_NasilKullanilir);
-			customer 
-			.deleteCustomerRides(customer_phone_no);		
+			assertFound(lbl_NasilKullanilir);	
 			return this;
 		}
 		
@@ -153,10 +140,6 @@ public class pageSurus extends PageBaseAndroid {
 			if(exists(btn_Navigate, 2))
 				throw new Exception("Konuma git butonu bulundu !");
 			}catch(Exception ex) {}
-			
-			customer 
-			.deleteCustomerRides(customer_phone_no);
-			
 			return this;
 		}		
 		public pageSurus Surus_Bitirme(String customer_phone_no, String scooter_code) {
@@ -166,8 +149,6 @@ public class pageSurus extends PageBaseAndroid {
 			click(btn_Bitir);
 			waitLoadingImage2();
 			assertFound(btn_Ileri);
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			
 			return this;
 		}
@@ -180,28 +161,17 @@ public class pageSurus extends PageBaseAndroid {
 			click(btn_Bitir);
 			waitLoadingImage2();
 			assertEquals(popup_Message, "MARTI'yı bırakmak istediğin yer yasaklı park alanıdır. Haritada kırmızı olarak gösterilen alanlara park edemezsin.");
-			click(btn_TAMAM);			
-			scooter
-			.setLastKnowPointToScooter(scooter_code, "sxk9m8gz8");  // ofis fence			
-			customer 
-			.deleteCustomerRides(customer_phone_no);			
+			click(btn_TAMAM);				
 			return this;
 		}	
 		
 		public pageSurus Kilit_Takilmadi(String customer_phone_no, String scooter_code) {
-			scooter
-			.setLastKnowPointToScooter(scooter_code, "sxk9m8gz8")  // ofis fence
-			.unlockScooter(scooter_code);
 			click(btn_FotoCekBitir);
 			waitLoadingImage();
 			click(btn_Bitir);
 			waitLoadingImage2();
 			assertEquals(popup_Message, "MARTI'yı doğru kilitlemediğin için sürüşünü bitiremiyoruz. Lütfen kilidi kontrol edip tekrar dene.");
 			click(btn_TAMAM);
-			scooter
-			.lockScooter(scooter_code);
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			return this;
 		}
 		
@@ -241,8 +211,6 @@ public class pageSurus extends PageBaseAndroid {
 		testDevice
 		.setAndroidWIFIServiceStatus(androidDriver, true)
 		.setAndroidDataServiceStatus(androidDriver, true);	
-		customer 
-		.deleteCustomerRides(customer_phone_no);
 		return this;
 	}
 		
@@ -253,8 +221,6 @@ public class pageSurus extends PageBaseAndroid {
 			assertFound(img_AlertContent);
 			click(btn_Tamam);
 			assertFound(btn_Bitir);
-			customer 
-			.deleteCustomerRides(customer_phone_no);
 			return this;
 		}
 		public pageSurus Odeme_Hatasi(String customer_phone_no, String scooter_code) {	
@@ -264,10 +230,6 @@ public class pageSurus extends PageBaseAndroid {
 			waitLoadingImage2();
 			assertEquals(popup_Message, "Ödemeni gerçekleştirmek için kart limitin yetersiz. Dilersen yeni bir kart ekleyerek ödemeni tamamlayabilirsin.");
 			click(btn_TAMAM);
-			
-			customer 
-			.deleteCustomerRides(customer_phone_no);
-
 			return this;
 		}
 		
@@ -282,14 +244,8 @@ public class pageSurus extends PageBaseAndroid {
 		
 		public pageSurus Yolculuk_Ozeti_Kontrol(String customer_phone_no) {
 //			double chargedPrice = Double.parseDouble(customer.getChargedRidePrice(customer_phone_no));
-			
-			
-			
-			
 //			double tax = chargedPrice * 0.18;
 //			double totalPrice = ridePrice 
-			
-			
 			//lbl_YolculukTutari	
 //			lbl_VergiTutari		
 //			lbl_ToplamTutar		
@@ -298,18 +254,14 @@ public class pageSurus extends PageBaseAndroid {
 		
 		public pageSurus Yolculugu_Degerlendirme(String customer_phone_no) {
 			click(btn_Ileri);
-			
 			assertEquals(lbl_YolculukDegerlendirme, "Martı Yolculuğunu Değerlendir");
 			click(btn_Star, 4);
 			swipe(lbl_YolculukDegerlendirme, 303, 975,346,231, 300);
-			click(btn_SebebiNeydiki);
-			
+			click(btn_SebebiNeydiki);			
 			click(btn_Gonder);
 			waitLoadingImage();
-			assertFound(img_NotifyIcon);
-			
-			customer 
-			.deleteCustomerRides(customer_phone_no);
+			assertFound(img_NotifyIcon);		
+
 			
 			return this;
 		}

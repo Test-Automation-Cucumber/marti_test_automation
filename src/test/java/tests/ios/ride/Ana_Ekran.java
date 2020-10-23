@@ -34,402 +34,408 @@ public class Ana_Ekran extends TestBase {
 	}
 
 // ******************************************************* TEST ***********************************************************
-//	@Test(priority = 20)
-//	public void TC_020_Konum_Izin_Kontrolu() {
-////		 *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//
-//		// ***********PAGE METHODS**************
-//
-//	}
-//	@Test(priority = 21)
-//	public void TC_021_Bildirim_Izin_Kontrolu() {
-////		 *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//
-//		// ***********PAGE METHODS**************
-//
-//	}
-//	@Test(priority = 22)
-//	public void TC_022_Dinamik_Popup_Goster() {
-////		 *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.setExplicitConsentForm(param_1, true)
-//		.addLocalCampaign(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Giris_Basarili(param_1);
-//		
-//		ana_Ekran
-//		.Dinamik_Popup_Goster_Popup_Var(param_1);
-//	}
-//	@Test(priority = 23)
-//	public void TC_023_Dinamik_Popup_Gosterme_Popup_Yok() {
-////		 *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.setExplicitConsentForm(param_1, true)
-//		.deleteLocalCampaign(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Giris_Basarili(param_1);
-//		
-//		ana_Ekran
-//		.Dinamik_Popup_Gosterme_Popup_Yok(param_1);
-//	}
-//	@Test(priority = 24)
-//	public void TC_024_Dinamik_Popup_Gosterme_Acik_Riza_Yok() {
-////		 *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.setExplicitConsentForm(param_1, false)
-//		.minus14DaysForExplicitConsentFormDate(param_1)
-//		.addLocalCampaign(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Dinamik_Popup_Gosterme_Popup_Yok(param_1);
-//	}
-//	@Test(priority = 25)
-//	public void TC_025_Acik_Riza_Hatirlatma_Gosterme() {
-////		 *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.setExplicitConsentForm(param_1, false)
-//		.minus14DaysForExplicitConsentFormDate(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Acik_Riza_Metni_Gosterme_Popup_Yok(param_1);
-//	}
-//	@Test(priority = 26)
-//	public void TC_026_Acik_Riza_Hatirlatma_Goster_Onay() {
-////		 *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		testDevice = new TestDevice();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		customer
-//		.setExplicitConsentForm(param_1, false)
-//		.setMinus16DaysForExplicitConsentFormDate(param_1);
-//		
-//		testDevice
-//		.restartApp(iosDriver);
-//		
-//		// ***********PAGE METHODS**************
-//
-//		
-//		ana_Ekran
-//		.Acik_Riza_Metni_Goster_Popup_Var(param_1);
-//	}
-//	@Test(priority = 27)
-//	public void TC_027_Scooter_Bilgileri_Goster() {
-////		 *******************SET PARAMETERS**************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//
-//		// ***********CASE DEPENDENCIES**************
-//		
-//		// ***********PAGE METHODS**************
-//
-//	}	
-//	@Test(priority = 28)
-//	public void TC_028_Surus_Baslat() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.deleteCustomerDebt(param_1)
-//		.deleteCreditCards(param_1)
-//		.addCreditCard(param_1);
-//
-//		customer
-//		.addTcknAndKvkkValidation(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Surus_Baslat(param_1);
-//	}
-//	@Test(priority = 29)
-//	public void TC_029_Tckn_Gecersiz() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// ******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//				
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.deleteTcknValidation(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Tckn_Gecersiz(param_1);
-//	}
-//	@Test(priority = 30)
-//	public void TC_030_Odeme_Yontemi_Yok_Kart_Yok() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.deleteCreditCards(param_1)
-//		.addTcknAndKvkkValidation(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Odeme_Yontemi_Yok(param_1);
-//	}
-//	@Test(priority = 31)
-//	public void TC_031_Odeme_Yontemi_Yok_Bakiye_Yetersiz() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//	
-//	}
-//	@Test(priority = 32)
-//	public void TC_032_Surus_Baslatma_Kamera_Izni_Verilmemis() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//	
-////		Surus_Baslatma_Kamera_Izni_Verilmemis
-//	}
-//	@Test(priority = 33)
-//	public void TC_033_Surus_Baslat_Kod_Girisi() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.addTcknAndKvkkValidation(param_1)
-//		.deleteCreditCards(param_1)
-//		.addCreditCard(param_1);
-//		customer
-//		.deleteCustomerDebt(param_1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Surus_Baslatma_Kod_Girisi(param_1);
-//	}
-//	@Test(priority = 34)
-//	public void TC_034_Surus_Baslat_Basarili() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		param_2 = testParameters[caseId][2];
-//		param_3 = testParameters[caseId][3];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani =  new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//     	customer
-//     	.addTcknAndKvkkValidation(param_1)
-//     	.deleteCreditCards(param_1)
-//     	.addCreditCard(param_1);
-//     	customer
-//     	.deleteCustomerDebt(param_1);
-//			
-//		scooter
-//		.addScooter(param_2, param_3);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Surus_Baslat_Basarili(param_1, param_2);
-//	}
-//	@Test(priority = 35)
-//	public void TC_035_Surus_Baslat_Basarisiz_Martiya_Uzak() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		param_2 = testParameters[caseId][2];
-//		param_3 = testParameters[caseId][3];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		customer = new Customer();
-//		scooter = new Scooter();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.addTcknAndKvkkValidation(param_1)
-//		.deleteCreditCards(param_1)
-//		.addCreditCard(param_1);
-//		customer.deleteCustomerDebt(param_1);
-//	
-//		scooter
-//		.addScooter(param_2, param_3)
-//		.setLastKnowPointToScooter(param_2, "sxk9q130z");
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Surus_Baslat_Basarisiz_Martiya_Uzak(param_1, param_2);
-//	}
-//	@Test(priority = 36)
-//	public void TC_036_Daha_Cok_Marti() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		ana_Ekran
-//		.Daha_Cok_Marti(param_1);
-//	}
-//	@Test(priority = 37)
-//	public void TC_037_Ortalama() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		ana_Ekran = new pageAnaEkran(iosDriver);
-//		giris_Ekrani = new pageGirisEkrani(iosDriver);
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//	}
+	@Test(priority = 20)
+	public void TC_020_Konum_Izin_Kontrolu() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+
+		// ***********PAGE METHODS**************
+
+	}
+	@Test(priority = 21)
+	public void TC_021_Bildirim_Izin_Kontrolu() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+
+		// ***********PAGE METHODS**************
+
+	}
+	@Test(priority = 22)
+	public void TC_022_Dinamik_Popup_Goster() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.setExplicitConsentForm(param_1, true)
+		.addLocalCampaign(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		ana_Ekran
+		.Dinamik_Popup_Goster_Popup_Var(param_1);
+	}
+	@Test(priority = 23)
+	public void TC_023_Dinamik_Popup_Gosterme_Popup_Yok() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.setExplicitConsentForm(param_1, true)
+		.deleteLocalCampaign(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Giris_Basarili(param_1);
+		
+		ana_Ekran
+		.Dinamik_Popup_Gosterme_Popup_Yok(param_1);
+	}
+	@Test(priority = 24)
+	public void TC_024_Dinamik_Popup_Gosterme_Acik_Riza_Yok() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.setExplicitConsentForm(param_1, false)
+		.minus14DaysForExplicitConsentFormDate(param_1)
+		.addLocalCampaign(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Dinamik_Popup_Gosterme_Popup_Yok(param_1);
+	}
+	@Test(priority = 25)
+	public void TC_025_Acik_Riza_Hatirlatma_Gosterme() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.setExplicitConsentForm(param_1, false)
+		.minus14DaysForExplicitConsentFormDate(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Acik_Riza_Metni_Gosterme_Popup_Yok(param_1);
+	}
+	@Test(priority = 26)
+	public void TC_026_Acik_Riza_Hatirlatma_Goster_Onay() {
+//		 *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		testDevice = new TestDevice();
+		
+		// ***********CASE DEPENDENCIES**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		customer
+		.setExplicitConsentForm(param_1, false)
+		.setMinus16DaysForExplicitConsentFormDate(param_1);
+		
+		testDevice
+		.restartApp(iosDriver);
+		
+		// ***********PAGE METHODS**************
+
+		
+		ana_Ekran
+		.Acik_Riza_Metni_Goster_Popup_Var(param_1);
+	}
+	@Test(priority = 27)
+	public void TC_027_Scooter_Bilgileri_Goster() {
+//		 *******************SET PARAMETERS**************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+
+		// ***********CASE DEPENDENCIES**************
+		
+		// ***********PAGE METHODS**************
+
+	}	
+	@Test(priority = 28)
+	public void TC_028_Surus_Baslat() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerDebt(param_1)
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+
+		customer
+		.addTcknAndKvkkValidation(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Surus_Baslat(param_1);
+	}
+	@Test(priority = 29)
+	public void TC_029_Tckn_Gecersiz() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// ******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+				
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteTcknValidation(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Tckn_Gecersiz(param_1);
+		
+		customer
+		.addTcknAndKvkkValidation(param_1);
+	}
+	@Test(priority = 30)
+	public void TC_030_Odeme_Yontemi_Yok_Kart_Yok() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCreditCards(param_1)
+		.addTcknAndKvkkValidation(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Odeme_Yontemi_Yok(param_1);
+	}
+	@Test(priority = 31)
+	public void TC_031_Odeme_Yontemi_Yok_Bakiye_Yetersiz() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+	
+	}
+	@Test(priority = 32)
+	public void TC_032_Surus_Baslatma_Kamera_Izni_Verilmemis() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+	
+//		Surus_Baslatma_Kamera_Izni_Verilmemis
+	}
+	@Test(priority = 33)
+	public void TC_033_Surus_Baslat_Kod_Girisi() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.addTcknAndKvkkValidation(param_1)
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		customer
+		.deleteCustomerDebt(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Surus_Baslatma_Kod_Girisi(param_1);
+	}
+	@Test(priority = 34)
+	public void TC_034_Surus_Baslat_Basarili() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani =  new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+     	customer
+     	.addTcknAndKvkkValidation(param_1)
+     	.deleteCreditCards(param_1)
+     	.addCreditCard(param_1);
+     	customer
+     	.deleteCustomerDebt(param_1);
+			
+		scooter
+		.addScooter(param_2, param_3);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Surus_Baslat_Basarili(param_1, param_2);
+	}
+	@Test(priority = 35)
+	public void TC_035_Surus_Baslat_Basarisiz_Martiya_Uzak() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		param_2 = testParameters[caseId][2];
+		param_3 = testParameters[caseId][3];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		customer = new Customer();
+		scooter = new Scooter();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.addTcknAndKvkkValidation(param_1)
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		customer.deleteCustomerDebt(param_1);
+	
+		scooter
+		.addScooter(param_2, param_3)
+		.setLastKnowPointToScooter(param_2, "sxk9q130z");
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Surus_Baslat_Basarisiz_Martiya_Uzak(param_1, param_2);
+	}
+	@Test(priority = 36)
+	public void TC_036_Daha_Cok_Marti() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Daha_Cok_Marti(param_1);
+	}
+	@Test(priority = 37)
+	public void TC_037_Ortalama() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		ana_Ekran = new pageAnaEkran(iosDriver);
+		giris_Ekrani = new pageGirisEkrani(iosDriver);
+		
+		// ***********CASE DEPENDENCIES**************
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+	}
 	@Test(priority = 38)
 	public void TC_038_Bize_Ulasin_Kilit_Problemi_Bildirme() {
 		// *******************SET PARAMETERS************************

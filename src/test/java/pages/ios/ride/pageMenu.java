@@ -7,8 +7,8 @@ import utilities.PageBaseIos;
 
 public class pageMenu extends PageBaseIos {
 	IOSDriver<IOSElement> iosDriver;
+	pageGirisEkrani giris_Ekrani;
 	TestDevice testDevice;
-	pageGirisEkrani giris_Ekrani;	
 	Customer customer;
 	Scooter scooter;
 	
@@ -94,12 +94,11 @@ public class pageMenu extends PageBaseIos {
 		String popup_HataliKartText											= "#Kartın üzerindeki isim boş ya da eksik olamaz.";
 		
 		// *********Page Methods*********
-		public pageMenu Versiyon_Kontrol(String phone_number) {
-			giris_Ekrani
-			.Giris_Basarili(phone_number);
+		public pageMenu Versiyon_Kontrol(String phone_number, String version_text) {
 			click(btn_Menu);
+			assertFound("#Merhaba " + customer.getCustomerName(phone_number));
 			swipe(lbl_Title, 303, 975,346,231, 300);
-			assertFound(lbl_Version);
+			assertFound("#"+version_text);
 			return this;
 		}	
 		
@@ -140,9 +139,6 @@ public class pageMenu extends PageBaseIos {
 			wait(2);
 			click(popup_PanoyaKopyala);
 			click(btn_Geri);
-			if (exists(btn_X, 5)) {
-				click(btn_X);
-			}
 			int count = customer.countCustomerCoupon(customer_phone_number);
 			assertEquals(count, 1);
 			return this;
@@ -154,11 +150,7 @@ public class pageMenu extends PageBaseIos {
 			click(btn_Geri);
 			return this;
 		}
-		public pageMenu SurusDetayiInceleme(String customer_phone_number, String scooter_code, String scooter_location) {
-			scooter
-			.addScooter(scooter_code, scooter_location);
-			customer
-			.addCustomerFinishedRide(customer_phone_number, scooter_code);		
+		public pageMenu SurusDetayiInceleme(String customer_phone_number, String scooter_code, String scooter_location) {	
 			click(li_Suruslerim);
 			click(li_SurusDetay);
 			assertFound(btn_FaturaGoruntule);
@@ -167,16 +159,10 @@ public class pageMenu extends PageBaseIos {
 		
 		public pageMenu Varsayilan_Kredi_Karti_Degistirme(String customer_phone_number) {
 			click(btn_Menu);
-			click(li_Odeme);
-			
+			click(li_Odeme);		
 			click(chb_KrediKartiUnSelected);
 			wait(1);
 			click(chb_KrediKartiSelected);
-			 
-			customer
-			.deleteCreditCards(customer_phone_number)
-			.addCreditCard(customer_phone_number);
-			
 			return this;
 		}
 		public pageMenu Kredi_Karti_Ekleme_Basarili(String customer_phone_number) {
@@ -189,9 +175,6 @@ public class pageMenu extends PageBaseIos {
 			writeText(txt_AyYil, "12/21");		
 			writeText(txt_CVC, "234");			
 			click(btn_Kaydet);
-			customer
-			.deleteCreditCards(customer_phone_number)
-			.addCreditCard(customer_phone_number);
 			return this;
 		}
 		public pageMenu Kredi_Karti_Ekleme_Basarisiz(String customer_phone_number) {
@@ -206,9 +189,6 @@ public class pageMenu extends PageBaseIos {
 			click(btn_Kaydet);
 			assertFound(popup_HataliKartText);
 			click(popup_Tamam);
-			customer
-			.deleteCreditCards(customer_phone_number)
-			.addCreditCard(customer_phone_number);
 			return this;
 		}	
 		
