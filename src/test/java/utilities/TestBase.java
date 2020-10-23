@@ -206,16 +206,19 @@ public class TestBase {
 			System.out.println("*******************************");
 			System.out.println("Error : " + result.getThrowable().getMessage() + " \n\n");
 			
+			try {
 			if (System.getProperty("platformName").equals("web")) {
 				temp = ExtentReportUtilities.getScreenshot(driver);
+				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 			} else if (System.getProperty("platformName").equals("android")) {
 				temp = ExtentReportUtilities.getScreenshot(androidDriver);
+				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 			} else if (System.getProperty("platformName").equals("ios")) {
 				temp = ExtentReportUtilities.getScreenshot(iosDriver);
-			}
-			try {
-				logger.fail(result.getThrowable().getMessage(),
-						MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+				logger.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+			}else if (System.getProperty("platformName").equals("api")) {
+				logger.fail(result.getThrowable().getMessage());
+			}			
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -228,16 +231,19 @@ public class TestBase {
 			System.out.println("******************************* \n\n");
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			System.out.println("!!!!! ERROR === " + result.getThrowable().getMessage());
+			try {
 			if (System.getProperty("platformName").equals("web")) {
 				temp = ExtentReportUtilities.getScreenshot(driver);
+				logger.skip(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 			} else if (System.getProperty("platformName").equals("android")) {
 				temp = ExtentReportUtilities.getScreenshot(androidDriver);
+				logger.skip(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 			} else if (System.getProperty("platformName").equals("ios")) {
 				temp = ExtentReportUtilities.getScreenshot(iosDriver);
-			}
-			try {
-				logger.skip(result.getThrowable().getMessage(),
-						MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+				logger.skip(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+			}else if (System.getProperty("platformName").equals("api")) {
+				logger.skip(result.getThrowable().getMessage());
+			}			
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

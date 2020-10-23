@@ -177,7 +177,7 @@ public class Marti_App_API extends TestBase {
 	}
 	
 	@Test//(priority = 12)
-	public void TC_01_customer_ridingDebts() throws Exception {
+	public void TC_012_customer_ridingDebts() throws Exception {
 		// *******************SET PARAMETERS************************
 		int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
 		String accessToken = "";
@@ -484,15 +484,17 @@ public void TC_032_payment_setDefault() throws Exception {
 	accessToken = get_token(caseNumber);
 	run_ws(caseNumber, accessToken, inputParameter);
 }
-
 	@Test//(priority = 33)
 public void TC_033_ride_checkBeforeReservation() throws Exception {
 	// *******************SET PARAMETERS************************
 	int caseNumber = Integer.parseInt(new Throwable().getStackTrace()[0].getMethodName().substring(3, 6));
 	String accessToken = "";
-
+	String customerPhoneNumber = testParameters[caseNumber][6];
+	
 	// *******************PAGE INSTANTIATIONS*******************
-
+	customer
+	.deleteCustomerReservations(customerPhoneNumber);
+	
 	// *********************CALL SERVICE************************
 	accessToken = get_token(caseNumber);
 	run_ws(caseNumber, accessToken, null);
@@ -658,6 +660,9 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		String scooterCode = testParameters[caseNumber][7];
 		
 		// *******************PAGE INSTANTIATIONS*******************
+		customer.
+		deleteCustomerReservations(customerPhoneNumber);
+		
 		scooter
 		.addScooter(scooterCode, "sxk9m8gyf");
 
@@ -716,7 +721,6 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		// *********************LAST STAND************************
 		
 	}
-
 	@Test//(priority = 45)
 	public void TC_045_ride_start() throws Exception {
 		// *******************SET PARAMETERS************************
@@ -726,6 +730,9 @@ public void TC_034_ride_checkBeforeRide() throws Exception {
 		String customerPhoneNumber = testParameters[caseNumber][6];
 		
 		// *******************PAGE INSTANTIATIONS*******************
+		customer
+		.deleteCustomerReservations(customerPhoneNumber);
+		
 		scooter
 		.addScooter(scooterCode, "sxk9m8gyf");
 		
