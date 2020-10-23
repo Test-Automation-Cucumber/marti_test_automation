@@ -19,7 +19,7 @@ import dbmodel.*;
 //import dbmodel.DataPreparation.MobilServiceData;
 import java.text.DateFormat;
 
-public class Data_MobilService extends TestBase {
+public class Data_MobilService {
 	Provider provider;
 	
 	// ******************************************GLOBAL_PARAMETERS**************************************
