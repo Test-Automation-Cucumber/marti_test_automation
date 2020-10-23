@@ -4,7 +4,7 @@
 <suite name="Web Suite" preserve-order="true" parallel="classes" thread-count="1">
 <test name="Web Tests">
 	<classes>
-	<class name="DataPreparation.Data_Health_Checker" />
+	<class name="DataPreparation.Data_Security" />
 	
 	</classes>
     </test>
