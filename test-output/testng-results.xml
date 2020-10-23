@@ -1,17 +1,1325 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="50" passed="50">
   <reporter-output>
   </reporter-output>
-  <suite name="Web Suite" duration-ms="4361" started-at="2020-10-23T11:56:55Z" finished-at="2020-10-23T11:56:59Z">
+  <suite name="API Suite" duration-ms="164017" started-at="2020-10-23T13:54:57Z" finished-at="2020-10-23T13:57:41Z">
     <groups>
     </groups>
-    <test name="Web Tests" duration-ms="4361" started-at="2020-10-23T11:56:55Z" finished-at="2020-10-23T11:56:59Z">
-      <class name="DataPreparation.Data_MobilService">
-        <test-method status="PASS" signature="SetCustomer()[pri:0, instance:DataPreparation.Data_MobilService@6b927fb]" name="SetCustomer" duration-ms="4337" started-at="2020-10-23T11:56:55Z" finished-at="2020-10-23T11:56:59Z">
+    <test name="API Tests" duration-ms="164017" started-at="2020-10-23T13:54:57Z" finished-at="2020-10-23T13:57:41Z">
+      <class name="tests.api.Marti_App_API">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="beforeSuite" is-config="true" duration-ms="138" started-at="2020-10-23T13:54:57Z" finished-at="2020-10-23T13:54:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SetCustomer -->
-      </class> <!-- DataPreparation.Data_MobilService -->
-    </test> <!-- Web Tests -->
-  </suite> <!-- Web Suite -->
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="beforeClass" is-config="true" duration-ms="1221" started-at="2020-10-23T13:54:57Z" finished-at="2020-10-23T13:54:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="7" started-at="2020-10-23T13:54:59Z" finished-at="2020-10-23T13:54:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_001_app_getConfig() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_001_app_getConfig()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_001_app_getConfig" duration-ms="2819" started-at="2020-10-23T13:54:59Z" finished-at="2020-10-23T13:55:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_app_getConfig -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:02Z" finished-at="2020-10-23T13:55:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_001_app_getConfig status=SUCCESS method=Marti_App_API.TC_001_app_getConfig()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:02Z" finished-at="2020-10-23T13:55:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_002_campaign_list() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_002_campaign_list()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_002_campaign_list" duration-ms="1742" started-at="2020-10-23T13:55:02Z" finished-at="2020-10-23T13:55:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_campaign_list -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:03Z" finished-at="2020-10-23T13:55:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_002_campaign_list status=SUCCESS method=Marti_App_API.TC_002_campaign_list()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:03Z" finished-at="2020-10-23T13:55:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_003_countries_list() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_003_countries_list()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_003_countries_list" duration-ms="1836" started-at="2020-10-23T13:55:03Z" finished-at="2020-10-23T13:55:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_countries_list -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:05Z" finished-at="2020-10-23T13:55:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_003_countries_list status=SUCCESS method=Marti_App_API.TC_003_countries_list()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_004_customer_addCouponToCustomer()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_004_customer_addCouponToCustomer" duration-ms="4372" started-at="2020-10-23T13:55:05Z" finished-at="2020-10-23T13:55:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_customer_addCouponToCustomer -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:05Z" finished-at="2020-10-23T13:55:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_004_customer_addCouponToCustomer() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:09Z" finished-at="2020-10-23T13:55:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_004_customer_addCouponToCustomer status=SUCCESS method=Marti_App_API.TC_004_customer_addCouponToCustomer()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:09Z" finished-at="2020-10-23T13:55:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_005_customer_couponList() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_005_customer_couponList()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_005_customer_couponList" duration-ms="1808" started-at="2020-10-23T13:55:09Z" finished-at="2020-10-23T13:55:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_customer_couponList -->
+        <test-method status="PASS" signature="TC_006_customer_hasPopup()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_006_customer_hasPopup" duration-ms="1800" started-at="2020-10-23T13:55:11Z" finished-at="2020-10-23T13:55:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_customer_hasPopup -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:11Z" finished-at="2020-10-23T13:55:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_006_customer_hasPopup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:11Z" finished-at="2020-10-23T13:55:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_005_customer_couponList status=SUCCESS method=Marti_App_API.TC_005_customer_couponList()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:13Z" finished-at="2020-10-23T13:55:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_006_customer_hasPopup status=SUCCESS method=Marti_App_API.TC_006_customer_hasPopup()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_007_customer_notificationCount()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_007_customer_notificationCount" duration-ms="1732" started-at="2020-10-23T13:55:13Z" finished-at="2020-10-23T13:55:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_customer_notificationCount -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:13Z" finished-at="2020-10-23T13:55:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_007_customer_notificationCount() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:15Z" finished-at="2020-10-23T13:55:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_008_customer_notificationList() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:15Z" finished-at="2020-10-23T13:55:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_007_customer_notificationCount status=SUCCESS method=Marti_App_API.TC_007_customer_notificationCount()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_008_customer_notificationList()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_008_customer_notificationList" duration-ms="1778" started-at="2020-10-23T13:55:15Z" finished-at="2020-10-23T13:55:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008_customer_notificationList -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:17Z" finished-at="2020-10-23T13:55:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_009_customer_payDebt() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:17Z" finished-at="2020-10-23T13:55:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_008_customer_notificationList status=SUCCESS method=Marti_App_API.TC_008_customer_notificationList()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_009_customer_payDebt()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_009_customer_payDebt" duration-ms="6061" started-at="2020-10-23T13:55:17Z" finished-at="2020-10-23T13:55:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009_customer_payDebt -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:23Z" finished-at="2020-10-23T13:55:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_009_customer_payDebt status=SUCCESS method=Marti_App_API.TC_009_customer_payDebt()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_010_customer_readKvkk()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_010_customer_readKvkk" duration-ms="1638" started-at="2020-10-23T13:55:23Z" finished-at="2020-10-23T13:55:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010_customer_readKvkk -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:23Z" finished-at="2020-10-23T13:55:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_010_customer_readKvkk() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:24Z" finished-at="2020-10-23T13:55:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_011_customer_readNotification() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:24Z" finished-at="2020-10-23T13:55:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_010_customer_readKvkk status=SUCCESS method=Marti_App_API.TC_010_customer_readKvkk()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_011_customer_readNotification()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_011_customer_readNotification" duration-ms="1940" started-at="2020-10-23T13:55:24Z" finished-at="2020-10-23T13:55:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011_customer_readNotification -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:26Z" finished-at="2020-10-23T13:55:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_012_customer_ridingDebts() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:26Z" finished-at="2020-10-23T13:55:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_011_customer_readNotification status=SUCCESS method=Marti_App_API.TC_011_customer_readNotification()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_012_customer_ridingDebts()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_012_customer_ridingDebts" duration-ms="1655" started-at="2020-10-23T13:55:26Z" finished-at="2020-10-23T13:55:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012_customer_ridingDebts -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:28Z" finished-at="2020-10-23T13:55:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_013_customer_signin() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:28Z" finished-at="2020-10-23T13:55:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_012_customer_ridingDebts status=SUCCESS method=Marti_App_API.TC_012_customer_ridingDebts()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_013_customer_signin()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_013_customer_signin" duration-ms="2098" started-at="2020-10-23T13:55:28Z" finished-at="2020-10-23T13:55:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013_customer_signin -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:30Z" finished-at="2020-10-23T13:55:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_013_customer_signin status=SUCCESS method=Marti_App_API.TC_013_customer_signin()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:30Z" finished-at="2020-10-23T13:55:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_014_customer_updateName() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_014_customer_updateName()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_014_customer_updateName" duration-ms="1849" started-at="2020-10-23T13:55:30Z" finished-at="2020-10-23T13:55:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014_customer_updateName -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:32Z" finished-at="2020-10-23T13:55:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_014_customer_updateName status=SUCCESS method=Marti_App_API.TC_014_customer_updateName()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:32Z" finished-at="2020-10-23T13:55:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_016_geofence_borders() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_016_geofence_borders()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_016_geofence_borders" duration-ms="3084" started-at="2020-10-23T13:55:32Z" finished-at="2020-10-23T13:55:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_016_geofence_borders -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:35Z" finished-at="2020-10-23T13:55:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_017_geofence_handshake() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_017_geofence_handshake()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_017_geofence_handshake" duration-ms="2891" started-at="2020-10-23T13:55:35Z" finished-at="2020-10-23T13:55:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_017_geofence_handshake -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:35Z" finished-at="2020-10-23T13:55:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_016_geofence_borders status=SUCCESS method=Marti_App_API.TC_016_geofence_borders()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:38Z" finished-at="2020-10-23T13:55:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_017_geofence_handshake status=SUCCESS method=Marti_App_API.TC_017_geofence_handshake()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:38Z" finished-at="2020-10-23T13:55:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_018_geofence_iotUnlock() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_018_geofence_iotUnlock()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_018_geofence_iotUnlock" duration-ms="12624" started-at="2020-10-23T13:55:38Z" finished-at="2020-10-23T13:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_018_geofence_iotUnlock -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:50Z" finished-at="2020-10-23T13:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_019_geofence_ring() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:50Z" finished-at="2020-10-23T13:55:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_018_geofence_iotUnlock status=SUCCESS method=Marti_App_API.TC_018_geofence_iotUnlock()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_019_geofence_ring()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_019_geofence_ring" duration-ms="3057" started-at="2020-10-23T13:55:50Z" finished-at="2020-10-23T13:55:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_019_geofence_ring -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:54Z" finished-at="2020-10-23T13:55:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_020_geofence_solveChallenge() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:54Z" finished-at="2020-10-23T13:55:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_019_geofence_ring status=SUCCESS method=Marti_App_API.TC_019_geofence_ring()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_020_geofence_solveChallenge()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_020_geofence_solveChallenge" duration-ms="1679" started-at="2020-10-23T13:55:54Z" finished-at="2020-10-23T13:55:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_020_geofence_solveChallenge -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:55:55Z" finished-at="2020-10-23T13:55:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_021_history_list() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:55Z" finished-at="2020-10-23T13:55:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_020_geofence_solveChallenge status=SUCCESS method=Marti_App_API.TC_020_geofence_solveChallenge()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_021_history_list()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_021_history_list" duration-ms="1765" started-at="2020-10-23T13:55:55Z" finished-at="2020-10-23T13:55:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_021_history_list -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:57Z" finished-at="2020-10-23T13:55:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_021_history_list status=SUCCESS method=Marti_App_API.TC_021_history_list()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_022_issue_contact()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_022_issue_contact" duration-ms="5854" started-at="2020-10-23T13:55:57Z" finished-at="2020-10-23T13:56:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_022_issue_contact -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:55:57Z" finished-at="2020-10-23T13:55:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_022_issue_contact() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:03Z" finished-at="2020-10-23T13:56:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_022_issue_contact status=SUCCESS method=Marti_App_API.TC_022_issue_contact()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:03Z" finished-at="2020-10-23T13:56:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_023_issue_requestScooter() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_023_issue_requestScooter()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_023_issue_requestScooter" duration-ms="1741" started-at="2020-10-23T13:56:03Z" finished-at="2020-10-23T13:56:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_023_issue_requestScooter -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:05Z" finished-at="2020-10-23T13:56:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_023_issue_requestScooter status=SUCCESS method=Marti_App_API.TC_023_issue_requestScooter()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:05Z" finished-at="2020-10-23T13:56:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_024_issue_send() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_024_issue_send()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_024_issue_send" duration-ms="1816" started-at="2020-10-23T13:56:05Z" finished-at="2020-10-23T13:56:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_024_issue_send -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:56:06Z" finished-at="2020-10-23T13:56:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_024_issue_send status=SUCCESS method=Marti_App_API.TC_024_issue_send()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:06Z" finished-at="2020-10-23T13:56:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_025_issue_types() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_025_issue_types()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_025_issue_types" duration-ms="2540" started-at="2020-10-23T13:56:06Z" finished-at="2020-10-23T13:56:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_025_issue_types -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:56:09Z" finished-at="2020-10-23T13:56:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_025_issue_types status=SUCCESS method=Marti_App_API.TC_025_issue_types()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_026_issue_uploadPhoto()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_026_issue_uploadPhoto" duration-ms="2473" started-at="2020-10-23T13:56:09Z" finished-at="2020-10-23T13:56:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_026_issue_uploadPhoto -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:09Z" finished-at="2020-10-23T13:56:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_026_issue_uploadPhoto() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:11Z" finished-at="2020-10-23T13:56:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_026_issue_uploadPhoto status=SUCCESS method=Marti_App_API.TC_026_issue_uploadPhoto()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_027_map_listAvailables()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_027_map_listAvailables" duration-ms="1920" started-at="2020-10-23T13:56:11Z" finished-at="2020-10-23T13:56:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_027_map_listAvailables -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:11Z" finished-at="2020-10-23T13:56:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_027_map_listAvailables() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:13Z" finished-at="2020-10-23T13:56:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_027_map_listAvailables status=SUCCESS method=Marti_App_API.TC_027_map_listAvailables()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:56:13Z" finished-at="2020-10-23T13:56:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_028_paymentaddCard() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_028_paymentaddCard()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_028_paymentaddCard" duration-ms="5615" started-at="2020-10-23T13:56:13Z" finished-at="2020-10-23T13:56:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_028_paymentaddCard -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:19Z" finished-at="2020-10-23T13:56:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_028_paymentaddCard status=SUCCESS method=Marti_App_API.TC_028_paymentaddCard()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:19Z" finished-at="2020-10-23T13:56:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_029_payment_cardList() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_029_payment_cardList()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_029_payment_cardList" duration-ms="1703" started-at="2020-10-23T13:56:19Z" finished-at="2020-10-23T13:56:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_029_payment_cardList -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:56:21Z" finished-at="2020-10-23T13:56:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_030_payment_default() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:21Z" finished-at="2020-10-23T13:56:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_029_payment_cardList status=SUCCESS method=Marti_App_API.TC_029_payment_cardList()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_030_payment_default()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_030_payment_default" duration-ms="1600" started-at="2020-10-23T13:56:21Z" finished-at="2020-10-23T13:56:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_030_payment_default -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:22Z" finished-at="2020-10-23T13:56:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_030_payment_default status=SUCCESS method=Marti_App_API.TC_030_payment_default()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_031_payment_deleteCard()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_031_payment_deleteCard" duration-ms="1989" started-at="2020-10-23T13:56:22Z" finished-at="2020-10-23T13:56:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_031_payment_deleteCard -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:22Z" finished-at="2020-10-23T13:56:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_031_payment_deleteCard() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:24Z" finished-at="2020-10-23T13:56:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_031_payment_deleteCard status=SUCCESS method=Marti_App_API.TC_031_payment_deleteCard()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_032_payment_setDefault()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_032_payment_setDefault" duration-ms="4922" started-at="2020-10-23T13:56:24Z" finished-at="2020-10-23T13:56:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_032_payment_setDefault -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:24Z" finished-at="2020-10-23T13:56:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_032_payment_setDefault() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_033_ride_checkBeforeReservation()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_033_ride_checkBeforeReservation" duration-ms="2973" started-at="2020-10-23T13:56:29Z" finished-at="2020-10-23T13:56:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_033_ride_checkBeforeReservation -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:29Z" finished-at="2020-10-23T13:56:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_032_payment_setDefault status=SUCCESS method=Marti_App_API.TC_032_payment_setDefault()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:29Z" finished-at="2020-10-23T13:56:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_033_ride_checkBeforeReservation() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:56:32Z" finished-at="2020-10-23T13:56:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_033_ride_checkBeforeReservation status=SUCCESS method=Marti_App_API.TC_033_ride_checkBeforeReservation()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_034_ride_checkBeforeRide()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_034_ride_checkBeforeRide" duration-ms="1875" started-at="2020-10-23T13:56:32Z" finished-at="2020-10-23T13:56:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_034_ride_checkBeforeRide -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:32Z" finished-at="2020-10-23T13:56:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_034_ride_checkBeforeRide() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:56:34Z" finished-at="2020-10-23T13:56:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_035_ride_customerHasReservation() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:34Z" finished-at="2020-10-23T13:56:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_034_ride_checkBeforeRide status=SUCCESS method=Marti_App_API.TC_034_ride_checkBeforeRide()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_035_ride_customerHasReservation()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_035_ride_customerHasReservation" duration-ms="1612" started-at="2020-10-23T13:56:34Z" finished-at="2020-10-23T13:56:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_035_ride_customerHasReservation -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:36Z" finished-at="2020-10-23T13:56:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_035_ride_customerHasReservation status=SUCCESS method=Marti_App_API.TC_035_ride_customerHasReservation()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_036_ride_customerHasRide()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_036_ride_customerHasRide" duration-ms="2830" started-at="2020-10-23T13:56:36Z" finished-at="2020-10-23T13:56:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_036_ride_customerHasRide -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:36Z" finished-at="2020-10-23T13:56:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_036_ride_customerHasRide() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:38Z" finished-at="2020-10-23T13:56:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_037_ride_end() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_037_ride_end()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_037_ride_end" duration-ms="9141" started-at="2020-10-23T13:56:38Z" finished-at="2020-10-23T13:56:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_037_ride_end -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:38Z" finished-at="2020-10-23T13:56:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_036_ride_customerHasRide status=SUCCESS method=Marti_App_API.TC_036_ride_customerHasRide()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_038_ride_getReviewCategories()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_038_ride_getReviewCategories" duration-ms="1877" started-at="2020-10-23T13:56:48Z" finished-at="2020-10-23T13:56:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_038_ride_getReviewCategories -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:48Z" finished-at="2020-10-23T13:56:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_038_ride_getReviewCategories() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:48Z" finished-at="2020-10-23T13:56:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_037_ride_end status=SUCCESS method=Marti_App_API.TC_037_ride_end()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:56:49Z" finished-at="2020-10-23T13:56:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_038_ride_getReviewCategories status=SUCCESS method=Marti_App_API.TC_038_ride_getReviewCategories()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_039_ride_paymentPreview()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_039_ride_paymentPreview" duration-ms="4494" started-at="2020-10-23T13:56:49Z" finished-at="2020-10-23T13:56:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_039_ride_paymentPreview -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:49Z" finished-at="2020-10-23T13:56:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_039_ride_paymentPreview() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:54Z" finished-at="2020-10-23T13:56:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_039_ride_paymentPreview status=SUCCESS method=Marti_App_API.TC_039_ride_paymentPreview()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_040_ride_reservationEnd()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_040_ride_reservationEnd" duration-ms="7803" started-at="2020-10-23T13:56:54Z" finished-at="2020-10-23T13:57:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_040_ride_reservationEnd -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:56:54Z" finished-at="2020-10-23T13:56:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_040_ride_reservationEnd() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:02Z" finished-at="2020-10-23T13:57:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_040_ride_reservationEnd status=SUCCESS method=Marti_App_API.TC_040_ride_reservationEnd()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_041_ride_reservationPaymentPreview()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_041_ride_reservationPaymentPreview" duration-ms="4263" started-at="2020-10-23T13:57:02Z" finished-at="2020-10-23T13:57:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_041_ride_reservationPaymentPreview -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:02Z" finished-at="2020-10-23T13:57:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_041_ride_reservationPaymentPreview() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:06Z" finished-at="2020-10-23T13:57:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_042_ride_reservationStart() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:06Z" finished-at="2020-10-23T13:57:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_041_ride_reservationPaymentPreview status=SUCCESS method=Marti_App_API.TC_041_ride_reservationPaymentPreview()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_042_ride_reservationStart()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_042_ride_reservationStart" duration-ms="3828" started-at="2020-10-23T13:57:06Z" finished-at="2020-10-23T13:57:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_042_ride_reservationStart -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:57:10Z" finished-at="2020-10-23T13:57:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_042_ride_reservationStart status=SUCCESS method=Marti_App_API.TC_042_ride_reservationStart()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_043_ride_review()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_043_ride_review" duration-ms="4935" started-at="2020-10-23T13:57:10Z" finished-at="2020-10-23T13:57:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_043_ride_review -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:10Z" finished-at="2020-10-23T13:57:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_043_ride_review() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:57:15Z" finished-at="2020-10-23T13:57:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_043_ride_review status=SUCCESS method=Marti_App_API.TC_043_ride_review()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:15Z" finished-at="2020-10-23T13:57:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_044_ride_review() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_044_ride_review()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_044_ride_review" duration-ms="2174" started-at="2020-10-23T13:57:15Z" finished-at="2020-10-23T13:57:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_044_ride_review -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:57:17Z" finished-at="2020-10-23T13:57:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_045_ride_start() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:17Z" finished-at="2020-10-23T13:57:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_044_ride_review status=SUCCESS method=Marti_App_API.TC_044_ride_review()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_045_ride_start()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_045_ride_start" duration-ms="6632" started-at="2020-10-23T13:57:17Z" finished-at="2020-10-23T13:57:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_045_ride_start -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:24Z" finished-at="2020-10-23T13:57:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_046_ride_status() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:24Z" finished-at="2020-10-23T13:57:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_045_ride_start status=SUCCESS method=Marti_App_API.TC_045_ride_start()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_046_ride_status()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_046_ride_status" duration-ms="4539" started-at="2020-10-23T13:57:24Z" finished-at="2020-10-23T13:57:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_046_ride_status -->
+        <test-method status="PASS" signature="TC_047_ride_uploadPhoto()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_047_ride_uploadPhoto" duration-ms="2066" started-at="2020-10-23T13:57:28Z" finished-at="2020-10-23T13:57:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_047_ride_uploadPhoto -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:28Z" finished-at="2020-10-23T13:57:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_046_ride_status status=SUCCESS method=Marti_App_API.TC_046_ride_status()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:28Z" finished-at="2020-10-23T13:57:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_047_ride_uploadPhoto() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:30Z" finished-at="2020-10-23T13:57:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_047_ride_uploadPhoto status=SUCCESS method=Marti_App_API.TC_047_ride_uploadPhoto()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:57:30Z" finished-at="2020-10-23T13:57:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_048_settings_getMyProfile() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_048_settings_getMyProfile()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_048_settings_getMyProfile" duration-ms="1595" started-at="2020-10-23T13:57:30Z" finished-at="2020-10-23T13:57:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_048_settings_getMyProfile -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:57:32Z" finished-at="2020-10-23T13:57:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_048_settings_getMyProfile status=SUCCESS method=Marti_App_API.TC_048_settings_getMyProfile()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:32Z" finished-at="2020-10-23T13:57:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_049_settings_updateMyProfile() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_049_settings_updateMyProfile()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_049_settings_updateMyProfile" duration-ms="3029" started-at="2020-10-23T13:57:32Z" finished-at="2020-10-23T13:57:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_049_settings_updateMyProfile -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="1" started-at="2020-10-23T13:57:35Z" finished-at="2020-10-23T13:57:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_050_settings_uploadPhoto() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:35Z" finished-at="2020-10-23T13:57:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_049_settings_updateMyProfile status=SUCCESS method=Marti_App_API.TC_049_settings_updateMyProfile()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TC_050_settings_uploadPhoto()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_050_settings_uploadPhoto" duration-ms="4936" started-at="2020-10-23T13:57:35Z" finished-at="2020-10-23T13:57:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_050_settings_uploadPhoto -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-10-23T13:57:40Z" finished-at="2020-10-23T13:57:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_050_settings_uploadPhoto status=SUCCESS method=Marti_App_API.TC_050_settings_uploadPhoto()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:40Z" finished-at="2020-10-23T13:57:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.api.Marti_App_API.TC_052_customer_generateInvitationCoupon() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_052_customer_generateInvitationCoupon()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="TC_052_customer_generateInvitationCoupon" duration-ms="1699" started-at="2020-10-23T13:57:40Z" finished-at="2020-10-23T13:57:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_052_customer_generateInvitationCoupon -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.api.Marti_App_API@31610302]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-23T13:57:41Z" finished-at="2020-10-23T13:57:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_052_customer_generateInvitationCoupon status=SUCCESS method=Marti_App_API.TC_052_customer_generateInvitationCoupon()[pri:0, instance:tests.api.Marti_App_API@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.api.Marti_App_API@31610302]" name="afterSuite" is-config="true" duration-ms="237" started-at="2020-10-23T13:57:41Z" finished-at="2020-10-23T13:57:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- tests.api.Marti_App_API -->
+    </test> <!-- API Tests -->
+  </suite> <!-- API Suite -->
 </testng-results>
