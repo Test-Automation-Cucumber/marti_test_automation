@@ -54,7 +54,7 @@ public class TestBase {
 	protected IOSDriver<IOSElement> iosDriver;
     protected String[][] testParameters;
     protected String queryGetParameters;
-	Provider provider = new Provider();
+    Provider provider = new Provider();
 	protected int caseId = 0;
 	static ExtentReports extent;
 	ExtentHtmlReporter reporter;
@@ -179,7 +179,6 @@ public class TestBase {
 				capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
 				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, automation_name);
 				capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
-				
 				iosDriver = new IOSDriver<IOSElement>(new URL(appium_server), capabilities);
 				iosDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
@@ -312,8 +311,7 @@ public String get_token(int case_id) throws Exception{
 		String accessToken = "";
 		String otp = "";
 		RestAssured.baseURI = baseUrl;
-		
-		
+
 		if (System.getProperty("appName").equals("ride")) {
 			endPoint = "/v"+ testParameters[15][4] +"/dispatch/" + testParameters[15][1];
 			otp = provider.ExecuteScalar("select sms_code from customers where mobile_phone ='" + testParameters[case_id][6] + "';", "martiDB");

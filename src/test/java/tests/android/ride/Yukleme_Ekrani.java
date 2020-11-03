@@ -52,6 +52,7 @@ public class Yukleme_Ekrani extends TestBase {
 		
 		// *******************PAGE INSTANTIATIONS*******************
 		yukleme_Ekrani = new pageYuklemeEkrani(androidDriver);
+		customer = new Customer();
 		
 		// ***********PAGE METHODS**************
 		customer

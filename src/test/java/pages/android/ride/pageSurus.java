@@ -55,9 +55,6 @@ public class pageSurus extends PageBaseAndroid {
 		String img_ScooterCode												= "#sctCodeText";	
 		String img_BatteryText												= "#batteryText";	
 		String img_DurationText												= "#durationText";	
-		
-		String lbl_YolculukTutari											= "#txtPrice";	
-		String lbl_VergiTutari												= "#txtVat";	
 		String lbl_ToplamTutar												= "#txtTotal";	
 		
 		
@@ -96,8 +93,7 @@ public class pageSurus extends PageBaseAndroid {
 		
 		public pageSurus Nasil_Surulur_Gecilmemis(String customer_phone_no, String scooter_code) {
 			assertFound(btn_Basla);
-			wait(4);
-			
+			wait(4);	
 			click(btn_Basla);
 			waitLoadingImage2();
 			click(btn_WriteCode);
@@ -243,12 +239,8 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 		public pageSurus Yolculuk_Ozeti_Kontrol(String customer_phone_no) {
-//			double chargedPrice = Double.parseDouble(customer.getChargedRidePrice(customer_phone_no));
-//			double tax = chargedPrice * 0.18;
-//			double totalPrice = ridePrice 
-			//lbl_YolculukTutari	
-//			lbl_VergiTutari		
-//			lbl_ToplamTutar		
+			String chargedPrice = customer.getChargedRidePrice(customer_phone_no);
+			assertEquals(lbl_ToplamTutar, "₺" + chargedPrice.replace(".", ","));
 			return this;
 		}
 		
@@ -261,8 +253,6 @@ public class pageSurus extends PageBaseAndroid {
 			click(btn_Gonder);
 			waitLoadingImage();
 			assertFound(img_NotifyIcon);		
-
-			
 			return this;
 		}
 }

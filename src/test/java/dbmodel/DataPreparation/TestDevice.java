@@ -1,9 +1,13 @@
 package dbmodel.DataPreparation;
 
 import java.io.IOException;
+import java.time.Duration;
+
+import com.sun.prism.sw.SWPipeline;
 
 import dbmodel.Provider;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.connection.ConnectionState;
@@ -128,7 +132,7 @@ public class TestDevice {
 /////////////////////////////////////////  IOS  ///////////////////////////////////////////////
 	
 	
-	public TestDevice setWIFIServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+	public TestDevice setIOSWIFIServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
 		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
 //		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 //		String tagName = element.getAttribute("content-desc");
@@ -153,7 +157,7 @@ public class TestDevice {
 		return this;
 	}
 	
-	public void setDataServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+	public void setIOSDataServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
 		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
 //		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 //		String tagName = element.getAttribute("content-desc");
@@ -174,15 +178,13 @@ public class TestDevice {
 		clickToHomeButton(iosDriver);
 	}
 	
-	public TestDevice setAirPlaneServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
+	public TestDevice setIOSAirPlaneServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {
 		//bu mantik güzelmis herseyi bunla bulup alabilirsin. guzellll
 //		MobileElement element = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 //		String tagName = element.getAttribute("content-desc");
 		
 		PageBaseIos pageBaseIos = new PageBaseIos(iosDriver);
-		
 		pageBaseIos.swipe(".UIAWindow", 20, iosDriver.manage().window().getSize().height-5, 10, 10, 230);  //Asagidan yukari cekerek paneli acar
-		
 		if (status) {
 			if (pageBaseIos.getValue("#airplane-mode-button", "value").equals("0")) {
 				pageBaseIos.click("#airplane-mode-button");
@@ -193,13 +195,33 @@ public class TestDevice {
 			}
 		}
 		clickToHomeButton(iosDriver);
-		
 		return this;
 	}
-
-	protected void clickToHomeButton(IOSDriver iosDriver) {
-		iosDriver.executeScript("client:client.deviceAction(\"Home\")");
+	public TestDevice setIOSLocationServiceStatus(IOSDriver<IOSElement> iosDriver, boolean status) {	
+		PageBaseIos pageBaseIos = new PageBaseIos(iosDriver);
+		iosDriver.runAppInBackground(Duration.ofSeconds(-1));
+		pageBaseIos.click("#Ayarlar");	
+		iosDriver.executeScript("client:client.applicationClose(\"com.apple.Preferences\");");
+		pageBaseIos.click("#Ayarlar");	
+		pageBaseIos.swipe("#Wi-Fi", 256, 650, 254, 1072, 230);
+		pageBaseIos.writeText("#Ara", "konum");
+		pageBaseIos.click("#Konum");
+		if (status) {
+			if (pageBaseIos.getValue(".UIASwitch", "value").equals("0")) {
+				pageBaseIos.click(".UIASwitch");
+			}
+		} else {
+			if (pageBaseIos.getValue(".UIASwitch", "value").equals("1")) {
+				pageBaseIos.click(".UIASwitch");
+				pageBaseIos.click("#Kapat");
+			}
+		}
+		iosDriver.runAppInBackground(Duration.ofSeconds(1));
+		return this;
 	}
 	
-	
+	public void clickToHomeButton(IOSDriver iosDriver) {
+		iosDriver.executeScript("client:client.deviceAction(\"Home\")");
+		
+	}
 }

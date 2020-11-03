@@ -115,10 +115,13 @@ public class Giris_Ekrani extends TestBase {
 	public void TC_009_Bos_Otp() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
+		
 		// *******************PAGE INSTANTIATIONS*******************
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		
 		// ***********PAGE METHODS**************
-		giris_Ekrani.Giris_Basarili(param_1)
+		giris_Ekrani
+		.Giris_Basarili(param_1)
 		.Bos_Otp(param_1);
 	}
 	@Test(retryAnalyzer = utilities.RetryTest.class, priority = 10)

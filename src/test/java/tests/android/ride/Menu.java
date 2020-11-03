@@ -328,7 +328,7 @@ public class Menu extends TestBase {
 	
 	
 	@Test(priority = 100)
-	public void TC_053_Varsayilan_Kredi_Karti_Degistirme() {
+	public void TC_100_Varsayilan_Kredi_Karti_Degistirme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
@@ -357,7 +357,7 @@ public class Menu extends TestBase {
 		
 	}
 	@Test(priority = 101)
-	public void TC_054_Kredi_Karti_Ekleme_Basarili() {
+	public void TC_101_Kredi_Karti_Ekleme_Basarili() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************
@@ -377,7 +377,7 @@ public class Menu extends TestBase {
 		.Kredi_Karti_Ekleme_Basarili(param_1);
 	}
 	@Test(priority = 90)
-	public void TC_055_Kredi_Karti_Ekleme_Basarisiz() {
+	public void TC_090_Kredi_Karti_Ekleme_Basarisiz() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		
@@ -403,7 +403,7 @@ public class Menu extends TestBase {
 	}
 
 	@Test(priority = 102)
-	public void TC_058_Kupon_Ekleme() {
+	public void TC_102_Kupon_Ekleme() {
 		// *******************SET PARAMETERS************************
 		param_1 = testParameters[caseId][1];
 		// *******************PAGE INSTANTIATIONS*******************

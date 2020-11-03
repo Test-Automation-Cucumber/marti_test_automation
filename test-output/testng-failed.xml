@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [API Suite]" parallel="classes">
-  <test thread-count="1" name="API Tests(failed)" parallel="classes">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
+  <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.api.Marti_App_API">
+      <class name="tests.ios.ride.Surus">
         <methods>
-          <include name="TC_041_ride_reservationPaymentPreview"/>
+          <include name="TC_065_Surus_Bitir_Basarili_Wallet"/>
+          <include name="TC_064_Surus_Bitir_Basarili"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="setUp"/>
+          <include name="TC_068_Uygulama_Degerlendirme"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
+          <include name="TC_066_Surus_Bitir_Basarisiz_Wallet_Yetersiz"/>
+          <include name="TC_067_Surus_Bitir_Basarili_Kupon_Kullanildi"/>
         </methods>
-      </class> <!-- tests.api.Marti_App_API -->
+      </class> <!-- tests.ios.ride.Surus -->
     </classes>
-  </test> <!-- API Tests(failed) -->
-</suite> <!-- Failed suite [API Suite] -->
+  </test> <!-- Web Tests(failed) -->
+</suite> <!-- Failed suite [Web Suite] -->

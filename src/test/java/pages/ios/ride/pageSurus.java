@@ -214,13 +214,14 @@ public class pageSurus extends PageBaseIos {
 		assertFound(btn_FotoCekBitir);		
 		testDevice
 //		.setAirPlaneServiceStatus(iosDriver, true)
-		.setWIFIServiceStatus(iosDriver, false);		
+		.setIOSWIFIServiceStatus(iosDriver, false);		
 		click(btn_FotoCekBitir);
 		waitLoadingImage();
 		click(btn_Bitir);
 		assertFound(popup_BirHataOlustu);	
 //		testDevice.setAirPlaneServiceStatus(iosDriver, false);
-		testDevice.setWIFIServiceStatus(iosDriver, true);		
+		testDevice
+		.setIOSWIFIServiceStatus(iosDriver, true);		
 		return this;
 	}
 		
@@ -248,15 +249,18 @@ public class pageSurus extends PageBaseIos {
 			click(btn_Tamam);		
 			return this;
 		}
-		
 		public pageSurus Surus_Bitirme_Basarili(String customer_phone_no, String scooter_code) {
 			click(btn_FotoCekBitir);
 			waitLoadingImage();
 			click(btn_Bitir);
 			waitLoadingImage();
 			return this;
-		}
-		
+		}		
+		public pageSurus Yolculuk_Ozeti_Kontrol(String customer_phone_no, String scooter_code) {
+			String chargedPrice = customer.getChargedRidePrice(customer_phone_no);
+			assertFound("₺" + chargedPrice.replace(".", ","));
+			return this;
+		}	
 		public pageSurus Yolculugu_Degerlendirme(String customer_phone_no) {
 			click(btn_Tamam);
 			assertEquals(lbl_YolculukDegerlendirme, "Martı Yolculuğunu Değerlendir");

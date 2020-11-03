@@ -140,7 +140,7 @@ public class PageBaseIos {
 
 //===========================================================================Write Text
 	// Write By Text
-	protected void writeText(String pure_element, String text) {
+	public void writeText(String pure_element, String text) {
 		By elementBy = findElements(pure_element, 0);
 
 		waitClickable(elementBy);
@@ -150,7 +150,7 @@ public class PageBaseIos {
 	}
 
 	// Write By Text
-	protected void writeText(String pure_element, String text, int index) {
+	public void writeText(String pure_element, String text, int index) {
 		By elementBy = findElements(pure_element, index);
 		waitClickable(elementBy);
 
@@ -160,7 +160,7 @@ public class PageBaseIos {
 	}
 	
 	// Write By Text Without Clear
-	protected void writeTextWithoutClear(String pure_element, String text) {
+	public void writeTextWithoutClear(String pure_element, String text) {
 		By elementBy = findElements(pure_element, 0);
 
 		waitClickable(elementBy);
@@ -169,7 +169,7 @@ public class PageBaseIos {
 	}
 	
 	// Write text without element
-	protected void writeTextWithoutElement(String text) {
+	public void writeTextWithoutElement(String text) {
 		iosDriver.getKeyboard().sendKeys(text);
 	}
 	

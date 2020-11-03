@@ -1,6 +1,8 @@
 package pages.android.ride;
 
 
+import org.openqa.selenium.html5.Location;
+
 import dbmodel.DataPreparation.*;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -62,10 +64,25 @@ public class pageAnaEkran extends PageBaseAndroid {
 		String btn_YanlisPark												= "#wrongParking";	
 		String btn_AcilDurumPaylas											= "#otherIssue";	
 		String btn_OkudumOnayliyorum  							        	= "#btnAccept";
+		String btn_KonumErisimineIzinVer						        	= "#btnEnableLoc";
+		String popup_GoogleMessageArea							        	= "#com.google.android.gms:id/message";
+		
 		
 		
 		// *********Page Methods*********
-
+		public pageAnaEkran Konum_Izin_Kontrolu() {
+			testDevice
+			.setAndroidLocationServiceStatus(false);
+			if(exists(btn_KonumErisimineIzinVer, 2))
+			click(btn_KonumErisimineIzinVer);
+			assertEquals(popup_GoogleMessageArea, "Daha iyi bir deneyim için Google'ın konum hizmetini kullanan cihaz konumunu açın. ");
+			click(btn_TAMAM);
+			testDevice
+			.setAndroidLocationServiceStatus(true);
+			androidDriver.setLocation(new Location(41.006405, 29.074996, 1)); //ofis
+			assertFound(btn_Basla);			
+			return this;
+		}	
 		public pageAnaEkran Surus_Baslat(String customer_phone_no) {
 			assertFound(btn_Basla);
 			wait(4);

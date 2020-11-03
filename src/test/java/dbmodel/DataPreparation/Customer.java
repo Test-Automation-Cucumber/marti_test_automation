@@ -5,23 +5,23 @@ import dbmodel.Provider;
 public class Customer {
 	Provider provider = new Provider();
 
-	// *musteri oluşturur
-	public Customer addCustomer(String customer_phone_no) {
-		try {
-			if (customer_phone_no.length() < 9) {
-				throw new Exception("hatali musteri numarasi");
-			}
-			provider.ExecuteCommand(
-					"delete from customers where mobile_phone = '" + customer_phone_no + "'; "
-					+ "INSERT INTO public.customers (\"name\", email, mobile_phone_country_code, mobile_phone, sms_code, is_enabled, \"language\", skip_verification, created_at, free_tier, tckn, birthdate, notes, is_kvkk_read, kvkk_date, tckn_validated, id_photo) "
-					+ "VALUES('Metin emre Şen', 'noreply@martiautomation.com', '90', '"+ customer_phone_no +"', '0000', true, 'tr-TR', false, (now() - interval '1 minute'), false, '42682855444', '1987-10-03', NULL, true, (now() - interval '30 second'), true, NULL);",
-					"martiDB");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return this;
-	}
+//	// *musteri oluşturur
+//	public Customer addCustomer(String customer_phone_no) {
+//		try {
+//			if (customer_phone_no.length() < 9) {
+//				throw new Exception("hatali musteri numarasi");
+//			}
+//			provider.ExecuteCommand(
+//					"delete from customers where mobile_phone = '" + customer_phone_no + "'; "
+//					+ "INSERT INTO public.customers (\"name\", email, mobile_phone_country_code, mobile_phone, sms_code, is_enabled, \"language\", skip_verification, created_at, free_tier, tckn, birthdate, notes, is_kvkk_read, kvkk_date, tckn_validated, id_photo) "
+//					+ "VALUES('Metin emre Şen', 'noreply@martiautomation.com', '90', '"+ customer_phone_no +"', '0000', true, 'tr-TR', false, (now() - interval '1 minute'), false, '42682855444', '1987-10-03', NULL, true, (now() - interval '30 second'), true, NULL);",
+//					"martiDB");
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return this;
+//	}
 	
 	// *musterinin suruslerini temizle
 	public Customer deleteCustomerRides(String customer_phone_no) {
@@ -332,6 +332,46 @@ public class Customer {
 		}
 		return this;
 	}
+		
+	// *musteri cüzdanına bakiye ekler
+	public Customer addWalletBalance(String customer_phone_no, double amount) {
+		try {
+			if (customer_phone_no.length() < 9) {
+				throw new Exception("hatali musteri numarasi");
+			}
+			provider.ExecuteCommand("INSERT INTO public.wallet_balance_transactions" + 
+					" (wallet_balance_id, ts, is_success, amount, provider_id, provider_type, payment_transaction_id)" + 
+					" VALUES((select wb.id from wallet w" + 
+					" INNER JOIN wallet_balance wb" + 
+					" on w.id = wb.wallet_id" + 
+					" where w.customer_id = (select id from customers where mobile_phone ='" + customer_phone_no + "')" + 
+					" and wb.balance_type = 1), now(), true, " + amount + ", 0, 7, 0);", "martiDB");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	// *musteri cüzdanındaki bakiyeyi resetler
+	public Customer deleteWalletBalance(String customer_phone_no) {
+		try {
+			if (customer_phone_no.length() < 9) {
+				throw new Exception("hatali musteri numarasi");
+			}
+			provider.ExecuteCommand("delete from wallet_balance_transactions" + 
+					" where wallet_balance_id in (select id from wallet_balance" + 
+					" where wallet_id in (select id from wallet" + 
+					" where customer_id in (select id from customers" + 
+					" where mobile_phone = '" + customer_phone_no + "')));", "martiDB");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	
 	
 	// *musterinin borclarını sil
 	public Customer deleteCustomerDebt(String customer_phone_no) {

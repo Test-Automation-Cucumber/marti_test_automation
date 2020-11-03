@@ -85,7 +85,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		writeText(otp_2, String.valueOf(ot_password[1]));
 		writeText(otp_3, String.valueOf(ot_password[2]));
 		writeText(otp_4, String.valueOf(ot_password[3]));
-		click(btn_Ileri);
+//		click(btn_Ileri);
 		waitLoadingImage();
 		return this;
 	}
@@ -108,7 +108,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			writeText(otp_2, "0");
 			writeText(otp_3, "0");
 			writeText(otp_4, "0");
-			click(btn_Ileri);
+//			click(btn_Ileri);
 			assertEquals(popup_Message, "SMS kodu hatalı");  // TEXTLER DAHA SONRA DB'DEN GELECEK. SIMDILIK BURDAN GIRIYORUZ..
 			click(btn_Tamam);
 			click(btn_Geri);
@@ -155,7 +155,7 @@ public class pageGirisEkrani extends PageBaseAndroid {
 			writeText(otp_2, String.valueOf(ot_password[1]));
 			writeText(otp_3, String.valueOf(ot_password[2]));
 			writeText(otp_4, String.valueOf(ot_password[3]));
-			click(btn_Ileri);
+//			click(btn_Ileri);
 			//burda patlarsa nasil gelir ekle
 			assertFound(img_NotifyIcon);
 			return this;

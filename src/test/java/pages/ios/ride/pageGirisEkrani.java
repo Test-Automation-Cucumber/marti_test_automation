@@ -88,7 +88,7 @@ public class pageGirisEkrani extends PageBaseIos {
 			click(btn_ChangeEnv);
 			wait(1);
 			click(lbl_Env, 1);	
-			click(chb_SozlesmeOnayUnChecked);
+			click(chb_SozlesmeOnayUnChecked, 1);
 			click(btn_Ileri);
 			Provider provider = new Provider();
 			String otp = null;
@@ -124,7 +124,7 @@ public class pageGirisEkrani extends PageBaseIos {
 			.resetCustomerLoginStatus(customer_phone_number)
 			.restartApp(iosDriver);
 			writeText(txt_PhoneNumber, customer_phone_number);
-			click(chb_SozlesmeOnayUnChecked);
+			click(chb_SozlesmeOnayUnChecked, 1);
 			click(btn_Ileri);
 			assertFound(lbl_TlfDogrula);
 			writeTextWithoutElement(String.valueOf(0));
@@ -148,7 +148,7 @@ public class pageGirisEkrani extends PageBaseIos {
 		.resetCustomerLoginStatus(customer_phone_number)
 		.restartApp(iosDriver);                                                         
 		writeText(txt_PhoneNumber, customer_phone_number);
-		click(chb_SozlesmeOnayUnChecked);
+		click(chb_SozlesmeOnayUnChecked, 1);
 		click(btn_Ileri);
 		assertFound(lbl_TlfDogrula);
 		Provider provider = new Provider();

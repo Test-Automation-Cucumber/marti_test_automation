@@ -1,6 +1,8 @@
 package pages.ios.ride;
 
 
+import org.openqa.selenium.html5.Location;
+
 import dbmodel.DataPreparation.*;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -65,11 +67,18 @@ public class pageAnaEkran extends PageBaseIos {
 		String btn_YanlisPark												= "#wrongParking";	
 		String btn_AcilDurumPaylas											= "#otherIssue";	
 		String popup_Campaign												= "#Burada senin için indirimimiz var!";	
-		String popup_AcikRizaMetniPopup										= "#OKUDUM, ONAYLIYORUM";	
-		
-		
+		String popup_AcikRizaMetniPopup										= "#OKUDUM, ONAYLIYORUM";
+		String popup_KonumunuzaErisilemiyor									= "#Konumunuza erişilemiyor";
 		
 		// *********Page Methods*********
+		
+		public pageAnaEkran Konum_Izin_Kontrolu() {
+			assertFound(popup_KonumunuzaErisilemiyor);
+			return this;
+		}	
+		
+		
+		
 		public pageAnaEkran Surus_Baslat(String customer_phone_no) {
 			assertFound(btn_Basla);
 			wait(4);
@@ -165,13 +174,13 @@ public class pageAnaEkran extends PageBaseIos {
 			waitLoadingImage();
 			assertEquals(popup_BosAlanlariDoldurmalisin, "Boş alanları doldurmalısın.");
 			click(btn_TAMAM);			
-//			writeText(txt_SorunDetay, "test otomasyon");
-//			click(btn_TAMAM);			
-//			click(btn_ParkImage);
-//			click(btn_TakeFoto);
-//			waitLoadingImage();
-			writeText(txt_KonumTarifi, "hq zone");
+			writeText(txt_SorunDetay, "test otomasyon");
 			click(btn_TAMAM);			
+			click(btn_ParkImage);
+			click(btn_TakeFoto);
+			waitLoadingImage();
+//			writeText(txt_KonumTarifi, "hq zone");
+//			click(btn_TAMAM);			
 			click(btn_Gonder);
 			waitLoadingImage();
 			assertEquals(popup_BosAlanlariDoldurmalisin, "Sorun bildirimin başarıyla gönderildi.");

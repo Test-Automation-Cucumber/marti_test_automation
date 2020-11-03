@@ -44,11 +44,26 @@ public class Ana_Ekran extends TestBase {
 		giris_Ekrani = new pageGirisEkrani(iosDriver);
 		customer = new Customer();
 		scooter = new Scooter();
+		testDevice = new TestDevice();
 		
 		// ***********CASE DEPENDENCIES**************
-
+		testDevice
+		.setIOSLocationServiceStatus(iosDriver, true);
+		
 		// ***********PAGE METHODS**************
-
+		giris_Ekrani
+		.Login(param_1);
+		
+		testDevice
+		.setIOSLocationServiceStatus(iosDriver, false);
+		
+		ana_Ekran
+		.Konum_Izin_Kontrolu();
+		
+		testDevice
+		.setIOSLocationServiceStatus(iosDriver, true);		
+		
+		
 	}
 	@Test(priority = 21)
 	public void TC_021_Bildirim_Izin_Kontrolu() {

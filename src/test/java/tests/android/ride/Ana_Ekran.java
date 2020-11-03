@@ -45,11 +45,19 @@ public class Ana_Ekran extends TestBase {
 		giris_Ekrani = new pageGirisEkrani(androidDriver);
 		customer = new Customer();
 		scooter = new Scooter();
+		testDevice = new TestDevice();
 		
 		// ***********CASE DEPENDENCIES**************
-
+		
 		// ***********PAGE METHODS**************
-
+		giris_Ekrani
+		.Login(param_1);
+		
+		ana_Ekran
+		.Konum_Izin_Kontrolu();
+		
+		testDevice
+		.setAndroidLocationServiceStatus(true);		
 	}
 	@Test(priority = 21)
 	public void TC_021_Bildirim_Izin_Kontrolu() {

@@ -31,7 +31,7 @@ public class pageBorclar extends PageBaseAndroid {
 		String popup_MessageText											= "#android:id/message";	
 		String btn_BorcOde													= "#btnPayDebt";	
 		String popup_TAMAM													= "#android:id/button1";	
-		
+		String lbl_MartiCuzdan												= "#cardHolder";	
 		
 		// *********Page Methods*********
 		public pageBorclar Borclu_Kullanici(String customer_phone_no) {
@@ -68,6 +68,21 @@ public class pageBorclar extends PageBaseAndroid {
 			assertFound(btn_BorcOde);
 			return this;
 		}
+		
+		public pageBorclar Borc_Odeme_Cuzdan_Yeterli(String customer_phone_no) {
+			assertFound(img_NotifyIcon);
+			wait(4);
+			click(btn_Basla);
+			waitLoadingImage2();
+			click(popup_BorcOde);
+			waitLoadingImage2();
+			waitLoadingImage();
+			assertFound(btn_BorcOde);
+			assertEquals(lbl_MartiCuzdan, "Martı Cüzdan");
+			return this;
+		}
+		
+		
 		public pageBorclar Borc_Odeme_Islemi_Basarili(String customer_phone_no) {
 			assertFound(img_NotifyIcon);
 			wait(4);
