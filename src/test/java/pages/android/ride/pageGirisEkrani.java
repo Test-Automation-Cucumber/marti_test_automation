@@ -17,7 +17,6 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		// *****************************************Web Elements***********************************
 		
 		// *****************General
-		String ProgressBar 													= "#progressBar"; //PROGRESS BAR  *com.martitech.marti.dev:id/progressBar   (com.martitech.marti.dev paket adı bu. kamera iznine koydun bunu çıkarmayi. ordan kopya cek)
 		private	String txt_PhoneNumber										= "#phoneNumber";
 		private	String btn_Ileri											= "#btnNext";
 		private	String lbl_TlfDogrula										= "#textView4";
@@ -47,12 +46,12 @@ public class pageGirisEkrani extends PageBaseAndroid {
 		private String btn_OkudumOnayliyorumAcikRizaMetni					= "#btnAccept";
 		
 		
-		
 		// *********Page Methods*********
 	public pageGirisEkrani Login(String phone_number) {
 		if (System.getProperty("startLogin").equals("no")) {
-			if (exists(img_Logo, 5)) {
+			if (exists(img_Logo, 3)) {
 				return this;
+
 			} else {
 				Giris_Basarili(phone_number);
 			}

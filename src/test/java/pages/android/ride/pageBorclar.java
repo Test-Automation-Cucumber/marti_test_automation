@@ -31,7 +31,11 @@ public class pageBorclar extends PageBaseAndroid {
 		String popup_MessageText											= "#android:id/message";	
 		String btn_BorcOde													= "#btnPayDebt";	
 		String popup_TAMAM													= "#android:id/button1";	
-		String lbl_MartiCuzdan												= "#cardHolder";	
+		String lbl_OdemeAraci												= "#cardHolder";	
+		String btn_KartDegistir												= "#btnChangeCard";	
+		String lbl_CuzdanBakiye												= "#walletBalance";	
+		String btn_Tamam													= "#btnOk";	
+		
 		
 		// *********Page Methods*********
 		public pageBorclar Borclu_Kullanici(String customer_phone_no) {
@@ -50,14 +54,14 @@ public class pageBorclar extends PageBaseAndroid {
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
-			assertEquals(popup_MessageText, "Önceki sürüşlerinden kalan ₺16,00 bakiyeniz bulunduğu için yeni bir sürüş başlatamazsın. Şimdi ödeme yaparak devam etmek ister misiniz?");		
+			assertEquals(popup_MessageText, "Önceki sürüşlerinden kalan ₺ 16,00 bakiyeniz bulunduğu için yeni bir sürüş başlatamazsın. Şimdi ödeme yaparak devam etmek ister misiniz?");		
 			click(popup_Tamam);
 			waitLoadingImage2();
 			assertFound(img_NotifyIcon);
 			return this;
 		}
 
-		public pageBorclar Borc_Odeme(String customer_phone_no) {
+		public pageBorclar Borc_Odeme_Cuzdan_Yetersiz() {
 			assertFound(img_NotifyIcon);
 			wait(4);
 			click(btn_Basla);
@@ -66,10 +70,13 @@ public class pageBorclar extends PageBaseAndroid {
 			waitLoadingImage2();
 			waitLoadingImage();
 			assertFound(btn_BorcOde);
+			assertEquals(lbl_OdemeAraci, "AUTO AUTOMATION");  //bunu bu şekilde verebilirsin. addCreditCard fonksiyonu bu isimde kart eklemesi yapiyor.
+			click(btn_KartDegistir);
+			assertFound(lbl_CuzdanBakiye);
 			return this;
 		}
 		
-		public pageBorclar Borc_Odeme_Cuzdan_Yeterli(String customer_phone_no) {
+		public pageBorclar Borc_Odeme_Cuzdan_Yeterli() {
 			assertFound(img_NotifyIcon);
 			wait(4);
 			click(btn_Basla);
@@ -78,7 +85,9 @@ public class pageBorclar extends PageBaseAndroid {
 			waitLoadingImage2();
 			waitLoadingImage();
 			assertFound(btn_BorcOde);
-			assertEquals(lbl_MartiCuzdan, "Martı Cüzdan");
+			assertEquals(lbl_OdemeAraci, "Martı Cüzdan");
+			click(btn_KartDegistir);
+			assertFound(lbl_CuzdanBakiye);
 			return this;
 		}
 		
@@ -88,16 +97,15 @@ public class pageBorclar extends PageBaseAndroid {
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
-
 			click(popup_BorcOde);
 			waitLoadingImage2();
 			waitLoadingImage();
 			click(btn_BorcOde);
+			waitLoadingImage();			
+			assertFound("$Bakiye başarıyla ödendi.");
+			click(btn_Tamam);
 			waitLoadingImage();
-			
-			assertEquals(popup_MessageText, "Bakiye başarıyla ödendi.");
-			click(popup_TAMAM);
-			waitLoadingImage();
+			assertFound(btn_Basla);
 			return this;
 		}
 		public pageBorclar Borc_Odeme_Islemi_Basarisiz(String customer_phone_no) {
@@ -105,7 +113,6 @@ public class pageBorclar extends PageBaseAndroid {
 			wait(4);
 			click(btn_Basla);
 			waitLoadingImage2();
-
 			click(popup_BorcOde);
 			waitLoadingImage2();
 			waitLoadingImage();

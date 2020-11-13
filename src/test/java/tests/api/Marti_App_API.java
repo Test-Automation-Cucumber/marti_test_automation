@@ -66,13 +66,14 @@ public class Marti_App_API extends TestBase {
 		String accessToken = "";
 		String couponCode = "";
 		String customerPhoneNumber = testParameters[caseNumber][6];
+		
 		// *******************PAGE INSTANTIATIONS*******************
-		customer.deleteCustomerCoupons(customerPhoneNumber);
+		customer.deleteCreatorCoupons(customerPhoneNumber);
 		
 		accessToken = get_token(caseNumber);
 		run_ws(52, accessToken, null); // KUPON OLUSTURUR.
 		
-		couponCode = customer.getCustomerCoupon(customerPhoneNumber);
+		couponCode = customer.getCreatorCoupon(customerPhoneNumber);
 		
 		// *********************CALL SERVICE************************
 		couponCode = "{\"code\":\"" + couponCode.substring(couponCode.lastIndexOf(":") + 1).replace("}", "").replace("\"", "") + "\"}";

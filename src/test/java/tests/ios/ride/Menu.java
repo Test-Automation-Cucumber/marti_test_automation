@@ -24,7 +24,7 @@ public class Menu extends TestBase {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
 		System.setProperty("appName", "ride");
 		System.setProperty("platformName", "ios");
-		System.setProperty("deviceName", "iPhone5S");
+		System.setProperty("deviceName", "iPhone7");
 		System.setProperty("startLogin", "no");
 	}
 
@@ -94,7 +94,7 @@ public class Menu extends TestBase {
 		
 		// ***********CASE DEPENDENCIES**************
 		customer
-		.deleteCustomerCoupons(param_1);
+		.deleteCreatorCoupons(param_1);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
@@ -184,7 +184,7 @@ public class Menu extends TestBase {
 		
 		// ***********CASE DEPENDENCIES**************
 		customer
-		.deleteCustomerCoupons(param_1);
+		.deleteCreatorCoupons(param_1);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani

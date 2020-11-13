@@ -38,7 +38,12 @@ public class pageBorclar extends PageBaseIos {
 		String btn_Ileri													= "#btnNext";	
 		String btn_KrediKartiEkle											= "#btnPayDebt";	
 		String txt_KartNumarasi												= "#cardNumber";
-			
+		String lbl_MartiCuzdan												= "#Martı Cüzdan";
+		String btn_Degistir													= "#Değiştir";
+		String btn_KrediKartiDegistir										= "#Kredi Kartı Ekle";
+		
+		
+		
 		// *********Page Methods*********
 		public pageBorclar Borclu_Kullanici(String customer_phone_no, String scooter_code) {
 			assertFound(img_NotifyIcon);
@@ -61,7 +66,7 @@ public class pageBorclar extends PageBaseIos {
 			return this;
 		}
 
-		public pageBorclar Borc_Odeme(String customer_phone_no) {	
+		public pageBorclar Borc_Odeme_Cuzdan_Yetersiz() {	
 			assertFound(img_NotifyIcon);
 			wait(4);
 			click(btn_Basla);
@@ -70,8 +75,26 @@ public class pageBorclar extends PageBaseIos {
 			waitLoadingImage();
 			assertFound(popup_BorcOde);
 			waitLoadingImage();
+			assertFound(lbl_MartiCuzdan);
+			click(btn_Degistir);
 			return this;
 		}
+		public pageBorclar Borc_Odeme_Cuzdan_Yeterli() {	
+			assertFound(img_NotifyIcon);
+			wait(4);
+			click(btn_Basla);
+			waitLoadingImage();
+			click(popup_BorcOde);
+			waitLoadingImage();
+			assertFound(popup_BorcOde);
+			waitLoadingImage();
+			assertFound(lbl_MartiCuzdan);
+			click(btn_Degistir);
+			assertFound(btn_KrediKartiDegistir);
+			assertFound(lbl_MartiCuzdan);
+			return this;
+		}
+				
 		public pageBorclar Borc_Odeme_Islemi_Basarili(String customer_phone_no) {
 			assertFound(img_NotifyIcon);
 			wait(4);

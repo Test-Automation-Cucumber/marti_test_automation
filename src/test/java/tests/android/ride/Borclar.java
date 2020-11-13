@@ -29,86 +29,87 @@ public class Borclar extends TestBase {
 	}
 
 // ******************************************************* TEST ***********************************************************
-//	@Test(priority = 43)
-//	public void TC_043_Borclu_Kullanici() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		borclar = new pageBorclar(androidDriver);
-//		giris_Ekrani = new pageGirisEkrani(androidDriver);
-//		customer = new Customer();
-//			
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.deleteCreditCards(param_1)
-//		.addCreditCard(param_1);
-//		customer
-//		.deleteCustomerDebt(param_1)
-//		.addCustomerDebt(param_1, 14);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		borclar
-//		.Borclu_Kullanici(param_1);
-//		
-//		customer
-//		.deleteCustomerDebt(param_1);
-//			
-//	}
-//	@Test(priority = 44)
-//	public void TC_044_Borclu_Kullanici_Plus_15() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		
-//		// *******************PAGE INSTANTIATIONS*******************
-//		borclar = new pageBorclar(androidDriver);
-//		giris_Ekrani = new pageGirisEkrani(androidDriver);
-//		customer = new Customer();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.deleteCustomerDebt(param_1)
-//		.addCustomerDebt(param_1, 16);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		borclar
-//		.Borclu_Kullanici_Plus_15(param_1);
-//		
-//		customer
-//		.deleteCustomerDebt(param_1);
-//		}
-//	@Test(priority = 45)
-//	public void TC_045_Borc_Odeme() {
-//		// *******************SET PARAMETERS************************
-//		param_1 = testParameters[caseId][1];
-//		// *******************PAGE INSTANTIATIONS*******************
-//		borclar = new pageBorclar(androidDriver);
-//		giris_Ekrani = new pageGirisEkrani(androidDriver);
-//		customer = new Customer();
-//		
-//		// ***********CASE DEPENDENCIES**************
-//		customer
-//		.deleteCustomerDebt(param_1)
-//		.addCustomerDebt(param_1, 11)
-//		.deleteWalletBalance(param_1)
-//		.addWalletBalance(param_1, 1);
-//		
-//		// ***********PAGE METHODS**************
-//		giris_Ekrani
-//		.Login(param_1);
-//		
-//		borclar
-//		.Borc_Odeme(param_1);
-//		
-//		customer
-//		.deleteCustomerDebt(param_1);
-//	}
+	@Test(priority = 43)
+	public void TC_043_Borclu_Kullanici() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		borclar = new pageBorclar(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+			
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		customer
+		.deleteCustomerDebt(param_1)
+		.addCustomerDebt(param_1, 14);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		borclar
+		.Borclu_Kullanici(param_1);
+		
+		customer
+		.deleteCustomerDebt(param_1);
+			
+	}
+	@Test(priority = 44)
+	public void TC_044_Borclu_Kullanici_Plus_15() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		
+		// *******************PAGE INSTANTIATIONS*******************
+		borclar = new pageBorclar(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerDebt(param_1)
+		.addCustomerDebt(param_1, 16);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		borclar
+		.Borclu_Kullanici_Plus_15(param_1);
+		
+		customer
+		.deleteCustomerDebt(param_1);
+		}
+	@Test(priority = 45)
+	public void TC_045_Borc_Odeme_Cuzdan_Yetersiz() {
+		// *******************SET PARAMETERS************************
+		param_1 = testParameters[caseId][1];
+		// *******************PAGE INSTANTIATIONS*******************
+		borclar = new pageBorclar(androidDriver);
+		giris_Ekrani = new pageGirisEkrani(androidDriver);
+		customer = new Customer();
+		
+		// ***********CASE DEPENDENCIES**************
+		customer
+		.deleteCustomerDebt(param_1)
+		.addCustomerDebt(param_1, 11)
+		.addWalletBalance(param_1, "10")
+		.deleteCreditCards(param_1)
+		.addCreditCard(param_1);
+		
+		// ***********PAGE METHODS**************
+		giris_Ekrani
+		.Login(param_1);
+		
+		borclar
+		.Borc_Odeme_Cuzdan_Yetersiz();
+		
+		customer
+		.deleteCustomerDebt(param_1);
+	}
 	@Test(priority = 46)
 	public void TC_046_Borc_Odeme_Cuzdan_Yeterli() {
 		// *******************SET PARAMETERS************************
@@ -122,15 +123,17 @@ public class Borclar extends TestBase {
 		customer
 		.deleteCustomerDebt(param_1)
 		.addCustomerDebt(param_1, 11)
-		.deleteWalletBalance(param_1)
-		.addWalletBalance(param_1, 11);
+		.addWalletBalance(param_1, "11");
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
 		.Login(param_1);
 		
 		borclar
-		.Borc_Odeme_Cuzdan_Yeterli(param_1);
+		.Borc_Odeme_Cuzdan_Yeterli();
+		
+		customer
+		.deleteCustomerDebt(param_1);
 	}
 	@Test(priority = 47)
 	public void TC_047_Borc_Odeme_Islemi_Basarili() {
@@ -167,6 +170,7 @@ public class Borclar extends TestBase {
 		
 		// ***********CASE DEPENDENCIES**************
 		customer
+		.deleteWalletBalance(param_1)
 		.deleteCreditCards(param_1)
 		.addErrorCreditCard(param_1)
 		.deleteCustomerDebt(param_1)
@@ -178,6 +182,9 @@ public class Borclar extends TestBase {
 		
 		borclar
 		.Borc_Odeme_Islemi_Basarisiz(param_1);
+		
+		customer
+		.deleteCustomerDebt(param_1);
 	}
 
 }

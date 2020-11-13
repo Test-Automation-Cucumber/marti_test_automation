@@ -3,20 +3,66 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Web Suite]" parallel="classes">
   <test thread-count="1" name="Web Tests(failed)" parallel="classes">
     <classes>
-      <class name="tests.ios.ride.Surus">
+      <class name="tests.android.ride.Ana_Ekran">
         <methods>
-          <include name="TC_065_Surus_Bitir_Basarili_Wallet"/>
-          <include name="TC_064_Surus_Bitir_Basarili"/>
+          <include name="TC_039_Bize_Ulasin_Hasarli_Sorunlu_Marti_Bildirme"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="TC_038_Bize_Ulasin_Kilit_Problemi_Bildirme"/>
+          <include name="TC_040_Bize_Ulasin_Yanlis_Park"/>
           <include name="setUp"/>
-          <include name="TC_068_Uygulama_Degerlendirme"/>
           <include name="tearDown"/>
           <include name="beforeClass"/>
-          <include name="TC_066_Surus_Bitir_Basarisiz_Wallet_Yetersiz"/>
-          <include name="TC_067_Surus_Bitir_Basarili_Kupon_Kullanildi"/>
         </methods>
-      </class> <!-- tests.ios.ride.Surus -->
+      </class> <!-- tests.android.ride.Ana_Ekran -->
+      <class name="tests.android.ride.Borclar">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="TC_044_Borclu_Kullanici_Plus_15"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+          <include name="TC_047_Borc_Odeme_Islemi_Basarili"/>
+        </methods>
+      </class> <!-- tests.android.ride.Borclar -->
+      <class name="tests.android.ride.Surus">
+        <methods>
+          <include name="TC_061_Ceza_Kurallarina_Erisim"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="TC_067_Surus_Bitir_Basarili_Kupon_Kullanildi"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_049_Surus_Basladi_Kodlu_Kilit"/>
+          <include name="beforeClass"/>
+          <include name="TC_064_Surus_Bitir_Basarili"/>
+        </methods>
+      </class> <!-- tests.android.ride.Surus -->
+      <class name="tests.android.ride.Menu">
+        <methods>
+          <include name="TC_081_Cikis"/>
+          <include name="TC_082_Yardim_Dokumanina_Erisim"/>
+          <include name="afterSuite"/>
+          <include name="TC_072_Arkadasini_Davet_Et"/>
+          <include name="setUp"/>
+          <include name="TC_101_Kredi_Karti_Ekleme_Basarili"/>
+          <include name="beforeClass"/>
+          <include name="TC_102_Kupon_Ekleme"/>
+          <include name="TC_083_Kvkk_Aydinlatma_Metnine_Erisim"/>
+          <include name="TC_069_Versiyon_Kontrol"/>
+          <include name="TC_079_Guvenlik_Dokumanina_Erisim"/>
+          <include name="beforeSuite"/>
+          <include name="TC_100_Varsayilan_Kredi_Karti_Degistirme"/>
+          <include name="TC_080_Surus_Kurallarina_Erisim"/>
+          <include name="tearDown"/>
+          <include name="TC_077_Arkadasini_Davet_Etme"/>
+          <include name="TC_084_Kullanici_Sozlesmesine_Erisim"/>
+          <include name="TC_076_Davet_Kodu_Girme"/>
+          <include name="TC_090_Kredi_Karti_Ekleme_Basarisiz"/>
+          <include name="TC_078_Nasil_Kullanilir_Erisim"/>
+        </methods>
+      </class> <!-- tests.android.ride.Menu -->
     </classes>
   </test> <!-- Web Tests(failed) -->
 </suite> <!-- Failed suite [Web Suite] -->

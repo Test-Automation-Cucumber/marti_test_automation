@@ -29,61 +29,61 @@ public class Menu extends TestBase {
 	}
 
 // ******************************************************* TEST ***********************************************************
-	@Test(priority = 69)
-	public void TC_069_Versiyon_Kontrol() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-		param_2 = testParameters[caseId][2];
-		
-		// *******************PAGE INSTANTIATIONS*******************
-		menu = new pageMenu(androidDriver);
-		giris_Ekrani = new pageGirisEkrani(androidDriver);
-		customer = new Customer();
-		
-		// ***********CASE DEPENDENCIES**************
-
-		// ***********PAGE METHODS**************
-		giris_Ekrani
-		.Login(param_1);
-		
-		menu
-		.Versiyon_Kontrol(param_1, param_2);
-	}
-	@Test(priority = 70)
-	public void TC_070_Profil_Duzenleme() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-		
-		// *******************PAGE INSTANTIATIONS*******************
-		menu = new pageMenu(androidDriver);
-		giris_Ekrani = new pageGirisEkrani(androidDriver);
-		
-		// ***********CASE DEPENDENCIES**************                                                                
-		
-
-		// ***********PAGE METHODS**************
-		giris_Ekrani
-		.Login(param_1);
-		
-		menu
-		.Profil_Duzenleme(param_1);
-	}
-	@Test(priority = 71)
-	public void TC_071_Cuzdana_Bakiye_Yukleme() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-	
-		// *******************PAGE INSTANTIATIONS*******************
-		menu = new pageMenu(androidDriver);
-		giris_Ekrani = new pageGirisEkrani(androidDriver);
-		
-		// ***********CASE DEPENDENCIES**************
-		
-		// ***********PAGE METHODS**************
-		giris_Ekrani
-		.Login(param_1);
-		
-	}
+//	@Test(priority = 69)
+//	public void TC_069_Versiyon_Kontrol() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//		param_2 = testParameters[caseId][2];
+//		
+//		// *******************PAGE INSTANTIATIONS*******************
+//		menu = new pageMenu(androidDriver);
+//		giris_Ekrani = new pageGirisEkrani(androidDriver);
+//		customer = new Customer();
+//		
+//		// ***********CASE DEPENDENCIES**************
+//
+//		// ***********PAGE METHODS**************
+//		giris_Ekrani
+//		.Login(param_1);
+//		
+//		menu
+//		.Versiyon_Kontrol(param_1, param_2);
+//	}
+//	@Test(priority = 70)
+//	public void TC_070_Profil_Duzenleme() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//		
+//		// *******************PAGE INSTANTIATIONS*******************
+//		menu = new pageMenu(androidDriver);
+//		giris_Ekrani = new pageGirisEkrani(androidDriver);
+//		
+//		// ***********CASE DEPENDENCIES**************                                                                
+//		
+//
+//		// ***********PAGE METHODS**************
+//		giris_Ekrani
+//		.Login(param_1);
+//		
+//		menu
+//		.Profil_Duzenleme(param_1);
+//	}
+//	@Test(priority = 71)
+//	public void TC_071_Cuzdana_Bakiye_Yukleme() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//	
+//		// *******************PAGE INSTANTIATIONS*******************
+//		menu = new pageMenu(androidDriver);
+//		giris_Ekrani = new pageGirisEkrani(androidDriver);
+//		
+//		// ***********CASE DEPENDENCIES**************
+//		
+//		// ***********PAGE METHODS**************
+//		giris_Ekrani
+//		.Login(param_1);
+//		
+//	}
 	@Test(priority = 72)
 	public void TC_072_Arkadasini_Davet_Et() {
 		// *******************SET PARAMETERS************************
@@ -96,7 +96,9 @@ public class Menu extends TestBase {
 		
 		// ***********CASE DEPENDENCIES**************
 		customer
-		.deleteCustomerCoupons(param_1);
+		.deleteCreatorCoupons(param_1)
+		.deleteCustomerRides(param_1)
+		.deleteCustomerReservations(param_1);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
@@ -178,7 +180,7 @@ public class Menu extends TestBase {
 	
 		// ***********CASE DEPENDENCIES**************
 		customer
-		.deleteCustomerCoupons(param_1);
+		.deleteCreatorCoupons(param_1);
 		
 		// ***********PAGE METHODS**************
 		giris_Ekrani
@@ -413,7 +415,7 @@ public class Menu extends TestBase {
 		// ***********CASE DEPENDENCIES**************
 		
 		customer
-		.deleteCustomerCoupons(param_1);
+		.deleteCreatorCoupons(param_1);
 		
 		// ***********PAGE METHODS**************
 		

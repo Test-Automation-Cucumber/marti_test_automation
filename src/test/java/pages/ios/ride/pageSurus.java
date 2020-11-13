@@ -68,9 +68,13 @@ public class pageSurus extends PageBaseIos {
 		String img_AlertContent												= "#photoRules_tr";
 		String btn_Star														= "#unstarredAsset";
 		String lbl_YolculukDegerlendirme									= "#Martı Yolculuğunu Değerlendir";
-		String btn_SebebiNeydiki											= "#Hızlı";
+		String btn_SebebiNeydiki											= "#Mobil Uygulama";
 		String img_NotifyIcon												= "#notificationIcon";	
 		String img_ScooterCode												= "#C049";	
+		String btn_Menu														= "#menu";
+		String lblb_OdemeYontemi											= "#cardHolder";	
+		
+		
 		
 		
 		// *********Page Methods*********
@@ -204,7 +208,15 @@ public class pageSurus extends PageBaseIos {
 //		}
 //			testDevice.setCamPermissionStatus(androidDriver, true);
 //			return this;
-//		}		
+//		}
+		
+		
+		public pageSurus Surus_Bitir_Basarisiz_Wallet_Yetersiz() {
+//			click(btn_FotoCekBitir);
+//			assertNotEquals(readText(lblb_OdemeYontemi), "Martı Cüzdan");
+			return this;
+		}
+		
 		
 	public pageSurus Surus_Bitir_Internet_Kapali(String customer_phone_no, String scooter_code) {
 		while (exists(lbl_NasilKullanilir, 5)) {
@@ -234,13 +246,7 @@ public class pageSurus extends PageBaseIos {
 			assertFound(btn_Bitir);				
 			return this;
 		}
-		public pageSurus Odeme_Hatasi(String customer_phone_no, String scooter_code) {
-			while (exists(lbl_NasilKullanilir, 5)) {
-				click(btn_Ileri);
-				waitMilliSec(750);
-			}			
-			scooter
-			.setMinus5ForRideTime(scooter_code);		
+		public pageSurus Odeme_Hatasi(String customer_phone_no, String scooter_code) {				
 			click(btn_FotoCekBitir);
 			waitLoadingImage();
 			click(btn_Bitir);
@@ -249,9 +255,17 @@ public class pageSurus extends PageBaseIos {
 			click(btn_Tamam);		
 			return this;
 		}
-		public pageSurus Surus_Bitirme_Basarili(String customer_phone_no, String scooter_code) {
+		public pageSurus Surus_Bitirme_Basarili() {
 			click(btn_FotoCekBitir);
 			waitLoadingImage();
+			click(btn_Bitir);
+			waitLoadingImage();
+			return this;
+		}	
+		public pageSurus Surus_Bitirme_Basarili_Wallet() {
+			click(btn_FotoCekBitir);
+			waitLoadingImage();
+			assertFound("$Martı Cüzdan");
 			click(btn_Bitir);
 			waitLoadingImage();
 			return this;
@@ -261,15 +275,20 @@ public class pageSurus extends PageBaseIos {
 			assertFound("₺" + chargedPrice.replace(".", ","));
 			return this;
 		}	
-		public pageSurus Yolculugu_Degerlendirme(String customer_phone_no) {
+		public pageSurus Yolculugu_Degerlendirme() {
 			click(btn_Tamam);
 			assertEquals(lbl_YolculukDegerlendirme, "Martı Yolculuğunu Değerlendir");
-			click(btn_Star, 4);
+			click(btn_Star, 2);
 			swipe(lbl_YolculukDegerlendirme, 303, 975,346,231, 300);
 			click(btn_SebebiNeydiki);		
 			click(btn_Gonder);
 			waitLoadingImage();
 			assertFound(img_NotifyIcon);					
+			return this;
+		}
+		public pageSurus CuzdanBakiyeKontrol(String cuzdan_bakiye) {
+			click(btn_Menu);
+			assertNotFound("#₺ 20,0");
 			return this;
 		}
 }

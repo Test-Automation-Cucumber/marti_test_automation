@@ -222,6 +222,11 @@ public class PageBaseIos {
 	protected void assertEquals(int num_1, int num_2) {
 		Assert.assertEquals(num_1, num_2);
 	}
+	
+	// Assert Not
+	protected void assertNotEquals(String pure_element, String expected_text) {
+		Assert.assertNotEquals(readText(pure_element), expected_text);
+	}
 
 	// Assert True
 	protected void assertTrue(boolean bool) {

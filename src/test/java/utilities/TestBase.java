@@ -262,7 +262,6 @@ public class TestBase {
 		} else if (System.getProperty("platformName").equals("ios")) {
 			iosDriver.quit();
 		}
-
     }
     
 	@AfterSuite

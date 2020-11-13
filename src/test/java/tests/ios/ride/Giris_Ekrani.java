@@ -22,7 +22,7 @@ public class Giris_Ekrani extends TestBase {
 		queryGetParameters = "select * from ride_app_test_parameters order by tc_id;";
 		System.setProperty("appName", "ride");
 		System.setProperty("platformName", "ios");
-		System.setProperty("deviceName", "iPhone5S");
+		System.setProperty("deviceName", "iPhone7");
 		System.setProperty("startLogin", "no");
 	}
 

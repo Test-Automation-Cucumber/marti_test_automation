@@ -56,10 +56,9 @@ public class pageSurus extends PageBaseAndroid {
 		String img_BatteryText												= "#batteryText";	
 		String img_DurationText												= "#durationText";	
 		String lbl_ToplamTutar												= "#txtTotal";	
-		
-		
-		
-		
+		String lbl_CuzdanBakiye												= "#walletBalance";	
+		String btn_Menu														= "#btnMenu";	
+		String lbl_OdemeAraci												= "#cardHolder";	
 		
 		// *********Page Methods*********
 
@@ -172,11 +171,9 @@ public class pageSurus extends PageBaseAndroid {
 		}
 		
 //		public pageSurus Kamera_Izni_Verilmemis() {
-//			String appPackageName=androidDriver.getCurrentPackage();
-//			testDevice.setCamPermissionStatus(androidDriver, false);
-//			androidDriver.closeApp();
-//			androidDriver.activateApp(appPackageName);
-//			
+//			testDevice
+//			.setAndroidCamPermissionStatus(androidDriver, false)
+//			.restartApp(androidDriver);
 //			click(btn_FotoCekBitir);
 //			waitLoadingImage();
 //
@@ -190,7 +187,7 @@ public class pageSurus extends PageBaseAndroid {
 //		} catch (Exception ex) {
 //
 //		}
-//			testDevice.setCamPermissionStatus(androidDriver, true);
+////			testDevice.setCamPermissionStatus(androidDriver, true);
 //			return this;
 //		}		
 		
@@ -219,7 +216,7 @@ public class pageSurus extends PageBaseAndroid {
 			assertFound(btn_Bitir);
 			return this;
 		}
-		public pageSurus Odeme_Hatasi(String customer_phone_no, String scooter_code) {	
+		public pageSurus Odeme_Hatasi() {	
 			click(btn_FotoCekBitir);
 			waitLoadingImage();
 			click(btn_Bitir);
@@ -229,7 +226,7 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}
 		
-		public pageSurus Surus_Bitirme_Basarili(String customer_phone_no, String scooter_code) {
+		public pageSurus Surus_Bitirme_Basarili() {
 			click(btn_FotoCekBitir);
 			waitLoadingImage();
 			click(btn_Bitir);
@@ -238,9 +235,31 @@ public class pageSurus extends PageBaseAndroid {
 			return this;
 		}
 		
+		public pageSurus Surus_Bitirme_Basarili_Wallet() {
+			click(btn_FotoCekBitir);
+			waitLoadingImage();
+			assertEquals(lbl_OdemeAraci, "Martı Cüzdan");
+			click(btn_Bitir);
+			waitLoadingImage2();
+			assertFound(lbl_EndRide);			
+			return this;
+		}	
+		
+		public pageSurus Surus_Bitir_Basarili_Kupon_Kullanildi() {
+			click(btn_FotoCekBitir);
+			waitLoadingImage();
+			assertEquals(lbl_OdemeAraci, "Martı Cüzdan");
+			click(btn_Bitir);
+			waitLoadingImage2();
+			assertFound(lbl_EndRide);			
+			return this;
+		}
+		
+		
+		
 		public pageSurus Yolculuk_Ozeti_Kontrol(String customer_phone_no) {
 			String chargedPrice = customer.getChargedRidePrice(customer_phone_no);
-			assertEquals(lbl_ToplamTutar, "₺" + chargedPrice.replace(".", ","));
+			assertEquals(lbl_ToplamTutar, "₺ " + chargedPrice.replace(".", ","));
 			return this;
 		}
 		
@@ -253,6 +272,24 @@ public class pageSurus extends PageBaseAndroid {
 			click(btn_Gonder);
 			waitLoadingImage();
 			assertFound(img_NotifyIcon);		
+			return this;
+		}
+		
+		public pageSurus CuzdanBakiyeKontrol(String cuzdan_bakiye) {
+		click(btn_Menu);
+		lbl_CuzdanBakiye = readText(lbl_CuzdanBakiye).replace("₺", "").trim();
+		if (Double.parseDouble(cuzdan_bakiye) <= Double.parseDouble(lbl_CuzdanBakiye.replace(",", "."))) {
+			try {
+				throw new Exception("Surus odemesi cuzdan'dan yapilmadi !");
+			} catch (Exception ex) {
+			}
+		}
+			return this;
+		}
+		
+		public pageSurus Surus_Bitir_Basarisiz_Wallet_Yetersiz() {
+			click(btn_FotoCekBitir);
+			assertNotEquals(lbl_OdemeAraci, "Martı Cüzdan");
 			return this;
 		}
 }

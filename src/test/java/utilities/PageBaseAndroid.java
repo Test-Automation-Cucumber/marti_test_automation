@@ -327,13 +327,15 @@ public class PageBaseAndroid {
 
 	// Assert True -- bu kisa süreli ariyor elementi.. 1 sn
 	protected void assertTrue(String pure_element) {
-		Assert.assertTrue(exists(pure_element, 1), "element : "+ pure_element + " ||");
-	}
+//		Assert.assertTrue(exists(pure_element, 1), "element : "+ pure_element + " ||");
+		Assert.assertTrue(exists(pure_element, 1));
+		}
 
 	// Assert Found -- bu uzun süreli ariyor elementi.. mesela 30 sn
 	protected void assertFound(String pure_element) {
-		Assert.assertTrue(exists(pure_element, 30), "element : "+ pure_element + " ||");
-	}
+//		Assert.assertTrue(exists(pure_element, 30), "element : "+ pure_element + " ||");
+		Assert.assertTrue(exists(pure_element, 30));
+		}
 
 	// Assert Found
 	protected void assertFound(String pure_element, int index) {

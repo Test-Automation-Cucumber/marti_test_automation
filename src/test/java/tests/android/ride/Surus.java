@@ -53,7 +53,7 @@ public class Surus extends TestBase {
 //		.deleteCustomerDebt(param_1)
 //		.deleteCreditCards(param_1)
 //		.deleteCustomerReservations(param_1)
-//		.addCustomer(param_1)
+////		.addCustomer(param_1)
 //		.addCreditCard(param_1);
 //		
 //		scooter
@@ -64,7 +64,7 @@ public class Surus extends TestBase {
 //		
 //		// ***********PAGE METHODS**************
 //		giris_Ekrani
-//		.Login(param_1);
+//		.Giris_Basarili(param_1);
 //		
 //		surus
 //		.Surus_Basladi_Kodlu_Kilit(param_1, param_2);
@@ -459,10 +459,11 @@ public class Surus extends TestBase {
 //		.lockScooter(param_2);
 //
 //		// ***********PAGE METHODS**************
-//		giris_Ekrani.Login(param_1);
+//		giris_Ekrani
+//		.Login(param_1);
 //
 ////		surus
-////		.Kamera_Izni_Verilmemis(param_1, param_2);
+////		.Kamera_Izni_Verilmemis();
 //	}
 //	@Test(priority = 60)
 //	public void TC_060_Surus_Bitir_Internet_Kapali() {
@@ -586,7 +587,7 @@ public class Surus extends TestBase {
 //		.restartApp(androidDriver);
 //
 //		surus
-//		.Odeme_Hatasi(param_1, param_2);
+//		.Odeme_Hatasi();
 //
 //		customer
 //		.deleteCustomerRides(param_1);
@@ -611,116 +612,129 @@ public class Surus extends TestBase {
 //		.Login(param_1);
 //
 //	}
-	@Test(priority = 64)
-	public void TC_064_Surus_Bitir_Basarili() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-		param_2 = testParameters[caseId][2];
-		param_3 = testParameters[caseId][3];
-
-		// *******************PAGE INSTANTIATIONS*******************
-		surus = new pageSurus(androidDriver);
-		giris_Ekrani = new pageGirisEkrani(androidDriver);
-		customer = new Customer();
-		scooter = new Scooter();
-		testDevice = new TestDevice();
-
-		// ***********CASE DEPENDENCIES**************
-		customer
-		.deleteCustomerRides(param_1)
-		.deleteCustomerDebt(param_1)
-		.deleteCreditCards(param_1)
-		.addCreditCard(param_1);
-		
-		customer
-		.addCustomerFinishedRide(param_1, param_2);
-
-		scooter
-		.addScooter(param_2, param_3)
-		.addScooterRide(param_1, param_2)
-		.setMinus5ForRideTime(param_2)
-		.lockScooter(param_2);
-
-		// ***********PAGE METHODS**************
-		giris_Ekrani
-		.Login(param_1);
-
-		testDevice
-		.restartApp(androidDriver);
-
-		surus
-		.Surus_Bitirme_Basarili(param_1, param_2)
-		.Yolculuk_Ozeti_Kontrol(param_1)
-		.Yolculugu_Degerlendirme(param_1);
-
-		customer
-		.deleteCustomerRides(param_1);
-	}
-	@Test(priority = 65)
-	public void TC_065_Surus_Bitir_Basarili_Wallet() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-		param_2 = testParameters[caseId][2];
-		param_3 = testParameters[caseId][3];
-
-		// *******************PAGE INSTANTIATIONS*******************
-		surus = new pageSurus(androidDriver);
-		giris_Ekrani = new pageGirisEkrani(androidDriver);
-		customer = new Customer();
-		scooter = new Scooter();
-
-		// ***********CASE DEPENDENCIES**************
-		customer
-		.deleteCustomerRides(param_1)
-		.deleteCustomerDebt(param_1)
-		.deleteCreditCards(param_1)
-		.addCreditCard(param_1);
-		
-		customer
-		.addCustomerFinishedRide(param_1, param_2);
-
-		scooter
-		.addScooter(param_2, param_3)
-		.addScooterRide(param_1, param_2)
-		.lockScooter(param_2);
-
-		// ***********PAGE METHODS**************
-		giris_Ekrani.Login(param_1);
-
-	}
-	@Test(priority = 66)
-	public void TC_066_Surus_Bitirme_Basarisiz_Wallet_Yetersiz() {
-		// *******************SET PARAMETERS************************
-		param_1 = testParameters[caseId][1];
-		param_2 = testParameters[caseId][2];
-		param_3 = testParameters[caseId][3];
-
-		// *******************PAGE INSTANTIATIONS*******************
-		surus = new pageSurus(androidDriver);
-		giris_Ekrani = new pageGirisEkrani(androidDriver);
-		customer = new Customer();
-		scooter = new Scooter();
-
-		// ***********CASE DEPENDENCIES**************
-		customer
-		.deleteCustomerRides(param_1)
-		.deleteCustomerDebt(param_1)
-		.deleteCreditCards(param_1)
-		.addCreditCard(param_1);
-		
-		customer
-		.addCustomerFinishedRide(param_1, param_2);
-
-		scooter
-		.addScooter(param_2, param_3)
-		.addScooterRide(param_1, param_2)
-		.lockScooter(param_2);
-
-		// ***********PAGE METHODS**************
-		giris_Ekrani
-		.Login(param_1);
-
-	}
+//	@Test(priority = 64)
+//	public void TC_064_Surus_Bitir_Basarili() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//		param_2 = testParameters[caseId][2];
+//		param_3 = testParameters[caseId][3];
+//
+//		// *******************PAGE INSTANTIATIONS*******************
+//		surus = new pageSurus(androidDriver);
+//		giris_Ekrani = new pageGirisEkrani(androidDriver);
+//		customer = new Customer();
+//		scooter = new Scooter();
+//		testDevice = new TestDevice();
+//
+//		// ***********CASE DEPENDENCIES**************
+//		customer
+//		.deleteCustomerRides(param_1)
+//		.deleteCustomerDebt(param_1)
+//		.deleteCreditCards(param_1)
+//		.addCreditCard(param_1);
+//		
+//		customer
+//		.addCustomerFinishedRide(param_1, param_2);
+//
+//		scooter
+//		.addScooter(param_2, param_3)
+//		.addScooterRide(param_1, param_2)
+//		.setMinus5ForRideTime(param_2)
+//		.lockScooter(param_2);
+//
+//		// ***********PAGE METHODS**************
+//		giris_Ekrani
+//		.Login(param_1);
+//
+//		testDevice
+//		.restartApp(androidDriver);
+//
+//		surus
+//		.Surus_Bitirme_Basarili()
+//		.Yolculuk_Ozeti_Kontrol(param_1)
+//		.Yolculugu_Degerlendirme(param_1);
+//
+//		customer
+//		.deleteCustomerRides(param_1);
+//	}
+//	@Test(priority = 65)
+//	public void TC_065_Surus_Bitir_Basarili_Wallet() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//		param_2 = testParameters[caseId][2];
+//		param_3 = testParameters[caseId][3];
+//		param_4 = testParameters[caseId][4]; //wallet balance
+//
+//		// *******************PAGE INSTANTIATIONS*******************
+//		surus = new pageSurus(androidDriver);
+//		giris_Ekrani = new pageGirisEkrani(androidDriver);
+//		customer = new Customer();
+//		scooter = new Scooter();
+//
+//		// ***********CASE DEPENDENCIES**************
+//		customer
+//		.addWalletBalance(param_1, param_4)
+//		.deleteCustomerRides(param_1)
+//		.deleteCustomerDebt(param_1)
+//		.deleteCreditCards(param_1)
+//		.addCreditCard(param_1);
+//		
+//		customer
+//		.addCustomerFinishedRide(param_1, param_2);
+//
+//		scooter
+//		.addScooter(param_2, param_3)
+//		.addScooterRide(param_1, param_2)
+//		.setMinus5ForRideTime(param_2)
+//		.lockScooter(param_2);
+//
+//		// ***********PAGE METHODS**************
+//		giris_Ekrani
+//		.Giris_Basarili(param_1);
+//		
+//		surus
+//		.Surus_Bitirme_Basarili_Wallet()
+//		.Yolculugu_Degerlendirme(param_1)
+//		.CuzdanBakiyeKontrol(param_4);
+//
+//	}
+//	@Test(priority = 66)
+//	public void TC_066_Surus_Bitir_Basarisiz_Wallet_Yetersiz() {
+//		// *******************SET PARAMETERS************************
+//		param_1 = testParameters[caseId][1];
+//		param_2 = testParameters[caseId][2];
+//		param_3 = testParameters[caseId][3];
+//
+//		// *******************PAGE INSTANTIATIONS*******************
+//		surus = new pageSurus(androidDriver);
+//		giris_Ekrani = new pageGirisEkrani(androidDriver);
+//		customer = new Customer();
+//		scooter = new Scooter();
+//
+//		// ***********CASE DEPENDENCIES**************
+//		customer
+//		.addWalletBalance(param_1, "2")
+//		.deleteCustomerRides(param_1)
+//		.deleteCustomerDebt(param_1)
+//		.deleteCreditCards(param_1)
+//		.addCreditCard(param_1);
+//		customer
+//		.addCustomerContinuesRide(param_1, param_2);
+//
+//		scooter
+//		.addScooter(param_2, param_3)
+//		.addScooterRide(param_1, param_2)
+//		.setMinus5ForRideTime(param_2)
+//		.lockScooter(param_2);
+//
+//		// ***********PAGE METHODS**************
+//		giris_Ekrani
+//		.Giris_Basarili(param_1);
+//		
+//		surus
+//		.Surus_Bitir_Basarisiz_Wallet_Yetersiz();
+//
+//	}
 	@Test(priority = 67)
 	public void TC_067_Surus_Bitir_Basarili_Kupon_Kullanildi() {
 		// *******************SET PARAMETERS************************
@@ -736,22 +750,24 @@ public class Surus extends TestBase {
 
 		// ***********CASE DEPENDENCIES**************
 		customer
+		.deleteCreatorCoupons(param_1)
 		.deleteCustomerRides(param_1)
 		.deleteCustomerDebt(param_1)
 		.deleteCreditCards(param_1)
 		.addCreditCard(param_1);
-		
-		customer
-		.addCustomerFinishedRide(param_1, param_2);
 
 		scooter
 		.addScooter(param_2, param_3)
 		.addScooterRide(param_1, param_2)
+		.setMinus5ForRideTime(param_2)
 		.lockScooter(param_2);
 
 		// ***********PAGE METHODS**************
 		giris_Ekrani
-		.Login(param_1);
+		.Giris_Basarili(param_1);
+		
+		surus.
+		Surus_Bitir_Basarili_Kupon_Kullanildi();
 
 	}
 	@Test(priority = 68)
@@ -786,7 +802,6 @@ public class Surus extends TestBase {
 		giris_Ekrani
 		.Login(param_1);
 
-		
 		scooter
 		.deleteScooterRides(param_2);
 		

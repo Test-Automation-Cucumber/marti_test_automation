@@ -113,7 +113,7 @@ public class pageMenu extends PageBaseAndroid {
 			click(btn_ArkadasiniDavetEt);
 			wait(2);
 			click(popup_PanoyaKopyala);
-			int count = customer.countCustomerCoupon(customer_phone_number);
+			int count = customer.countCreatorCoupon(customer_phone_number);
 			assertEquals(count, 1);
 			click(btn_Geri);		
 			click(btn_Geri);
@@ -127,7 +127,7 @@ public class pageMenu extends PageBaseAndroid {
 //			swipe(lbl_Title, 303, 975,346,231, 300);
 			click(popup_PanoyaKopyala);
 			click(btn_Geri);
-			int count = customer.countCustomerCoupon(customer_phone_number);
+			int count = customer.countCreatorCoupon(customer_phone_number);
 			assertEquals(count, 1);
 			
 			return this;
@@ -305,7 +305,7 @@ public class pageMenu extends PageBaseAndroid {
 			String couponCode = "";			
 			couponCode = customer
 			.deleteCustomerRides(customer_phone_number)
-			.getCustomerCoupon(customer_phone_number);
+			.getCreatorCoupon(customer_phone_number);
 			click(btn_Menu);
 			click(li_Kampanyalar);
 			click(btn_KuponlarimGoruntule);

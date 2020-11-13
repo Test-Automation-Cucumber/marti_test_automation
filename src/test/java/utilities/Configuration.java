@@ -85,6 +85,8 @@ public class Configuration {
 					is = ClassLoader.getSystemResourceAsStream("devices\\ios\\iPhone5S.property");
 				else if (System.getProperty("deviceName").equals("xsmax"))
 					is = ClassLoader.getSystemResourceAsStream("devices\\ios\\xsmax.property");
+				else if (System.getProperty("deviceName").equals("iPhone7"))
+					is = ClassLoader.getSystemResourceAsStream("devices\\ios\\iPhone7.property");
 				
 				// device properties
 				Reader reader = new InputStreamReader(is, "UTF-8");

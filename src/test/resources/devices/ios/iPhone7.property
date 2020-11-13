@@ -1,0 +1,6 @@
+==================================>>>>>>> iPhone5S <<<<<<==============================
+device.udid				=d746c28585cab7fcb966d7c8f6a2e41133d60609
+platform.version		=14
+device.name				=iPhone
+automation.name			=XCUITest
+appium.server			=http://127.0.0.1:4723/wd/hub

@@ -96,9 +96,27 @@ public class Customer {
 				}
 				return Integer.parseInt(rideId);
 			}
+			
+			// *kupon ekleme
+			public Customer addCustomerCoupons(String customer_phone_no, String amount) {
+				try {
+					if (customer_phone_no.length() < 9) {
+						throw new Exception("hatali musteri numarasi");
+					}
+					provider.ExecuteCommand(
+							"delete from coupons where customer_id in ((select id from customers where mobile_phone = '" + customer_phone_no + "'), 1);"
+							+ " INSERT INTO public.coupons(code, customer_id, is_used, ride_id, amount, used_at, created_at, expires_at, user_id, customer_expires_at, batch_key, loaded_amount, multi_use, creator_customer_id)" + 
+							" VALUES('OTOMASYON', (select id from customers where mobile_phone = '" + customer_phone_no + "'), false, NULL, " + amount + ", NULL, (now() - interval '10 minute'), (now() + interval '10 minute'), 185, (now() + interval '10 minute'), NULL, NULL, false, NULL);"
+							,"martiDB");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return this;
+			}
 	
-	// *kupon temizleme
-	public Customer deleteCustomerCoupons(String customer_phone_no) {
+	// *kupon oluşturucu temizleme
+	public Customer deleteCreatorCoupons(String customer_phone_no) {
 		try {
 			if (customer_phone_no.length() < 9) {
 				throw new Exception("hatali musteri numarasi");
@@ -113,8 +131,8 @@ public class Customer {
 		return this;
 	}
 	
-	// *kupon kontrol
-	public int countCustomerCoupon(String customer_phone_no) {
+	// *kupon oluşturucu kontrol
+	public int countCreatorCoupon(String customer_phone_no) {
 		int count = 0;
 		try {
 			if (customer_phone_no.length() < 9) {
@@ -131,7 +149,7 @@ public class Customer {
 	}
 	
 	// *kullanilmamis kupon getir
-	public String getCustomerCoupon(String customer_phone_no) {
+	public String getCreatorCoupon(String customer_phone_no) {
 	String couponCode = "";
 		try {
 			if (customer_phone_no.length() < 9) {
@@ -140,7 +158,7 @@ public class Customer {
 			couponCode = provider.ExecuteScalar(
 					"select code from coupons where creator_customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "') order by id desc;",
 					"martiDB");
-			provider.ExecuteCommand("update coupons set creator_customer_id = 1 where creator_customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "')",
+			provider.ExecuteCommand("update coupons set customer_id = 1 where creator_customer_id = (select id from customers where mobile_phone = '" + customer_phone_no + "')",
 					"martiDB");
 			
 		} catch (Exception e) {
@@ -334,7 +352,8 @@ public class Customer {
 	}
 		
 	// *musteri cüzdanına bakiye ekler
-	public Customer addWalletBalance(String customer_phone_no, double amount) {
+	public Customer addWalletBalance(String customer_phone_no, String amount) {
+		deleteWalletBalance(customer_phone_no);
 		try {
 			if (customer_phone_no.length() < 9) {
 				throw new Exception("hatali musteri numarasi");
@@ -345,7 +364,7 @@ public class Customer {
 					" INNER JOIN wallet_balance wb" + 
 					" on w.id = wb.wallet_id" + 
 					" where w.customer_id = (select id from customers where mobile_phone ='" + customer_phone_no + "')" + 
-					" and wb.balance_type = 1), now(), true, " + amount + ", 0, 7, 0);", "martiDB");
+					" and wb.balance_type = 1), now(), true, " + Double.parseDouble(amount) + ", 0, 7, 0);", "martiDB");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -370,9 +389,7 @@ public class Customer {
 		}
 		return this;
 	}
-	
-	
-	
+
 	// *musterinin borclarını sil
 	public Customer deleteCustomerDebt(String customer_phone_no) {
 		try {

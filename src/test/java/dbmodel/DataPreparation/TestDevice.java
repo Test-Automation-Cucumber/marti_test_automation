@@ -2,12 +2,14 @@ package dbmodel.DataPreparation;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
-import com.sun.prism.sw.SWPipeline;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import dbmodel.Provider;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileDriver;
+//import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.connection.ConnectionState;
@@ -128,6 +130,20 @@ public class TestDevice {
 			}
 			return this;
 		}
+	
+	public TestDevice notify(AndroidDriver<AndroidElement> androidDriver) {
+		androidDriver.openNotifications();
+		List<AndroidElement> allnotifications=androidDriver.findElements(By.id("android:id/title"));
+
+		    for (AndroidElement webElement : allnotifications) {
+		        System.out.println(webElement.getText());
+		        if(webElement.getText().contains("something")){
+		            System.out.println("Notification found");
+		            break;
+		        }
+		    }
+		    return this;
+			}
 	
 /////////////////////////////////////////  IOS  ///////////////////////////////////////////////
 	
