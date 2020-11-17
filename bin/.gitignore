@@ -17,3 +17,23 @@ target/
 
 # local
 /src/main/resources/local.properties
+/.gitignore
+/.metadata/
+/LICENSE
+/drivers/
+/pom.xml
+/pom_controlcenter_web.xml
+/pom_health_checker_data.xml
+/pom_health_checker_ios.xml
+/pom_mobile_service_data.xml
+/pom_rebalancer_data.xml
+/pom_ride_android.xml
+/pom_ride_api.xml
+/pom_ride_ios.xml
+/pom_security_android.xml
+/pom_security_data.xml
+/pom_swapper_data.xml
+/reports/
+/snapshots/
+/src/
+/test-output/

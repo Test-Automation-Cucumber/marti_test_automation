@@ -1,2 +1,0 @@
-# AWS Device Farm Example
-
