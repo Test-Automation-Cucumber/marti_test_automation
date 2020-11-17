@@ -52,8 +52,8 @@ public class Giris_Ekrani extends TestBase {
 		// ***********CASE DEPENDENCIES**************
 		
 		// ***********PAGE METHODS**************
-		giris_Ekrani
-		.Giris_Basarisiz(param_1);
+//		giris_Ekrani
+//		.Giris_Basarisiz(param_1);
 	}
 	@Test(priority = 14)
 	public void TC_014_Dogrulama_Basarisiz() {
